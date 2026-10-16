@@ -282,11 +282,11 @@ function _levelAt(pos) {
   return 42;
 }
 function _biomeOf(lat, lon, ds) {
-  if (ds <= 8) return 'costa';
+  if (ds <= 12) return 'costa';
   if (lon < -65 || (lon < -60 && lat > -14) || (lon < -56 && lat > -12) || (lon < -47.5 && lat > -8) || (lon < -44 && lat > -4.5)) return 'amazonia';
   if (lon > -59.2 && lon < -55.6 && lat < -16.2 && lat > -21.8) return 'pantanal';
   if (lat < -29.2) return 'pampa';
-  if ((lat < -21.5 && lon > -54.5) || (ds <= 45 && lat < -8 && lon > -42.5) || (lon > -42.5 && lat < -14 && lat > -22)) return 'mata_atlantica';
+  if ((lat < -21.5 && lon > -54.5) || (ds <= 70 && lat < -8 && lon > -42.5) || (lon > -42.5 && lat < -14 && lat > -22)) return 'mata_atlantica';
   if (lat > -17.5 && lat < -3.5 && lon > -46 && lon < -35.5) return 'caatinga';
   return 'cerrado';
 }
@@ -350,20 +350,20 @@ function buildWorld() {
     if (!land[i]) { tiles[y][x] = ocean[i] ? 'water' : 'tree'; biomeGrid[y][x] = ocean[i] ? 'costa' : 'cerrado'; continue; }
     const ds = dSea[i], lat = _lat(y), lon = _lon(x), bio = _biomeOf(lat, lon, ds);
     biomeGrid[y][x] = bio;
-    const r = R(), n1 = _mnoise(x, y, 5, 11), n2 = _mnoise(x, y, 16, 12);
+    const r = R(), n1 = _mnoise(x, y, 7, 11), n2 = _mnoise(x, y, 26, 12);
     let t = 'grass';
     if (bio === 'costa') {
-      if (ds <= 3) t = 'sand'; else if (ds <= 9 && n1 > 0.62) t = 'sand'; else if (r < 0.05) t = 'tree'; else if (r < 0.08) t = 'flower';
+      if (ds <= 3) t = 'sand'; else if (ds <= 14 && n1 > 0.62) t = 'sand'; else if (r < 0.05) t = 'tree'; else if (r < 0.08) t = 'flower';
     } else if (bio === 'mata_atlantica') { t = n1 > 0.6 ? 'tree' : r < 0.04 ? 'tree' : r < 0.07 ? 'flower' : 'grass'; }
     else if (bio === 'pampa') { t = r < 0.012 ? 'tree' : r < 0.05 ? 'flower' : 'grass'; }
     else if (bio === 'cerrado') { t = (n1 > 0.74 || r < 0.035) ? 'tree' : r < 0.1 ? 'flower' : 'grass'; }
     else if (bio === 'caatinga') { t = n2 > 0.52 ? (r < 0.04 ? 'tree' : 'sand') : r < 0.035 ? 'tree' : r < 0.045 ? 'flower' : 'grass'; if (t === 'sand' && n1 > 0.7) t = 'grass'; }
     else if (bio === 'amazonia') {
       t = n1 > 0.5 ? 'tree' : (n2 > 0.66 ? 'tall' : 'grass');
-      const rv1 = Math.abs(_mnoise(x, y, 34, 5) - 0.5), rv2 = Math.abs(_mnoise(x, y, 26, 6) - 0.5);
-      if (rv1 < 0.017 || rv2 < 0.012 || _mnoise(x, y, 9, 8) > 0.82) t = 'water';
+      const rv1 = Math.abs(_mnoise(x, y, 54, 5) - 0.5), rv2 = Math.abs(_mnoise(x, y, 40, 6) - 0.5);
+      if (rv1 < 0.017 || rv2 < 0.012 || _mnoise(x, y, 14, 8) > 0.84) t = 'water';
     } else if (bio === 'pantanal') {
-      const pn = _mnoise(x, y, 10, 9);
+      const pn = _mnoise(x, y, 16, 9);
       t = pn > 0.64 ? 'water' : (n1 > 0.5 && r < 0.9) ? 'tall' : r < 0.02 ? 'tree' : 'grass';
     }
     if (resv[i]) { if (t === 'tree' || t === 'water' || t === 'tall') t = 'grass'; if (bio === 'costa' && ds <= 2) t = 'sand'; }
@@ -733,4 +733,47 @@ function buildWorld() {
   }
 
   // --- imagens de fallback dos prédios
-  
+  const imgCache = {};
+  for (const b of World.buildings) {
+    _M.doors[b.door ? b.door.x + ',' + b.door.y : 'x' + b.id] = b;
+    try {
+      if (typeof drawBuilding === 'function') {
+        const cacheable = b.kind === 'pf' || b.kind === 'casa';
+        const key = b.kind + '|' + b.w + '|' + b.h + '|' + (b.roof || '');
+        if (cacheable && imgCache[key]) b.img = imgCache[key]; else { b.img = drawBuilding(b); if (cacheable) imgCache[key] = b.img; }
+      }
+    } catch (e) { b.img = null; }
+  }
+
+  World.landMask = land; World.tiles = tiles; World.areaGrid = areaGrid; World.biomeGrid = biomeGrid;
+  World.cities = cities.map(c => ({ id: c.id, name: c.name, uf: c.uf, order: c.order, x: c.x, y: c.y, w: c.w, h: c.h, biome: c.biome }));
+}
+
+// ---------------------------------------------------------------- consultas
+function tileAt(x, y) {
+  if (x < 0 || y < 0 || x >= MAP_W || y >= MAP_H) return 'tree';
+  return World.tiles[y][x];
+}
+function isSolid(x, y) {
+  if (SOLID.has(tileAt(x, y))) return true;
+  return World.npcs.some(n => n.x === x && n.y === y && !n.hidden);
+}
+function buildingAtDoor(x, y) { return _M.doors[x + ',' + y]; }
+function biomeAt(x, y) {
+  if (x < 0 || y < 0 || x >= MAP_W || y >= MAP_H) return 'cerrado';
+  return World.biomeGrid[y][x];
+}
+function zoneAt(x, y) {
+  if (x < 0 || y < 0 || x >= MAP_W || y >= MAP_H) return null;
+  const id = World.areaGrid[y][x];
+  if (id && World.areas[id]) return World.areas[id];
+  const r = _M.routeGrid ? _M.routeGrid[y * MAP_W + x] : -1;
+  return r >= 0 ? World.areas['rota_' + (r + 1)] : null;
+}
+function regionAt(x, y) {
+  if (x < 0 || y < 0 || x >= MAP_W || y >= MAP_H) return 'Brasil';
+  if (_M.boxGrid) { const b = _M.boxGrid[y * MAP_W + x]; if (b > 0) return _M.cityList[b - 1].name; }
+  const r = _M.routeGrid ? _M.routeGrid[y * MAP_W + x] : -1;
+  const bio = BIOME_NAMES[World.biomeGrid[y][x]] || '';
+  return r >= 0 ? `Rota ${_ROUTE_BR[r]} · ${bio}` : bio;
+}

@@ -136,7 +136,9 @@ function catchShakes(foe, ballRate) {
 
 // Dados de balanceamento opcionais (gerados em docs/balanceamento.json e copiados para web/data/).
 function loadBalance() {
-  return fetch('data/balance.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(d => {
+  const src = location.protocol === 'file:' && window.BALANCE_DATA ? Promise.resolve(window.BALANCE_DATA)
+    : fetch('data/balance.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : window.BALANCE_DATA || null).catch(() => window.BALANCE_DATA || null);
+  return src.then(d => {
     if (!d) return;
     Object.assign(MOVES, d.moves || {});
     Object.assign(ABILITIES, d.abilities || {});

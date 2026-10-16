@@ -38,6 +38,11 @@ function drawPol(p, back, x, y, size) {
   ctx.drawImage(img, x, y, size, size);
   ctx.imageSmoothingEnabled = false;
 }
+// Silhueta para a Polidex; abrindo via file:// o canvas fica "contaminado" e não pode ser lido.
+function silURL(p) {
+  try { return silhouette(polImg(p)).toDataURL(); }
+  catch (e) { return 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><text x="5" y="8" font-size="8" text-anchor="middle" fill="#3a3a48">?</text></svg>'); }
+}
 function spriteURL(p, back = false) {
   const k = p.id + back;
   if (imgCache[k]) return imgCache[k];
@@ -259,7 +264,7 @@ function hpClass(f) { return f > 0.5 ? '' : f > 0.2 ? 'y' : 'r'; }
 function monDetailHTML(p, m) {
   const seen = !m && !G.seen[p.id];
   const st = m ? stats(m) : null;
-  const img = seen ? silhouette(polImg(p)).toDataURL() : spriteURL(p);
+  const img = seen ? silURL(p) : spriteURL(p);
   return `<h2 style="margin:0;padding:.3em .6em;font-size:1em;color:#fff;background:#1e3a78;display:flex;justify-content:space-between">
     <span>Nº ${String(p.dex).padStart(3, '0')} ${seen ? '?????' : dexName(p)}</span><span>${m ? 'Nv ' + m.lvl : (G.caught[p.id] ? 'PRESO' : '')}</span></h2>
     <div class="body"><div class="pic"><img src="${img}">${seen ? '' : typeChips(p.types)}</div>
@@ -275,7 +280,7 @@ async function openPolidex() {
   for (;;) {
     const i = await listScreen('POLIDEX', POLITICOS, p => {
       const s = G.seen[p.id];
-      const img = s ? spriteURL(p) : silhouette(polImg(p)).toDataURL();
+      const img = s ? spriteURL(p) : silURL(p);
       return `<img src="${img}"><span class="dim">${String(p.dex).padStart(3, '0')}</span><span class="grow">${s ? dexName(p) : '?????'}</span>${G.caught[p.id] ? '🔒' : ''}`;
     }, { right: `Vistos ${nSeen} · Presos ${nCaught}`, start });
     if (i < 0) return;
@@ -470,7 +475,12 @@ function updateWorld(dt) {
 
 function showRegion() {
   const r = regionName(G.x, G.y);
-  if (r !== S.region) { S.region = r; const l = el('div', 'box location', r); ui.appendChild(l); setTimeout(() => l.remove(), 2400); }
+  if (r !== S.region) {
+    // uma placa por vez: a nova substitui a anterior
+    S.region = r;
+    document.querySelectorAll('#ui .location').forEach(e => e.remove());
+    const l = el('div', 'box location', r); ui.appendChild(l); setTimeout(() => l.remove(), 2400);
+  }
 }
 
 function onStep() {
@@ -592,7 +602,7 @@ function drawMinimap() {
     const land = World.landMask;
     for (let j = 0; j < MAP_H; j++) for (let i = 0; i < MAP_W; i++) {
       const t = tileAt(i, j);
-      x.fillStyle = t === 'water' ? '#3a78c8' : land && !(land[j] && land[j][i]) ? '#1e3a24' : (MINI_COLORS[t] && t !== 'tree' ? MINI_COLORS[t] : '#5fae48');
+      x.fillStyle = t === 'water' ? '#3a78c8' : land && !(land.length === MAP_W * MAP_H ? land[j * MAP_W + i] : land[j] && land[j][i]) ? '#1e3a24' : (MINI_COLORS[t] && t !== 'tree' ? MINI_COLORS[t] : '#5fae48');
       x.fillRect(i, j, 1, 1);
     }
     if (World.cities) for (const c of World.cities) {
@@ -1394,6 +1404,7 @@ function boot() {
   const ready = Promise.all([loadBalance(), loadCustomSprites(), document.fonts ? document.fonts.ready : null, document.fonts ? document.fonts.load('700 16px Nunito') : null])
     .then(() => { for (const k in imgCache) delete imgCache[k]; });
   const bootEl = $('#boot');
+  if (location.protocol === 'file:' && !window.EMBEDDED_ASSETS) { const fh = $('.file-hint'); if (fh) fh.hidden = false; }
   const start = full => {
     if (bootEl.classList.contains('hidden')) return;
     bootEl.classList.add('hidden');

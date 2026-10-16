@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>POKÉPOL QA cidades</title>
+<style>
+body{margin:0;background:#111;color:#eee;font:14px system-ui,sans-serif}
+h2{margin:10px 8px 2px;font-size:15px}
+canvas{display:block;margin:0 8px 8px;image-rendering:pixelated;border:1px solid #555}
+#nav{position:sticky;top:0;background:#222;padding:4px 8px;z-index:9}
+#nav a{color:#8cf;margin-right:8px;font-size:12px}
+</style></head><body>
+<div id="nav"></div><div id="out"></div>
+<script src="js/data.js"></script><script src="js/rules.js"></script><script src="js/art.js"></script><script src="js/map.js"></script>
+<script>
+const BUILD = String(Date.now());
+const _q0=new URLSearchParams(location.search); const PX = +(_q0.get("px")||32), M = 6;
+const NB = [[0,-1],[1,-1],[1,0],[1,1],[0,1],[-1,1],[-1,0],[-1,-1]];
+function neighborMask(x,y,k){let m=0;for(let i=0;i<8;i++){const nx=x+NB[i][0],ny=y+NB[i][1];if(nx<0||ny<0||nx>=MAP_W||ny>=MAP_H||tileAt(nx,ny)===k)m|=1<<i;}return m;}
+const BIOME_FILTER={pampa:'hue-rotate(-6deg) saturate(0.9) brightness(1.08)',cerrado:'hue-rotate(-26deg) saturate(0.85) brightness(1.03)',caatinga:'hue-rotate(-42deg) saturate(0.55) brightness(1.1)',amazonia:'hue-rotate(8deg) saturate(1.35) brightness(0.8)',pantanal:'hue-rotate(14deg) saturate(1.15) brightness(0.94)'};
+const BIOME_TILES=new Set(['grass','tall','tree','flower','lawn']);const biomeCache=new WeakMap();
+function biomeTile(src,kind,biome){const f=biome&&BIOME_TILES.has(kind)&&BIOME_FILTER[biome];if(!f)return src;let m=biomeCache.get(src);if(!m)biomeCache.set(src,m={});if(!m[biome]){const c=document.createElement('canvas');c.width=src.width;c.height=src.height;const x=c.getContext('2d');x.filter=f;x.drawImage(src,0,0);m[biome]=c;}return m[biome];}
+function loadSprite(src){return new Promise(r=>{const im=new Image();im.onload=()=>r(im);im.onerror=()=>r(null);im.src=src+'?v='+Date.now();});}
+function renderRect(ctx, x0, y0, w, h, f, sprites, flagMismatch) {
+  ctx.imageSmoothingEnabled=false;
+  for (let y=y0;y<y0+h;y++) for (let x=x0;x<x0+w;x++) {
+    let k = tileAt(x,y);
+    if (k==='bld') k = y<14?'lawn':'grass';
+    const frames=Tiles[k]; if(!frames) continue;
+    const fi = k==='tree'&&frames.length===4 ? (x&1)+(y&1)*2 : k==='grass'&&frames.length>2 ? ((x*7+y*13)%frames.length) : f%frames.length;
+    const at = AUTOTILE_KINDS.has(k) ? autotileFor(k, neighborMask(x,y,k), f) : null;
+    let img = at||frames[fi];
+    ctx.drawImage(biomeTile(img,k,biomeAt(x,y)), (x-x0)*PX,(y-y0)*PX,PX,PX);
+  }
+  for (const b of World.buildings) {
+    if (b.x+b.w<x0||b.x>x0+w||b.y+b.h<y0||b.y>y0+h) continue;
+    const sp = b.sprite && sprites[b.sprite]; const bi = sp || b.img;
+    if (bi) ctx.drawImage(bi,(b.x-x0)*PX,(b.y-y0)*PX,b.w*PX,b.h*PX);
+    if (sp && flagMismatch && (sp.naturalWidth!==b.w*16||sp.naturalHeight!==b.h*16)) {
+      ctx.strokeStyle='#f0f';ctx.lineWidth=3;ctx.strokeRect((b.x-x0)*PX,(b.y-y0)*PX,b.w*PX,b.h*PX);
+      ctx.fillStyle='#f0f';ctx.font='12px sans-serif';ctx.fillText(sp.naturalWidth+'x'+sp.naturalHeight+' vs '+b.w*16+'x'+b.h*16,(b.x-x0)*PX+4,(b.y-y0)*PX+14);
+    }
+    if (b.door) { ctx.fillStyle='rgba(255,255,0,.8)'; ctx.fillRect((b.door.x-x0)*PX+PX*.375,(b.door.y-y0)*PX+PX*.8,PX/4,PX/5); }
+  }
+  const acts = World.npcs.filter(n=>!n.hidden && n.x>=x0&&n.x<x0+w&&n.y>=y0&&n.y<y0+h);
+  for (const n of acts) {
+    const img = personSprite(n.look,n.dir,0), hh = PX*img.height/img.width;
+    ctx.drawImage(img,(n.x-x0)*PX,(n.y-y0)*PX+PX-hh-(hh>PX?PX/8:PX/4),PX,hh);
+  }
+}
+window.renderRect = renderRect;
+(async()=>{
+  buildTiles(); buildWorld(); await ART_READY;
+  const names=[...new Set(World.buildings.map(b=>b.sprite).filter(Boolean))];
+  const sprites={}; await Promise.all(names.map(async s=>{sprites[s]=await loadSprite(s);}));
+  window.QA_sprites=sprites;
+  const out=document.getElementById('out'), nav=document.getElementById('nav');
+  const q=new URLSearchParams(location.search), only=q.get('c');
+  for (const c of World.cities) {
+    if (only && c.id!==only) continue;
+    const x0=c.x-M,y0=c.y-M,w=c.w+2*M,h=c.h+2*M;
+    const h2=document.createElement('h2'); h2.id=c.id; h2.textContent=`${c.order}. ${c.name} (${c.uf}) — ${c.biome}`; out.appendChild(h2);
+    const cv=document.createElement('canvas'); cv.width=w*PX; cv.height=h*PX; cv.id='cv_'+c.id; out.appendChild(cv);
+    renderRect(cv.getContext('2d'),x0,y0,w,h,0,sprites,true);
+    const a=document.createElement('a'); a.href='#'+c.id; a.textContent=c.order; nav.appendChild(a);
+  }
+  document.title='QA pronto'; window.QA_DONE=true;
+})();
+</script></body></html>

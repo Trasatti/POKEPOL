@@ -620,7 +620,9 @@ const customSprites = {};
 
 // sprites/index.json lista os PNGs disponíveis, ex.: ["golpenaro", "golpenaro_back"]
 function loadCustomSprites() {
-  return fetch('sprites/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : []).catch(() => []).then(names => Promise.all(names.map(n => new Promise(res => {
+  const list = location.protocol === 'file:' && window.SPRITE_LIST ? Promise.resolve(window.SPRITE_LIST)
+    : fetch('sprites/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : window.SPRITE_LIST || []).catch(() => window.SPRITE_LIST || []);
+  return list.then(names => Promise.all(names.map(n => new Promise(res => {
     const img = new Image();
     img.onload = () => { customSprites[n] = img; res(); };
     img.onerror = res;
