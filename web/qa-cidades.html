@@ -53,6 +53,7 @@ window.renderRect = renderRect;
   window.QA_sprites=sprites;
   const out=document.getElementById('out'), nav=document.getElementById('nav');
   const q=new URLSearchParams(location.search), only=q.get('c');
+  const rc=q.get('rect'); if(rc){const [rx,ry,rw,rh]=rc.split(',').map(Number);const cv=document.createElement('canvas');cv.width=rw*PX;cv.height=rh*PX;out.appendChild(cv);renderRect(cv.getContext('2d'),rx,ry,rw,rh,0,sprites,true);document.title='QA pronto';window.QA_DONE=true;return;}
   for (const c of World.cities) {
     if (only && c.id!==only) continue;
     const x0=c.x-M,y0=c.y-M,w=c.w+2*M,h=c.h+2*M;

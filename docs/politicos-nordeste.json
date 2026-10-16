@@ -1,0 +1,597 @@
+[
+  {
+    "id": "pastorgilpina",
+    "name": "Pastor Gilpina",
+    "real": "Pastor Gil",
+    "short": "Condenado pelo STF por propina sobre emendas",
+    "uf": "MA",
+    "party": "PL",
+    "cargo": "Deputado federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Meowth",
+    "fact": "Condenado pela 1ª Turma do STF em 17/03/2026 a 5 anos e 6 meses em regime semiaberto por corrupção passiva: propina de 25% sobre R$ 6,67 milhões em emendas para São José de Ribamar. A Câmara decide sobre o mandato; a defesa diz que ele não decidiu a aplicação dos recursos.",
+    "source": "https://www.poder360.com.br/poder-justica/stf-condena-deputados-do-pl-acusados-de-desviar-emendas/",
+    "caricature": "Exagerar a Bíblia debaixo do braço e o sorriso de pregador; prop: sacola de dízimo transbordando moedas de 25%.",
+    "photoHint": "Deputado Pastor Gil, foto oficial da Câmara dos Deputados"
+  },
+  {
+    "id": "boscopropina",
+    "name": "Boscopropina",
+    "real": "Bosco Costa",
+    "short": "Ex-deputado condenado pelo STF por propina de emendas",
+    "uf": "SE",
+    "party": "PL",
+    "cargo": "Ex-deputado federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Persian",
+    "fact": "Condenado pela 1ª Turma do STF em 17/03/2026 a 5 anos e 6 meses em regime semiaberto por corrupção passiva, no mesmo caso das emendas a São José de Ribamar (MA). Já não exerce mandato; a defesa diz que não houve direcionamento ilícito de recursos.",
+    "source": "https://www.poder360.com.br/poder-justica/stf-condena-deputados-do-pl-acusados-de-desviar-emendas/",
+    "caricature": "Exagerar o topete grisalho e o ar de bom velhinho; prop: carimbo gigante de EMENDA com 25% pingando.",
+    "photoHint": "Bosco Costa, ex-deputado federal PL-SE, foto oficial"
+  },
+  {
+    "id": "bezerrodeouro",
+    "name": "Bezerro de Ouro",
+    "real": "Fernando Bezerra Coelho",
+    "short": "Ex-senador alvo da Operação Vassalos",
+    "uf": "PE",
+    "party": "MDB",
+    "cargo": "Ex-senador",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Rhyhorn",
+    "fact": "Alvo da Operação Vassalos (PF, autorizada por Flávio Dino) em 25/02/2026, com 42 mandados de busca: suspeita de direcionar licitações bancadas por emendas (Codevasf, Dnocs), com propina e lavagem. Investigado, sem denúncia; nega.",
+    "source": "https://www.diariodepernambuco.com.br/politica/2026/02/11708480-operacao-o-contra-familia-coelho-entenda-a-investigacao-da-pf.html",
+    "caricature": "Exagerar a testa larga e o bigode; prop: retroescavadeira de brinquedo cavando asfalto de ouro.",
+    "photoHint": "Fernando Bezerra Coelho, ex-senador, foto oficial do Senado"
+  },
+  {
+    "id": "coelhinhodapascoa",
+    "name": "Coelhinho da Páscoa",
+    "real": "Fernando Coelho Filho",
+    "short": "Deputado alvo da Operação Vassalos",
+    "uf": "PE",
+    "party": "União",
+    "cargo": "Deputado federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Diglett",
+    "fact": "Alvo da Operação Vassalos (PF/STF, Dino) em 25/02/2026, junto do pai e de Miguel Coelho: suspeita de fraude em licitações pagas com emendas, corrupção e lavagem. Investigado, sem denúncia; os alvos negam irregularidades.",
+    "source": "https://www.diariodepernambuco.com.br/politica/2026/02/11708480-operacao-o-contra-familia-coelho-entenda-a-investigacao-da-pf.html",
+    "caricature": "Exagerar os dentes de coelho e o topete; prop: ovo de Páscoa recheado de mandados de busca.",
+    "photoHint": "Fernando Coelho Filho, deputado federal, foto oficial da Câmara"
+  },
+  {
+    "id": "petrolinando",
+    "name": "Petrolinando",
+    "real": "Miguel Coelho",
+    "short": "Ex-prefeito de Petrolina alvo da Operação Vassalos",
+    "uf": "PE",
+    "party": "União",
+    "cargo": "Ex-prefeito de Petrolina",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Geodude",
+    "fact": "Alvo da Operação Vassalos (PF/STF) em 25/02/2026: a PF apura contratos de obras e pavimentação bancados por emendas, com suspeita de propina e lavagem. Investigado, sem denúncia; nega.",
+    "source": "https://www.diariodepernambuco.com.br/politica/2026/02/11708480-operacao-o-contra-familia-coelho-entenda-a-investigacao-da-pf.html",
+    "caricature": "Exagerar o cabelo penteado e o sorriso jovem de candidato; prop: rolo compressor com placa de licitação.",
+    "photoHint": "Miguel Coelho, ex-prefeito de Petrolina, foto de campanha"
+  },
+  {
+    "id": "victormala",
+    "name": "Victormala",
+    "real": "Marcelo Victor",
+    "short": "Presidente da Assembleia de AL flagrado com R$ 146 mil em 2022",
+    "uf": "AL",
+    "party": "MDB",
+    "cargo": "Deputado estadual, presidente da ALE-AL",
+    "types": [
+      "FUGA"
+    ],
+    "pokemon": "Chansey",
+    "fact": "Em setembro de 2022 a PF apreendeu cerca de R$ 146 mil em espécie com ele num hotel de Maceió, dinheiro que investigadores suspeitaram ser para compra de votos. Ele nega; Moraes (TSE) pediu esclarecimentos à PF após queixa de Renan Calheiros.",
+    "source": "https://www.cnnbrasil.com.br/politica/moraes-determina-que-pf-esclareca-operacao-contra-presidente-da-assembleia-de-al/",
+    "caricature": "Exagerar o terno de político de beira-mar; prop: mala aberta cheia de santinhos e notas.",
+    "photoHint": "Marcelo Victor, presidente da Assembleia Legislativa de Alagoas"
+  },
+  {
+    "id": "iprevisao",
+    "name": "Iprevisão",
+    "real": "JHC (João Henrique Caldas)",
+    "short": "Ex-prefeito de Maceió citado pela PF no caso Iprev-Master",
+    "uf": "AL",
+    "party": "PSDB",
+    "cargo": "Ex-prefeito de Maceió, candidato ao governo",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Porygon",
+    "fact": "A PF e a CGU fizeram buscas em 10/08/2026 (ministro Mendonça) sobre R$ 97 milhões do Iprev de Maceió aplicados no Banco Master. Em set/2026 a PF apontou JHC como responsável pela gestão do instituto e o caso foi ao STF por foro. Sem denúncia; ele diz que não está no processo.",
+    "source": "https://tribunadosertao.com.br/politica/2026/09/12/977812-pf-apontou-jhc-como-responsavel-pela-gestao-do-iprev-no-caso-banco-master",
+    "caricature": "Exagerar o rosto jovem de coach e o cabelo penteado; prop: cofrinho de previdência dentro de um banco quebrado.",
+    "photoHint": "JHC, João Henrique Caldas, ex-prefeito de Maceió"
+  },
+  {
+    "id": "elmarcado",
+    "name": "Elmarcado",
+    "real": "Elmar Nascimento",
+    "short": "Deputado investigado na Operação Overclean",
+    "uf": "BA",
+    "party": "União",
+    "cargo": "Deputado federal",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Onix",
+    "fact": "Investigado no STF na Operação Overclean (5ª fase, 17/07/2025) sobre emendas dele à Codevasf para Campo Formoso, com suspeita de fraude em licitações, desvio e lavagem. Não foi alvo de mandados; os citados negam irregularidades.",
+    "source": "https://jornalgrandebahia.com.br/2025/07/ex-presidente-da-codevasf-e-familiares-de-deputado-sao-alvos-da-5a-fase-da-operacao-overclean/",
+    "caricature": "Exagerar a cara de líder do Centrão e o ar sério; prop: manilha da Codevasf cheia de emendas.",
+    "photoHint": "Elmar Nascimento, deputado federal União-BA, foto oficial"
+  },
+  {
+    "id": "elmoformoso",
+    "name": "Elmo Formoso",
+    "real": "Elmo Nascimento",
+    "short": "Prefeito de Campo Formoso, irmão de Elmar",
+    "uf": "BA",
+    "party": "partido não informado na fonte",
+    "cargo": "Prefeito de Campo Formoso",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Sandshrew",
+    "fact": "Investigado na 5ª fase da Operação Overclean (17/07/2025), que trata Campo Formoso como centro do esquema de emendas, licitações e contratos. Sem denúncia noticiada; os citados negam.",
+    "source": "https://jornalgrandebahia.com.br/2025/07/ex-presidente-da-codevasf-e-familiares-de-deputado-sao-alvos-da-5a-fase-da-operacao-overclean/",
+    "caricature": "Exagerar o rosto redondo de irmão do chefão; prop: trator da Codevasf com a placa de Campo Formoso.",
+    "photoHint": "Elmo Nascimento, prefeito de Campo Formoso (BA)"
+  },
+  {
+    "id": "felixterno",
+    "name": "Felixterno",
+    "real": "Félix Mendonça Júnior",
+    "short": "Deputado alvo de busca da PF por emendas",
+    "uf": "BA",
+    "party": "PDT",
+    "cargo": "Deputado federal",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Persian",
+    "fact": "Alvo de nova operação da PF em 13/01/2026, com 9 mandados autorizados pelo STF, sobre emendas a municípios baianos (Overclean); já fora alvo em junho de 2025. Investigado; nega e critica a lentidão da apuração.",
+    "source": "https://www.portaltela.com/noticias/politica/2026/01/13/felix-mendonca-jr-nega-acusacoes-e-critica-lentidao-da-investigacao/",
+    "caricature": "Exagerar a cabeleira grisalha e o ar de gato escovado; prop: gaveta de emendas com rabo de gato aparecendo.",
+    "photoHint": "Félix Mendonça Júnior, deputado federal PDT-BA"
+  },
+  {
+    "id": "dalbarril",
+    "name": "Dal Barril",
+    "real": "Dal Barreto",
+    "short": "Deputado alvo da 6ª fase da Overclean",
+    "uf": "BA",
+    "party": "União",
+    "cargo": "Deputado federal",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Voltorb",
+    "fact": "Alvo da 6ª fase da Operação Overclean em outubro de 2025: oito mandados autorizados pelo STF e celular apreendido no aeroporto de Salvador, por suspeita de desvio de emendas e fraude em licitações. Investigado, sem denúncia; nega irregularidades.",
+    "source": "https://www.portaltela.com/noticias/politica/2025/10/14/pf-deflagra-nova-fase-da-operacao-overclean-e-mira-deputado-federal-do-uniao/",
+    "caricature": "Exagerar o bigode e o ar de dono de posto; prop: bomba de gasolina soltando notas.",
+    "photoHint": "Dal Barreto, deputado federal União-BA"
+  },
+  {
+    "id": "underhandinho",
+    "name": "Underhandinho",
+    "real": "Júnior Mano",
+    "short": "Deputado alvo da Operação Underhand",
+    "uf": "CE",
+    "party": "PSB (eleito pelo PL em 2022)",
+    "cargo": "Deputado federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Raticate",
+    "fact": "Alvo da Operação Underhand (PF, STF/Gilmar) em 08/07/2025: 15 mandados e R$ 54,6 milhões bloqueados por suspeita de desvio de emendas e fraude em licitações em municípios cearenses. Investigado; seu gabinete diz que ele não participa de licitações.",
+    "source": "https://diariodonordeste.verdesmares.com.br/pontopoder/quem-e-junior-mano-deputado-cearense-alvo-da-pf-em-investigacao-sobre-desvio-de-dinheiro-publico-1.3667746",
+    "caricature": "Exagerar o sorriso simpático e o topete; prop: mão por baixo da mesa segurando emenda.",
+    "photoHint": "Júnior Mano, deputado federal do Ceará"
+  },
+  {
+    "id": "adutorao",
+    "name": "Adutorão",
+    "real": "Wilson Santiago",
+    "short": "Réu por propina na Adutora Capivara",
+    "uf": "PB",
+    "party": "PTB (à época)",
+    "cargo": "Ex-deputado federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Poliwhirl",
+    "fact": "Denunciado pela PGR em dezembro de 2019 (Operação Pés de Barro) por corrupção passiva e organização criminosa: 10% de propina na Adutora Capivara. A Justiça Federal da PB recebeu a denúncia em abril de 2021 e ele virou réu. Nega.",
+    "source": "https://www.poder360.com.br/justica/pgr-denuncia-deputado-wilson-santiago-por-organizacao-criminosa-e-corrupcao-passiva/",
+    "caricature": "Exagerar os óculos e o terno largo; prop: cano de adutora seco jorrando só notas de 10%.",
+    "photoHint": "Wilson Santiago, ex-deputado federal PTB-PB"
+  },
+  {
+    "id": "calvarinho",
+    "name": "Calvarinho",
+    "real": "Ricardo Coutinho",
+    "short": "Ex-governador denunciado na Operação Calvário",
+    "uf": "PB",
+    "party": "PSB",
+    "cargo": "Ex-governador da Paraíba",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Koffing",
+    "fact": "Denunciado pelo MP-PB em janeiro de 2020 como líder de organização criminosa na Operação Calvário (desvio via organizações sociais); foi preso em dez/2019 e solto no dia seguinte pelo STJ. Réu, sem condenação nas fontes; a defesa diz que a acusação se apoia só em delações.",
+    "source": "https://www.metropoles.com/brasil/politica-brasil/mp-denuncia-ex-governador-da-pb-ricardo-coutinho-e-quer-r-134-mi",
+    "caricature": "Exagerar a barba e o olhar firme; prop: cruz vermelha de hospital cheia de maços de dinheiro.",
+    "photoHint": "Ricardo Coutinho, ex-governador da Paraíba"
+  },
+  {
+    "id": "sepsisalves",
+    "name": "Sépsis Alves",
+    "real": "Henrique Eduardo Alves",
+    "short": "Ex-ministro do Turismo preso na Lava Jato",
+    "uf": "RN",
+    "party": "MDB",
+    "cargo": "Ex-deputado federal e ex-ministro do Turismo",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Muk",
+    "fact": "Preso em 2017 e acusado nas operações Manus (propina na Arena das Dunas), Sépsis (FI-FGTS; MPF pediu 78 anos em 2018) e Cui Bono. Em 2018 o STJ negou habeas corpus; o texto consultado não confirma condenação final.",
+    "source": "https://www.poder360.com.br/justica/stj-nega-habeas-corpus-ao-ex-deputado-henrique-eduardo-alves/",
+    "caricature": "Exagerar o topete lustroso de eterno presidente da Câmara; prop: estádio de brinquedo com cheiro de infecção.",
+    "photoHint": "Henrique Eduardo Alves, ex-presidente da Câmara, foto de 2016"
+  },
+  {
+    "id": "robinsonfantasma",
+    "name": "Robinson Fantasma",
+    "real": "Robinson Faria",
+    "short": "Ex-governador denunciado por funcionários fantasmas",
+    "uf": "RN",
+    "party": "PSD",
+    "cargo": "Ex-governador do RN",
+    "types": [
+      "RACHADINHA"
+    ],
+    "pokemon": "Gastly",
+    "fact": "Alvo da Operação Anteros (PF, 15/08/2017) e denunciado pela PGR em set/2017 por obstruir apuração sobre salários de fantasmas na Assembleia (a delatora diz que ele embolsava R$ 100 mil/mês até 2010). O texto consultado não mostra desfecho; a defesa nega.",
+    "source": "https://www.abcdoabc.com.br/pgr-denuncia-governador-do-rn-por-desvios/",
+    "caricature": "Exagerar a calvície e o bigode ralo; prop: lençol de fantasma com crachá de servidor.",
+    "photoHint": "Robinson Faria, ex-governador do RN"
+  },
+  {
+    "id": "paulinhocassado",
+    "name": "Paulinho Cassadinho",
+    "real": "Paulinho Freire",
+    "short": "Prefeito de Natal alvo de ação de cassação do MPRN",
+    "uf": "RN",
+    "party": "União",
+    "cargo": "Prefeito de Natal",
+    "types": [
+      "FAKE"
+    ],
+    "pokemon": "Psyduck",
+    "fact": "O MPRN pediu em fevereiro de 2025 a cassação e oito anos de inelegibilidade dele e do vice por suposto abuso de poder político e econômico na eleição de 2024 (servidores pressionados, serviços trocados por apoio). Ação eleitoral em curso, não condenação.",
+    "source": "https://portaldeprefeitura.com.br/bastidores-da-politica/ministerio-publico-pede-cassacao-de-prefeito-do-rn/588752/",
+    "caricature": "Exagerar o sorrisão de campanha e o terno claro; prop: faixa de prefeito rasgada por uma ação do MP.",
+    "photoHint": "Paulinho Freire, prefeito de Natal"
+  },
+  {
+    "id": "alvaroreudias",
+    "name": "Álvaro Réu Dias",
+    "real": "Álvaro Dias",
+    "short": "Ex-prefeito de Natal réu em ação eleitoral",
+    "uf": "RN",
+    "party": "Republicanos",
+    "cargo": "Ex-prefeito de Natal",
+    "types": [
+      "FAKE"
+    ],
+    "pokemon": "Slowpoke",
+    "fact": "A 4ª Zona Eleitoral de Natal manteve o ex-prefeito como réu (fev/2025) em ação do Ministério Público Eleitoral por suposto abuso de poder político e econômico na eleição de 2024. Ação em curso; sem condenação nas fontes.",
+    "source": "https://agorarn.com.br/opiniao/alvaro-dias-comeca-a-se-preocupar-com-possibilidade-de-ficar-inelegivel-para-2026/",
+    "caricature": "Exagerar o bigodão e o ar sonolento; prop: urna eleitoral pendurada no pescoço por uma corrente.",
+    "photoHint": "Álvaro Dias, ex-prefeito de Natal"
+  },
+  {
+    "id": "gentilgate",
+    "name": "Gentilgate",
+    "real": "Amanda Gentil",
+    "short": "Deputada alvo da Operação Lei do Retorno",
+    "uf": "MA",
+    "party": "PP",
+    "cargo": "Deputada federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Clefairy",
+    "fact": "Teve a residência alvo de busca na Operação Lei do Retorno (PF, 19/08/2025), que apura fraude em licitações e desvio de mais de R$ 50 milhões do Fundeb no MA e PI. Investigada; a reportagem não registra resposta dela.",
+    "source": "https://oimparcial.com.br/brasil/2025/08/saiba-quem-sao-os-investigados-na-operacao-da-pf-sobre-desvios-do-fundeb/",
+    "caricature": "Exagerar o cabelo longo e o olhar doce; prop: merenda escolar que vira cofrinho.",
+    "photoHint": "Amanda Gentil, deputada federal PP-MA"
+  },
+  {
+    "id": "fundebao",
+    "name": "Fundebão",
+    "real": "Fábio Gentil",
+    "short": "Ex-prefeito de Caxias na Operação Lei do Retorno",
+    "uf": "MA",
+    "party": "partido não informado na fonte",
+    "cargo": "Ex-prefeito de Caxias",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Slowbro",
+    "fact": "Teve a casa alvo de busca em 19/08/2025 na Operação Lei do Retorno (PF) por suposto desvio do Fundeb na gestão em Caxias. Investigado; a reportagem aberta não registra resposta dele.",
+    "source": "https://oimparcial.com.br/brasil/2025/08/saiba-quem-sao-os-investigados-na-operacao-da-pf-sobre-desvios-do-fundeb/",
+    "caricature": "Exagerar a papada e o ar de patriarca; prop: ônibus escolar vazio carregando malas.",
+    "photoHint": "Fábio Gentil, ex-prefeito de Caxias (MA)"
+  },
+  {
+    "id": "daniellatematica",
+    "name": "Daniella Temática",
+    "real": "Daniella Tema",
+    "short": "Deputada estadual com gabinete visitado pela PF",
+    "uf": "MA",
+    "party": "PSB",
+    "cargo": "Deputada estadual",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Jynx",
+    "fact": "A PF cumpriu mandado em seu gabinete na Assembleia do MA na Operação Lei do Retorno (19/08/2025). Investigada; ela afirmou em nota que não há indício de irregularidade em sua atuação.",
+    "source": "https://oimparcial.com.br/brasil/2025/08/saiba-quem-sao-os-investigados-na-operacao-da-pf-sobre-desvios-do-fundeb/",
+    "caricature": "Exagerar o penteado de salão e a pose de tribuna; prop: gaveta de gabinete com mandado de busca.",
+    "photoHint": "Daniella Tema, deputada estadual do Maranhão"
+  },
+  {
+    "id": "luannabenesse",
+    "name": "Luanna Benesse",
+    "real": "Luanna Rezende",
+    "short": "Prefeita afastada na Operação Benesse",
+    "uf": "MA",
+    "party": "partido não informado na fonte",
+    "cargo": "Prefeita de Vitorino Freire",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Rhydon",
+    "fact": "Em 01/09/2023 a PF fez buscas e ela foi afastada do cargo na Operação Benesse, sobre emendas da Codevasf para asfalto. É irmã do então ministro Juscelino Filho, que nega irregularidades. Investigada, sem condenação nas fontes.",
+    "source": "https://www.cnnbrasil.com.br/politica/pf-realiza-operacao-no-maranhao-contra-desvio-de-recursos-da-codevasf/",
+    "caricature": "Exagerar o penteado e o ar de médica prefeita; prop: rolo de asfalto com selo da Codevasf.",
+    "photoHint": "Luanna Rezende, prefeita de Vitorino Freire (MA)"
+  },
+  {
+    "id": "dudufontana",
+    "name": "Dudu da Fontana",
+    "real": "Eduardo da Fonte",
+    "short": "Deputado denunciado na Lava Jato",
+    "uf": "PE",
+    "party": "PP",
+    "cargo": "Deputado federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Vaporeon",
+    "fact": "Denunciado pela PGR na Lava Jato por corrupção passiva e lavagem (R$ 300 mil da UTC, 2010). Em 2018 o julgamento na 2ª Turma do STF foi suspenso pela 5ª vez com placar de 2 a 2; o desfecho final não aparece nas fontes consultadas.",
+    "source": "https://www.tribunapr.com.br/noticias/politica/stf-suspende-pela-5-vez-julgamento-de-denuncia-contra-dudu-da-fonte/",
+    "caricature": "Exagerar o cabelo grisalho e o sorriso de tio; prop: fonte de praça jorrando notas da UTC.",
+    "photoHint": "Eduardo da Fonte, deputado federal PP-PE"
+  },
+  {
+    "id": "garotopropaganda",
+    "name": "Garoto-Propaganda",
+    "real": "Valmir de Francisquinho",
+    "short": "Mais votado ao governo de SE barrado pela Ficha Limpa",
+    "uf": "SE",
+    "party": "PL",
+    "cargo": "Ex-prefeito de Itabaiana",
+    "types": [
+      "FAKE"
+    ],
+    "pokemon": "Machop",
+    "fact": "Condenado em 2019 por abuso de poder na eleição de 2018 (usou a máquina de Itabaiana a favor do filho), ficou inelegível; o TSE manteve o indeferimento da candidatura ao governo em 29/09/2022. Ressalva: busca posterior aponta que o TSE devolveu seus direitos políticos em out/2022 (não confirmado em página aberta).",
+    "source": "https://www.poder360.com.br/justica/tse-barra-candidatura-de-valmir-de-francisquinho-ao-governo-de-se/",
+    "caricature": "Exagerar a barba branca e o corpão de líder; prop: boné de campanha do filho colado na prefeitura.",
+    "photoHint": "Valmir de Francisquinho, candidato ao governo de Sergipe 2022"
+  },
+  {
+    "id": "mouradopirambu",
+    "name": "Moura do Pirambu",
+    "real": "André Moura",
+    "short": "Ex-deputado condenado pelo STF",
+    "uf": "SE",
+    "party": "partido não informado na fonte",
+    "cargo": "Ex-deputado federal e ex-prefeito de Pirambu",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Primeape",
+    "fact": "Condenado pelo STF em 29/09/2021 (6 a 4) a 8 anos e 3 meses por peculato e formação de quadrilha quando era prefeito de Pirambu (1997 a 2004). Uma busca posterior diz que assinou acordo de não persecução penal com a PGR em 2023 (não aberta).",
+    "source": "https://www.dgabc.com.br/Noticia/3780049/stf-condena-ex-deputado-andre-moura-a-prisao-por-apropriacao-de-recursos-publicos",
+    "caricature": "Exagerar a testa franzida e o pescoço de touro; prop: prefeitura de Pirambu amarrada com a quadrilha de pelúcia.",
+    "photoHint": "André Moura, ex-deputado federal de Sergipe"
+  },
+  {
+    "id": "binhogalinhadeira",
+    "name": "Binho Galinhadeira",
+    "real": "Binho Galinha",
+    "short": "Deputado estadual que ficou foragido na Operação Estado Anômico",
+    "uf": "BA",
+    "party": "PRD",
+    "cargo": "Deputado estadual",
+    "types": [
+      "FUGA"
+    ],
+    "pokemon": "Farfetchd",
+    "fact": "Alvo da Operação Estado Anômico (PF, 30/09 a 01/10/2025): organização armada acusada de jogo do bicho, extorsão, agiotagem e lavagem em Feira de Santana; a PF diz que ele ficou foragido após a preventiva. Investigado; presunção de inocência.",
+    "source": "https://www.bahianoticias.com.br/noticia/309107-caso-binho-galinha-organizacao-criminosa-atuava-ha-mais-de-20-anos-em-feira-e-regiao-diz-pf",
+    "caricature": "Exagerar a crista de galinha e o terno brilhante; prop: palpite de jogo do bicho no bolso e fuga pelo mato.",
+    "photoHint": "Binho Galinha, deputado estadual da Bahia"
+  },
+  {
+    "id": "yurydoparedao",
+    "name": "Yury do Paredão",
+    "real": "Yury do Paredão",
+    "short": "Deputado alvo de busca da PF a dias da eleição",
+    "uf": "CE",
+    "party": "MDB (eleito pelo PL em 2022)",
+    "cargo": "Deputado federal",
+    "types": [
+      "FAKE"
+    ],
+    "pokemon": "Jigglypuff",
+    "fact": "Teve a casa alvo de busca em 02/10/2026 numa operação PF/Procuradoria Regional Eleitoral (autorizada pelo TRE-CE) por possíveis irregularidades eleitorais; nada foi apreendido na casa, segundo a assessoria. Investigado; ele se diz à disposição das autoridades.",
+    "source": "https://mais.opovo.com.br/jornal/politica/2026/10/03/yury-do-paredao-e-alvo-de-operacao-da-pf-que-apura-supostas-irregularidades-eleitorais-no-ceara.html",
+    "caricature": "Exagerar o rosto sorridente de cantor e o boné; prop: caixa de som de paredão com mandado grudado.",
+    "photoHint": "Yury do Paredão, deputado federal do Ceará"
+  },
+  {
+    "id": "vereadoraarbok",
+    "name": "Vereadora Arbok",
+    "real": "Tatiana Medeiros",
+    "short": "Vereadora de Teresina presa pela PF",
+    "uf": "PI",
+    "party": "PSB",
+    "cargo": "Vereadora de Teresina",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Arbok",
+    "fact": "Presa em 03/04/2025 na 2ª fase da Operação Escudo Eleitoral (PF): fortes indícios, segundo a PF, de que a campanha de 2024 foi financiada por dinheiro de facção e desvio via ONG Vamos Juntos. A reportagem não traz a defesa dela.",
+    "source": "https://www.infomoney.com.br/politica/pf-prende-vereadora-de-teresina-por-suspeita-de-usar-dinheiro-de-faccao-em-campanha/",
+    "caricature": "Exagerar o olhar de cobra e o cabelo liso; prop: urna com rabo de cobra e uma ONG de fachada.",
+    "photoHint": "Tatiana Medeiros, vereadora de Teresina"
+  },
+  {
+    "id": "topiquedias",
+    "name": "Topique Dias",
+    "real": "Rejane Dias",
+    "short": "Deputada alvo de busca da PF no caso Seduc-PI",
+    "uf": "PI",
+    "party": "PT",
+    "cargo": "Deputada federal",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Doduo",
+    "fact": "Teve gabinete e casa alvo de busca na 3ª fase da Operação Topique (PF, 27/07/2020), sobre fraude no transporte escolar da Seduc (R$ 50 milhões do Fundeb/Pnate). Alvo de busca, sem acusação formal nas fontes; ela diz ter agido dentro da lei.",
+    "source": "https://www.congressoemfoco.com.br/corrupcao/pf-faz-buscas-na-casa-do-governador-do-piaui-e-em-gabinete-de-deputada/",
+    "caricature": "Exagerar o penteado e o olhar sereno; prop: ônibus escolar de brinquedo com duas cabeças ao volante.",
+    "photoHint": "Rejane Dias, deputada federal PT-PI"
+  },
+  {
+    "id": "laranjeirao",
+    "name": "Laranjeirão",
+    "real": "João Vitor Laranjeira",
+    "short": "Prefeito afastado na 7ª fase da Overclean",
+    "uf": "BA",
+    "party": "PSD",
+    "cargo": "Prefeito de Riacho de Santana",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Exeggutor",
+    "fact": "Afastado do cargo em 16/10/2025 na 7ª fase da Operação Overclean (PF), suspeito de ligação com o esquema de desvio de emendas; a PF aponta possível ligação política com o deputado Dal Barreto. Investigado, sem condenação.",
+    "source": "https://www.gazetadopovo.com.br/brasil/prefeito-cidade-ba-afastado-operacao-desvio-emendas/",
+    "caricature": "Exagerar o nome de fruta e o rosto jovem; prop: laranjeira dando mandados em vez de laranjas.",
+    "photoHint": "João Vitor Laranjeira, prefeito de Riacho de Santana"
+  },
+  {
+    "id": "lobaodeangra",
+    "name": "Lobão de Angra",
+    "real": "Edison Lobão",
+    "short": "Ex-ministro denunciado no quadrilhão do MDB",
+    "uf": "MA",
+    "party": "MDB",
+    "cargo": "Ex-senador e ex-ministro de Minas e Energia",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Magneton",
+    "fact": "Denunciado pela PGR em 2017 no chamado quadrilhão do MDB do Senado (Lava Jato). O STF rejeitou a denúncia em 14/08/2023, por falta de elementos além de delações; não há condenação.",
+    "source": "https://economicnewsbrasil.com.br/2023/08/15/supremo-arquiva-denuncia-da-lava-jato/",
+    "caricature": "Exagerar a careca e as sobrancelhas de vovô sério; prop: usina nuclear de Angra 3 como chapéu.",
+    "photoHint": "Edison Lobão, ex-senador e ex-ministro"
+  },
+  {
+    "id": "eunicarroforte",
+    "name": "Eunício Carro-Forte",
+    "real": "Eunício Oliveira",
+    "short": "Ex-presidente do Senado citado em inquéritos da Lava Jato",
+    "uf": "CE",
+    "party": "MDB",
+    "cargo": "Ex-senador",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Tauros",
+    "fact": "Investigado em dois inquéritos da Lava Jato no STF: suposta propina de R$ 2,1 milhões da Odebrecht (MP 613) e de recursos da Hypermarcas na campanha de 2014. Em dez/2020 a 2ª Turma julgava recursos para arquivar; o desfecho não consta na fonte.",
+    "source": "https://crusoe.com.br/?p=127450",
+    "caricature": "Exagerar o bigode e o terno de empresário; prop: carro-forte de valores com cofre aberto.",
+    "photoHint": "Eunício Oliveira, ex-presidente do Senado"
+  },
+  {
+    "id": "xequematinho",
+    "name": "Xeque-Matinho",
+    "real": "Leto Viana",
+    "short": "Prefeito de Cabedelo preso na Operação Xeque-Mate",
+    "uf": "PB",
+    "party": "PRP (à época)",
+    "cargo": "Ex-prefeito de Cabedelo",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Haunter",
+    "fact": "Preso em 03/04/2018 na Operação Xeque-Mate (PF e Gaeco-MPPB), com cinco vereadores, em apuração de enriquecimento incompatível, fantasmas e doações fraudulentas de imóveis. Sem condenação nas fontes consultadas.",
+    "source": "https://www.congressoemfoco.com.br/noticia/51318/operacao-xeque-mate-prende-prefeito-e-cinco-vereadores-de-cabedelo-na-paraiba",
+    "caricature": "Exagerar o rosto redondo e a pose de enxadrista; prop: tabuleiro de xadrez com peças algemadas.",
+    "photoHint": "Leto Viana, ex-prefeito de Cabedelo"
+  },
+  {
+    "id": "gavetinha",
+    "name": "Gavetinha",
+    "real": "Marcel Carvalho",
+    "short": "Ex-prefeito de Paratinga com dinheiro na gaveta",
+    "uf": "BA",
+    "party": "PT",
+    "cargo": "Ex-prefeito de Paratinga",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Kangaskhan",
+    "fact": "Alvo da 4ª fase da Overclean (27/06/2025): a PF encontrou grande quantia em dinheiro guardada em gavetas da casa dele. Investigado por suposta propina na liberação de emendas; não consta condenação.",
+    "source": "https://portaldeprefeitura.com.br/bastidores-da-politica/pf-dinheiro-gaveta-casa-ex-prefeito-bahia-desvio-emenda/597935/",
+    "caricature": "Exagerar o sorriso tímido; prop: gaveta de cômoda abarrotada de maços.",
+    "photoHint": "Marcel Carvalho, ex-prefeito de Paratinga (BA)"
+  },
+  {
+    "id": "boquirao",
+    "name": "Boquirão",
+    "real": "Alan Machado",
+    "short": "Prefeito de Boquira afastado pelo STF",
+    "uf": "BA",
+    "party": "partido não informado na fonte",
+    "cargo": "Prefeito de Boquira",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Diglett",
+    "fact": "Afastado cautelarmente em 27/06/2025 pelo ministro Nunes Marques na 4ª fase da Overclean, que apura emendas liberadas mediante vantagem indevida e fraude em licitações. O nome varia na imprensa (Alan Machado/Alan França); sem condenação.",
+    "source": "https://www.infomoney.com.br/politica/stf-afasta-prefeitos-suspeitos-de-desviar-emendas-parlamentares-veja-quem-sao/",
+    "caricature": "Exagerar a boca grande (Boquira) e o ar de prefeito de interior; prop: boca de mina cuspindo emendas.",
+    "photoHint": "Alan Machado, prefeito de Boquira (BA)"
+  }
+]

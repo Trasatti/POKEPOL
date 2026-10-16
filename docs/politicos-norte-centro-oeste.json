@@ -1,0 +1,578 @@
+[
+  {
+    "id": "ptolomeudo",
+    "name": "Ptolomeudo",
+    "real": "Gladson Cameli",
+    "short": "Gladson Cameli",
+    "uf": "AC",
+    "party": "PP",
+    "cargo": "Ex-governador do Acre, pré-candidato ao Senado",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Golem",
+    "fact": "Condenado pelo STJ em 6/5/2026 a 25 anos e 9 meses (regime fechado) na ação da Operação Ptolomeu, por organização criminosa, corrupção, peculato, lavagem e fraude em licitações; no mesmo dia virou réu em nova ação sobre a rodovia AC-405. Cabe recurso.",
+    "source": "https://www.congressoemfoco.com.br/noticia/118941/ja-condenado-ex-governador-do-acre-vira-reu-em-nova-denuncia-no-stj",
+    "caricature": "Governador de colete de obra segurando um tijolo de ouro, rodeado de rochas e asfalto rachado; placa AC-405.",
+    "photoHint": "Homem de meia-idade, cabelo curto escuro, sorriso largo, terno escuro.",
+    "weak": ""
+  },
+  {
+    "id": "cestabasico",
+    "name": "Cestabásico",
+    "real": "Antonio Denarium",
+    "short": "Antonio Denarium",
+    "uf": "RR",
+    "party": "Republicanos",
+    "cargo": "Ex-governador de Roraima, candidato ao Senado",
+    "types": [
+      "FUGA"
+    ],
+    "pokemon": "Chansey",
+    "fact": "TSE formou maioria em 28/4/2026 para manter a inelegibilidade por abuso de poder político e econômico em 2022 (cestas básicas, reformas de casas); ele renunciou em março para disputar o Senado e o vice perdeu o mandato.",
+    "source": "https://www.congressoemfoco.com.br/noticia/118453/tse-forma-maioria-para-declarar-ex-governador-de-roraima-inelegivel",
+    "caricature": "Governador com cesta básica gigante como escudo, fugindo com uma faixa de 'renúncia'.",
+    "photoHint": "Homem de cabelo grisalho, bigode ralo, camisa social azul.",
+    "weak": "Julgamento ainda podia ter recurso/complemento de voto; partido varia entre fontes (PP/Republicanos)."
+  },
+  {
+    "id": "alcolumbrando",
+    "name": "Alcolumbrando",
+    "real": "Davi Alcolumbre",
+    "short": "Davi Alcolumbre",
+    "uf": "AP",
+    "party": "União Brasil",
+    "cargo": "Senador e presidente do Senado",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Rhydon",
+    "fact": "Citado no contexto da Operação Overclean (PF/STF) sobre desvios de emendas, ligada ao empresário Marcos Moura, associado a ele; em 2025 o inquérito não havia achado provas de irregularidade entre os dois e uma assessora seria ouvida. Não é réu; ele defende as emendas.",
+    "source": "https://www.portaltela.com/noticias/politica/2025/02/02/investigacoes-da-pf-sobre-emendas-pressionam-presidentes-do-congresso-nacional/",
+    "caricature": "Gigante de pedra com martelo de presidente do Senado distribuindo envelopes de emendas.",
+    "photoHint": "Homem de cabelo preto penteado, terno escuro, barba curta.",
+    "weak": "FRACA: ele não é alvo formal; fonte de 2025 diz que a ligação é indireta. Considerar trocar."
+  },
+  {
+    "id": "cassolicitado",
+    "name": "Cassolicitado",
+    "real": "Ivo Cassol",
+    "short": "Ivo Cassol",
+    "uf": "RO",
+    "party": "PP",
+    "cargo": "Ex-senador e ex-governador de Rondônia",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Onix",
+    "fact": "Condenado pelo STF em 8/8/2013 (AP 565) a 4 anos, 8 meses e 26 dias por fraude em licitações em Rolim de Moura; primeiro senador condenado pelo Supremo. Pena depois reduzida e extinta; seguiu inelegível em 2022.",
+    "source": "https://www.congressoemfoco.com.br/noticias/stf-condena-ivo-cassol-por-fraude-em-licitacao",
+    "caricature": "Cobra de pedra enrolada em planta de licitação carimbada 'FRAUDE'.",
+    "photoHint": "Homem de cabelo curto, queixo marcado, sorriso confiante.",
+    "weak": ""
+  },
+  {
+    "id": "onibusgacz",
+    "name": "Onibusgacz",
+    "real": "Acir Gurgacz",
+    "short": "Acir Gurgacz",
+    "uf": "RO",
+    "party": "PDT",
+    "cargo": "Ex-senador, candidato ao Senado",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Pidgeot",
+    "fact": "Condenado pelo STF em 2018 a 4 anos e 6 meses (semiaberto) por desvio de finalidade em financiamento do Banco da Amazônia para ônibus da Eucatur; em 3/8/2026 Nunes Marques suspendeu os efeitos da condenação em revisão criminal.",
+    "source": "https://www.dgabc.com.br/Noticia/4339208/stf-suspende-condenacao-de-ex-senador-acir-gurgacz-e-libera-candidatura-nas-eleicoes",
+    "caricature": "Empresário-pássaro voando num ônibus superfaturado com nota de 290 mil colada na porta.",
+    "photoHint": "Homem de cabelo grisalho, terno e gravata.",
+    "weak": ""
+  },
+  {
+    "id": "carlessado",
+    "name": "Carlessado",
+    "real": "Mauro Carlesse",
+    "short": "Mauro Carlesse",
+    "uf": "TO",
+    "party": "PSL (à época)",
+    "cargo": "Ex-governador do Tocantins",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Weezing",
+    "fact": "Afastado por 6 meses pelo STJ (confirmado em 20/10/2021) por suspeita de obstruir investigações anticorrupção e de pagamentos indevidos ligados ao Plansaúde (Operação Éris); PGR o denunciou. Nega.",
+    "source": "https://www.agazeta.com.br/brasil/stj-confirma-afastamento-de-governador-do-tocantins-por-seis-meses-1021",
+    "caricature": "Governador em nuvem de gás roxa, plano de saúde rasgado, carregando uma caixa 'afastado'.",
+    "photoHint": "Homem de cabelo castanho curto, rosto redondo, terno claro.",
+    "weak": "Partido atual e desfecho não confirmados."
+  },
+  {
+    "id": "zequimadeira",
+    "name": "Zequimadeira",
+    "real": "Zequinha Marinho",
+    "short": "Zequinha Marinho",
+    "uf": "PA",
+    "party": "PL",
+    "cargo": "Senador",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Exeggutor",
+    "fact": "Em 2022 o ex-superintendente da PF no AM, Alexandre Saraiva, o citou como parlamentar financiado por grupos que devastam a Amazônia, e o ligou à Operação Handroanthus (madeira apreendida). Ele nega, diz ter atuado como representante legal de madeireiros e que vai à Justiça.",
+    "source": "https://www.oliberal.com/politica/delegado-da-pf-acusa-zequinha-marinho-de-ser-financiado-por-grupos-criminosos-1.549293",
+    "caricature": "Palmeira de três cabeças com toras de madeira e motosserra, coroa de senador.",
+    "photoHint": "Homem de cabelo curto grisalho, óculos, terno escuro.",
+    "weak": "FRACA: acusação verbal de ex-delegado, sem denúncia; partido varia (Podemos/PL) entre fontes."
+  },
+  {
+    "id": "azamboiada",
+    "name": "Azamboiada",
+    "real": "Reinaldo Azambuja",
+    "short": "Reinaldo Azambuja",
+    "uf": "MS",
+    "party": "PL",
+    "cargo": "Ex-governador de MS",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Tauros",
+    "fact": "MPF o denunciou ao STJ em 14/10/2020, então governador (PSDB), com os donos da JBS, por corrupção, lavagem e organização criminosa (suposta propina de R$ 67 milhões por benefícios fiscais). Ele nega e diz confiar na Justiça.",
+    "source": "https://www.congressoemfoco.com.br/corrupcao/mpf-denuncia-governador-do-ms-joesley-e-wesley-batista-por-corrupcao",
+    "caricature": "Boi de chifres dourados com gravata, carregando carne em bandeja de ICMS.",
+    "photoHint": "Homem de cabelo castanho curto, camisa social, ar sério.",
+    "weak": "Andamento atual no STJ não confirmado; filiação ao PL não aparece na fonte aberta."
+  },
+  {
+    "id": "lamapuccinelli",
+    "name": "Lamapuccinelli",
+    "real": "André Puccinelli",
+    "short": "André Puccinelli",
+    "uf": "MS",
+    "party": "MDB",
+    "cargo": "Ex-governador de MS",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Muk",
+    "fact": "Alvo da Operação Lama Asfáltica; voltou a ser réu em 10/8/2022 por fraude em licitação na obra da Avenida Lúdio Coelho; em 2024 outra ação (MS-040) foi extinta por falta de provas. Nega.",
+    "source": "https://www.campograndenews.com.br/cidades/capital/puccinelli-e-giroto-voltam-a-ser-reus-por-fraude-em-obra-da-avenida-ludio-coelho",
+    "caricature": "Monstro de lama preta pingando asfalto, pasta 'Lama Asfáltica'.",
+    "photoHint": "Homem calvo, bigode, óculos, terno escuro.",
+    "weak": ""
+  },
+  {
+    "id": "covidpinheiro",
+    "name": "Covidpinheiro",
+    "real": "Emanuel Pinheiro",
+    "short": "Emanuel Pinheiro",
+    "uf": "MT",
+    "party": "MDB",
+    "cargo": "Prefeito de Cuiabá (em 2024)",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Koffing",
+    "fact": "MPMT o investiga como suposto chefe de organização criminosa que interferia em contratações da saúde, inclusive na covid-19; afastado e depois liberado para voltar ao cargo por liminar do STJ em março de 2024. Sem condenação criminal; nega.",
+    "source": "https://www.lex.com.br/stj-autoriza-retorno-de-prefeito-de-cuiaba-ao-cargo-e-suspende-investigacao-por-suposta-organizacao-criminosa",
+    "caricature": "Balão de gás tóxico com máscara hospitalar, segurando contrato de UTI.",
+    "photoHint": "Homem de cabelo grisalho, rosto sério, camisa social.",
+    "weak": "Cargo e status atuais não confirmados."
+  },
+  {
+    "id": "selmadois",
+    "name": "Selmadois",
+    "real": "Selma Arruda",
+    "short": "Selma Arruda",
+    "uf": "MT",
+    "party": "Podemos",
+    "cargo": "Ex-senadora e ex-juíza",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Ditto",
+    "fact": "TSE cassou o mandato em 10/12/2019 (6 a 1) por caixa 2 e abuso de poder econômico em 2018 (R$ 1,23 milhão omitidos); conhecida como 'Moro de saia'. Ela alegou empréstimo do suplente.",
+    "source": "https://www.poder360.com.br/congresso/tse-decide-cassar-mandato-da-senadora-juiza-selma-arruda/",
+    "caricature": "Juíza com toga cheia de bolsos e duas planilhas, uma escondida atrás.",
+    "photoHint": "Mulher de cabelo curto liso, toga preta.",
+    "weak": ""
+  },
+  {
+    "id": "perildeliver",
+    "name": "Perildeliver",
+    "real": "Marconi Perillo",
+    "short": "Marconi Perillo",
+    "uf": "GO",
+    "party": "PSDB",
+    "cargo": "Ex-governador de Goiás",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Persian",
+    "fact": "MPF o denunciou em 19/6/2019 (Operação Cash Delivery) por corrupção passiva, lavagem e organização criminosa: R$ 17,8 milhões de suposta propina da Odebrecht. A defesa alega perseguição e questiona a competência.",
+    "source": "https://www.tribunapr.com.br/noticias/politica/lava-jato-denuncia-marconi-perillo-por-propina-de-r-178-milhoes-da-odebrecht/",
+    "caricature": "Entregador de pizza com mochila térmica cheia de dinheiro, moto 'Cash Delivery'.",
+    "photoHint": "Homem de cabelo castanho, bigode, terno claro.",
+    "weak": "Desfecho judicial posterior a 2019 não confirmado."
+  },
+  {
+    "id": "pandoruda",
+    "name": "Pandoruda",
+    "real": "José Roberto Arruda",
+    "short": "José Roberto Arruda",
+    "uf": "DF",
+    "party": "PL (candidatura 2022)",
+    "cargo": "Ex-governador do DF",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Meowth",
+    "fact": "STJ manteve por unanimidade (outubro de 2025) condenação por improbidade na Caixa de Pandora (contratos Linknet, sobrepreço de 331,96%); segue inelegível. Em 2018 também virou réu no caso Mané Garrincha.",
+    "source": "https://www.cnnbrasil.com.br/politica/stj-mantem-ex-governador-do-df-jose-roberto-arruda-inelegivel/",
+    "caricature": "Gato com pacotes de dinheiro nas meias e no paletó, caixa de Pandora aberta.",
+    "photoHint": "Homem de cabelo escuro penteado, sorriso, terno.",
+    "weak": "Partido atual a conferir."
+  },
+  {
+    "id": "ibaneisolado",
+    "name": "Ibaneisolado",
+    "real": "Ibaneis Rocha",
+    "short": "Ibaneis Rocha",
+    "uf": "DF",
+    "party": "MDB",
+    "cargo": "Ex-governador do DF",
+    "types": [
+      "GOLPE"
+    ],
+    "pokemon": "Machoke",
+    "fact": "Afastado por Moraes em 8/1/2023 por suposta omissão nos ataques de 8 de janeiro; voltou ao cargo em março de 2023. A PGR pediu arquivamento e Moraes arquivou o inquérito em 5/3/2025. Nega.",
+    "source": "https://www.cnnbrasil.com.br/politica/ibaneis-rocha-deve-recorrer-de-afastamento-ao-stf-nesta-semana/",
+    "caricature": "Governador de óculos escuros dormindo no sofá enquanto a Esplanada pega fogo.",
+    "photoHint": "Homem de cabelo grisalho curto, terno, rosto sério.",
+    "weak": "Caso arquivado em 2025 (data do arquivamento vem de resumo de busca); afastamento é o fato documentado."
+  },
+  {
+    "id": "waldesvio",
+    "name": "Waldesvio",
+    "real": "Waldez Góes",
+    "short": "Waldez Góes",
+    "uf": "AP",
+    "party": "PDT",
+    "cargo": "Ex-governador do Amapá e ex-ministro da Integração",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Raticate",
+    "fact": "Preso pela PF na Operação Mãos Limpas (2010, ordem do STJ); condenado pelo STJ em novembro de 2019 a 6 anos e 9 meses por peculato (consignados), com recurso no STF parado em 2023. Nega.",
+    "source": "https://www.congressoemfoco.com.br/noticia/71050/sarney-elogia-candidato-ao-senado-preso-pela-pf",
+    "caricature": "Rato de terno com bolsa de consignados vazando moedas.",
+    "photoHint": "Homem de cabelo grisalho, terno, ar tranquilo.",
+    "weak": "Condenação de 2019 vem da Revista Oeste (2023); fonte linkada confirma apenas a prisão de 2010."
+  },
+  {
+    "id": "silvaldoma",
+    "name": "Silvaldoma",
+    "real": "Silval Barbosa",
+    "short": "Silval Barbosa",
+    "uf": "MT",
+    "party": "MDB",
+    "cargo": "Ex-governador de MT",
+    "types": [
+      "DELACAO"
+    ],
+    "pokemon": "Rattata",
+    "fact": "Condenado em 2018 na Operação Sodoma (esquema de propina por incentivos fiscais e contratos); teve outra pena de 13 anos e 7 meses por propina de R$ 2,5 milhões. Fez delação homologada por Fux, que citou Blairo Maggi.",
+    "source": "https://www.tribunapr.com.br/noticias/politica/justica-condena-silval-e-mais-14-por-propinas-em-mato-grosso/",
+    "caricature": "Governador de tornozeleira eletrônica entregando um dossiê, rato de laboratório ao lado.",
+    "photoHint": "Homem de cabelo grisalho, camisa social, tornozeleira.",
+    "weak": ""
+  },
+  {
+    "id": "oigarcia",
+    "name": "Oigarcia",
+    "real": "Fábio Garcia",
+    "short": "Fábio Garcia",
+    "uf": "MT",
+    "party": "União Brasil",
+    "cargo": "Deputado federal",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Voltorb",
+    "fact": "Alvo de busca e apreensão da PF em 6/8/2026 (Operação Heritage, autorizada por Dino) sobre suposto desvio de R$ 308 milhões no acordo do estado com a Oi; investigado por peculato, lavagem e crimes financeiros. Sem denúncia.",
+    "source": "https://www.folhape.com.br/noticia/amp/505012/ex-governador-do-mt-e-deputado-sao-alvos-da-pf-em-investigacao-sobre/",
+    "caricature": "Bola de energia com telefone de orelhão gritando 'Oi?' e cofre.",
+    "photoHint": "Homem de cabelo curto, terno, ar corporativo.",
+    "weak": "Fonte não traz defesa de Garcia."
+  },
+  {
+    "id": "sojamaggi",
+    "name": "Sojamaggi",
+    "real": "Blairo Maggi",
+    "short": "Blairo Maggi",
+    "uf": "MT",
+    "party": "PR (à época)",
+    "cargo": "Ex-ministro da Agricultura e ex-governador",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Bellsprout",
+    "fact": "Fux abriu inquérito em 24/8/2017, a pedido da PGR, sobre organização criminosa no governo de MT, da qual Janot o apontava como principal líder (delação de Silval). Investigado.",
+    "source": "https://abcdoabc.com.br/fux-abre-inquerito-contra-blairo-por-organizacao-criminosa-em-mato-grosso/",
+    "caricature": "Planta carnívora gigante de soja com mapa do cerrado nas folhas.",
+    "photoHint": "Homem de cabelo grisalho, chapéu de fazendeiro, sorriso.",
+    "weak": "Partido atual e desfecho do inquérito não verificados."
+  },
+  {
+    "id": "bragapropria",
+    "name": "Bragapropria",
+    "real": "Eduardo Braga",
+    "short": "Eduardo Braga",
+    "uf": "AM",
+    "party": "MDB",
+    "cargo": "Senador",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Sandslash",
+    "fact": "Em 2013 o STF abriu inquérito (Gilmar Mendes) por suposto desvio na desapropriação de terreno em Manaus (comprado por R$ 400 mil, pago R$ 13 milhões), fraude e peculato. Ele diz ter apenas assinado o decreto, de boa-fé.",
+    "source": "https://www.em.com.br/app/noticia/politica/2013/03/22/interna_politica,361427/stf-investiga-eduardo-braga-por-desvio-e-fraude-no-am.shtml",
+    "caricature": "Tatu cavador com cartaz 'terreno R$ 13 milhões', pá de obra e decreto.",
+    "photoHint": "Homem de cabelo grisalho, terno, ar cansado.",
+    "weak": "Inquérito de 2013: desfecho não confirmado."
+  },
+  {
+    "id": "fragalhado",
+    "name": "Fragalhado",
+    "real": "Alberto Fraga",
+    "short": "Alberto Fraga",
+    "uf": "DF",
+    "party": "PL",
+    "cargo": "Ex-deputado federal (bancada da bala)",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Hitmonlee",
+    "fact": "Condenado em 24/9/2018 (1ª instância) a 4 anos, 2 meses e 20 dias (semiaberto) por concussão: R$ 350 mil de propina em 2008, quando era secretário de Transportes do DF; o STF o tornou réu em 2015. Nega.",
+    "source": "https://www.congressoemfoco.com.br/corrupcao/fraga-pega-quatro-anos-de-prisao-em-regime-semiaberto-por-cobrar-propina/",
+    "caricature": "Policial com chute de caratê derrubando um ônibus de propina, fita 'bancada da bala'.",
+    "photoHint": "Homem de cabelo grisalho curto, bigode, pose firme.",
+    "weak": "Fonte lista DEM-DF; PL é conferir. Recursos posteriores não verificados."
+  },
+  {
+    "id": "baldeado",
+    "name": "Baldeado",
+    "real": "Alexandre Baldy",
+    "short": "Alexandre Baldy",
+    "uf": "GO",
+    "party": "PP (à época)",
+    "cargo": "Ex-ministro das Cidades",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Grimer",
+    "fact": "Preso em 6/8/2020 e solto no dia seguinte por Gilmar Mendes; MPF-RJ o denunciou em agosto de 2020 por corrupção, peculato, fraude em licitações e organização criminosa (Pró-Saúde e hospital em Goiás). A defesa diz que o patrimônio é declarado.",
+    "source": "https://www.congressoemfoco.com.br/judiciario/lava-jato-mpf-denuncia-alexandre-baldy-por-corrupcao/",
+    "caricature": "Ministro-balde jogando lama de hospital, maço de R$ 500 mil.",
+    "photoHint": "Homem jovem, cabelo curto, terno ajustado.",
+    "weak": "Partido não informado na fonte aberta; desfecho a conferir."
+  },
+  {
+    "id": "masteriane",
+    "name": "Masteriane",
+    "real": "Adriane Lopes",
+    "short": "Adriane Lopes",
+    "uf": "MS",
+    "party": "PP",
+    "cargo": "Prefeita de Campo Grande",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Jigglypuff",
+    "fact": "Alvo da Operação Suffragium (PF, 19/6/2026) sobre suposta compra de votos em 2024; em outra frente, buscas por aplicação do instituto de previdência no Banco Master. Sem denúncia; ela diz ter recebido com surpresa.",
+    "source": "https://www.campograndenews.com.br/cidades/capital/prefeita-cita-decisoes-judiciais-e-diz-que-recebeu-com-surpresa-a-operacao-da-pf",
+    "caricature": "Prefeita-balão cor-de-rosa engolindo notas do Banco Master e urnas.",
+    "photoHint": "Mulher de cabelo médio castanho, blazer.",
+    "weak": "A página aberta não nomeia alvos; detalhes (compra de votos, Master) vêm de resumos de busca."
+  },
+  {
+    "id": "reidogado",
+    "name": "Reidogado",
+    "real": "Marcelo Miranda",
+    "short": "Marcelo Miranda",
+    "uf": "TO",
+    "party": "MDB",
+    "cargo": "Ex-governador do Tocantins",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Rhyhorn",
+    "fact": "Virou réu em outubro de 2018 na Operação Reis do Gado, com prejuízo de cerca de R$ 458 milhões atribuído pela Procuradoria; também teve mandato cassado duas vezes. Nega.",
+    "source": "https://www.tribunapr.com.br/noticias/politica/justica-poe-marcelo-miranda-no-banco-dos-reus-da-operacao-reis-do-gado/",
+    "caricature": "Rei com coroa de chifres e rebanho de notas de dinheiro.",
+    "photoHint": "Homem de cabelo castanho, terno, sorriso.",
+    "weak": "Desfecho atual não confirmado."
+  },
+  {
+    "id": "helderbellum",
+    "name": "Helderbellum",
+    "real": "Helder Barbalho",
+    "short": "Helder Barbalho",
+    "uf": "PA",
+    "party": "MDB",
+    "cargo": "Governador do Pará",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Weezing",
+    "fact": "Alvo da Operação S.O.S. da PF (29/9/2020): buscas no gabinete e prisão de 2 secretários por suspeita de desvio na saúde (contratos de R$ 1,2 bi com OSs, hospitais de campanha). Investigado; o governo diz apoiar a apuração.",
+    "source": "https://www.poder360.com.br/justica/pf-mira-suposto-desvio-de-r-12-bilhao-em-contratos-da-saude-no-para/",
+    "caricature": "Governador em máscara de gás verde cercado de respiradores vazios.",
+    "photoHint": "Homem de cabelo castanho, jovem, terno, sorridente.",
+    "weak": "Sem denúncia noticiada nas fontes abertas."
+  },
+  {
+    "id": "gimpropina",
+    "name": "Gimpropina",
+    "real": "Gim Argello",
+    "short": "Gim Argello",
+    "uf": "DF",
+    "party": "PTB (à época)",
+    "cargo": "Ex-senador",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Gengar",
+    "fact": "Condenado por Moro em 13/10/2016 a 19 anos por corrupção, lavagem e obstrução (R$ 7,35 milhões de empreiteiras para livrá-las de CPIs da Petrobras). Pena depois reduzida pelo TRF4; o STJ teria anulado a condenação por competência eleitoral.",
+    "source": "https://www.congressoemfoco.com.br/amp/noticia/51936/lava-jato-moro-condena-gim-argello-a-19-anos-de-prisao",
+    "caricature": "Fantasma de terno cobrindo uma CPI com lençol e embolsando cheques.",
+    "photoHint": "Homem de cabelo preto, bigode, terno escuro.",
+    "weak": "Anulação pelo STJ vem de resumo de busca, não aberto."
+  },
+  {
+    "id": "manegarrincha",
+    "name": "Manegarrincha",
+    "real": "Agnelo Queiroz",
+    "short": "Agnelo Queiroz",
+    "uf": "DF",
+    "party": "PT",
+    "cargo": "Ex-governador do DF",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Geodude",
+    "fact": "Virou réu em 25/4/2018 por suposta propina de R$ 6,5 milhões no estádio Mané Garrincha (orçamento de R$ 1,778 bi); em outra ação foi absolvido em 2ª instância. Nega.",
+    "source": "https://www.poder360.com.br/brasil/agnelo-arruda-e-filippelli-viram-reus-por-superfaturamento-do-mane-garrincha/",
+    "caricature": "Pedra com chuteiras gigantes carregando um estádio inflado de boletos.",
+    "photoHint": "Homem de cabelo grisalho, jaleco médico sobre terno.",
+    "weak": ""
+  },
+  {
+    "id": "sudamjader",
+    "name": "Sudamjader",
+    "real": "Jader Barbalho",
+    "short": "Jader Barbalho",
+    "uf": "PA",
+    "party": "MDB",
+    "cargo": "Senador",
+    "types": [
+      "CENTRAO"
+    ],
+    "pokemon": "Oddish",
+    "fact": "Em 2013 a Justiça Federal no TO o condenou, em ação de improbidade do MPF, a ressarcir R$ 2,2 milhões desviados do Finam/Sudam via empresa Imperador Agroindustrial; o STF recebeu denúncia de peculato e lavagem em 2014.",
+    "source": "https://vermelho.org.br/?p=285334",
+    "caricature": "Planta daninha de raízes douradas sugando a Sudam, nota de Finam na boca.",
+    "photoHint": "Homem de cabelo branco, óculos, terno e gravata.",
+    "weak": "Condenação cível, fonte de veículo partidário; denúncia do STF só em resumo de busca."
+  },
+  {
+    "id": "bittacota",
+    "name": "Bittacota",
+    "real": "Marcio Bittar",
+    "short": "Marcio Bittar",
+    "uf": "AC",
+    "party": "PL",
+    "cargo": "Senador",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Gastly",
+    "fact": "Alvo do inquérito 4846 do STF (cota parlamentar paga a empresa suspeita de fachada); em abril de 2023 a competência do Supremo foi restabelecida. Investigado; sem denúncia noticiada.",
+    "source": "https://evinistalon.com/stf-ministra-restabelece-competencia-do-stf-para-investigar-senador",
+    "caricature": "Fantasma gasoso com cota de gabinete e nota de 'Atos Dois'.",
+    "photoHint": "Homem de cabelo grisalho, ar sério, terno.",
+    "weak": "Status após 2023 não confirmado; fonte é blog local (a empresa vem de resumo de busca)."
+  },
+  {
+    "id": "draculeao",
+    "name": "Draculeão",
+    "real": "Celina Leão",
+    "short": "Celina Leão",
+    "uf": "DF",
+    "party": "PP",
+    "cargo": "Vice-governadora do DF",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Zubat",
+    "fact": "Em março de 2017 o TJDFT a tornou ré na Operação Drácon (suposta propina por emendas ligadas à saúde, 2015-2016). Ela nega e fala em politização.",
+    "source": "https://congressoemfoco.com.br/noticias/tj-aceita-denuncia-e-cinco-deputados-se-tornam-reus-na-operacao-dracon",
+    "caricature": "Leoa vampira com capa e presas, sugando emendas de hospital.",
+    "photoHint": "Mulher de cabelo loiro médio, blazer.",
+    "weak": "Fonte aberta é de 2017; andamento de 2026 (recurso negado) vem de resumo de busca."
+  },
+  {
+    "id": "wanderfome",
+    "name": "Wanderfome",
+    "real": "Wanderlei Barbosa",
+    "short": "Wanderlei Barbosa",
+    "uf": "TO",
+    "party": "Republicanos",
+    "cargo": "Governador do Tocantins",
+    "types": [
+      "PROPINA"
+    ],
+    "pokemon": "Snorlax",
+    "fact": "STJ o afastou em setembro de 2025 (Fames-19: suposto desvio em cestas básicas na pandemia); PF fez buscas em 12/11/2025 (Nêmesis, suposta obstrução). O STF mandou-o voltar em dezembro de 2025. Investigado; diz colaborar.",
+    "source": "https://www.infomoney.com.br/politica/governador-afastado-tocantins-alvo-nova-operacao-obstrucao-investigacao/",
+    "caricature": "Urso gordo dormindo sobre cestas básicas e pousada de luxo.",
+    "photoHint": "Homem de cabelo curto escuro, ar descontraído.",
+    "weak": "Retorno de dezembro vem de resumo de busca."
+  },
+  {
+    "id": "maurodoi",
+    "name": "Maurodoi",
+    "real": "Mauro Mendes",
+    "short": "Mauro Mendes",
+    "uf": "MT",
+    "party": "União Brasil",
+    "cargo": "Ex-governador, candidato ao Senado",
+    "types": [
+      "LAVAGEM"
+    ],
+    "pokemon": "Magnemite",
+    "fact": "Alvo da PF em 6/8/2026 (Operação Heritage, STF/Dino) por suposto desvio de R$ 308 milhões no acordo de ICMS com a Oi; pedido de bloqueio de até R$ 316 milhões. Diz confiar na investigação.",
+    "source": "https://www.folhape.com.br/noticia/amp/505012/ex-governador-do-mt-e-deputado-sao-alvos-da-pf-em-investigacao-sobre/",
+    "caricature": "Ímã voador atraindo moedas de um telefone Oi, passaporte apreendido.",
+    "photoHint": "Homem de cabelo grisalho, empresário, terno.",
+    "weak": "Uma fonte da busca dá 6/10, a aberta dá 6/8/2026; adotei a aberta."
+  },
+  {
+    "id": "biafake",
+    "name": "Biafake",
+    "real": "Bia Kicis",
+    "short": "Bia Kicis",
+    "uf": "DF",
+    "party": "PL",
+    "cargo": "Deputada federal",
+    "types": [
+      "FAKE"
+    ],
+    "pokemon": "Haunter",
+    "fact": "Incluída no inquérito das fake news (STF/Moraes): em maio de 2020 foi alvo de busca e apreensão e em junho teve o sigilo bancário quebrado, na apuração de financiamento de atos antidemocráticos.",
+    "source": "https://www.jornalgrandebahia.com.br/2021/03/investigada-pelo-stf-extremista-bia-kicis-e-eleita-presidente-da-ccj-da-camara-dos-deputados/",
+    "caricature": "Fantasma loira com celular lançando notícias falsas em loop.",
+    "photoHint": "Mulher de cabelo loiro liso, blazer.",
+    "weak": "Caso tem componente de discurso; fonte aberta é de 2021 e de tom opinativo; status atual não verificado."
+  }
+]

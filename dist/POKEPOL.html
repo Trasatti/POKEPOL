@@ -21,7 +21,7 @@ window.EMBEDDED_ASSETS = {"sprites/abinzinho.png": "data:image/png;base64,iVBORw
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#0b0c18">
-<meta name="build" content="20261016h">
+<meta name="build" content="20261016i">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -2706,7 +2706,7 @@ function buildWorld() {
   for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
     const i = y * W + x;
     if (!land[i]) { tiles[y][x] = ocean[i] ? 'water' : 'tree'; biomeGrid[y][x] = ocean[i] ? 'costa' : 'cerrado'; continue; }
-    const ds = dSea[i], lat = _lat(y), lon = _lon(x), bio = _biomeOf(lat, lon, ds);
+    const ds = dSea[i], lat = _lat(y), lon = _lon(x), bio = _biomeOf(lat + (_mnoise(x, y, 9, 31) - 0.5) * 1.2, lon + (_mnoise(x, y, 9, 32) - 0.5) * 1.2, ds);   // fronteira entre biomas irregular (sem linha reta)
     biomeGrid[y][x] = bio;
     const r = R(), n1 = _mnoise(x, y, 7, 11), n2 = _mnoise(x, y, 26, 12);
     let t = 'grass';
@@ -2761,7 +2761,8 @@ function buildWorld() {
   function stampTown(c) {
     const ox = c.x, oy = c.y, w = c.w, h = c.h, bras = c.id === 'brasilia';
     const bio = _biomeOf(c.lat, c.lon, dSea[(oy + (h >> 1)) * W + ox + (w >> 1)]);
-    for (let y = oy; y < oy + h; y++) for (let x = ox; x < ox + w; x++) biomeGrid[y][x] = bio === 'amazonia' || bio === 'costa' || bio === 'caatinga' || bio === 'pampa' || bio === 'pantanal' || bio === 'mata_atlantica' ? bio : 'cerrado';
+    // bioma uniforme na caixa + margem de 6 tiles: o anel de árvores e a borda da cidade não ficam com tons diferentes
+    for (let y = Math.max(0, oy - 6); y < Math.min(H, oy + h + 6); y++) for (let x = Math.max(0, ox - 6); x < Math.min(W, ox + w + 6); x++) if (!boxGrid[y * W + x] || boxGrid[y * W + x] === c.order) biomeGrid[y][x] = bio === 'amazonia' || bio === 'costa' || bio === 'caatinga' || bio === 'pampa' || bio === 'pantanal' || bio === 'mata_atlantica' ? bio : 'cerrado';
     c.biome = biomeGrid[oy][ox];
     rect(ox - 2, oy - 2, w + 4, h + 4, 'grass');
     rect(ox, oy, w, h, bras ? 'lawn' : 'grass');
@@ -2779,11 +2780,12 @@ function buildWorld() {
       rect(ox + 1, gy, 1, yC - gy + 1, 'path'); rect(ox + w - 2, gy, 1, yC - gy + 1, 'path');
       for (let k = 0; k < nH - 1; k++) rect(hx(k) + 6, gy, 1, yB - gy + 1, 'path');
       // palácio, PF e monumento
-      const palX = ox + (w >> 1) - 3, pfX = ox + w - 8;
+      const small0 = h <= 16;   // cidades pequenas (w=22): desloca monumento e PF 1 tile para sobrar uma coluna livre entre os prédios
+      const palX = ox + (w >> 1) - 3, pfX = ox + w - (small0 ? 7 : 8);
       rect(palX - 1, oy + 6, 8, 2, 'lawn');
       const pal = addB(c, 'palacio', c.id === 'rio_de_janeiro' ? 'guanabara' : c.id + '_palacio', palX, oy + 2, 6, 4, c.pal, { sprite: `assets/landmarks/${_slug(c.id)}_palacio.png` });
       const pf = addB(c, 'pf', c.id + '_pf', pfX, oy + 2, 6, 4, 'Superintendência da PF');
-      const mon = addB(c, 'landmark', c.id + '_landmark', ox + 2, oy + 2, c.lmw, c.lmh, c.mon, { sprite: `assets/landmarks/${_slug(c.id)}.png` });
+      const mon = addB(c, 'landmark', c.id + '_landmark', ox + (small0 ? 1 : 2), oy + 2, c.lmw, c.lmh, c.mon, { sprite: `assets/landmarks/${_slug(c.id)}.png` });
       rect(pal.door.x, oy + 6, 1, 2, 'path'); rect(pf.door.x, oy + 6, 1, 2, 'path');
       rect(ox + 2, oy + 7, 5, 1, 'flower');
       // casas: duas fileiras
@@ -3070,6 +3072,17 @@ function buildWorld() {
     let T = 0;
     for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) if (tiles[by + dy][bx + dx] === 'tree') T++;
     if (T > 0 && T < 4) for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) if (tiles[by + dy][bx + dx] === 'tree' && land[(by + dy) * W + bx + dx]) tiles[by + dy][bx + dx] = 'grass';
+    // fora da terra (fronteira / litoral): bloco 2x2 só de não-terra é completado com árvore; se tocar o mar ou a terra, os tiles viram grama/água (nunca uma árvore cortada)
+    if (T > 0 && T < 4) {
+      let wet = false, anyLand = false;
+      for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) { const i = (by + dy) * W + bx + dx; if (ocean[i] || tiles[by + dy][bx + dx] === 'water') wet = true; if (land[i]) anyLand = true; }
+      for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) {
+        const i = (by + dy) * W + bx + dx, t = tiles[by + dy][bx + dx];
+        if (land[i]) continue;
+        if (wet || anyLand) { if (t === 'tree') tiles[by + dy][bx + dx] = ocean[i] ? 'water' : 'grass'; }
+        else if (t !== 'tree') tiles[by + dy][bx + dx] = 'tree';
+      }
+    }
   }
 
   // --- alcançabilidade: tall isolado vira grama
@@ -3711,8 +3724,8 @@ function buildingImg(b) {
 // Cada bioma muda a cor da vegetação.
 const BIOME_FILTER = {
   pampa: 'hue-rotate(-6deg) saturate(0.9) brightness(1.08)',
-  cerrado: 'hue-rotate(-26deg) saturate(0.85) brightness(1.03)',
-  caatinga: 'hue-rotate(-42deg) saturate(0.55) brightness(1.1)',
+  cerrado: 'hue-rotate(-12deg) saturate(0.9) brightness(1.03)',
+  caatinga: 'hue-rotate(-26deg) saturate(0.7) brightness(1.08)',
   amazonia: 'hue-rotate(8deg) saturate(1.35) brightness(0.8)',
   pantanal: 'hue-rotate(14deg) saturate(1.15) brightness(0.94)',
 };

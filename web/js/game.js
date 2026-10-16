@@ -571,8 +571,8 @@ function buildingImg(b) {
 // Cada bioma muda a cor da vegetação.
 const BIOME_FILTER = {
   pampa: 'hue-rotate(-6deg) saturate(0.9) brightness(1.08)',
-  cerrado: 'hue-rotate(-26deg) saturate(0.85) brightness(1.03)',
-  caatinga: 'hue-rotate(-42deg) saturate(0.55) brightness(1.1)',
+  cerrado: 'hue-rotate(-12deg) saturate(0.9) brightness(1.03)',
+  caatinga: 'hue-rotate(-26deg) saturate(0.7) brightness(1.08)',
   amazonia: 'hue-rotate(8deg) saturate(1.35) brightness(0.8)',
   pantanal: 'hue-rotate(14deg) saturate(1.15) brightness(0.94)',
 };
