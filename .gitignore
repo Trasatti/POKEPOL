@@ -20,3 +20,8 @@ desktop.ini
 
 # Configuração local do Claude Code
 .claude/settings.local.json
+
+# Rascunhos de pesquisa ainda não checados (só a lista final verificada vai para o repositório público)
+docs/politicos-sul-sudeste.*
+docs/politicos-nordeste.*
+docs/politicos-norte-centro-oeste.*
