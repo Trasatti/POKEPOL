@@ -467,6 +467,19 @@ function drawBuildingProc(b) {
     R(fx + 2, 1, 16, 11, '#2a8a3a');
     for (let k = 0; k < 5; k++) { R(fx + 10 - k * 2 - 1, 6 - k, (k * 2 + 1) * 2 - 1, 1, '#f4d030'); R(fx + 10 - k * 2 - 1, 6 + k, (k * 2 + 1) * 2 - 1, 1, '#f4d030'); }
     E_(x, fx + 10, 6, 3, 3, '#1e4aa8');
+  } else if (b.kind === 'empresa') {
+    // torre de escritórios: vidro cinza-azulado, faixa de letreiro com o nome da empresa e porta de vidro
+    const pal = { jf: '#2e7d4f', odebrecht: '#c8a020', rural: '#b02a2a', master: '#3a5fb0' }[b.empresa] || '#5a6a80';
+    R(0, 6, W, H - 6, '#4a5260'); R(2, 8, W - 4, H - 10, '#6c7686');
+    for (let j = 40; j < H - 20; j += 16) for (let i = 8; i < W - 8; i += 14) {
+      R(i, j, 11, 11, '#8fb4d0'); R(i, j, 11, 4, '#b4d4ea'); R(i, j + 8, 11, 3, '#6c94b4'); P(i + 2, j + 2, '#ffffff'); P(i + 3, j + 3, '#ffffff');
+    }
+    R(0, 0, W, 8, '#2e3440'); R(0, 6, W, 2, '#1c2028');
+    R(8, 14, W - 16, 22, pal); R(8, 14, W - 16, 3, shade(pal, 1.3)); R(8, 33, W - 16, 3, shade(pal, 0.6));
+    x.fillStyle = '#ffffff'; x.font = 'bold 14px sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillText((b.label || '').replace(/^(Sede da |Banco )/, m => m === 'Banco ' ? 'BANCO ' : 'SEDE ').toUpperCase().slice(0, 22), cxm, 26);
+    x.textAlign = 'left';
+    door('#39424f', { glass: '#9ccaf0', h: 34 });
   } else { // casa
     const roof = b.roof || '#c84848', roofD = shade(roof, 0.7), roofL = shade(roof, 1.25);
     // chaminé

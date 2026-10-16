@@ -1,0 +1,57 @@
+# Ginásios do POKÉPOL
+
+## Como funcionam os ginásios do Fire Red (resumo)
+
+1. Cada cidade principal tem um ginásio com um tipo-tema; o jogador enfrenta os treinadores do local em sequência antes do Líder.
+2. Os treinadores comuns têm times pequenos e servem de aquecimento; o Líder fica no fundo.
+3. O Líder tem o time mais forte do ginásio, quase sempre do tipo-tema, e entrega a Insígnia (Badge) e uma MT ao ser derrotado.
+4. Kanto tem 8 ginásios, com níveis crescentes (de cerca de Lv 12 no primeiro a cerca de Lv 50 no último); as insígnias liberam obediência de nível e habilidades de campo.
+5. Com as 8 insígnias o jogador acessa a Liga: Elite dos Quatro em sequência e depois o Campeão. (Resumo feito de memória sobre Bulbapedia/Fire Red; a página não foi aberta nesta tarefa.)
+
+## POKÉPOL: regras
+
+- 26 ginásios, um por capital estadual (exceto Brasília), dentro do palácio do governo, com 2-4 capangas e um chefão.
+- Chefões e capangas são 100% fictícios, com nomes de trocadilho, inspirados no TIPO de crime organizado associado à região no debate público. Sem nomes reais, sem facções reais, sem glorificação de violência.
+- A piada: o chefão fictício banca políticos corruptos. As insígnias levam o nome de operações reais da PF.
+- Coluna Fonte: OK = existência e contexto da operação confirmados em busca na web nesta tarefa. A conferir = nome/ano de memória; o link é genérico (artigo próprio ou lista de operações da PF); revisar antes de publicar.
+
+## Tabela
+
+| # | Cidade | Insígnia | Operação | Chefão | Crime | Tipos | Capangas | Fonte |
+|---|---|---|---|---|---|---|---|---|
+| 1 | curitiba | Insígnia Lava Jato | Operação Lava Jato (PF/MPF, 2014, PR) | Barão do Pedágio (Chefão do Cartel das Empreiteiras do Sul) | cartel de obras e licitações | PROPINA, LAVAGEM | 2: Laranja Júnior, Doleiro de Esquina | [OK](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Lava_Jato) |
+| 2 | florianopolis | Insígnia Moeda Verde | Operação Moeda Verde (PF, 2007, SC) | Barão do Alvará Frente-Mar (Chefão da Especulação da Ilha) | licenciamento ambiental fraudulento / especulação imobiliária | PROPINA, GOLPE | 2: Corretor do Mangue, Fiscal Distraído | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Moeda_Verde) |
+| 3 | porto_alegre | Insígnia Rodin | Operação Rodin (PF/MPF, 2007, RS) | Tio Carimbo (Chefão da Fraude do Detran) | fraude em licitação e serviços públicos de trânsito | FAKE, PROPINA | 2: Instrutor Fantasma, Despachante do Pampa | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Rodin) |
+| 4 | sao_paulo | Insígnia Castelo de Areia | Operação Castelo de Areia (PF, 2009, SP) | Dom Empreiteiro do Areião (Chefão do Cartel da Terra do Cimento) | cartel de obras e doações eleitorais não declaradas | PROPINA, LAVAGEM | 2: Caixa Dois da Paulista, Lobista da Marginal | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Castelo_de_Areia) |
+| 5 | rio_de_janeiro | Insígnia Calicute | Operação Calicute (PF/MPF, 2016, RJ) | Dom Bicheirone (Chefão do Jogo do Bicho do Rio) | jogo do bicho / contravenção | PROPINA, LAVAGEM | 2: Anotador da Banca, Camelô de Joias | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Calicute) |
+| 6 | vitoria | Insígnia Naufrágio | Operação Naufrágio (PF, 2008, ES) | Capitão Descaminho (Chefão do Porto Fantasma) | contrabando e descaminho portuário | PROPINA, FAKE | 2: Estivador de Fachada, Despachante de Porto | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Naufr%C3%A1gio) |
+| 7 | belo_horizonte | Insígnia Acrônimo | Operação Acrônimo (PF, 2015, MG/DF) | Barão do Caixa Dois das Gerais (Chefão do Pão-de-Queijo Offshore) | caixa dois eleitoral e empresas de fachada | LAVAGEM, CENTRAO | 2: Gráfica Fantasma, Mineirinho Laranja | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Acr%C3%B4nimo) |
+| 8 | salvador | Insígnia Faroeste | Operação Faroeste (PF/MPF, 2019, BA) | Coronel Grileiro (Chefão da Grilagem do Oeste) | grilagem de terras e venda de decisões | GOLPE, PROPINA | 3: Cartorário de Faz-de-Conta, Peão de Grilo, Advogado do Embargo | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste) |
+| 9 | aracaju | Insígnia Serôdio | Operação Serôdio (PF, 2020, SE) | Doutor Respirador Fantasma (Chefão da Saúde de Papel) | desvio de verba da saúde / superfaturamento | RACHADINHA, FAKE | 3: Fornecedor de Máscara Dourada, Enfermeiro de Fachada, Sócio da Empresa de Esquina | [OK](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Ser%C3%B4dio) |
+| 10 | maceio | Insígnia Taturana | Operação Taturana (PF, 2007, AL) | Senhor Folha Fantasma (Chefão da Folha de Pagamento Invisível) | funcionários fantasmas em folha pública | RACHADINHA, FAKE | 3: Assessor Fantasma, Caixa de Rachadinha, Taturana Peluda | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Taturana) |
+| 11 | recife | Insígnia Turbulência | Operação Turbulência (PF, 2016, PE) | Comodoro Jatinho Laranja (Chefão do Aeroporto das Fachadas) | lavagem de dinheiro via laranjas e aeronaves | LAVAGEM, FUGA | 3: Piloto de Fachada, Laranja do Hangar, Despachante de Voo | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Turbul%C3%AAncia) |
+| 12 | joao_pessoa | Insígnia Calvário | Operação Calvário (PF/MPF/GAECO, 2018, PB) | Doutor Organização Social (Chefão da Saúde Terceirizada) | desvio de verba da saúde via organizações sociais | PROPINA, DELACAO | 3: Gerente de OS, Médico Plantonista de Papel, Motorista de Ambulância Fria | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Calv%C3%A1rio) |
+| 13 | natal | Insígnia Anteros | Operação Anteros (PF, 2017, RN) | Seu Juros Eleitoreiro (Chefão da Agiotagem de Votos) | agiotagem eleitoral e compra de votos | GOLPE, DELACAO | 3: Cabo Eleitoral Mercenário, Agiota de Plantão, Testemunha Calada | [OK](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Anteros) |
+| 14 | fortaleza | Insígnia Castelão | Operação sobre obras da Arena Castelão (PF, 2021, CE) | Rei do Cimento Cearense (Chefão do Estádio Superfaturado) | cartel e superfaturamento em obra pública | PROPINA, CENTRAO | 3: Mestre de Obras Fantasma, Fiscal do Aditivo, Lobista da Areia | [OK](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 15 | teresina | Insígnia Topique | Operação Topique (PF, 2020, PI) | Dono do Busão Escolar (Chefão do Transporte Escolar Imaginário) | desvio de verba da educação (transporte escolar) | RACHADINHA, LAVAGEM | 3: Motorista de Rota Fantasma, Dono de Frota Fria, Diretor de Escola Imaginária | [OK](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 16 | sao_luis | Insígnia Sermão aos Peixes | Operação Sermão aos Peixes (PF/CGU/MPF, MA) | Frei Superfatura (Chefão da Saúde Pesqueira) | desvio e superfaturamento de verba da saúde | PROPINA, RACHADINHA | 3: Sacristão de Contratos, Pescador de Emendas, Tesoureiro Piedoso | [OK](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 17 | belem | Insígnia Plenitude | Operação Plenitude (PF, PA) | Doutor Soro Dourado (Chefão da Saúde Terceirizada do Norte) | desvio de verbas do SUS e fraude em licitação | LAVAGEM, FAKE | 3: Fornecedor de Gaze Premium, Paciente Fantasma, Licitante de Cartas Marcadas | [OK](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 18 | macapa | Insígnia Mãos Limpas | Operação Mãos Limpas (PF/MPF, 2010, AP) | Mestre do Ouro Contrabandeado (Chefão do Garimpo e Descaminho do Extremo Norte) | garimpo ilegal e contrabando de ouro | LAVAGEM, FUGA | 4: Garimpeiro Clandestino, Ourives de Fachada, Barqueiro da Fronteira, Laranja do Rio | [a conferir](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 19 | boa_vista | Insígnia Praga do Egito | Operação Praga do Egito (PF, 2003, RR) | Barão da Draga (Chefão do Garimpo Ilegal do Norte) | garimpo ilegal em área protegida | LAVAGEM, FUGA | 4: Dragueiro Sem Licença, Piloto de Avião Clandestino, Comprador de Ouro, Cantineiro do Garimpo | [a conferir](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 20 | manaus | Insígnia Maus Caminhos | Operação Maus Caminhos (PF/MPF/CGU, 2016, AM) | Dom Tubarão da Zona Franca (Chefão do Descaminho Eletrônico) | contrabando/descaminho e desvio de verba da saúde | PROPINA, FAKE | 4: Contrabandista de Eletrônicos, Gerente de UTI Móvel, Barqueiro de Nota Fria, Fiscal de Container | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Maus_Caminhos) |
+| 21 | porto_velho | Insígnia Dominó | Operação Dominó (PF, 2006, RO) | Seu Motosserra Legalizada (Chefão do Desmatamento Dominó) | grilagem e desmatamento ilegal | GOLPE, FAKE | 4: Motosserrista Sem Registro, Grileiro de Beira de Estrada, Madeireiro Fantasma, Peão do Desmate | [OK](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 22 | rio_branco | Insígnia G7 | Operação G7 (PF, 2019, AC) | Coronel da Madeira Gelada (Chefão da Madeira Clandestina) | desmatamento e extração ilegal de madeira | GOLPE, CENTRAO | 4: Madeireiro de Fronteira, Serrador Fantasma, Despachante do Madeirão, Motorista de Carreta | [a conferir](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+| 23 | cuiaba | Insígnia Sanguessuga | Operação Sanguessuga (PF/CGU, 2006, MT) | Doutor Gado Frio (Chefão da Pecuária de Papel) | fraude em compras públicas e gado de fachada | PROPINA, GOLPE | 4: Vendedor de Ambulância, Pecuarista de Fachada, Lobista de Emenda, Fiscal da Boiada | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Sanguessuga) |
+| 24 | campo_grande | Insígnia Lama Asfáltica | Operação Lama Asfáltica (PF/MPF/CGU, 2015, MS) | Dom Muamba Seca (Chefão do Contrabando de Fronteira) | contrabando e descaminho na fronteira / obras superfaturadas | PROPINA, FUGA | 4: Mula de Fronteira, Motorista de Caminhão Fantasma, Empreiteiro da Lama, Fiscal de Estrada | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Lama_Asf%C3%A1ltica) |
+| 25 | goiania | Insígnia Monte Carlo | Operação Monte Carlo (PF, 2012, GO/DF) | Dom Caça-Níquel do Cerrado (Chefão do Jogo Ilegal do Cerrado) | jogo ilegal (caça-níqueis) e lavagem | GOLPE, LAVAGEM | 4: Operador de Máquina, Gerente de Bingo, Contador de Fichas, Segurança de Cassino | [a conferir](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Monte_Carlo) |
+| 26 | palmas | Insígnia Fames-19 | Operação Fames-19 (PF, 2024, TO) | Dom Cesta-Básica Premium (Chefão da Merenda Dourada) | desvio de verba da pandemia e compra de votos | RACHADINHA, CENTRAO | 4: Fornecedor de Frango Congelado, Distribuidor de Cesta, Cabo Eleitoral de Cestinha, Contador do Pós-Pandemia | [OK](https://pt.wikipedia.org/wiki/Lista_de_opera%C3%A7%C3%B5es_da_Pol%C3%ADcia_Federal_do_Brasil) |
+
+## Brasília: Elite dos Lobbies e Planalto
+
+- Lobista-Mor do Agro-Caixa (Líder da Bancada do Boi e da Soja)
+- Sir Bet Bilionário (Dono da Bancada das Apostas)
+- Doutora Juros Altíssimos (Lobista do Sistema Financeiro)
+- Mestre das Concessões (Lobista de Empreiteiras e Pedágios)
+- Campeão: time do Planalto existente; só falas novas em web/data/gyms.json.
+
+Dados completos: web/data/gyms.json.

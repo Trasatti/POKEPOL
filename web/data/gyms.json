@@ -1,0 +1,1718 @@
+{
+ "curitiba": {
+  "badge": "Insígnia Pixuleco",
+  "op": "Pixuleco (Lava Jato, 18ª fase)",
+  "opSource": "https://www.jb.com.br/pais/noticias/2015/08/13/pf-cumpre-11-mandados-judiciais-na-18a-fase-da-operacao-lava-jato.html",
+  "boss": {
+   "name": "Barão do Pedágio",
+   "title": "Chefão do Cartel das Empreiteiras do Sul",
+   "crime": "cartel de obras e licitações",
+   "intro": [
+    "Aqui em Curitiba eu financio obra que nunca termina. É um investimento de longo prazo!",
+    "Meus deputados são como o pedágio: sempre cobram, nunca entregam."
+   ],
+   "lose": "Tá bom, tá bom... só não me mande para a vara federal.",
+   "look": {
+    "hair": "#2b1b10",
+    "shirt": "#7a1f1f",
+    "pants": "#222222",
+    "accessory": "pasta 3x4"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Laranja Júnior",
+    "title": "Laranja Profissional",
+    "line": "Meu nome está em 40 empresas e eu não conheço nenhuma!",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#6b2f6b",
+     "pants": "#3a3a5a",
+     "cap": "#111111",
+     "accessory": "relógio dourado"
+    }
+   },
+   {
+    "name": "Doleiro de Esquina",
+    "title": "Câmbio Paralelo",
+    "line": "Troco dólar, euro e favor político. Aceito Pix também.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#a0522d",
+     "pants": "#4a3a2a",
+     "cap": "#7a1f1f",
+     "accessory": "mochila"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "LAVAGEM"
+  ]
+ },
+ "florianopolis": {
+  "badge": "Insígnia Moeda Verde",
+  "op": "Operação Moeda Verde (PF, 2007, SC)",
+  "opSource": "https://www.congressoemfoco.com.br/noticia/100340/operacao-moeda-verde-prende-22-em-florianopolis",
+  "boss": {
+   "name": "Barão do Alvará Frente-Mar",
+   "title": "Chefão da Especulação da Ilha",
+   "crime": "licenciamento ambiental fraudulento / especulação imobiliária",
+   "intro": [
+    "Na Ilha da Magia, o alvará sai mais rápido que o pôr do sol.",
+    "Eu financio campanha e o deputado libera o prédio na duna."
+   ],
+   "lose": "Ok, embargaram meu mar. Que maré!",
+   "look": {
+    "hair": "#c9c9c9",
+    "shirt": "#c04a1f",
+    "pants": "#5a5a5a",
+    "accessory": "colete"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Corretor do Mangue",
+    "title": "Aterrador de Manguezal",
+    "line": "Esse mangue era só lama, agora é condomínio!",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#2f6b3a",
+     "pants": "#1f2f3f",
+     "cap": "#2f4f2f",
+     "accessory": "bigode"
+    }
+   },
+   {
+    "name": "Fiscal Distraído",
+    "title": "Licença Express",
+    "line": "Carimbo em cinco minutos, sem olhar o projeto.",
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#2a2a2a",
+     "pants": "#3f2f1f",
+     "accessory": "charuto"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "GOLPE"
+  ]
+ },
+ "porto_alegre": {
+  "badge": "Insígnia Erga Omnes",
+  "op": "Erga Omnes (Lava Jato, 14ª fase)",
+  "opSource": "https://www.jb.com.br/pais/noticias/2015/06/19/amp/pf-deflagra-14a-fase-da-operacao-lava-jato.html",
+  "boss": {
+   "name": "Tio Carimbo",
+   "title": "Chefão da Fraude do Detran",
+   "crime": "fraude em licitação e serviços públicos de trânsito",
+   "intro": [
+    "Tchê, aqui até a carteira de motorista tem preço de churrasco.",
+    "Eu patrocino o deputado e ele me devolve o contrato. É o ciclo da vida."
+   ],
+   "lose": "Bah! Perdi o carimbo e o contrato.",
+   "look": {
+    "hair": "#3a2a1a",
+    "shirt": "#0f6b6b",
+    "pants": "#222222",
+    "cap": "#b8860b",
+    "accessory": "chapéu panamá"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Instrutor Fantasma",
+    "title": "Aulas Nunca Dadas",
+    "line": "Tu passou na prova e eu nem te vi!",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#1f3a7a",
+     "pants": "#3a3a5a",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Despachante do Pampa",
+    "title": "Papel Timbrado",
+    "line": "Documento pronto em 24 horas, de verdade ou não.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#b8860b",
+     "pants": "#4a3a2a",
+     "cap": "#111111",
+     "accessory": "maleta de dinheiro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "FAKE",
+   "PROPINA"
+  ]
+ },
+ "sao_paulo": {
+  "badge": "Insígnia Aletheia",
+  "op": "Aletheia (Lava Jato, 24ª fase)",
+  "opSource": "https://www.jb.com.br/pais/noticias/2016/03/04/amp/acao-da-pf-contra-lula-e-destaque-de-jornais-em-todo-mundo.html",
+  "boss": {
+   "name": "Dom Empreiteiro do Areião",
+   "title": "Chefão do Cartel da Terra do Cimento",
+   "crime": "cartel de obras e doações eleitorais não declaradas",
+   "intro": [
+    "São Paulo não pode parar, e minha obra também não: ela nem começa.",
+    "Financio dez partidos de uma vez. Diversificar é o segredo."
+   ],
+   "lose": "Meu castelo era de areia mesmo...",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#e8e0c8",
+    "pants": "#5a5a5a",
+    "cap": "#7a1f1f",
+    "accessory": "óculos escuros"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Caixa Dois da Paulista",
+    "title": "Contador Criativo",
+    "line": "Doação oficial? Só a que aparece no TSE.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#7a1f1f",
+     "pants": "#1f2f3f",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Lobista da Marginal",
+    "title": "Trânsito de Influência",
+    "line": "Aqui só flui o que eu libero.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#6b2f6b",
+     "pants": "#3f2f1f",
+     "cap": "#2f4f2f",
+     "accessory": "lenço no pescoço"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "LAVAGEM"
+  ]
+ },
+ "rio_de_janeiro": {
+  "badge": "Insígnia Radioatividade",
+  "op": "Radioatividade (Lava Jato, 16ª fase)",
+  "opSource": "https://www.jb.com.br/pais/noticias/2015/07/28/amp/policia-federal-deflagra-16a-fase-da-operacao-lava-jato.html",
+  "boss": {
+   "name": "Dom Bicheirone",
+   "title": "Chefão do Jogo do Bicho do Rio",
+   "crime": "jogo do bicho / contravenção",
+   "intro": [
+    "No Rio, até o bicho dá palpite. E eu banco os deputados que ouvem.",
+    "Aposto na Zebra, no Jacaré e no Vereador. Os três sempre dão."
+   ],
+   "lose": "Deu Avestruz... perdi a banca!",
+   "look": {
+    "hair": "#8a2b1b",
+    "shirt": "#a0522d",
+    "pants": "#222222",
+    "accessory": "pasta 3x4"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Anotador da Banca",
+    "title": "Apostador Profissional",
+    "line": "Dá Burro hoje, fiz a fezinha!",
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#c04a1f",
+     "pants": "#3a3a5a",
+     "cap": "#b8860b",
+     "accessory": "relógio dourado"
+    }
+   },
+   {
+    "name": "Camelô de Joias",
+    "title": "Joalheiro de Ocasião",
+    "line": "Joia legítima, nota fiscal... bem, meio fiscal.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#2f6b3a",
+     "pants": "#4a3a2a",
+     "accessory": "mochila"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "LAVAGEM"
+  ]
+ },
+ "vitoria": {
+  "badge": "Insígnia Naufrágio",
+  "op": "Operação Naufrágio (PF, 2008, ES)",
+  "opSource": "https://www.congressoemfoco.com.br/noticia/74816/pf-prende-cupula-do-judiciario-capixaba",
+  "boss": {
+   "name": "Capitão Descaminho",
+   "title": "Chefão do Porto Fantasma",
+   "crime": "contrabando e descaminho portuário",
+   "intro": [
+    "Container que entra no porto sai sem fiscal e sem imposto.",
+    "Os deputados me adoram: pago o café e o cafezal."
+   ],
+   "lose": "Meu porto afundou... Naufrágio!",
+   "look": {
+    "hair": "#4a4a4a",
+    "shirt": "#2a2a2a",
+    "pants": "#5a5a5a",
+    "cap": "#111111",
+    "accessory": "colete"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Estivador de Fachada",
+    "title": "Carregador de Nota Fria",
+    "line": "Esse container tem só pão de queijo. Juro.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#0f6b6b",
+     "pants": "#1f2f3f",
+     "cap": "#7a1f1f",
+     "accessory": "bigode"
+    }
+   },
+   {
+    "name": "Despachante de Porto",
+    "title": "Papel Navegante",
+    "line": "Declaração de carga? Criativa.",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#1f3a7a",
+     "pants": "#3f2f1f",
+     "accessory": "charuto"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "FAKE"
+  ]
+ },
+ "belo_horizonte": {
+  "badge": "Insígnia Acrônimo",
+  "op": "Operação Acrônimo (PF, 2015, MG/DF)",
+  "opSource": "https://www.em.com.br/app/noticia/politica/2015/05/29/interna_politica,652786/empresario-ligado-ao-pt-e-preso-em-flagrante-durante-operacao-da-pf.shtml",
+  "boss": {
+   "name": "Barão do Caixa Dois das Gerais",
+   "title": "Chefão do Pão-de-Queijo Offshore",
+   "crime": "caixa dois eleitoral e empresas de fachada",
+   "intro": [
+    "Uai, campanha cara, sô. Eu pago por fora, por dentro e por baixo da mesa.",
+    "Meus laranjas rendem mais que minério."
+   ],
+   "lose": "Uai... perdi o caixa e a mesa!",
+   "look": {
+    "hair": "#6b4a2a",
+    "shirt": "#b8860b",
+    "pants": "#222222",
+    "cap": "#2f4f2f",
+    "accessory": "chapéu panamá"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Gráfica Fantasma",
+    "title": "Nota Fria Industrial",
+    "line": "Imprimi dois milhões de santinhos... e zero notas.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#e8e0c8",
+     "pants": "#3a3a5a",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Mineirinho Laranja",
+    "title": "Sócio de Fachada",
+    "line": "Sou dono da empresa mas nunca vi o escritório.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#7a1f1f",
+     "pants": "#4a3a2a",
+     "cap": "#b8860b",
+     "accessory": "maleta de dinheiro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "LAVAGEM",
+   "CENTRAO"
+  ]
+ },
+ "salvador": {
+  "badge": "Insígnia Acarajé",
+  "op": "Acarajé (Lava Jato, 23ª fase)",
+  "opSource": "https://jornalgrandebahia.com.br/2016/02/policia-federal-deflagra-23a-fase-da-operacao-lava-jato/",
+  "boss": {
+   "name": "Coronel Grileiro",
+   "title": "Chefão da Grilagem do Oeste",
+   "crime": "grilagem de terras e venda de decisões",
+   "intro": [
+    "Essa terra aqui? Minha. Escritura? Eu mesmo assinei, com letra bonita.",
+    "Planto soja, cerca e deputado. Só o deputado eu não precisei regar."
+   ],
+   "lose": "Perdi a fazenda... e o mapa estava de cabeça pra baixo!",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#6b2f6b",
+    "pants": "#5a5a5a",
+    "accessory": "óculos escuros"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Cartorário de Faz-de-Conta",
+    "title": "Escritura Criativa",
+    "line": "Registro retroativo? Faço em cinco minutos.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#a0522d",
+     "pants": "#1f2f3f",
+     "cap": "#111111",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Peão de Grilo",
+    "title": "Cerca-Viva",
+    "line": "Mexeu na cerca, mexeu comigo!",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#c04a1f",
+     "pants": "#3f2f1f",
+     "cap": "#7a1f1f",
+     "accessory": "lenço no pescoço"
+    }
+   },
+   {
+    "name": "Advogado do Embargo",
+    "title": "Liminar Sob Medida",
+    "line": "Tenho uma liminar pra cada ocasião.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#2f6b3a",
+     "pants": "#222222",
+     "accessory": "óculos escuros"
+    }
+   }
+  ],
+  "typeFocus": [
+   "GOLPE",
+   "PROPINA"
+  ]
+ },
+ "aracaju": {
+  "badge": "Insígnia Serôdio",
+  "op": "Operação Serôdio (PF, 2020, SE)",
+  "opSource": "https://agenciabrasil.ebc.com.br/geral/noticia/2020-07/operacao-da-pf-investiga-sobrepreco-no-hospital-de-campanha-de-aracaju",
+  "boss": {
+   "name": "Doutor Respirador Fantasma",
+   "title": "Chefão da Saúde de Papel",
+   "crime": "desvio de verba da saúde / superfaturamento",
+   "intro": [
+    "No meu hospital de campanha, o único leito cheio era o da conta bancária.",
+    "Compro máscara por preço de ouro e entrego com nota de papelão."
+   ],
+   "lose": "Meu balanço sumiu... e o hospital também!",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#2a2a2a",
+    "pants": "#3a3a5a",
+    "cap": "#2f4f2f",
+    "accessory": "bigode"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Fornecedor de Máscara Dourada",
+    "title": "Superfaturador",
+    "line": "Máscara de ouro, só R$ 90 a unidade.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#0f6b6b",
+     "pants": "#4a3a2a",
+     "accessory": "mochila"
+    }
+   },
+   {
+    "name": "Enfermeiro de Fachada",
+    "title": "Plantonista Fantasma",
+    "line": "Estou escalado em 12 hospitais ao mesmo tempo.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#1f3a7a",
+     "pants": "#5a5a5a",
+     "cap": "#b8860b",
+     "accessory": "pasta 3x4"
+    }
+   },
+   {
+    "name": "Sócio da Empresa de Esquina",
+    "title": "Contrato Emergencial",
+    "line": "Dispensa de licitação é meu esporte.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#b8860b",
+     "pants": "#1f2f3f",
+     "accessory": "bigode"
+    }
+   }
+  ],
+  "typeFocus": [
+   "RACHADINHA",
+   "FAKE"
+  ]
+ },
+ "maceio": {
+  "badge": "Insígnia Taturana",
+  "op": "Operação Taturana (PF, 2007, AL)",
+  "opSource": "https://www.congressoemfoco.com.br/noticia/2103/pf-prende-quadrilha-na-assembleia-de-alagoas",
+  "boss": {
+   "name": "Senhor Folha Fantasma",
+   "title": "Chefão da Folha de Pagamento Invisível",
+   "crime": "funcionários fantasmas em folha pública",
+   "intro": [
+    "Tenho 300 funcionários e nenhum aparece. Eficiência pura!",
+    "Pago salário de gente que nunca existiu. É o melhor RH do Brasil."
+   ],
+   "lose": "Zerou a folha... e o salário também.",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#e8e0c8",
+    "pants": "#3f2f1f",
+    "cap": "#111111",
+    "accessory": "maleta de dinheiro"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Assessor Fantasma",
+    "title": "Presente Só no Holerite",
+    "line": "Eu trabalho 24 horas por dia, só que invisível.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#7a1f1f",
+     "pants": "#222222",
+     "cap": "#7a1f1f",
+     "accessory": "colete"
+    }
+   },
+   {
+    "name": "Caixa de Rachadinha",
+    "title": "Recolhedor de Dízimo",
+    "line": "Metade do seu salário vira contribuição voluntária.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#6b2f6b",
+     "pants": "#3a3a5a",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Taturana Peluda",
+    "title": "Lagarta de Gabinete",
+    "line": "Fui nomeada e nem sei onde fica a sala.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#a0522d",
+     "pants": "#4a3a2a",
+     "cap": "#2f4f2f",
+     "accessory": "maleta de dinheiro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "RACHADINHA",
+   "FAKE"
+  ]
+ },
+ "recife": {
+  "badge": "Insígnia Turbulência",
+  "op": "Operação Turbulência (PF, 2016, PE)",
+  "opSource": "https://agenciabrasil.ebc.com.br/geral/noticia/2016-11/processo-da-operacao-turbulencia-e-arquivado-pela-justica",
+  "boss": {
+   "name": "Comodoro Jatinho Laranja",
+   "title": "Chefão do Aeroporto das Fachadas",
+   "crime": "lavagem de dinheiro via laranjas e aeronaves",
+   "intro": [
+    "Meu jatinho tem três donos que nunca entraram nele.",
+    "Voo alto, pago baixo e declaro nada."
+   ],
+   "lose": "Turbulência! O jato pousou no INSS.",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#c04a1f",
+    "pants": "#5a5a5a",
+    "accessory": "óculos escuros"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Piloto de Fachada",
+    "title": "Jatinho de Aluguel",
+    "line": "Quem é o dono do jato? Sei lá, só pilotei.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#2f6b3a",
+     "pants": "#1f2f3f",
+     "cap": "#b8860b",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Laranja do Hangar",
+    "title": "Sócio de Aeronave",
+    "line": "Comprei um jato com meu salário de padeiro.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#2a2a2a",
+     "pants": "#3f2f1f",
+     "accessory": "lenço no pescoço"
+    }
+   },
+   {
+    "name": "Despachante de Voo",
+    "title": "Plano de Voo Falso",
+    "line": "Plano de voo: ida sem volta.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#0f6b6b",
+     "pants": "#222222",
+     "cap": "#111111",
+     "accessory": "óculos escuros"
+    }
+   }
+  ],
+  "typeFocus": [
+   "LAVAGEM",
+   "FUGA"
+  ]
+ },
+ "joao_pessoa": {
+  "badge": "Insígnia Calvário",
+  "op": "Operação Calvário (PF/MPF/GAECO, 2018, PB)",
+  "opSource": "https://www.tnh1.com.br/noticia/nid/pf-combate-desvio-de-recursos-nos-servicos-de-saude-da-paraiba/",
+  "boss": {
+   "name": "Doutor Organização Social",
+   "title": "Chefão da Saúde Terceirizada",
+   "crime": "desvio de verba da saúde via organizações sociais",
+   "intro": [
+    "Terceirizei a saúde, a educação e a honestidade.",
+    "Minha OS cuida de tudo, menos do paciente."
+   ],
+   "lose": "Calvário foi esse, viu? Vou delatar!",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#1f3a7a",
+    "pants": "#3a3a5a",
+    "cap": "#7a1f1f",
+    "accessory": "bigode"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Gerente de OS",
+    "title": "Contratos Terceirizados",
+    "line": "A conta é nossa; a saúde, de quem pagar.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#b8860b",
+     "pants": "#4a3a2a",
+     "accessory": "mochila"
+    }
+   },
+   {
+    "name": "Médico Plantonista de Papel",
+    "title": "Escala Imaginária",
+    "line": "Atendo em três cidades... no papel.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#e8e0c8",
+     "pants": "#5a5a5a",
+     "cap": "#2f4f2f",
+     "accessory": "pasta 3x4"
+    }
+   },
+   {
+    "name": "Motorista de Ambulância Fria",
+    "title": "Ambulância de Cartão",
+    "line": "Essa ambulância nunca saiu da garagem.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#7a1f1f",
+     "pants": "#1f2f3f",
+     "accessory": "bigode"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "DELACAO"
+  ]
+ },
+ "natal": {
+  "badge": "Insígnia Anteros",
+  "op": "Operação Anteros (PF, 2017, RN)",
+  "opSource": "https://www.congressoemfoco.com.br/noticia/34644/governador-do-rio-grande-do-norte-e-alvo-de-busca-e-apreensao-da-pf",
+  "boss": {
+   "name": "Seu Juros Eleitoreiro",
+   "title": "Chefão da Agiotagem de Votos",
+   "crime": "agiotagem eleitoral e compra de votos",
+   "intro": [
+    "Empresto dinheiro pro candidato e cobro em voto, com juros compostos.",
+    "Compro apoio, silêncio e cesta básica no atacado."
+   ],
+   "lose": "Quebrei... os juros me alcançaram!",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#6b2f6b",
+    "pants": "#3f2f1f",
+    "cap": "#b8860b",
+    "accessory": "maleta de dinheiro"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Cabo Eleitoral Mercenário",
+    "title": "Voto por Quilo",
+    "line": "Seu voto vale uma cesta e meio botijão.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#a0522d",
+     "pants": "#222222",
+     "accessory": "colete"
+    }
+   },
+   {
+    "name": "Agiota de Plantão",
+    "title": "Juros Compostos",
+    "line": "Quem deve a mim vota em quem eu mandar.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#c04a1f",
+     "pants": "#3a3a5a",
+     "cap": "#111111",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Testemunha Calada",
+    "title": "Silêncio Remunerado",
+    "line": "Não vi, não ouvi, e recebi.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#2f6b3a",
+     "pants": "#4a3a2a",
+     "cap": "#7a1f1f",
+     "accessory": "maleta de dinheiro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "GOLPE",
+   "DELACAO"
+  ]
+ },
+ "fortaleza": {
+  "badge": "Insígnia Colosseum",
+  "op": "Operação Colosseum (PF, 2021, CE)",
+  "opSource": "https://diariodonordeste.verdesmares.com.br/jogada/policia-federal-investiga-fraudes-e-corrupcao-de-r-11-milhoes-em-obras-da-arena-castelao-1.3171095",
+  "boss": {
+   "name": "Rei do Cimento Cearense",
+   "title": "Chefão do Estádio Superfaturado",
+   "crime": "cartel e superfaturamento em obra pública",
+   "intro": [
+    "Meu estádio saiu mais caro que o Maracanã e menos bonito que o açude.",
+    "Gol de placa, e a placa é de ouro."
+   ],
+   "lose": "Impedido! Meu cartel foi expulso.",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#2a2a2a",
+    "pants": "#5a5a5a",
+    "accessory": "óculos escuros"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Mestre de Obras Fantasma",
+    "title": "Cronograma Infinito",
+    "line": "Obra pronta? Só na maquete.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#0f6b6b",
+     "pants": "#1f2f3f",
+     "cap": "#2f4f2f",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Fiscal do Aditivo",
+    "title": "Aditivo Rápido",
+    "line": "Aditivo sai rápido, o cimento é que demora.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#1f3a7a",
+     "pants": "#3f2f1f",
+     "accessory": "lenço no pescoço"
+    }
+   },
+   {
+    "name": "Lobista da Areia",
+    "title": "Material Superfaturado",
+    "line": "Saco de cimento: R$ 400, qualidade nenhuma.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#b8860b",
+     "pants": "#222222",
+     "cap": "#b8860b",
+     "accessory": "óculos escuros"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "CENTRAO"
+  ]
+ },
+ "teresina": {
+  "badge": "Insígnia Topique",
+  "op": "Operação Topique (PF, 2020, PI)",
+  "opSource": "https://www.tnh1.com.br/noticia/nid/pf-faz-buscas-na-casa-de-governador-do-piaui-e-em-gabinete-da-primeira-dama-na-camara/",
+  "boss": {
+   "name": "Dono do Busão Escolar",
+   "title": "Chefão do Transporte Escolar Imaginário",
+   "crime": "desvio de verba da educação (transporte escolar)",
+   "intro": [
+    "Meus ônibus escolares levam alunos... só no papel.",
+    "Pago o motorista, o combustível e o deputado. Só o aluno fica na estrada."
+   ],
+   "lose": "Parei na estrada... ônibus quebrado!",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#e8e0c8",
+    "pants": "#3a3a5a",
+    "accessory": "bigode"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Motorista de Rota Fantasma",
+    "title": "Rota Inexistente",
+    "line": "Percorri 800 km no papel, sem sair da garagem.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#7a1f1f",
+     "pants": "#4a3a2a",
+     "cap": "#111111",
+     "accessory": "mochila"
+    }
+   },
+   {
+    "name": "Dono de Frota Fria",
+    "title": "Frota de Fachada",
+    "line": "Tenho 50 ônibus. Estão todos no Excel.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#6b2f6b",
+     "pants": "#5a5a5a",
+     "cap": "#7a1f1f",
+     "accessory": "pasta 3x4"
+    }
+   },
+   {
+    "name": "Diretor de Escola Imaginária",
+    "title": "Escola de Papel",
+    "line": "Minha escola tem 300 alunos e zero cadeiras.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#a0522d",
+     "pants": "#1f2f3f",
+     "accessory": "bigode"
+    }
+   }
+  ],
+  "typeFocus": [
+   "RACHADINHA",
+   "LAVAGEM"
+  ]
+ },
+ "sao_luis": {
+  "badge": "Insígnia Sermão aos Peixes",
+  "op": "Operação Sermão aos Peixes (PF/CGU/MPF, MA)",
+  "opSource": "https://www.tribunapr.com.br/noticias/politica/na-sermao-dos-peixes-pf-investiga-desvios-na-saude-do-ma-e-destruicao-de-provas/",
+  "boss": {
+   "name": "Frei Superfatura",
+   "title": "Chefão da Saúde Pesqueira",
+   "crime": "desvio e superfaturamento de verba da saúde",
+   "intro": [
+    "Prego sermão sobre honestidade enquanto a conta fecha com saldo.",
+    "Meus contratos são abençoados: ninguém sabe de onde vieram."
+   ],
+   "lose": "Amém... acabou o sermão.",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#c04a1f",
+    "pants": "#3f2f1f",
+    "cap": "#2f4f2f",
+    "accessory": "maleta de dinheiro"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Sacristão de Contratos",
+    "title": "Pregador de Licitações",
+    "line": "Sermão curto, contrato longo.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#2f6b3a",
+     "pants": "#222222",
+     "accessory": "colete"
+    }
+   },
+   {
+    "name": "Pescador de Emendas",
+    "title": "Rede de Emendas",
+    "line": "Jogo a rede e pesco emenda parlamentar.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#2a2a2a",
+     "pants": "#3a3a5a",
+     "cap": "#b8860b",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Tesoureiro Piedoso",
+    "title": "Dízimo Público",
+    "line": "A caixinha fecha todo mês, direitinho.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#0f6b6b",
+     "pants": "#4a3a2a",
+     "accessory": "maleta de dinheiro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "RACHADINHA"
+  ]
+ },
+ "belem": {
+  "badge": "Insígnia Plenitude",
+  "op": "Operação Plenitude (PF, PA)",
+  "opSource": "https://sbtnews.sbt.com.br/noticia/policia/policia-federal-realiza-operacao-contra-desvio-de-r-1-7-bilhao-do-sus",
+  "boss": {
+   "name": "Doutor Soro Dourado",
+   "title": "Chefão da Saúde Terceirizada do Norte",
+   "crime": "desvio de verbas do SUS e fraude em licitação",
+   "intro": [
+    "No Pará, o soro é tão caro que vem com banho de ouro.",
+    "Meu hospital é plenitude: plenamente superfaturado."
+   ],
+   "lose": "Esvaziou o soro... e o caixa.",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#1f3a7a",
+    "pants": "#5a5a5a",
+    "cap": "#111111",
+    "accessory": "óculos escuros"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Fornecedor de Gaze Premium",
+    "title": "Gaze de Ouro",
+    "line": "Gaze de luxo, R$ 500 o metro.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#b8860b",
+     "pants": "#1f2f3f",
+     "cap": "#7a1f1f",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Paciente Fantasma",
+    "title": "Leito Ocupado de Papel",
+    "line": "Estou internado em 4 hospitais ao mesmo tempo.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#e8e0c8",
+     "pants": "#3f2f1f",
+     "accessory": "lenço no pescoço"
+    }
+   },
+   {
+    "name": "Licitante de Cartas Marcadas",
+    "title": "Pregão Combinado",
+    "line": "Venci licitação com empresa criada ontem.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#7a1f1f",
+     "pants": "#222222",
+     "cap": "#2f4f2f",
+     "accessory": "óculos escuros"
+    }
+   }
+  ],
+  "typeFocus": [
+   "LAVAGEM",
+   "FAKE"
+  ]
+ },
+ "macapa": {
+  "badge": "Insígnia Mãos Limpas",
+  "op": "Operação Mãos Limpas (PF/MPF, 2010, AP)",
+  "opSource": "https://istoedinheiro.com.br/governador-do-amapa-e-preso-em-operacao-da-pf",
+  "boss": {
+   "name": "Mestre do Ouro Contrabandeado",
+   "title": "Chefão do Garimpo e Descaminho do Extremo Norte",
+   "crime": "garimpo ilegal e contrabando de ouro",
+   "intro": [
+    "Meu ouro nasce sem nota, cresce sem imposto e morre numa offshore.",
+    "Banco deputado com pepita. Funciona melhor que emenda."
+   ],
+   "lose": "Perdi a pepita... e a fronteira.",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#6b2f6b",
+    "pants": "#3a3a5a",
+    "accessory": "bigode"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Garimpeiro Clandestino",
+    "title": "Cavador sem Licença",
+    "line": "Esse ouro é achado, não é roubado!",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#a0522d",
+     "pants": "#4a3a2a",
+     "cap": "#b8860b",
+     "accessory": "mochila"
+    }
+   },
+   {
+    "name": "Ourives de Fachada",
+    "title": "Joalheria de Passagem",
+    "line": "Compro ouro sem origem, vendo ouro sem destino.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#c04a1f",
+     "pants": "#5a5a5a",
+     "accessory": "pasta 3x4"
+    }
+   },
+   {
+    "name": "Barqueiro da Fronteira",
+    "title": "Rota Alternativa",
+    "line": "Passo na fronteira sem ninguém ver.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#2f6b3a",
+     "pants": "#1f2f3f",
+     "cap": "#111111",
+     "accessory": "bigode"
+    }
+   },
+   {
+    "name": "Laranja do Rio",
+    "title": "Sócio de Draga",
+    "line": "Meu nome está em 12 dragas, todas na lama.",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#2a2a2a",
+     "pants": "#3f2f1f",
+     "cap": "#7a1f1f",
+     "accessory": "charuto"
+    }
+   }
+  ],
+  "typeFocus": [
+   "LAVAGEM",
+   "FUGA"
+  ]
+ },
+ "boa_vista": {
+  "badge": "Insígnia Praga do Egito",
+  "op": "Operação Praga do Egito (PF, 2003, RR)",
+  "opSource": "https://www.folhabv.com.br/?p=14555",
+  "boss": {
+   "name": "Barão da Draga",
+   "title": "Chefão do Garimpo Ilegal do Norte",
+   "crime": "garimpo ilegal em área protegida",
+   "intro": [
+    "Minha draga é tão ecológica que só leva o ouro e deixa o rio.",
+    "Banco deputado que fecha os olhos pro meu garimpo."
+   ],
+   "lose": "Desassoreei meu império...",
+   "look": {
+    "hair": "#6b4a2a",
+    "shirt": "#0f6b6b",
+    "pants": "#222222",
+    "accessory": "chapéu panamá"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Dragueiro Sem Licença",
+    "title": "Rio Turvo",
+    "line": "Esse rio já foi mais claro. Culpa do rio.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#1f3a7a",
+     "pants": "#3a3a5a",
+     "cap": "#2f4f2f",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Piloto de Avião Clandestino",
+    "title": "Pista Escondida",
+    "line": "Pouso onde ninguém vê.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#b8860b",
+     "pants": "#4a3a2a",
+     "accessory": "maleta de dinheiro"
+    }
+   },
+   {
+    "name": "Comprador de Ouro",
+    "title": "Sem Perguntas",
+    "line": "Ouro bom não precisa de nota.",
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#e8e0c8",
+     "pants": "#5a5a5a",
+     "cap": "#b8860b",
+     "accessory": "chapéu panamá"
+    }
+   },
+   {
+    "name": "Cantineiro do Garimpo",
+    "title": "Mercado Paralelo",
+    "line": "Vendo arroz a preço de ouro, literalmente.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#7a1f1f",
+     "pants": "#1f2f3f",
+     "accessory": "corrente de ouro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "LAVAGEM",
+   "FUGA"
+  ]
+ },
+ "manaus": {
+  "badge": "Insígnia Maus Caminhos",
+  "op": "Operação Maus Caminhos (PF/MPF/CGU, 2016, AM)",
+  "opSource": "https://www.mpf.mp.br/grandes-casos/casos-historicos/operacao-maus-caminhos",
+  "boss": {
+   "name": "Dom Tubarão da Zona Franca",
+   "title": "Chefão do Descaminho Eletrônico",
+   "crime": "contrabando/descaminho e desvio de verba da saúde",
+   "intro": [
+    "Na Zona Franca, até a nota fiscal vem importada do Paraguai.",
+    "Pago a campanha e o deputado me paga com isenção."
+   ],
+   "lose": "Zona Franca fechou pra balanço!",
+   "look": {
+    "hair": "#4a4a4a",
+    "shirt": "#6b2f6b",
+    "pants": "#3f2f1f",
+    "cap": "#111111",
+    "accessory": "mochila"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Contrabandista de Eletrônicos",
+    "title": "Muamba Premium",
+    "line": "Esse celular é original! Pelo menos o brilho.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#a0522d",
+     "pants": "#222222",
+     "cap": "#7a1f1f",
+     "accessory": "óculos escuros"
+    }
+   },
+   {
+    "name": "Gerente de UTI Móvel",
+    "title": "UTI de Fachada",
+    "line": "Minha UTI móvel nunca saiu do pátio.",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#c04a1f",
+     "pants": "#3a3a5a",
+     "accessory": "relógio dourado"
+    }
+   },
+   {
+    "name": "Barqueiro de Nota Fria",
+    "title": "Transporte Fluvial",
+    "line": "Navego com nota nova a cada margem.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#2f6b3a",
+     "pants": "#4a3a2a",
+     "cap": "#2f4f2f",
+     "accessory": "mochila"
+    }
+   },
+   {
+    "name": "Fiscal de Container",
+    "title": "Fiscal Cego",
+    "line": "Abri só o primeiro container; o resto eu confiei.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#2a2a2a",
+     "pants": "#5a5a5a",
+     "accessory": "pasta 3x4"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "FAKE"
+  ]
+ },
+ "porto_velho": {
+  "badge": "Insígnia Dominó",
+  "op": "Operação Dominó (PF, 2006, RO)",
+  "opSource": "https://www.congressoemfoco.com.br/noticia/92973/pf-prende-presidentes-do-tj-e-da-assembleia-de-rondonia",
+  "boss": {
+   "name": "Seu Motosserra Legalizada",
+   "title": "Chefão do Desmatamento Dominó",
+   "crime": "grilagem e desmatamento ilegal",
+   "intro": [
+    "Derrubei só uma árvore. Ela tinha dois mil hectares.",
+    "Meu desmate é sustentável: quando acaba a mata, eu mudo de estado."
+   ],
+   "lose": "Floresta em pé... meu império no chão!",
+   "look": {
+    "hair": "#8a2b1b",
+    "shirt": "#0f6b6b",
+    "pants": "#1f2f3f",
+    "cap": "#b8860b",
+    "accessory": "celular na orelha"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Motosserrista Sem Registro",
+    "title": "Corte Silencioso",
+    "line": "Eu só cortei o que estava no caminho.",
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#1f3a7a",
+     "pants": "#3f2f1f",
+     "accessory": "charuto"
+    }
+   },
+   {
+    "name": "Grileiro de Beira de Estrada",
+    "title": "Cerca Criativa",
+    "line": "Cerquei o horizonte e registrei como meu.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#b8860b",
+     "pants": "#222222",
+     "cap": "#111111",
+     "accessory": "colete"
+    }
+   },
+   {
+    "name": "Madeireiro Fantasma",
+    "title": "Nota Verde",
+    "line": "A madeira é legal. A origem, nem tanto.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#e8e0c8",
+     "pants": "#3a3a5a",
+     "cap": "#7a1f1f",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Peão do Desmate",
+    "title": "Trator Sem Placa",
+    "line": "Meu trator não tem placa nem consciência.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#7a1f1f",
+     "pants": "#4a3a2a",
+     "accessory": "maleta de dinheiro"
+    }
+   }
+  ],
+  "typeFocus": [
+   "GOLPE",
+   "FAKE"
+  ]
+ },
+ "rio_branco": {
+  "badge": "Insígnia G7",
+  "op": "Operação G7 (PF, 2013, AC)",
+  "opSource": "https://www.em.com.br/app/noticia/politica/2013/06/05/interna_politica,399927/amp.html",
+  "boss": {
+   "name": "Coronel da Madeira Gelada",
+   "title": "Chefão da Madeira Clandestina",
+   "crime": "desmatamento e extração ilegal de madeira",
+   "intro": [
+    "No Acre, toda árvore tem dono: o que não tem, eu registro.",
+    "Eu doo à campanha e a campanha doa a floresta."
+   ],
+   "lose": "A floresta voltou... e meu negócio acabou.",
+   "look": {
+    "hair": "#111111",
+    "shirt": "#6b2f6b",
+    "pants": "#5a5a5a",
+    "cap": "#2f4f2f",
+    "accessory": "óculos escuros"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Madeireiro de Fronteira",
+    "title": "Tora Sem Nota",
+    "line": "Tora legal é aquela que ninguém viu.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#a0522d",
+     "pants": "#1f2f3f",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Serrador Fantasma",
+    "title": "Serraria Clandestina",
+    "line": "Serrei até a lei, mas deu pouco lucro.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#c04a1f",
+     "pants": "#3f2f1f",
+     "cap": "#b8860b",
+     "accessory": "lenço no pescoço"
+    }
+   },
+   {
+    "name": "Despachante do Madeirão",
+    "title": "Guia Florestal Falsa",
+    "line": "Guia pronta em duas horas, floresta inclusa.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#2f6b3a",
+     "pants": "#222222",
+     "accessory": "óculos escuros"
+    }
+   },
+   {
+    "name": "Motorista de Carreta",
+    "title": "Carreta Fria",
+    "line": "Levei toras escondidas debaixo de banana.",
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#2a2a2a",
+     "pants": "#3a3a5a",
+     "cap": "#111111",
+     "accessory": "relógio dourado"
+    }
+   }
+  ],
+  "typeFocus": [
+   "GOLPE",
+   "CENTRAO"
+  ]
+ },
+ "cuiaba": {
+  "badge": "Insígnia de Cuiabá",
+  "op": "",
+  "opSource": "",
+  "boss": {
+   "name": "Doutor Gado Frio",
+   "title": "Chefão da Pecuária de Papel",
+   "crime": "fraude em compras públicas e gado de fachada",
+   "intro": [
+    "No Mato Grosso o gado é tanto que dá pra esconder emenda em cada cabeça.",
+    "Vendo ambulância superfaturada e entrego uma Kombi com adesivo."
+   ],
+   "lose": "Estourou a boiada...",
+   "look": {
+    "hair": "#3a2a1a",
+    "shirt": "#0f6b6b",
+    "pants": "#4a3a2a",
+    "cap": "#7a1f1f",
+    "accessory": "charuto"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Vendedor de Ambulância",
+    "title": "Veículo Sob Medida",
+    "line": "Ambulância 0 km, faltando as rodas.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#1f3a7a",
+     "pants": "#5a5a5a",
+     "accessory": "pasta 3x4"
+    }
+   },
+   {
+    "name": "Pecuarista de Fachada",
+    "title": "Boi Frio",
+    "line": "Meu rebanho tem 10 mil cabeças, todas no papel.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#b8860b",
+     "pants": "#1f2f3f",
+     "cap": "#2f4f2f",
+     "accessory": "bigode"
+    }
+   },
+   {
+    "name": "Lobista de Emenda",
+    "title": "Emenda Itinerante",
+    "line": "Emenda que passa, emenda que fica... comigo.",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#e8e0c8",
+     "pants": "#3f2f1f",
+     "accessory": "charuto"
+    }
+   },
+   {
+    "name": "Fiscal da Boiada",
+    "title": "Brinco Falso",
+    "line": "Brinco no boi, nota na pasta, tudo certo.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#7a1f1f",
+     "pants": "#222222",
+     "cap": "#b8860b",
+     "accessory": "colete"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "GOLPE"
+  ]
+ },
+ "campo_grande": {
+  "badge": "Insígnia Lama Asfáltica",
+  "op": "Operação Lama Asfáltica (PF/MPF/CGU, 2015, MS)",
+  "opSource": "https://www.tribunapr.com.br/noticias/politica/pf-deflagra-lama-asfaltica-e-mira-em-assessor-especial-dos-transportes/",
+  "boss": {
+   "name": "Dom Muamba Seca",
+   "title": "Chefão do Contrabando de Fronteira",
+   "crime": "contrabando e descaminho na fronteira / obras superfaturadas",
+   "intro": [
+    "Na fronteira, o que cruza é caminhão. O que paga é deputado.",
+    "Contrabando de cigarro, de eletrônico e de emenda."
+   ],
+   "lose": "A lama secou... e eu fiquei seco!",
+   "look": {
+    "hair": "#c9c9c9",
+    "shirt": "#6b2f6b",
+    "pants": "#3a3a5a",
+    "accessory": "corrente de ouro"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Mula de Fronteira",
+    "title": "Descaminho Pessoal",
+    "line": "Isso é só presente de aniversário. 500 vezes.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#a0522d",
+     "pants": "#4a3a2a",
+     "cap": "#111111",
+     "accessory": "maleta de dinheiro"
+    }
+   },
+   {
+    "name": "Motorista de Caminhão Fantasma",
+    "title": "Carga Sem Rota",
+    "line": "Minha carga atravessa na hora do cafezinho.",
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#c04a1f",
+     "pants": "#5a5a5a",
+     "cap": "#7a1f1f",
+     "accessory": "chapéu panamá"
+    }
+   },
+   {
+    "name": "Empreiteiro da Lama",
+    "title": "Asfalto de Papel",
+    "line": "Asfaltei a rua... só no orçamento.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#2f6b3a",
+     "pants": "#1f2f3f",
+     "accessory": "corrente de ouro"
+    }
+   },
+   {
+    "name": "Fiscal de Estrada",
+    "title": "Carimbo Seletivo",
+    "line": "Esse caminhão eu já conheço, passa direto.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#2a2a2a",
+     "pants": "#3f2f1f",
+     "cap": "#2f4f2f",
+     "accessory": "lenço no pescoço"
+    }
+   }
+  ],
+  "typeFocus": [
+   "PROPINA",
+   "FUGA"
+  ]
+ },
+ "goiania": {
+  "badge": "Insígnia Monte Carlo",
+  "op": "Operação Monte Carlo (PF, 2012, GO/DF)",
+  "opSource": "https://jornalgrandebahia.com.br/2012/02/operacao-monte-carlo-pf-prende-pelo-menos-20-envolvidos-em-exploracao-de-caca-niqueis/",
+  "boss": {
+   "name": "Dom Caça-Níquel do Cerrado",
+   "title": "Chefão do Jogo Ilegal do Cerrado",
+   "crime": "jogo ilegal (caça-níqueis) e lavagem",
+   "intro": [
+    "Aqui a máquina sempre paga... pra mim e pro deputado.",
+    "Banco campanha com caça-níquel. Rende mais que soja."
+   ],
+   "lose": "Zerou o placar! Game over.",
+   "look": {
+    "hair": "#2b1b10",
+    "shirt": "#0f6b6b",
+    "pants": "#222222",
+    "accessory": "pasta 3x4"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Operador de Máquina",
+    "title": "Caça-Níquel Ambulante",
+    "line": "Joga aqui, perde ali, eu ganho em todo lugar.",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#1f3a7a",
+     "pants": "#3a3a5a",
+     "cap": "#b8860b",
+     "accessory": "relógio dourado"
+    }
+   },
+   {
+    "name": "Gerente de Bingo",
+    "title": "Bingo de Fachada",
+    "line": "Bingo clandestino, prêmio só pra mim.",
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#b8860b",
+     "pants": "#4a3a2a",
+     "accessory": "mochila"
+    }
+   },
+   {
+    "name": "Contador de Fichas",
+    "title": "Lavagem em Fichas",
+    "line": "Troco fichas por notas limpinhas.",
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#e8e0c8",
+     "pants": "#5a5a5a",
+     "cap": "#111111",
+     "accessory": "pasta 3x4"
+    }
+   },
+   {
+    "name": "Segurança de Cassino",
+    "title": "Segurança Contratada",
+    "line": "Entra quem for amigo do chefe.",
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#7a1f1f",
+     "pants": "#1f2f3f",
+     "cap": "#7a1f1f",
+     "accessory": "bigode"
+    }
+   }
+  ],
+  "typeFocus": [
+   "GOLPE",
+   "LAVAGEM"
+  ]
+ },
+ "palmas": {
+  "badge": "Insígnia Fames-19",
+  "op": "Operação Fames-19 (PF, 2024, TO)",
+  "opSource": "https://revistaoeste.com/politica/pf-mira-governador-do-tocantins-em-operacao-no-estado/",
+  "boss": {
+   "name": "Dom Cesta-Básica Premium",
+   "title": "Chefão da Merenda Dourada",
+   "crime": "desvio de verba da pandemia e compra de votos",
+   "intro": [
+    "Minha cesta básica custa R$ 700 e vem sem arroz.",
+    "Vendi frango congelado como se fosse filé de ouro."
+   ],
+   "lose": "Cesta vazia... acabou o rango.",
+   "look": {
+    "hair": "#e0b84a",
+    "shirt": "#6b2f6b",
+    "pants": "#3f2f1f",
+    "accessory": "maleta de dinheiro"
+   }
+  },
+  "trainers": [
+   {
+    "name": "Fornecedor de Frango Congelado",
+    "title": "Frango Premium",
+    "line": "Frango de ouro, preço de ouro, sabor de papelão.",
+    "look": {
+     "hair": "#3a2a1a",
+     "shirt": "#a0522d",
+     "pants": "#222222",
+     "cap": "#2f4f2f",
+     "accessory": "colete"
+    }
+   },
+   {
+    "name": "Distribuidor de Cesta",
+    "title": "Cesta Fantasma",
+    "line": "Distribuí 10 mil cestas... pra mim mesmo.",
+    "look": {
+     "hair": "#4a4a4a",
+     "shirt": "#c04a1f",
+     "pants": "#3a3a5a",
+     "accessory": "celular na orelha"
+    }
+   },
+   {
+    "name": "Cabo Eleitoral de Cestinha",
+    "title": "Voto por Cesta",
+    "line": "Seu voto vale uma cesta, meia cesta se for cedo.",
+    "look": {
+     "hair": "#2b1b10",
+     "shirt": "#2f6b3a",
+     "pants": "#4a3a2a",
+     "cap": "#b8860b",
+     "accessory": "maleta de dinheiro"
+    }
+   },
+   {
+    "name": "Contador do Pós-Pandemia",
+    "title": "Planilha Mágica",
+    "line": "Planilha em dia; o dinheiro, em outra conta.",
+    "look": {
+     "hair": "#111111",
+     "shirt": "#2a2a2a",
+     "pants": "#5a5a5a",
+     "accessory": "chapéu panamá"
+    }
+   }
+  ],
+  "typeFocus": [
+   "RACHADINHA",
+   "CENTRAO"
+  ]
+ },
+ "brasilia": {
+  "elite": [
+   {
+    "name": "Lobista-Mor do Agro-Caixa",
+    "title": "Líder da Bancada do Boi e da Soja",
+    "intro": [
+     "Quem planta voto colhe lei. E a lei sai com defensivo grátis.",
+     "Minha terra é grande, meu orçamento maior ainda, e a fiscalização... pequena."
+    ],
+    "look": {
+     "hair": "#6b4a2a",
+     "shirt": "#3a5a2a",
+     "pants": "#1f2f3f",
+     "cap": "#111111",
+     "accessory": "pasta 3x4"
+    },
+    "theme": "agro"
+   },
+   {
+    "name": "Sir Bet Bilionário",
+    "title": "Dono da Bancada das Apostas",
+    "intro": [
+     "A casa sempre ganha. Principalmente quando a casa é o Congresso.",
+     "Aposto no deputado, na emenda e no recesso."
+    ],
+    "look": {
+     "hair": "#c9c9c9",
+     "shirt": "#7a1f7a",
+     "pants": "#3f2f1f",
+     "cap": "#7a1f1f",
+     "accessory": "relógio dourado"
+    },
+    "theme": "bets"
+   },
+   {
+    "name": "Doutora Juros Altíssimos",
+    "title": "Lobista do Sistema Financeiro",
+    "intro": [
+     "Meu spread é mais alto que o Congresso.",
+     "Empresto ao Governo, cobro do Povo e ainda mando e-mail de agradecimento."
+    ],
+    "look": {
+     "hair": "#8a2b1b",
+     "shirt": "#1f3a7a",
+     "pants": "#222222",
+     "accessory": "óculos escuros"
+    },
+    "theme": "banco"
+   },
+   {
+    "name": "Mestre das Concessões",
+    "title": "Lobista de Empreiteiras e Pedágios",
+    "intro": [
+     "Toda estrada tem pedágio; todo pedágio tem lobby.",
+     "Eu financio o plenário, o plenário financia a obra, a obra financia eu."
+    ],
+    "look": {
+     "hair": "#e0b84a",
+     "shirt": "#b8860b",
+     "pants": "#3a3a5a",
+     "cap": "#2f4f2f",
+     "accessory": "corrente de ouro"
+    },
+    "theme": "empreiteira"
+   }
+  ],
+  "champion": {
+   "intro": [
+    "Você chegou ao Planalto! Aqui o último degrau é o mais escorregadio.",
+    "Passou pela Elite dos Lobbies, mas o Chefe do Palácio tem a faixa, o time e a trilha sonora."
+   ],
+   "lose": "A faixa caiu... mas o Brasil segue na fila da CPI."
+  }
+ }
+}

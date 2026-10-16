@@ -7,7 +7,7 @@ const START = { x: 0, y: 0, dir: 'up' };   // preenchido em buildWorld(): em fre
 
 const BIOME_NAMES = { pampa: 'Pampa', mata_atlantica: 'Mata Atlântica', costa: 'Litoral', caatinga: 'Caatinga', amazonia: 'Amazônia', pantanal: 'Pantanal', cerrado: 'Cerrado' };
 
-const World = { tiles: [], buildings: [], npcs: [], signs: {}, cities: [], areas: {}, areaGrid: [], biomeGrid: [], routes: [], landMask: null };
+const World = { tiles: [], buildings: [], npcs: [], signs: {}, cities: [], areas: {}, areaGrid: [], biomeGrid: [], routes: [], landMask: null, airports: {} };
 const _M = { routeGrid: null, boxGrid: null, doors: {}, cityList: [] };
 
 // ---------------------------------------------------------------- dados das cidades
@@ -239,11 +239,19 @@ function _mh(i, j, s) {
   n = Math.imul(n ^ (n >>> 13), 1274126177);
   return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
 }
+const _NZ = {};   // reticulados de ruído em cache (rápido): chave = escala*1000 + semente
 function _mnoise(x, y, sc, s) {
-  const gx = x / sc, gy = y / sc, i = Math.floor(gx), j = Math.floor(gy), fx = gx - i, fy = gy - j;
+  const key = sc * 1000 + s;
+  let L = _NZ[key];
+  if (!L) {
+    const gw = Math.ceil(MAP_W / sc) + 3, gh = Math.ceil(MAP_H / sc) + 3, arr = new Float32Array(gw * gh);
+    for (let j = 0; j < gh; j++) for (let i = 0; i < gw; i++) arr[j * gw + i] = _mh(i, j, s);
+    L = _NZ[key] = { arr, gw };
+  }
+  const gx = x / sc, gy = y / sc, i = gx | 0, j = gy | 0, fx = gx - i, fy = gy - j, o = j * L.gw + i, A = L.arr;
   const u = fx * fx * (3 - 2 * fx), v = fy * fy * (3 - 2 * fy);
-  const a = _mh(i, j, s), b = _mh(i + 1, j, s), c = _mh(i, j + 1, s), d = _mh(i + 1, j + 1, s);
-  return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+  const p = A[o], q = A[o + 1], r = A[o + L.gw], t = A[o + L.gw + 1];
+  return p + (q - p) * u + (r - p) * v + (p - q - r + t) * u * v;
 }
 function _fillPoly(pts, W, H) {
   const m = new Uint8Array(W * H), n = pts.length;
@@ -311,15 +319,24 @@ function buildWorld() {
   const rect = (x, y, w, h, k) => { for (let j = y; j < y + h; j++) for (let i = x; i < x + w; i++) if (inb(i, j)) tiles[j][i] = k; };
   const set = (x, y, k) => { if (inb(x, y)) tiles[y][x] = k; };
 
-  World.buildings = []; World.npcs = []; World.signs = {}; World.cities = []; World.areas = {}; World.routes = [];
+  World.airports = {}; World.buildings = []; World.npcs = []; World.signs = {}; World.cities = []; World.areas = {}; World.routes = [];
 
   // --- cidades: caixas
   const cities = _CITIES.map((c, i) => {
     const id = c[0], bras = id === 'brasilia';
     const w = bras ? 46 : _BIG.has(id) ? 30 : _SMALL.has(id) ? 22 : 26, h = bras ? 26 : _BIG.has(id) ? 22 : _SMALL.has(id) ? 16 : 20;
-    return { id, name: c[1], uf: c[2], de: c[3], lat: c[4], lon: c[5], x: c[6], y: c[7], w, h, order: i + 1, pal: (_LM[id] && _LM[id][3]) || c[8], mon: (_LM[id] && _LM[id][2]) || c[9], lmw: _LM[id] ? _LM[id][0] : 5, lmh: _LM[id] ? _LM[id][1] : 5, tag: c[10], lines: c[11], gy: bras ? 9 : 8, big: bras || _BIG.has(id) };
+    return { id, name: c[1], uf: c[2], de: c[3], lat: c[4], lon: c[5], x: c[6], y: c[7], w, h, order: i + 1, pal: (_LM[id] && _LM[id][3]) || c[8], mon: (_LM[id] && _LM[id][2]) || c[9], lmw: _LM[id] ? _LM[id][0] : 5, lmh: _LM[id] ? _LM[id][1] : 5, tag: c[10], lines: c[11], gy: bras ? 9 : 8, gy2: bras ? 9 : (h <= 16 ? 12 : 17), big: bras || _BIG.has(id) };
   });
   _M.cityList = cities;
+  // portões: entrada (rota anterior) na linha da rua de cima, saída (rota seguinte) na rua de baixo.
+  // Se rota anterior e seguinte ficariam do mesmo lado, a saída usa o lado oposto (a rota contorna a cidade) para as duas rotas nunca se cruzarem.
+  cities.forEach((c, i) => {
+    const cxm = c.x + c.w / 2, p = cities[i - 1], n = cities[i + 1];
+    c.inRow = c.gy; c.outRow = c.gy2;
+    c.inSide = p ? ((p.x + p.w / 2) <= cxm ? 'W' : 'E') : null;
+    c.outSide = n ? ((n.x + n.w / 2) >= cxm ? 'E' : 'W') : null;
+    if (c.inSide && c.outSide && c.inSide === c.outSide) c.outSide = c.outSide === 'E' ? 'W' : 'E';
+  });
   const boxGrid = new Int8Array(N), blk = new Uint8Array(N), resv = new Uint8Array(N), land = new Uint8Array(N);
 
   // --- máscara de terra
@@ -329,7 +346,7 @@ function buildWorld() {
   const oceanPoly = _fillPoly(cs.concat([[cs[cs.length - 1][0], H + 5], [W + 5, H + 5], [W + 5, -5], [cs[0][0], -5]]), W, H);
   for (let i = 0; i < N; i++) land[i] = polyMask[i];
   const mark = (arr, c, m, v) => { for (let y = Math.max(0, c.y - m); y < Math.min(H, c.y + c.h + m); y++) for (let x = Math.max(0, c.x - m); x < Math.min(W, c.x + c.w + m); x++) arr[y * W + x] = v; };
-  cities.forEach((c, i) => { mark(land, c, 7, 1); mark(resv, c, 5, 1); mark(blk, c, 3, 1); mark(boxGrid, c, 0, i + 1); });
+  cities.forEach((c, i) => { mark(land, c, 7, 1); mark(resv, c, 5, 1); mark(blk, c, 2, 1); mark(boxGrid, c, 0, i + 1); });
   // faixa de terra ligando capitais consecutivas (a costa "estufa" onde as cidades foram deslocadas)
   for (let k = 0; k + 1 < cities.length; k++) {
     const A = cities[k], B = cities[k + 1], ax = A.x + A.w / 2, ay = A.y + A.h / 2, bx = B.x + B.w / 2, by = B.y + B.h / 2;
@@ -416,7 +433,7 @@ function buildWorld() {
       // ruas e conectores
       rect(ox, gy, w, 1, 'path');
       const small = h <= 16, yB = oy + 12, yC = small ? yB : oy + 17;
-      rect(ox + 1, yB, w - 2, 1, 'path'); rect(ox + 1, yC, w - 2, 1, 'path');
+      rect(ox, yB, w, 1, 'path'); rect(ox, yC, w, 1, 'path');   // yC = portão de saída (rota seguinte)
       const nH = Math.floor((w - 8) / 8) + 1;
       const hx = k => ox + 2 + 8 * k;
       rect(ox + 1, gy, 1, yC - gy + 1, 'path'); rect(ox + w - 2, gy, 1, yC - gy + 1, 'path');
@@ -432,11 +449,11 @@ function buildWorld() {
       rect(ox + 2, oy + 7, 5, 1, 'flower');
       // casas: duas fileiras
       let sx = hx(1) - 1, ex = hx(nH - 1) - 2, sw = ex - sx + 1;
-      if (small) { sx = ox + 3; sw = w - 6; }
+      if (small) { sx = ox + 3; sw = 10; }
       for (let k = 0; k < nH; k++) {
         const b = addB(c, 'casa', `${c.id}_casa${k + 1}`, hx(k), oy + 9, 4, 3, 'Casa', { roof: roofs[(c.order + k) % roofs.length] });
         set(b.door.x, b.door.y, 'bld');
-        if (!small && (k === 0 || k === nH - 1)) {
+        if (!small && k === 0) {
           const b2 = addB(c, 'casa', `${c.id}_casa${nH + k + 1}`, hx(k), oy + 14, 4, 3, 'Casa', { roof: roofs[(c.order + k + 3) % roofs.length] });
           for (let fx = hx(k) - 1; fx <= hx(k) + 4; fx++) if (fx !== ox + 1 && fx !== ox + w - 2) set(fx, oy + 13, 'fence');
         }
@@ -453,6 +470,14 @@ function buildWorld() {
         rect(sx, oy + 13, sw, 1, 'flower'); rect(sx, oy + 16, sw, 1, 'flower');
         for (let k = 0; k < sw; k += 3) { set(sx + k, oy + 15, 'flower'); }
       }
+      // pista de pouso + jatinho (lado direito da praça)
+      {
+        const rw = small ? 6 : 8, rx = small ? ox + w - 8 : ox + 17, ry = oy + 13;
+        rect(rx, ry, rw, 3, 'runway');
+        const jt = addB(c, 'jato', 'jato_' + c.id, rx + (small ? 1 : 2), ry, 3, 2, 'Jatinho particular', {});
+        World.airports[c.id] = { x: jt.door.x, y: jt.door.y + 1 };
+        if (!small) set(rx + 3, oy + 16, 'path');
+      }
       // área de baixo
       if (h > 20) {
         rect(ox + 3, oy + 19, 7, 3, 'water'); rect(ox + 2, oy + 19, 1, 3, 'flower'); rect(ox + 10, oy + 19, 1, 3, 'flower');
@@ -466,6 +491,7 @@ function buildWorld() {
         if (!small && (y === oy + 13 || y === yC + 1 || (y > oy + 17))) { if (R() < 0.3) tree2(x, y); else set(x, y, 'flower'); continue; }
         set(x, y, 'flower');
       }
+      if (h === 20) { rect(ox + 3, oy + 18, w - 6, 2, 'tall'); for (let yy = oy + 18; yy < oy + 20; yy++) for (let xx = ox + 3; xx < ox + w - 3; xx++) areaGrid[yy][xx] = 'cidade_' + c.id; }   // mato alto dentro da cidade (treino antes do 1º portão)
       sign(ox + 1, gy - 1, signTxt); sign(ox + w - 2, gy - 1, signTxt);
       sign(pf.door.x - 2, oy + 7, `SUPERINTENDÊNCIA DA POLÍCIA FEDERAL — ${c.name}\nEntre pela porta para curar a equipe, comprar mandados e acessar a carceragem.`);
       sign(pal.door.x - 2, oy + 7, `${c.pal.toUpperCase()}\nSede do governo estadual — ${c.name}.`);
@@ -490,6 +516,8 @@ function buildWorld() {
       rect(ox + 2, oy + 19, 12, 5, 'tall'); rect(ox + 32, oy + 19, 12, 5, 'tall');
       rect(ox + 17, oy + 19, 12, 2, 'flower'); rect(ox + 17, oy + 22, 12, 1, 'flower');
       for (let k = 0; k < 14; k++) { const x = ox + 2 + ((R() * 42) | 0), y = oy + 10 + ((R() * 7) | 0); if (tiles[y][x] === 'lawn') set(x, y, 'flower'); }
+      rect(ox + 19, oy + 19, 8, 3, 'runway');
+      { const jt = addB(c, 'jato', 'jato_brasilia', ox + 21, oy + 19, 3, 2, 'Jatinho particular', {}); World.airports.brasilia = { x: jt.door.x, y: jt.door.y + 1 }; }
       for (let y = oy + 19; y < oy + 24; y++) for (let x = ox + 2; x < ox + 44; x++) if (tiles[y][x] === 'tall') areaGrid[y][x] = 'cidade_brasilia';
       sign(ox + 1, gy - 1, signTxt); sign(ox + w - 2, gy - 1, signTxt);
       sign(ox + 20, oy + 9 + 1, 'ESPLANADA DOS MINISTÉRIOS — Brasília\nCongresso: Operação Lava Jato\nPlanalto: Operação Tempus Veritatis');
@@ -543,6 +571,9 @@ function buildWorld() {
   // --- rotas: A* de portão a portão
   const noise = new Float32Array(N);
   for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) noise[y * W + x] = _mnoise(x, y, 8, 77) * 1.4 + _mnoise(x, y, 3, 78) * 0.5;
+  const avoid = new Int8Array(N), near = new Uint8Array(N), rblock = new Uint8Array(N);
+  cities.forEach((c, i) => mark(avoid, c, 14, i + 1));
+  let curA = -1, curB = -1;
   const G = new Float32Array(N), PAR = new Int32Array(N), STAMP = new Int32Array(N);
   let stamp = 0;
   function astar(sx, sy, tx, ty) {
@@ -563,9 +594,12 @@ function buildWorld() {
         if (nx < 1 || ny < 1 || nx >= W - 1 || ny >= H - 1) continue;
         const j = ny * W + nx;
         if (closed[j] || !land[j] || blk[j]) continue;
+        if (rblock[j] && !((Math.abs(nx - sx) <= 9 && Math.abs(ny - sy) <= 9) || (Math.abs(nx - tx) <= 9 && Math.abs(ny - ty) <= 9))) continue;   // rotas nunca se cruzam
         const t = tiles[ny][nx];
         let c = 1 + noise[j];
-        if (t === 'tree') c += 2.5; else if (t === 'water') c += 7; else if (t === 'path') c = 0.3;
+        if (t === 'tree') c += 2.5; else if (t === 'water') c += 7; else if (t === 'path') c += 14;   // rotas não se fundem
+        const av = avoid[j]; if (av && av - 1 !== curA && av - 1 !== curB) c += 40;                   // nem passam colado nos portões de outras cidades
+        if (near[j]) c += 6;
         if (dBorder[j] <= 3) c += 12;
         const g = G[i] + c;
         if (STAMP[j] !== stamp || g < G[j]) { STAMP[j] = stamp; G[j] = g; PAR[j] = i; push(g + Math.abs(nx - tx) + Math.abs(ny - ty), j); }
@@ -573,7 +607,10 @@ function buildWorld() {
     }
     return null;
   }
-  const carveCell = (x, y) => { if (!inb(x, y) || ocean[y * W + x] || boxGrid[y * W + x]) return; if (tiles[y][x] !== 'bld') tiles[y][x] = 'path'; };
+  const ringM = new Uint8Array(N);
+  cities.forEach(c => { for (let y = c.y - 2; y < c.y + c.h + 2; y++) for (let x = c.x - 2; x < c.x + c.w + 2; x++) if (inb(x, y) && !boxGrid[y * W + x]) ringM[y * W + x] = 1; });
+  let carveRing = false;
+  const carveCell = (x, y) => { if (!inb(x, y) || ocean[y * W + x] || boxGrid[y * W + x] || (ringM[y * W + x] && !carveRing)) return; if (tiles[y][x] !== 'bld') tiles[y][x] = 'path'; };
   const brush = (x, y) => { carveCell(x, y); carveCell(x + 1, y); carveCell(x, y + 1); carveCell(x + 1, y + 1); };
   function carveLine(x0, y0, x1, y1, wide) {
     let x = x0, y = y0; (wide ? brush : carveCell)(x, y);
@@ -584,16 +621,23 @@ function buildWorld() {
   }
   for (const r of routes) {
     const a = r.a, b = r.b, ac = a.x + a.w / 2, bc = b.x + b.w / 2;
-    const sideA = bc >= ac ? 'E' : 'W', sideB = ac <= bc ? 'W' : 'E';
-    const sx = sideA === 'E' ? a.x + a.w + 3 : a.x - 4, sy = a.y + a.gy;
-    const tx = sideB === 'E' ? b.x + b.w + 3 : b.x - 4, ty = b.y + b.gy;
+    const sideA = a.outSide, sideB = b.inSide;
+    const sx = sideA === 'E' ? a.x + a.w + 3 : a.x - 4, sy = a.y + a.outRow;
+    const tx = sideB === 'E' ? b.x + b.w + 3 : b.x - 4, ty = b.y + b.inRow;
+    curA = a.order - 1; curB = b.order - 1;
     let cells = astar(sx, sy, tx, ty); r.fb = !cells;
     if (!cells) { cells = []; let x = sx, y = sy; while (x !== tx || y !== ty) { cells.push([x, y]); if (x !== tx) x += Math.sign(tx - x); else y += Math.sign(ty - y); } cells.push([tx, ty]); }
     r.cells = cells;
-    for (const [x, y] of cells) brush(x, y);
+    for (const [x, y] of cells) { brush(x, y); for (let dy = -5; dy <= 5; dy++) for (let dx = -5; dx <= 5; dx++) { const xx = x + dx, yy = y + dy; if (inb(xx, yy)) near[yy * W + xx] = 1; } for (let dy = -6; dy <= 6; dy++) for (let dx = -6; dx <= 6; dx++) { const xx = x + dx, yy = y + dy; if (inb(xx, yy)) rblock[yy * W + xx] = 1; } }
     // extensão até o portão
+    r.ext = [];
+    for (let x = Math.min(sideA === 'E' ? a.x + a.w - 1 : a.x, sx); x <= Math.max(sideA === 'E' ? a.x + a.w - 1 : a.x, sx); x++) r.ext.push([x, sy]);
+    for (let x = Math.min(sideB === 'E' ? b.x + b.w - 1 : b.x, tx); x <= Math.max(sideB === 'E' ? b.x + b.w - 1 : b.x, tx); x++) r.ext.push([x, ty]);
+    for (const [x, y] of r.ext) for (let dy = -6; dy <= 6; dy++) for (let dx = -6; dx <= 6; dx++) { const xx = x + dx, yy = y + dy; if (inb(xx, yy)) rblock[yy * W + xx] = 1; }
+    carveRing = true;
     carveLine(sideA === 'E' ? a.x + a.w - 1 : a.x, sy, sx, sy, false);
     carveLine(sideB === 'E' ? b.x + b.w - 1 : b.x, ty, tx, ty, false);
+    carveRing = false;
     r.sideA = sideA; r.sideB = sideB;
     World.routes.push({ id: r.id, k: r.k, br: r.br, from: a.id, to: b.id, length: cells.length, fallback: r.fb });
   }
@@ -602,7 +646,7 @@ function buildWorld() {
   const routeGrid = new Int8Array(N).fill(-1);
   {
     const q = new Int32Array(N); let qh = 0, qt = 0;
-    routes.forEach((r, ri) => { for (const [x, y] of r.cells) { const i = y * W + x; if (routeGrid[i] < 0) { routeGrid[i] = ri; q[qt++] = i; } } });
+    routes.forEach((r, ri) => { for (const [x, y] of r.cells.concat(r.ext)) { const i = y * W + x; if (routeGrid[i] < 0) { routeGrid[i] = ri; q[qt++] = i; } } });
     while (qh < qt) {
       const i = q[qh++], x = i % W, y = (i / W) | 0, v = routeGrid[i];
       if (x > 0 && routeGrid[i - 1] < 0) { routeGrid[i - 1] = v; q[qt++] = i - 1; }
@@ -612,6 +656,39 @@ function buildWorld() {
     }
   }
   _M.routeGrid = routeGrid; _M.boxGrid = boxGrid; _M.routeList = routes;
+
+  // --- paredes de árvores entre as regiões de cada rota: o país vira uma corrente cidade -> rota -> cidade,
+  //     e a única passagem de uma rota para a seguinte é atravessar a cidade (portão de saída guardado pela PF)
+  const wall = new Uint8Array(N);
+  {
+    const rid = (bx, by) => (bx < 0 || by < 0 || bx >= W || by >= H) ? -2 : routeGrid[by * W + bx];
+    const busy = (bx, by) => {
+      if (bx < 0 || by < 0 || bx >= W || by >= H) return true;
+      for (let j = 0; j < 2; j++) for (let i = 0; i < 2; i++) { const t = tiles[by + j][bx + i]; if (t === 'path' || t === 'bld' || t === 'sign' || boxGrid[(by + j) * W + bx + i]) return true; }
+      return false;
+    };
+    const mk = [];
+    for (let by = 0; by < H; by += 2) for (let bx = 0; bx < W; bx += 2) {
+      const id = rid(bx, by); if (id < 0 || busy(bx, by)) continue;
+      let hi = false;
+      for (const [dx, dy] of [[2, 0], [-2, 0], [0, 2], [0, -2]]) { const n = rid(bx + dx, by + dy); if (n >= 0 && n !== id && (id > n || busy(bx + dx, by + dy))) hi = true; }
+      if (hi) mk.push([bx, by]);
+    }
+    for (const [bx, by] of mk) for (let j = 0; j < 2; j++) for (let i = 0; i < 2; i++) { const k = (by + j) * W + bx + i; if (!land[k] || ocean[k]) continue; tiles[by + j][bx + i] = 'tree'; wall[k] = 1; }
+    // vedação final: onde duas regiões ainda se tocam (corredores muito próximos), uma cerca de 1 tile fecha a fresta
+    let seals = 0;
+    for (let y = 0; y < H - 1; y++) for (let x = 0; x < W - 1; x++) {
+      const i = y * W + x;
+      if (boxGrid[i] || SOLID.has(tiles[y][x]) || routeGrid[i] < 0) continue;
+      for (const j of [i + 1, i + W]) {
+        const nx = j % W, ny = (j / W) | 0;
+        if (boxGrid[j] || SOLID.has(tiles[ny][nx]) || routeGrid[j] < 0 || routeGrid[j] === routeGrid[i]) continue;
+        if (tiles[y][x] !== 'path') { tiles[y][x] = 'fence'; wall[i] = 1; seals++; break; }
+        if (tiles[ny][nx] !== 'path') { tiles[ny][nx] = 'fence'; wall[j] = 1; seals++; }
+      }
+    }
+    _M.seals = seals;
+  }
 
   // --- mato alto: manchas ao longo das rotas
   const nearCity = (x, y, m) => {
@@ -623,14 +700,14 @@ function buildWorld() {
     for (let y = Math.floor(cy - ry - 2); y <= cy + ry + 2; y++) for (let x = Math.floor(cx - rx - 2); x <= cx + rx + 2; x++) {
       if (!inb(x, y)) continue;
       const i = y * W + x;
-      if (resv[i] || !land[i]) continue;
+      if (resv[i] || !land[i] || wall[i]) continue;
       const e = ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2, th = 1 + (_mh(x, y, 91) - 0.5) * 0.7;
       if (e < th && tallOK.has(tiles[y][x])) { tiles[y][x] = 'tall'; areaGrid[y][x] = area; }
     }
   }
   routes.forEach((r, ri) => {
     const cells = r.cells, n = cells.length;
-    for (let i = 4; i < n - 4; i += 2 + ((R() * 3) | 0)) {
+    for (let i = 4; i < n - 4; i += 1 + ((R() * 2) | 0)) {
       const p = cells[i], q0 = cells[Math.max(0, i - 3)], q1 = cells[Math.min(n - 1, i + 3)];
       let dx = q1[0] - q0[0], dy = q1[1] - q0[1]; const L = Math.hypot(dx, dy) || 1; dx /= L; dy /= L;
       const px = -dy, py = dx, bio = biomeGrid[p[1]][p[0]], big = (bio === 'amazonia' || bio === 'pantanal') ? 1.4 : 1;
@@ -638,12 +715,32 @@ function buildWorld() {
         if (R() > 0.9) continue;
         const off = 3 + R() * 7, cx = p[0] + px * off * side, cy = p[1] + py * off * side;
         const near = nearCity(cx, cy, 6);
-        blob(cx, cy, (2.5 + R() * 3.5) * big, (2.5 + R() * 3) * big, near ? 'cidade_' + near.id : r.id);
+        blob(cx, cy, (4 + R() * 4.5) * big, (3.5 + R() * 4) * big, near ? 'cidade_' + near.id : r.id);
       }
-      if (i % 19 < 2) {  // campo grande
+      if (i % 7 < 2) {  // campo grande
         const side = R() < 0.5 ? 1 : -1, off = 8 + R() * 6, cx = p[0] + px * off * side, cy = p[1] + py * off * side, near = nearCity(cx, cy, 6);
-        blob(cx, cy, (6 + R() * 3) * big, (5 + R() * 3) * big, near ? 'cidade_' + near.id : r.id);
+        blob(cx, cy, (7 + R() * 4) * big, (6 + R() * 4) * big, near ? 'cidade_' + near.id : r.id);
       }
+    }
+  });
+
+  // --- trechos de mato alto cobrindo o próprio caminho (como a Rota 1 de Kanto)
+  routes.forEach(r => {
+    const cells = r.cells, n = cells.length;
+    let i = 10 + ((R() * 10) | 0);
+    while (i < n - 12) {
+      const len = 9 + ((R() * 10) | 0);
+      for (let k = i; k < Math.min(n - 12, i + len); k++) {
+        const [x, y] = cells[k], near = nearCity(x, y, 6), area = near ? 'cidade_' + near.id : r.id;
+        for (const [dx, dy] of [[0, 0], [1, 0], [0, 1], [1, 1], [-1, 0], [2, 0], [0, -1], [0, 2], [-1, 1], [2, 1]]) {
+          const xx = x + dx, yy = y + dy;
+          if (!inb(xx, yy)) continue;
+          const j = yy * W + xx, t = tiles[yy][xx];
+          if (resv[j] || !land[j] || wall[j] || boxGrid[j]) continue;
+          if (t === 'path' || t === 'grass' || t === 'flower' || t === 'tree') { tiles[yy][xx] = 'tall'; areaGrid[yy][xx] = area; }
+        }
+      }
+      i += len + 2 + ((R() * 6) | 0);
     }
   });
 
@@ -662,7 +759,7 @@ function buildWorld() {
         let ok = true, wet = 0, tot = 0;
         for (let y = Math.floor(cy - RR - 1); y <= cy + RR + 1 && ok; y++) for (let x = Math.floor(cx - RR - 1); x <= cx + RR + 1; x++) {
           if (Math.hypot(x - cx, y - cy) > RR + 1.5) continue;
-          if (!inb(x, y) || !land[y * W + x] || resv[y * W + x] || dBorder[y * W + x] <= 4 || tiles[y][x] === 'path' || tiles[y][x] === 'sign') { ok = false; break; }
+          if (!inb(x, y) || !land[y * W + x] || resv[y * W + x] || dBorder[y * W + x] <= 4 || tiles[y][x] === 'path' || tiles[y][x] === 'sign' || wall[y * W + x] || routeGrid[y * W + x] !== routeGrid[p[1] * W + p[0]]) { ok = false; break; }
           if (tiles[y][x] === 'water') wet++; tot++;
         }
         if (!ok || wet > tot * 0.1) continue;
@@ -713,7 +810,7 @@ function buildWorld() {
   for (let by = 0; by < H; by += 2) for (let bx = 0; bx < W; bx += 2) {
     let T = 0;
     for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) if (tiles[by + dy][bx + dx] === 'tree') T++;
-    if (T > 0 && T < 4) for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) if (tiles[by + dy][bx + dx] === 'tree' && land[(by + dy) * W + bx + dx]) tiles[by + dy][bx + dx] = 'grass';
+    if (T > 0 && T < 4) for (let dy = 0; dy < 2; dy++) for (let dx = 0; dx < 2; dx++) if (tiles[by + dy][bx + dx] === 'tree' && land[(by + dy) * W + bx + dx] && !wall[(by + dy) * W + bx + dx]) tiles[by + dy][bx + dx] = 'grass';
     // fora da terra (fronteira / litoral): bloco 2x2 só de não-terra é completado com árvore; se tocar o mar ou a terra, os tiles viram grama/água (nunca uma árvore cortada)
     if (T > 0 && T < 4) {
       let wet = false, anyLand = false;
@@ -725,6 +822,13 @@ function buildWorld() {
         else if (t !== 'tree') tiles[by + dy][bx + dx] = 'tree';
       }
     }
+  }
+
+  // --- saídas das cidades: o mundo é aberto (sem NPCs bloqueando); a fenda do portão tem 1 tile de largura
+  for (const r of routes) {
+    const a = r.a, y = a.y + a.outRow, yp = y ^ 1, west = r.sideA === 'W';
+    const cols = west ? [a.x - 2, a.x - 1] : [a.x + a.w, a.x + a.w + 1];
+    for (const cx2 of cols) { tiles[y][cx2] = 'path'; if (tiles[yp][cx2] !== 'bld') tiles[yp][cx2] = 'fence'; }
   }
 
   // --- alcançabilidade: tall isolado vira grama
@@ -743,6 +847,40 @@ function buildWorld() {
       }
     }
     for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (tiles[y][x] === 'tall' && !seen[y * W + x]) { tiles[y][x] = 'grass'; areaGrid[y][x] = null; }
+  }
+
+  // --- sedes de empresas (zonas de treino), à margem das rotas perto de cada cidade
+  const EMP = [['jf', 'sao_paulo', 'Sede da J&F'], ['odebrecht', 'salvador', 'Sede da Odebrecht'], ['rural', 'belo_horizonte', 'Banco Rural'], ['master', 'brasilia', 'Banco Master']];
+  const okT = new Set(['grass', 'flower', 'tall', 'tree', 'sand']);
+  for (const [emp, cid, label] of EMP) {
+    const c = cityBy[cid]; let done = false;
+    const cand = routes.filter(r => r.a.id === cid || r.b.id === cid);
+    for (let step = 0; step < 80 && !done; step++) for (const r of cand) {
+      if (done) break;
+      const n = r.cells.length, atStart = r.a.id === cid, i = atStart ? 6 + step : n - 7 - step;
+      if (i < 4 || i > n - 4) continue;
+      const [px, py] = r.cells[i];
+      for (const sgn of [-1]) {
+        const bx = px - 2, by = py - 5;                           // logo acima do caminho, porta voltada para ele
+        const lx = bx + 3, ly = by + 4;                          // tile logo abaixo da porta
+        let ok = true;
+        for (let y = by - 1; y <= by + 5 && ok; y++) for (let x = bx - 1; x <= bx + 6; x++) {
+          const k = y * W + x;
+          if (!inb(x, y) || !land[k] || wall[k] || ocean[k] || boxGrid[k] || ringM[k]) { ok = false; break; }
+          const inside = x >= bx && x < bx + 6 && y >= by && y < by + 4;
+          if (inside && !okT.has(tiles[y][x])) { ok = false; break; }
+          if (!inside && y === ly && x === lx) continue;
+          if (!inside && (tiles[y][x] === 'sign' || tiles[y][x] === 'bld' || tiles[y][x] === 'fence' || tiles[y][x] === 'water')) { ok = false; break; }
+        }
+        if (!ok) continue;
+        const bb = addB(c, 'empresa', 'empresa_' + emp, bx, by, 6, 4, label, { empresa: emp, sprite: null });
+        for (let y = by; y < by + 4; y++) for (let x = bx; x < bx + 6; x++) areaGrid[y][x] = null;
+        // trilha de 1 tile da porta até o caminho
+        for (let y = ly; y <= py; y++) if (tiles[y][lx] !== 'path') tiles[y][lx] = 'path';
+        done = true; break;
+      }
+    }
+    if (!done) console.warn('empresa sem lugar: ' + emp);
   }
 
   // --- imagens de fallback dos prédios

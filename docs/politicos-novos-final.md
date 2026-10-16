@@ -1,0 +1,452 @@
+# POKÉPOL: novos políticos (verificados)
+
+Total: 112. Todos com procedimento oficial confirmado em fonte aberta; status = o da fonte (investigado não é condenado).
+
+- **Eduardo Velloso** (Vellosaur do Pix) | União | Deputado federal (AC) | AC | PROPINA, LAVAGEM
+  - Em 29/1/2026 a PF cumpriu 14 mandados de busca, expedidos pelo STF, na Operacao Graco, que apura suposto desvio de cerca de R$ 912 mil em emendas Pix para Sena Madureira (AC), usadas para pagar shows. Os mandados atingiram imoveis dele em Rio Branco e seu apartamento funcional em Brasilia. A fonte informa que ele nao se manifestou.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/115939/pf-mira-deputado-eduardo-velloso-em-operacao-sobre-desvio-de-emendas
+- **Gladson Cameli** (Ptolomeudo) | PP | Ex-governador do Acre | AC | PROPINA
+  - O STJ condenou Gladson Cameli em 6/5/2026 a 25 anos e 9 meses em regime inicial fechado na ação da Operação Ptolomeu, e a Corte Especial o tornou réu no mesmo dia em nova ação sobre a rodovia AC-405. A defesa negou as acusações e alegou nulidade de provas no primeiro caso; cabe recurso.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/118941/ja-condenado-ex-governador-do-acre-vira-reu-em-nova-denuncia-no-stj
+- **Dr. Furlan (Antonio Furlan)** (Furlanquim do Hospital) | PSD | Ex-prefeito de Macapa (renunciou em marco de 2026) | AP | PROPINA, LAVAGEM
+  - Em 4/3/2026 o ministro Flavio Dino (STF) afastou o prefeito de Macapa, na 2a fase da Operacao Paroxismo da PF, que apura suspeita de fraude na licitacao do Hospital Geral Municipal, desvio de recursos e lavagem de dinheiro. Ele renunciou em 5/3 para disputar o governo. A fonte registra que sao indicios e que a defesa nao se manifestou.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/116945/dino-cita-saques-e-indicios-de-fraude-ao-afastar-prefeito-de-macapa ; https://oimparcial.com.br/noticias/2026/03/stf-determina-afastamento-do-prefeito-de-macapa-em-operacao-da-policia-federal/
+- **Alan Machado** (Boquirão) | partido não confirmado | Prefeito de Boquira (BA) | BA | PROPINA
+  - Afastado cautelarmente em 27/06/2025 por decisão do ministro Nunes Marques (STF) na 4ª fase da Overclean, sobre emendas e licitações. Sem condenação; a fonte não traz manifestação dele.
+  - Fonte: https://www.infomoney.com.br/politica/stf-afasta-prefeitos-suspeitos-de-desviar-emendas-parlamentares-veja-quem-sao/
+- **Binho Galinha** (Binho Galinhadeira) | PRD | Deputado estadual (BA) | BA | FUGA
+  - Alvo da Operação Estado Anômico (PF, fim de set/2025), contra organização acusada de jogo do bicho, extorsão e lavagem em Feira de Santana; segundo a PF, teve prisão preventiva decretada e seguia foragido em 01/10/2025. Investigado; a fonte não traz defesa.
+  - Fonte: https://www.bahianoticias.com.br/noticia/309107-caso-binho-galinha-organizacao-criminosa-atuava-ha-mais-de-20-anos-em-feira-e-regiao-diz-pf
+- **Carlinhos Sobral** (Sobralisk de Coronel) | MDB | Deputado estadual eleito (BA) e ex-prefeito de Coronel João Sá | BA | LAVAGEM
+  - Em 15/10/2026 a PF cumpriu mandados de busca na Bahia e em Sergipe sobre suspeita de desvio de verbas da Saude e da Educacao de Coronel Joao Sa enquanto ele era prefeito. Foram apreendidos documentos, celulares e computadores. Ele diz estar tranquilo, que o caso e de 2024 e nasceu de denuncia da oposicao, e que ja apresentou provas.
+  - Fonte: https://www.portalalerta.com.br/index.php/2026/10/16/deputado-estadual-eleito-na-bahia-e-alvo-de-operacao-que-investiga-suspeita-de-desvio-de-recursos-publicos/
+- **Dal Barreto** (Dal Barril) | União | Deputado federal | BA | CENTRAO
+  - Alvo da 6ª fase da Operação Overclean (PF) em outubro de 2025, com oito mandados de busca autorizados pelo STF e celular apreendido no aeroporto de Salvador, por suspeitas de corrupção, lavagem e desvio de emendas e licitações. Investigado, sem denúncia; a fonte não traz manifestação da defesa.
+  - Fonte: https://www.portaltela.com/noticias/politica/2025/10/14/pf-deflagra-nova-fase-da-operacao-overclean-e-mira-deputado-federal-do-uniao/
+- **Félix Mendonça Júnior** (Felixterno) | PDT | Deputado federal | BA | CENTRAO
+  - Principal alvo da 9ª fase da Operação Overclean (PF/CGU, 13/01/2026): 9 mandados de busca autorizados pelo STF e bloqueio de R$ 24 milhões, por suspeita de desvio de emendas, corrupção e lavagem. Já fora alvo em junho de 2025. Investigado, sem denúncia; nega e diz colaborar com a investigação.
+  - Fonte: https://www.portaltela.com/noticias/politica/2026/01/13/felix-mendonca-jr-nega-acusacoes-e-critica-lentidao-da-investigacao/
+- **João Vitor Laranjeira** (Laranjeirão) | PSD | Prefeito de Riacho de Santana (BA) | BA | PROPINA
+  - Alvo da 7ª fase da Operação Overclean (PF), em 16/10/2025, por suspeita de ligação com esquema de desvio de emendas parlamentares. Investigado, sem condenação; a reportagem não obteve resposta dele.
+  - Fonte: https://www.gazetadopovo.com.br/brasil/prefeito-cidade-ba-afastado-operacao-desvio-emendas/
+- **Marcel Carvalho** (Gavetinha) | PT | Ex-prefeito de Paratinga (BA) | BA | PROPINA
+  - Alvo da 4ª fase da Operação Overclean (PF, 27/06/2025), em que agentes encontraram grande quantia em dinheiro em gavetas de sua casa; a PF investiga suposta cobrança de vantagem indevida na liberação de emendas. Sem condenação; a fonte não traz a defesa.
+  - Fonte: https://portaldeprefeitura.com.br/bastidores-da-politica/pf-dinheiro-gaveta-casa-ex-prefeito-bahia-desvio-emenda/597935/
+- **Audic Mota** (Cassamota) | MDB | Deputado estadual (CE; diploma cassado pelo TSE em 2024) | CE | GOLPE
+  - Em 24 de maio de 2024 o TSE, por 5 votos a 2, reconheceu abuso de poder político nas eleições de 2022, cassou o diploma de Audic Mota e o tornou inelegível por oito anos; o TRE-CE havia rejeitado o caso por unanimidade. Ele disse que vai analisar e recorrer, e afirma confiar na Justiça.
+  - Fonte: https://www.opovo.com.br/noticias/politica/eleicoes/2024/05/24/tse-torna-prefeito-e-vice-de-baturite-inelegiveis-e-cassa-deputados-eduardo-bismarck-e-audic-mota.html
+- **Gorete Pereira** (Goretaria do Desconto) | MDB | Deputada federal (CE) | CE | LAVAGEM
+  - Em 17/3/2026 a PF e a CGU deflagraram a Operacao Indebito, desdobramento da Sem Desconto sobre descontos nao autorizados em beneficios do INSS. A deputada foi alvo de mandado de busca e passou a usar tornozeleira eletronica. A fonte diz que a defesa nao foi localizada e nao detalha acusacoes especificas contra ela.
+  - Fonte: https://diariodonordeste.verdesmares.com.br/pontopoder/pf-deflagra-operacao-contra-fraudes-no-inss-no-ceara-deputada-gorete-pereira-e-um-dos-alvos-1.3750636
+- **Júnior Mano** (Underhandinho) | PSB | Deputado federal | CE | PROPINA
+  - Alvo da Operação Underhand (PF, STF/Gilmar Mendes) em 08/07/2025: 15 mandados de busca e R$ 54,6 milhões bloqueados por suspeita de desvio de recursos e fraude em licitações. Investigado; a assessoria diz que ele não tem participação em licitações, gastos ou fiscalização de contratos.
+  - Fonte: https://diariodonordeste.verdesmares.com.br/pontopoder/quem-e-junior-mano-deputado-cearense-alvo-da-pf-em-investigacao-sobre-desvio-de-dinheiro-publico-1.3667746
+- **Mário Vicktor Linhares Cavalcante** (Vicktorgon da Omerta) | União | Vereador de Sobral (CE) | CE | PROPINA
+  - Em 11/8/2026 a Operacao Omerta (PF e MPCE) cumpriu mandados de prisao contra tres vereadores de Sobral, entre eles Mário Vicktor. Segundo o MPCE, eles são suspeitos de cobrar R$ 60 mil de candidatos para fazer campanha em areas dominadas por faccao. O bloco União/PP anunciou que vai abrir procedimento para expulsá-lo. A fonte nao traz a defesa.
+  - Fonte: https://mais.opovo.com.br/colunistas/henrique-araujo/2026/08/11/quem-sao-os-vereadores-presos-por-suspeita-de-elo-com-faccao-e-de-cobrar-pedagio-de-rs-60-mil.html
+- **Raimundo Nonato do Nascimento (Junim do Povo)** (Junimorto do Pedagio) | Podemos | Vereador de Sobral (CE) | CE | PROPINA
+  - Em 11/8/2026 a Operacao Omerta (PF e MPCE) cumpriu mandados de prisao contra tres vereadores de Sobral, incluindo Junim do Povo, suspeitos segundo o MPCE de cobrar R$ 60 mil de candidatos para acesso a areas controladas por faccao. A fonte informa que o Podemos ainda nao havia respondido e nao traz a defesa dele.
+  - Fonte: https://mais.opovo.com.br/colunistas/henrique-araujo/2026/08/11/quem-sao-os-vereadores-presos-por-suspeita-de-elo-com-faccao-e-de-cobrar-pedagio-de-rs-60-mil.html
+- **Yury do Paredão** (Yury do Paredão) | MDB | Deputado federal (CE) | CE | FAKE
+  - Teve a casa alvo de busca em 02/10/2026 em operação da PF com medidas autorizadas pelo TRE-CE para apurar possíveis irregularidades eleitorais. Investigado; a assessoria diz que nada foi apreendido e ele se coloca à disposição das autoridades.
+  - Fonte: https://mais.opovo.com.br/jornal/politica/2026/10/03/yury-do-paredao-e-alvo-de-operacao-da-pf-que-apura-supostas-irregularidades-eleitorais-no-ceara.html
+- **Alberto Fraga** (Fragalhado) | DEM (à época) | Ex-deputado federal | DF | PROPINA
+  - Em 24/9/2018 a Vara Criminal de Núcleo Bandeirante (DF) o condenou em 1ª instância a 4 anos, 2 meses e 20 dias em regime semiaberto por concussão (R$ 350 mil de propina em 2008, quando era secretário de Transportes do DF; caso da Operação Regin). Ele nega e recorreu.
+  - Fonte: https://www.congressoemfoco.com.br/corrupcao/fraga-pega-quatro-anos-de-prisao-em-regime-semiaberto-por-cobrar-propina/
+- **Augusto Heleno** (Helenoncio) | PRD | General da reserva; ex-ministro do GSI | DF | GOLPE
+  - A 1ª Turma do STF o condenou em 11/09/2025 a 21 anos na AP 2668 (organização criminosa, tentativa de golpe e outros crimes). Cumpre a pena em prisão domiciliar desde dezembro de 2025 por motivo de saúde.
+  - Fonte: https://pt.wikipedia.org/wiki/Augusto_Heleno
+- **Celina Leão** (Draculeão) | PP | Vice-governadora do DF | DF | PROPINA
+  - Em 21/3/2017 o Conselho Especial do TJDFT recebeu a denúncia do MPDFT por corrupção passiva e a tornou ré na Operação Drácon (suposta propina por emendas ligadas à saúde). Ela nega.
+  - Fonte: https://congressoemfoco.com.br/noticias/tj-aceita-denuncia-e-cinco-deputados-se-tornam-reus-na-operacao-dracon
+- **Ibaneis Rocha** (Ibaneisolado) | MDB | Ex-governador do Distrito Federal | DF | GOLPE
+  - O ministro Alexandre de Moraes (STF) afastou Ibaneis Rocha do governo em 8/1/2023 em investigação sobre ações e omissões de autoridades nos ataques daquele dia. Em 5/3/2025 Moraes arquivou o inquérito a pedido da PGR. A defesa contestou o afastamento.
+  - Fonte: https://www.cnnbrasil.com.br/politica/ibaneis-rocha-deve-recorrer-de-afastamento-ao-stf-nesta-semana/ ; https://www.infomoney.com.br/politica/moraes-arquiva-investigacao-sobre-ibaneis-por-suposta-omissao-no-8-de-janeiro/
+- **José Roberto Arruda** (Pandoruda) | partido não confirmado | Ex-governador do Distrito Federal | DF | PROPINA
+  - A Primeira Turma do STJ rejeitou, por unanimidade, recurso de José Roberto Arruda e manteve condenação por improbidade administrativa em caso da Operação Caixa de Pandora (julgamento virtual iniciado em 13/10/2025). Ele segue inelegível por condenações ligadas ao esquema de 2009.
+  - Fonte: https://www.cnnbrasil.com.br/politica/stj-mantem-ex-governador-do-df-jose-roberto-arruda-inelegivel/
+- **Marcelo Câmara** (Câmaraespion) | partido não confirmado | Coronel da reserva; ex-assessor especial do governo Bolsonaro | DF | GOLPE
+  - A 1a Turma do STF o condenou a 21 anos de prisão no núcleo 2 da trama golpista, ligado ao monitoramento de autoridades. Estava preso preventivamente desde junho de 2025; Moraes declarou o trânsito em julgado em 24/4/2026 e o STM será oficiado sobre a perda do posto.
+  - Fonte: https://www.gazetadopovo.com.br/republica/moraes-determina-prisao-definitiva-de-filipe-martins-e-outros-condenados-do-nucleo-2/ ; https://www.bahianoticias.com.br/noticia/312179-com-prisao-de-filipe-martins-veja-a-situacao-dos-23-reus-ja-condenados-da-trama-golpista
+- **Mário Fernandes** (Mário Punhalzard) | partido não confirmado | General da reserva; ex-secretário-executivo da Secretaria-Geral da Presidência | DF | GOLPE
+  - A 1a Turma do STF o condenou a 26 anos e 6 meses de prisão, a maior pena do núcleo 2 da trama golpista, apontando-o como autor do plano 'Punhal Verde e Amarelo'. Moraes declarou o trânsito em julgado em 24/4/2026; o STM será oficiado sobre a perda do posto e da patente.
+  - Fonte: https://www.gazetadopovo.com.br/republica/moraes-determina-prisao-definitiva-de-filipe-martins-e-outros-condenados-do-nucleo-2/ ; https://www.bahianoticias.com.br/noticia/312179-com-prisao-de-filipe-martins-veja-a-situacao-dos-23-reus-ja-condenados-da-trama-golpista
+- **Paulo Sérgio Nogueira** (Paulo Sérgio Nogueirock) | partido não confirmado | General do Exército; ex-ministro da Defesa (2022) | DF | GOLPE
+  - Em 11/9/2025 a 1a Turma do STF o condenou a 19 anos de prisão em regime inicial fechado e 84 dias-multa na AP 2668 (organização criminosa armada, tentativa de abolição violenta do Estado de Direito, golpe de Estado e outros crimes). Foi preso em 25/11/2025 para cumprir a pena.
+  - Fonte: https://pt.wikipedia.org/wiki/Paulo_S%C3%A9rgio_Nogueira ; https://www.itatiaia.com.br/politica/stf-libera-execucao-das-penas-e-aliados-de-bolsonaro-comecam-a-ser-detidos/
+- **Bruno Teófilo Araújo** (Brunoeco) | PDT | Ex-prefeito de Pedro Canário | ES | PROPINA
+  - Está em prisão preventiva desde 26/05/2026, na 2ª fase da Operação Eco da Fraude (PF), por suspeita de fraude em licitações, corrupção e lavagem no caso do 34º Forró da Tábua Lascada. Em junho de 2026 o STJ negou habeas corpus sem analisar o mérito. A defesa vai recorrer.
+  - Fonte: https://www.agazeta.com.br/es/politica/stj-mantem-presos-prefeito-e-ex-prefeito-de-pedro-canario-investigados-por-corrupcao-0626
+- **Capitão Assumção** (Assumcão) | PL | Deputado estadual (ALES) | ES | GOLPE
+  - Investigado no STF (min. Alexandre de Moraes) por participação nos bloqueios de rodovias após a eleição de 2022, usava tornozeleira desde dezembro de 2022. Em 28/2/2024 a PF o prendeu por descumprimento das medidas cautelares; a Assembleia revogou a prisão por 24 a 4 e Moraes o soltou em 7/3/2024.
+  - Fonte: https://istoedinheiro.com.br/deputado-do-pl-no-espirito-santo-e-preso-pela-pf-em-vitoria
+- **Gilvan da Federal** (Gilvan do Quinto) | PL | Deputado federal | ES | GOLPE
+  - Em 18/8/2026 a 1ª Turma do STF aceitou por unanimidade denúncia da PGR e o tornou réu por injúria contra o presidente Lula, por fala na Comissão de Segurança Pública da Câmara em abril de 2025. A defesa pediu arquivamento alegando imunidade parlamentar; a relatora, Cármen Lúcia, rejeitou o argumento.
+  - Fonte: https://portaldeprefeitura.com.br/bastidores-da-politica/deputado-do-pl-vira-reu-no-stf-por-desejar-morte-de-lula/630226/
+- **Kleilson Martins Rezende** (Kleilsonforró) | PSB | Prefeito de Pedro Canário (ES), afastado em 2026 | ES | PROPINA
+  - Está em prisão preventiva desde 26/05/2026, na 2ª fase da Operação Eco da Fraude (PF), por suspeita de fraude em contratos do 34º Forró da Tábua Lascada. Em 15/06/2026 o STJ manteve a prisão sem julgar o mérito, por falta de decisão do TJES. A defesa diz que os motivos da prisão cessaram e vai recorrer.
+  - Fonte: https://www.agazeta.com.br/es/politica/stj-mantem-presos-prefeito-e-ex-prefeito-de-pedro-canario-investigados-por-corrupcao-0626
+- **Alexandre Baldy** (Baldeado) | partido não confirmado | Ex-ministro das Cidades | GO | PROPINA
+  - Em agosto de 2020 o MPF (força-tarefa da Lava Jato no RJ) o denunciou por corrupção, peculato, fraude em licitações e organização criminosa, em caso ligado à Pró-Saúde e ao Hospital Hurso (GO). Preso em 6/8/2020 e solto no dia seguinte por decisão de Gilmar Mendes. A defesa diz que é inocente.
+  - Fonte: https://www.congressoemfoco.com.br/judiciario/lava-jato-mpf-denuncia-alexandre-baldy-por-corrupcao/
+- **Marconi Perillo** (Perildeliver) | PSDB | Ex-governador de Goiás | GO | PROPINA
+  - O MPF denunciou Marconi Perillo em junho de 2019, na Operação Cash Delivery, por corrupção passiva, lavagem e organização criminosa (suposta propina de R$ 17,8 milhões da Odebrecht). A defesa fala em perseguição e contesta a competência. Desfecho posterior não confirmado.
+  - Fonte: https://www.tribunapr.com.br/noticias/politica/lava-jato-denuncia-marconi-perillo-por-propina-de-r-178-milhoes-da-odebrecht/
+- **Vilmar Mariano** (Vilmar Exonerador) | União Brasil | Ex-prefeito de Aparecida de Goiânia | GO | GOLPE
+  - Em 5/8/2025 a juíza da 119ª Zona Eleitoral o declarou inelegível, com a esposa Sulnara Gomes Santana, por abuso de poder político nas eleições de 2024 (exonerações em massa de comissionados), com multa de R$ 30 mil. A reportagem não traz a defesa; a decisão cabe recurso.
+  - Fonte: https://revistaoeste.com/politica/ex-prefeito-de-aparecida-se-torna-inelegivel-por-abuso-de-poder/
+- **Amanda Gentil** (Gentilgate) | PP | Deputada federal | MA | PROPINA
+  - Teve a residência alvo de busca e apreensão em 19/08/2025 na Operação Lei do Retorno (PF), que apura suposto desvio de mais de R$ 50 milhões do Fundeb no MA e PI. É investigada; a reportagem não registra manifestação dela.
+  - Fonte: https://oimparcial.com.br/brasil/2025/08/saiba-quem-sao-os-investigados-na-operacao-da-pf-sobre-desvios-do-fundeb/
+- **Edésio Cavalcanti** (Edesiopeixe de Turiacu) | Republicanos | Prefeito de Turiaçu (cassado em 1a instancia) | MA | FAKE
+  - Em decisao publicada em 8/6/2026, a Justica Eleitoral cassou o prefeito e o vice de Turiacu (MA) por abuso de poder politico e economico nas eleicoes de 2024 e declarou ambos inelegiveis por 8 anos. A sentenca cita distribuicao de peixe na Semana Santa de 2024 alem do criterio legal. A fonte nao traz a defesa; a decisao cabe recurso.
+  - Fonte: https://oimparcial.com.br/noticias/2026/06/cassados-prefeito-e-vice-prefeito-de-turiacu-por-abuso-de-poder-politico-e-economico/
+- **Fábio Gentil** (Fundebão) | partido não confirmado | Ex-prefeito de Caxias (MA) | MA | PROPINA
+  - Teve a residência alvo de busca e apreensão em 19/08/2025 na Operação Lei do Retorno (PF), sobre suposto desvio do Fundeb. É investigado; a reportagem não registra manifestação dele.
+  - Fonte: https://oimparcial.com.br/brasil/2025/08/saiba-quem-sao-os-investigados-na-operacao-da-pf-sobre-desvios-do-fundeb/
+- **Luanna Rezende** (Luanna Benesse) | partido não confirmado | Prefeita de Vitorino Freire (MA) | MA | PROPINA
+  - Em 01/09/2023 foi alvo de busca da PF e de medida cautelar de afastamento do cargo na Operação Benesse, sobre emendas via Codevasf. É irmã do então ministro Juscelino Filho, cuja defesa nega irregularidades. Sem condenação nas fontes.
+  - Fonte: https://www.cnnbrasil.com.br/politica/pf-realiza-operacao-no-maranhao-contra-desvio-de-recursos-da-codevasf/
+- **Pastor Gil** (Pastor Gilpina) | PL | Deputado federal | MA | PROPINA
+  - Condenado pela 1ª Turma do STF em 17/03/2026 a 5 anos e 6 meses em regime semiaberto por corrupção passiva, em caso de emendas parlamentares destinadas a São José de Ribamar (MA). A decisão sobre o mandato cabe à Câmara; a defesa nega irregularidades e diz que ele não teve ingerência sobre a aplicação final das verbas. A fonte não informa sobre recursos.
+  - Fonte: https://www.poder360.com.br/poder-justica/stf-condena-deputados-do-pl-acusados-de-desviar-emendas/
+- **Bruno Engler** (Englerfake) | PL | Deputado estadual (ALMG) | MG | FAKE
+  - Em julho de 2025 o TRE-MG recebeu denúncia do Ministério Público Eleitoral e o tornou réu por campanha de desinformação contra o então prefeito de BH Fuad Noman no 2º turno de 2024, quando Engler era candidato a prefeito. Segundo a acusação, ele coordenou a campanha; a defesa diz que não houve crime.
+  - Fonte: https://www.opovo.com.br/noticias/politica/2025/07/26/nikolas-ferreira-se-torna-reu-na-justica-eleitoral-de-mg-e-pode-ficar-inelegivel.html
+- **Danilo Rezende** (Danilo Hipócrita) | Republicanos | Prefeito de Três Marias (afastado em 2026) | MG | PROPINA
+  - Em 9/6/2026 o MPMG fez a Operação Hipócrates (30 mandados de busca, inclusive na prefeitura) e em 10/6 o TJMG o afastou cautelarmente do cargo por suspeitas de fraude em licitação (transporte escolar), crimes de responsabilidade e lavagem. Ele diz que não é ordenador de despesas da Educação e confia no esclarecimento dos fatos.
+  - Fonte: https://www.itatiaia.com.br/politica/justica-determina-afastamento-cautelar-de-prefeito-de-tres-marias/
+- **Delegada Sheila** (Delegada Sheilantasma) | PL | Deputada estadual (ALMG) | MG | FAKE
+  - Em julho de 2025 o TRE-MG recebeu denúncia do Ministério Público Eleitoral e a tornou ré, com Nikolas Ferreira e Bruno Engler, por suposta divulgação de conteúdo difamatório/falso contra o então prefeito de BH Fuad Noman em 2024. A acusação diz que ela compartilhou o material.
+  - Fonte: https://www.opovo.com.br/noticias/politica/2025/07/26/nikolas-ferreira-se-torna-reu-na-justica-eleitoral-de-mg-e-pode-ficar-inelegivel.html
+- **Euclydes Pettersen** (Herói E.) | Republicanos | Deputado federal | MG | PROPINA
+  - Alvo de buscas em 13/11/2025 na Operação Sem Desconto (PF/CGU, autorizada pelo STF, min. André Mendonça); em fevereiro a PF apreendeu um jatinho dele. A PF o indiciou entre 48 pessoas por suspeita de propina para proteção política ao esquema de descontos no INSS. Ele nega envolvimento e diz que indiciamento não é ação penal.
+  - Fonte: https://sbtnews.sbt.com.br/noticia/politica/pf-indicia-deputado-euclydes-pettersen-na-sem-desconto ; https://www.opovo.com.br/noticias/politica/2025/11/13/amp/fraudes-no-inss-ex-ministro-de-bolsonaro-e-deputados-sao-alvos-da-pf.html
+- **Fernando Pimentel** (Pimentacrônimo) | PT | Ex-governador de MG; presidente da EMGEA | MG | LAVAGEM
+  - Alvo da Operação Acrônimo (PF, 2015), foi denunciado pela PGR em 2016 (corrupção e lavagem de dinheiro) e em 2018 (caixa 2). Em 2019 foi absolvido de acusação de caixa 2 na campanha de 2010 e, em 2021, a Justiça rejeitou denúncia baseada na delação da JBS. As fontes consultadas não trazem condenação nem desfecho final das denúncias de 2016 e 2018.
+  - Fonte: https://pt.wikipedia.org/wiki/Fernando_Pimentel
+- **Marcelo Álvaro Antônio** (Laranjálvaro) | PL | Deputado federal (MG); ex-ministro do Turismo | MG | LAVAGEM
+  - No caso das candidaturas-laranja do PSL em 2018, a PF o indiciou em 03/10/2019 e o Ministério Público Eleitoral de MG o denunciou em 04/10/2019 por falsidade ideológica, apropriação indébita eleitoral e associação criminosa. Nas fontes consultadas não consta o recebimento ou rejeição da denúncia; ele nega irregularidades.
+  - Fonte: https://pt.wikipedia.org/wiki/Marcelo_%C3%81lvaro_Ant%C3%B4nio ; https://www.congressoemfoco.com.br/noticia/24867/pf-indicia-ministro-do-turismo-por-candidaturas-laranjas-no-psl
+- **Nikolas Ferreira** (Nikolasfake) | PL | Deputado federal | MG | FAKE
+  - Em julho de 2025 o TRE-MG recebeu denúncia do Ministério Público Eleitoral e o tornou réu, junto com Bruno Engler e outros, por difundir informação falsa/difamatória contra o então prefeito de BH Fuad Noman no 2º turno de 2024, a partir de vídeo sobre um livro do prefeito. Ele chama o caso de perseguição política.
+  - Fonte: https://www.opovo.com.br/noticias/politica/2025/07/26/nikolas-ferreira-se-torna-reu-na-justica-eleitoral-de-mg-e-pode-ficar-inelegivel.html
+- **Raquel Muniz** (Raquelveu) | PSD | Deputada federal (MG) em 2016 | MG | PROPINA
+  - Foi alvo de buscas da PF na Operação Véu Protetor em 09/09/2016, junto com o marido Ruy Muniz, em apuração sobre desvio de verbas, fraudes tributárias e lavagem. É investigação, sem condenação; a assessoria disse que ela se manifestaria.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/41294/deputada-federal-e-prefeito-afastado-de-montes-claros-sao-alvos-da-pf
+- **Ruy Muniz** (Ruyveu) | PSB | Prefeito afastado de Montes Claros (MG) em 2016 | MG | PROPINA
+  - Foi preso em abril de 2016 por suspeita de corrupção na saúde de Montes Claros e, em 09/09/2016, foi alvo da Operação Véu Protetor da PF, que apura desvio de verbas, fraudes tributárias e lavagem. Os fatos são investigação; o Congresso em Foco não registra condenação nem manifestação dele.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/41294/deputada-federal-e-prefeito-afastado-de-montes-claros-sao-alvos-da-pf
+- **André Puccinelli** (Lamapuccinelli) | partido não confirmado | Ex-governador de Mato Grosso do Sul | MS | LAVAGEM
+  - A Justiça Federal aceitou em 10/8/2022 denúncia da Operação Lama Asfáltica contra André Puccinelli, tornando-o réu por fraude em licitação na obra da Avenida Lúdio Coelho (Campo Grande). A fonte não traz a defesa sobre o mérito; andamento posterior não confirmado.
+  - Fonte: https://www.campograndenews.com.br/cidades/capital/puccinelli-e-giroto-voltam-a-ser-reus-por-fraude-em-obra-da-avenida-ludio-coelho
+- **Neno Razuk** (Razukbicho) | PL | Deputado estadual (ALEMS) | MS | LAVAGEM
+  - Em fevereiro de 2024, após as duas fases da Operação Successione, a Justiça aceitou denúncia do Gaeco/MPMS e o tornou réu, acusado de liderar organização criminosa ligada à disputa pelo jogo do bicho em Campo Grande. Ele alega ser vítima de uma armação.
+  - Fonte: https://www.campograndenews.com.br/politica/alems-e-notificada-mas-futuro-de-neno-razuk-como-deputado-depende-de-denuncia
+- **Reinaldo Azambuja** (Azamboiada) | partido não confirmado | Ex-governador de Mato Grosso do Sul | MS | PROPINA
+  - O MPF denunciou ao STJ, em 14/10/2020, o então governador Reinaldo Azambuja (PSDB) e os donos da JBS por corrupção ativa e passiva, lavagem e organização criminosa (suposta propina de cerca de R$ 67 milhões). Ele disse receber a denúncia com indignação e confiar que a verdade prevalecerá. Andamento posterior não confirmado.
+  - Fonte: https://www.congressoemfoco.com.br/corrupcao/mpf-denuncia-governador-do-ms-joesley-e-wesley-batista-por-corrupcao
+- **Blairo Maggi** (Sojamaggi) | partido não confirmado | Ex-ministro da Agricultura e ex-governador de Mato Grosso | MT | CENTRAO
+  - O ministro Luiz Fux (STF) autorizou em 24/8/2017, a pedido da PGR, inquérito sobre suposta organização criminosa no governo de Mato Grosso, na qual a PGR apontava Blairo Maggi como líder. Ele figura como investigado; desfecho não confirmado e a fonte não traz a defesa.
+  - Fonte: https://abcdoabc.com.br/fux-abre-inquerito-contra-blairo-por-organizacao-criminosa-em-mato-grosso/
+- **Emanuel Pinheiro** (Mensalinhomuk) | MDB | Ex-prefeito de Cuiabá (2017-2024) | MT | PROPINA
+  - Em setembro de 2020 a 5ª Vara Federal de Mato Grosso aceitou denúncia do MPF e o tornou réu por corrupção no caso do chamado mensalinho da gestão Silval Barbosa; ele disse que provará sua inocência. Em março de 2024 o TJMT o afastou por 180 dias, sob acusação de organização criminosa na Saúde municipal, e liminar do ministro Ribeiro Dantas (STJ) permitiu seu retorno ao cargo e suspendeu o inquérito.
+  - Fonte: https://www.poder360.com.br/justica/prefeito-de-cuiaba-e-ex-governador-viram-reus-por-mensalinho/ ; https://www.lex.com.br/stj-autoriza-retorno-de-prefeito-de-cuiaba-ao-cargo-e-suspende-investigacao-por-suposta-organizacao-criminosa
+- **Fábio Garcia** (Oigarcia) | União Brasil | Deputado federal e candidato a vice-governador de MT | MT | LAVAGEM
+  - Fábio Garcia foi alvo de busca e apreensão da PF em 6/8/2026 na Operação Heritage, que apura suposto desvio no acordo do estado de Mato Grosso com a Oi. Não há denúncia; a fonte não traz a posição da defesa.
+  - Fonte: https://www.folhape.com.br/noticia/amp/505012/ex-governador-do-mt-e-deputado-sao-alvos-da-pf-em-investigacao-sobre/
+- **Mauro Mendes** (Maurodoi) | União Brasil | Ex-governador, candidato ao Senado | MT | LAVAGEM
+  - Em 6/8/2026 foi alvo da Operação Heritage (PF, autorizada pelo STF) sobre suposto desvio ligado à renegociação de dívida do estado com a Oi (de R$ 690 mi para R$ 308 mi); a PF pediu bloqueio de até R$ 316 mi. Ele diz confiar na investigação; nada foi provado em juízo.
+  - Fonte: https://www.folhape.com.br/noticia/amp/505012/ex-governador-do-mt-e-deputado-sao-alvos-da-pf-em-investigacao-sobre/
+- **Neri Geller** (Gelerão) | PP | Deputado federal | MT | GOLPE
+  - O TSE cassou o mandato de deputado federal de Neri Geller em 2022 por abuso de poder econômico e captação ilícita de recursos, tornando-o inelegível por oito anos. Em outubro de 2022 houve ação no STF para que a Câmara declarasse a perda do mandato.
+  - Fonte: https://olhardireto.com.br/juridico/noticias/marrafon-envia-ao-stf-nova-manifestacao-por-perda-de-mandato-de-neri-geller
+- **Ondanir Bortolini (Nininho)** (Nininhorn) | partido não confirmado | Deputado estadual (MT) | MT | PROPINA
+  - Em 15 de abril de 2026 a Corte Especial do STJ recebeu parcialmente denúncia do MPF e tornou réus o ex-governador Silval Barbosa (corrupção passiva) e o deputado estadual Ondanir Bortolini, o Nininho (corrupção ativa), em caso de propina ligado à concessão de rodovia em Mato Grosso. A denúncia por lavagem de dinheiro não foi aceita. A fonte não traz a manifestação da defesa.
+  - Fonte: https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/stj-torna-reus-ex-governador-de-mt-e-ex-deputado-por-corrupcao-em-concessao-de-rodovia
+- **Selma Arruda** (Selmadois) | Podemos (à época) | Ex-senadora e ex-juíza | MT | LAVAGEM
+  - O TSE cassou em 10/12/2019, por 6 votos a 1, o mandato da senadora Selma Arruda por caixa 2 e abuso de poder econômico na campanha de 2018 (R$ 1,23 milhão não declarados). Ela afirmou que o valor foi empréstimo do primeiro suplente, usado na pré-campanha.
+  - Fonte: https://www.poder360.com.br/congresso/tse-decide-cassar-mandato-da-senadora-juiza-selma-arruda/
+- **Silval Barbosa** (Silvaldoma) | MDB | Ex-governador de Mato Grosso | MT | DELACAO
+  - A Justiça de Mato Grosso condenou em 1ª instância, em maio de 2018, Silval Barbosa e outras 14 pessoas na Operação Sodoma (suposta propina por incentivos fiscais). Ele firmou delação premiada e tem outra condenação por propina de R$ 2,5 milhões. Recursos posteriores não verificados.
+  - Fonte: https://www.tribunapr.com.br/noticias/politica/justica-condena-silval-e-mais-14-por-propinas-em-mato-grosso/
+- **Antônio Doido (Antônio Leocádio dos Santos)** (Doidoleon do Igapo) | MDB | Deputado federal (PA) | PA | PROPINA, LAVAGEM
+  - Em 16/12/2025 a PF cumpriu 31 mandados de busca na Operacao Igapo, autorizada pelo ministro Flavio Dino (STF), sobre suspeita de desvio de emendas e verbas estaduais, corrupcao e lavagem de dinheiro; dinheiro em especie foi apreendido no apartamento funcional. A fonte registra que ele nao se manifestou.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/114924/deputado-antonio-doido-e-alvo-de-operacao-da-pf-por-desvio-de-recursos
+- **Helder Barbalho** (Helderbellum) | MDB | Governador do Pará (à época da operação) | PA | PROPINA
+  - Em 29/9/2020 a PF deflagrou a Operação S.O.S. sobre suspeita de desvio em contratos de R$ 1,2 bi da saúde com organizações sociais; houve busca e apreensão no gabinete do governador e prisão de 2 secretários. Ele é investigado; o governo diz apoiar a apuração.
+  - Fonte: https://www.poder360.com.br/justica/pf-mira-suposto-desvio-de-r-12-bilhao-em-contratos-da-saude-no-para/
+- **Manoel Pioneiro** (Pioneirodon do Saque) | Republicanos | Ex-prefeito de Ananindeua e ex-presidente da Cohab; candidato a deputado federal em 2026 | PA | LAVAGEM, FAKE
+  - Em 29/9/2026 a PF prendeu em flagrante, em Belem, seis pessoas, entre elas Manoel Pioneiro, sob suspeita de lavagem de dinheiro e compra de votos (art. 299 do Codigo Eleitoral). O gabinete dele disse que um saque de R$ 300 mil estava dentro da normalidade e sem relacao com a campanha.
+  - Fonte: https://revistaoeste.com/politica/pf-prende-candidato-a-deputado-no-para/
+- **Chico Nazário (Francisco Nazário de Oliveira)** (Nazariguana do Lixo) | União | Prefeito de Caaporã (PB), afastado | PB | PROPINA, LAVAGEM
+  - Em 20/8/2026 a Operacao Purgatorio (Gaeco) levou o TJPB a afastar por 180 dias o prefeito de Caaporã, em investigação de suposta organização criminosa e fraude no contrato de coleta de lixo, com dano estimado em cerca de R$ 2 milhões. A reportagem cita video de 2024 em que ele recebe uma bolsa de dinheiro (R$ 400 mil de doação de campanha, segundo o veículo). A fonte não traz a defesa.
+  - Fonte: https://jornaldaparaiba.com.br/politica/pleno-poder/secretarios-da-prefeitura-de-caapora-tambem-sao-afastados-pela-justica-veja-mais-detalhes
+- **Leto Viana** (Xeque-Matinho) | PRP (à época) | Ex-prefeito de Cabedelo (PB) | PB | PROPINA
+  - Preso em 03/04/2018 na Operação Xeque-Mate (PF e Gaeco-MPPB), que apura enriquecimento incompatível, servidores fantasmas e doações fraudulentas de imóveis. A fonte não traz a defesa; sem condenação nas fontes.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/51318/operacao-xeque-mate-prende-prefeito-e-cinco-vereadores-de-cabedelo-na-paraiba
+- **Ricardo Coutinho** (Calvarinho) | PSB | Ex-governador da Paraíba | PB | PROPINA
+  - Denunciado pelo MP-PB em janeiro de 2020 na Operação Calvário, apontado como líder de organização criminosa; o MP pede perda de função, inabilitação e R$ 134,2 milhões em danos. Foi preso em 20/12/2019 e solto no dia seguinte por decisão do STJ. Sem condenação nas fontes; a defesa diz que a acusação se baseia só em delações.
+  - Fonte: https://www.metropoles.com/brasil/politica-brasil/mp-denuncia-ex-governador-da-pb-ricardo-coutinho-e-quer-r-134-mi
+- **Wilson Santiago** (Adutorão) | PTB (à época) | Ex-deputado federal | PB | PROPINA
+  - Denunciado pela PGR em dezembro de 2019 (Operação Pés de Barro) por corrupção passiva e organização criminosa, por suposta propina da Coenco nas obras da Adutora Capivara; foi afastado do mandato por Celso de Mello em 2019 e a Câmara rejeitou o afastamento em 02/2020. Reportagem indica que a Justiça Federal da PB recebeu a denúncia em 2021. A defesa nega que ele tenha recebido propina.
+  - Fonte: https://www.poder360.com.br/justica/pgr-denuncia-deputado-wilson-santiago-por-organizacao-criminosa-e-corrupcao-passiva/ ; https://www.camara.leg.br/noticias/634689-CAMARA-REJEITA-AFASTAMENTO-DO-DEPUTADO-WILSON-SANTIAGO
+- **Eduardo da Fonte** (Dudu da Fontana) | PP | Deputado federal (PE) | PE | PROPINA
+  - A 2ª Turma do STF recebeu, por 3 a 2, em maio de 2018, denúncia da PGR por corrupção passiva e lavagem (R$ 300 mil da UTC em 2010), tornando-o réu. Ele nega e a defesa diz que as doações eram legais. Desfecho final não confirmado.
+  - Fonte: https://www.tribunapr.com.br/noticias/politica/stf-suspende-pela-5-vez-julgamento-de-denuncia-contra-dudu-da-fonte/ ; https://www.congressoemfoco.com.br/amp/noticia/27904/eduardo-da-fonte-vira-reu-na-lava-jato
+- **Fernando Bezerra Coelho** (Bezerro de Ouro) | MDB | Ex-senador | PE | PROPINA
+  - Alvo da Operação Vassalos (PF, autorizada pelo ministro Flávio Dino, do STF) em 25/02/2026, com 42 mandados de busca, por suspeita de direcionamento de licitações pagas com emendas (Codevasf, Dnocs), corrupção e lavagem. Investigado, sem denúncia; os investigados negam irregularidades.
+  - Fonte: https://www.diariodepernambuco.com.br/politica/2026/02/11708480-operacao-o-contra-familia-coelho-entenda-a-investigacao-da-pf.html
+- **Fernando Coelho Filho** (Coelhinho da Páscoa) | União | Deputado federal | PE | PROPINA
+  - Alvo da Operação Vassalos (PF, autorizada pelo ministro Flávio Dino, do STF) em 25/02/2026, junto com o pai e Miguel Coelho, por suspeita de fraude em licitações pagas com emendas, corrupção e lavagem. Investigado, sem denúncia; os investigados negam irregularidades.
+  - Fonte: https://www.diariodepernambuco.com.br/politica/2026/02/11708480-operacao-o-contra-familia-coelho-entenda-a-investigacao-da-pf.html
+- **Miguel Coelho** (Petrolinando) | União | Ex-prefeito de Petrolina | PE | PROPINA
+  - Alvo da Operação Vassalos (PF, autorizada pelo ministro Flávio Dino, do STF) em 25/02/2026, que apura licitações bancadas por emendas, com suspeita de corrupção e lavagem; a prefeitura de Petrolina também foi alvo de buscas. Investigado, sem denúncia; os investigados negam irregularidades.
+  - Fonte: https://www.diariodepernambuco.com.br/politica/2026/02/11708480-operacao-o-contra-familia-coelho-entenda-a-investigacao-da-pf.html
+- **Tatiana Medeiros** (Vereadora Arbok) | PSB | Vereadora de Teresina (PI) | PI | LAVAGEM
+  - Presa pela PF em 03/04/2025 na 2ª fase da Operação Escudo Eleitoral, que apura suposto financiamento da campanha de 2024 com recursos de tráfico e desvios via ONG. A reportagem não traz a defesa dela.
+  - Fonte: https://www.infomoney.com.br/politica/pf-prende-vereadora-de-teresina-por-suspeita-de-usar-dinheiro-de-faccao-em-campanha/
+- **Beto Richa** (Betopedágio) | PSDB | Deputado federal (PR); ex-governador do Paraná (2011-2018) | PR | PROPINA
+  - Em fevereiro de 2019 a Justiça aceitou denúncia do MPF contra Beto Richa e outras nove pessoas por corrupção passiva e organização criminosa na Operação Integração (pedágios no Paraná), tornando-o réu. Em 2018 ele já havia sido condenado em segunda instância por uma parada em Paris com dinheiro público. A defesa contesta a acusação; sem condenação definitiva no caso dos pedágios nas fontes consultadas.
+  - Fonte: https://jovempan.com.br/brasil/justica-aceita-denuncia-contra-beto-richa-na-operacao-lava-jato/ ; https://pt.wikipedia.org/wiki/Beto_Richa
+- **Deltan Dallagnol** (Deltanpoint) | Novo | Ex-deputado federal (mandato cassado em 2023); ex-procurador da Lava Jato | PR | FUGA
+  - O TSE cassou seu mandato de deputado federal em 16/05/2023, por unanimidade, por entender que ele deixou o MPF com procedimentos pendentes no CNMP para evitar inelegibilidade; ele contesta a decisão. Em 2022 o TCU o condenou a devolver diárias da Lava Jato, e a elegibilidade para 2026 segue em discussão no TSE.
+  - Fonte: https://pt.wikipedia.org/wiki/Deltan_Dallagnol
+- **Fernando Francischini** (Francisfake) | PL | Ex-deputado estadual do Paraná (cassado em 2021) | PR | FAKE
+  - O TSE cassou seu mandato em 28/10/2021 por abuso de poder político e uso indevido dos meios de comunicação (divulgação de informações falsas sobre urnas em 2018) e o declarou inelegível por oito anos. Em 2022 a Segunda Turma do STF revogou liminar que suspendia a condenação e manteve a inelegibilidade.
+  - Fonte: https://pt.wikipedia.org/wiki/Fernando_Francischini
+- **Filipe Martins** (Filipe Martinstweet) | partido não confirmado | Ex-assessor especial para Assuntos Internacionais da Presidência | PR | GOLPE
+  - A 1a Turma do STF o condenou a 21 anos de prisão no julgamento do núcleo 2 da trama golpista (dezembro de 2025). Moraes declarou o trânsito em julgado em 24/4/2026 e determinou o cumprimento da pena. Ele já estava preso preventivamente desde o fim de 2025.
+  - Fonte: https://www.gazetadopovo.com.br/republica/moraes-determina-prisao-definitiva-de-filipe-martins-e-outros-condenados-do-nucleo-2/ ; https://www.bahianoticias.com.br/noticia/312179-com-prisao-de-filipe-martins-veja-a-situacao-dos-23-reus-ja-condenados-da-trama-golpista
+- **Mauro Moraes** (Itaúzard) | PL | Deputado estadual (PR) | PR | CENTRAO
+  - Em 2 de outubro de 2026 a Polícia Federal cumpriu mandado de busca e apreensão, autorizado pela Justiça Eleitoral, contra o deputado estadual Mauro Moraes, após um assessor sacar cerca de R$ 300 mil em espécie em agência bancária dentro da Assembleia do Paraná. A PF apura movimentações atípicas e possível relação com crimes eleitorais; a coluna não localizou a defesa. Não há denúncia.
+  - Fonte: https://www.metropoles.com/colunas/manoela-alcantara/pf-busca-deputado-assembleia ; https://www.esmaelmorais.com.br/pf-operacao-itau-alep-deputado-pl-curitiba/
+- **Nelson Meurer** (Meurelava) | PP | Ex-deputado federal (PR); morreu em 2020 | PR | LAVAGEM
+  - A 2ª Turma do STF o condenou em 29/05/2018 a 13 anos e 9 meses em regime fechado por corrupção passiva e lavagem de dinheiro (Lava Jato). Foi preso em 30/10/2019 para cumprir a pena e morreu em 12/07/2020, de Covid-19.
+  - Fonte: https://pt.wikipedia.org/wiki/Nelson_Meurer
+- **Ricardo Arruda** (Ricardinfluencia) | PL | Deputado estadual (Alep) | PR | PROPINA
+  - Em 2/9/2024 o Órgão Especial do TJPR aceitou por unanimidade denúncia do MP-PR e o tornou réu por associação criminosa, peculato e tráfico de influência, em cinco casos de suposta venda de serviços no gabinete (reintegração de PMs) entre 2016 e 2017. Ele nega e diz sofrer perseguição.
+  - Fonte: https://www.bandab.com.br/?p=1565212 ; https://www.bandab.com.br/noticias-parana/tj-decide-hoje-sobre-denuncia-contra-ricardo-arruda/amp/
+- **Almir Garnier** (Garnierfrota) | partido não confirmado | Almirante; ex-comandante da Marinha (2021-2022) | RJ | GOLPE
+  - Em 11/9/2025 a 1a Turma do STF o condenou a 24 anos de prisão e 100 dias-multa na AP 2668 (organização criminosa, tentativa de golpe de Estado e outros crimes). Moraes mandou iniciar o cumprimento da pena em 25/11/2025, após o trânsito em julgado. O STF registrou o voto de Fux pela absolvição dele.
+  - Fonte: https://pt.wikipedia.org/wiki/Almir_Garnier ; https://www.itatiaia.com.br/politica/stf-libera-execucao-das-penas-e-aliados-de-bolsonaro-comecam-a-ser-detidos/
+- **Greg Duarte** (Gregfantasma) | PL | Vereador de Angra dos Reis | RJ | RACHADINHA
+  - Em 24/3/2026 a PF cumpriu cinco mandados de busca contra o vereador na Operação Caça Fantasmas, que apura suposta nomeação de assessores sem atuação efetiva, possível rachadinha e irregularidades eleitorais. É investigação em curso, sem denúncia noticiada; ele nega e fala em motivação pessoal.
+  - Fonte: https://portaldeprefeitura.com.br/bastidores-da-politica/vereador-do-pl-e-investigado-pela-pf-em-operacao-sobre-rachadinha/617696/
+- **Marcelo Crivella** (Quadrocrivela) | Republicanos | Deputado federal; ex-prefeito do Rio de Janeiro | RJ | PROPINA
+  - Em fevereiro de 2021 a 1ª Vara Criminal Especializada do Rio recebeu denúncia do MP no caso conhecido como QG da Propina (corrupção em pagamentos a credores da prefeitura). Em 8/10/2024 o TRE-RJ o declarou inelegível por 8 anos por abuso de poder; em 2026 o TSE (min. André Mendonça) suspendeu a inelegibilidade, mantida por 4 a 3 em agosto. A defesa disse esperar a rejeição da denúncia.
+  - Fonte: https://www.poder360.com.br/poder-eleicoes-2026/tse-libera-marcelo-crivella-para-concorrer-nas-eleicoes/ ; https://revistaoeste.com/politica/ex-prefeito-do-rio-marcelo-crivella-vira-reu-em-acao-sobre-qg-da-propina/
+- **Marcelo Queiroz** (Queirozcastrator) | PSDB | Deputado federal (RJ); ex-secretário estadual de Agricultura do RJ | RJ | PROPINA, LAVAGEM
+  - Em 12/5/2026 a PF cumpriu 12 mandados de busca, autorizados pelo ministro Flávio Dino (STF), na Operação Castratio, que apura suspeita de direcionamento de licitações e fraude em cerca de R$ 200 milhões em contratos de castração de animais da Secretaria de Agricultura do RJ, quando ele a chefiava. Ele migrou do PP para o PSDB em 2025. A reportagem não registra denúncia; ele nega enriquecimento ilícito.
+  - Fonte: https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/pf-mira-deputado-do-rj-e-fraudes-em-contratos-de-r-200-milhoes ; https://atarde.com.br/politica/deputado-federal-e-alvo-da-pf-em-operacao-contra-fraudes-em-licitacoes-1388595
+- **Marcus Vinicius Amim Fernandes** (Unhamim) | partido não confirmado | Ex-secretário de Polícia Civil do RJ | RJ | LAVAGEM
+  - Em 15 de outubro de 2026 a PF prendeu o ex-secretário de Polícia Civil Marcus Vinicius Amim Fernandes na 8ª fase da Operação Unha e Carne, que apura lavagem de dinheiro por rede de postos de combustíveis; as prisões preventivas decorrem de decisão no âmbito da ADPF 635 do STF. A fonte não traz manifestação da defesa.
+  - Fonte: https://www.portalaz.com.br/noticia/politica/99009/pf-prende-deputado-eleito-a-ex-chefe-da-policia-civil-em-operacao-no-rio/
+- **Moreira Franco** (Angorá Franco) | MDB | Ex-governador do RJ e ex-ministro | RJ | PROPINA
+  - Preso preventivamente em 21/03/2019 na Lava Jato (Angra 3/Eletronuclear) e solto em 25/03/2019 por decisão do TRF-2; a denúncia criminal, aceita em 2019, foi anulada pelo STF por incompetência do juízo. Em novembro de 2025 foi absolvido, com outros réus, em ação de improbidade sobre Angra 3. Ele nega as acusações.
+  - Fonte: https://pt.wikipedia.org/wiki/Moreira_Franco ; https://www.migalhas.com.br/quentes/445231/justica-absolve-temer-moreira-franco-e-othon-em-acao-da-eletronuclear
+- **Márcio Canella** (Canellafuzil) | União Brasil | Ex-prefeito de Belford Roxo (2025-2026) | RJ | LAVAGEM
+  - Em 07/07/2026, na 6ª fase da Operação Unha e Carne (PF), foi preso em flagrante por posse irregular de arma de fogo (fuzil encontrado em seu carro). A PF o investiga como suposto braço político de esquema de lavagem de R$ 7,6 bilhões por rede de postos de combustível. Investigado; a reportagem não traz resposta da defesa.
+  - Fonte: https://www.moneytimes.com.br/pf-prende-ex-prefeito-de-belford-roxo-suspeito-de-lavagem-de-r-76-bi-gaep/
+- **Rodrigo Amorim** (Amorimboizebu) | União Brasil | Deputado estadual (Alerj) | RJ | GOLPE
+  - Em 2 de maio de 2024 o TRE-RJ o condenou por 4 a 3 por violência política de gênero contra a vereadora Benny Briolly (PSOL), por discurso na Alerj em 17/5/2022; pena de 1 ano, 4 meses e 13 dias, convertida em multa e serviços comunitários. A defesa classificou a fala como inadequada, mas nega que configure violência de gênero.
+  - Fonte: https://oantagonista.com.br/brasil/eleicao-no-rio-justica-eleitoral-indefere-candidatura-de-amorim/ ; https://oantagonista.com.br/brasil/tre-rj-retoma-julgamento-de-deputado-por-violencia-de-genero/
+- **Rosinha Garotinho** (Rosinha d'Água) | MDB | Ex-governadora do RJ; ex-prefeita de Campos dos Goytacazes | RJ | PROPINA
+  - Presa em 22/11/2017 na Operação Caixa d'Água (PF, ligada à campanha de 2014), sob acusação de corrupção, concussão, organização criminosa e falsidade em prestação de contas eleitorais; foi solta por decisão do TRE-RJ, com tornozeleira. Mandato de prefeita de Campos foi cassado pelo TRE-RJ (eleição de 2008). As fontes consultadas não registram condenação criminal no caso.
+  - Fonte: https://www.poder360.com.br/justica/tse-nega-habeas-corpus-para-casal-garotinho-e-presidente-do-pr ; https://pt.wikipedia.org/wiki/Rosinha_Garotinho
+- **Thiego Raimundo dos Santos Silva (TH Joias)** (THJoiaCV) | partido não confirmado | Ex-deputado estadual do RJ (2024-2025) | RJ | LAVAGEM
+  - Preso em 03/09/2025 na Operação Zargun (PF), por suspeita de ligação com o Comando Vermelho; indiciado pela PF em 12/11/2025 e, em 16/03/2026, denunciado pela PGR por obstrução de investigação. Expulso do MDB na data da prisão. Processo em curso; as alegações não foram julgadas.
+  - Fonte: https://pt.wikipedia.org/wiki/TH_Joias
+- **Washington Reis** (Reisfuzil) | MDB | Ex-prefeito de Duque de Caxias; ex-secretário estadual de Transportes (até jul/2025) | RJ | CENTRAO
+  - Condenado pelo STF em 2016 a 7 anos e 2 meses em regime semiaberto por crime ambiental (loteamento na zona de amortecimento da Reserva do Tinguá). Foi alvo de buscas da PF em dezembro de 2024 em investigação sobre suspeita de compra de votos e lavagem de dinheiro na Baixada Fluminense; não há denúncia registrada nas fontes consultadas.
+  - Fonte: https://pt.wikipedia.org/wiki/Washington_Reis
+- **Cletson Rivaldo Queiroz** (Cletsonbee do Equador) | MDB | Prefeito de Equador (RN), cassado | RN | FAKE
+  - Em 30/7/2026 o TRE-RN manteve a cassacao do prefeito e do vice de Equador (RN) por abuso de poder politico ligado ao uso de cooperativas no ano eleitoral, com aumento de cerca de R$ 3,5 milhoes em repasses, e a inelegibilidade de ambos por 8 anos. A acao foi do Solidariedade; a fonte nao traz a defesa.
+  - Fonte: https://justicapotiguar.com.br/index.php/2026/07/30/tre-rn-mantem-cassacao-do-prefeito-e-do-vice-de-equador-rn-por-abuso-de-poder-politico/
+- **Henrique Eduardo Alves** (Sépsis Alves) | MDB | Ex-ministro do Turismo e ex-deputado federal | RN | PROPINA
+  - Condenado em 01/06/2018 pela 10ª Vara Federal do DF (Operação Sépsis) a mais de oito anos; em 07/12/2021 a 3ª Turma do TRF-1 anulou a condenação por incompetência da Justiça Federal e enviou o caso à Justiça Eleitoral do RN. Também foi acusado nas operações Manus e Cui Bono; a fonte de 2018 não traz a defesa.
+  - Fonte: https://www.em.com.br/app/noticia/politica/2018/06/01/interna_politica,963892/justica-do-df-condena-cunha-a-mais-de-24-anos-de-prisao-por-fraudes-no.shtml ; https://www.poder360.com.br/justica/justica-anula-condenacao-de-cunha-e-henrique-alves-por-corrupcao-na-caixa/
+- **Robinson Faria** (Robinson Fantasma) | PSD | Ex-governador do RN | RN | RACHADINHA
+  - Denunciado pela PGR em 19/09/2017 no STJ por suposta obstrução de investigação sobre desvio de salários de servidores fantasmas na Assembleia do RN (Operação Anteros); uma delatora afirma que ele recebia R$ 100 mil por mês até 2010. A defesa disse que não tinha acessado a denúncia e que sua conduta é ilibada. O desfecho não consta na fonte.
+  - Fonte: https://www.abcdoabc.com.br/pgr-denuncia-governador-do-rn-por-desvios/
+- **Ivo Cassol** (Cassolicitado) | PP (à época) | Ex-senador e ex-governador de Rondônia | RO | PROPINA
+  - O STF condenou Ivo Cassol por unanimidade em 8/8/2013 a 4 anos, 8 meses e 26 dias em regime semiaberto por fraude em licitações em Rolim de Moura (RO), quando era prefeito. Na época a decisão ainda admitia recurso.
+  - Fonte: https://www.congressoemfoco.com.br/noticias/stf-condena-ivo-cassol-por-fraude-em-licitacao
+- **Antonio Denarium** (Cestabásico) | Republicanos | Ex-governador de Roraima | RR | FUGA
+  - O TSE formou maioria em 28/4/2026 para declarar Antonio Denarium inelegível por abuso de poder político e econômico nas eleições de 2022, mantendo entendimento do TRE-RR. A fonte não traz manifestação da defesa; o resultado final do julgamento e eventuais recursos não foram confirmados.
+  - Fonte: https://www.congressoemfoco.com.br/noticia/118453/tse-forma-maioria-para-declarar-ex-governador-de-roraima-inelegivel
+- **Marcinho Belota** (Belotachu da Busca) | PL | Deputado estadual (RR) | RR | FAKE
+  - Em 2/10/2026 a PF cumpriu mandado de busca na casa do deputado estadual, em desdobramento da prisao em flagrante de 22 pessoas suspeitas de pagar eleitores em Boa Vista. Foram apreendidos notebook, documentos e cerca de R$ 6 mil. Ele diz respeitar a PF, contesta a forma da busca e afirma que o dinheiro e declarado.
+  - Fonte: https://www.metropoles.com/colunas/mirelle-pinheiro/deputado-e-alvo-de-operacao-apos-22-pessoas-serem-presas-por-comprar-votos
+- **Jairo Jorge** (Jairocopa) | PSD | Ex-prefeito de Canoas | RS | PROPINA, LAVAGEM
+  - Na Operação Copa Livre, o MP o denunciou em 2022, com 16 outros, por corrupção, lavagem, falsidade ideológica e peculato em contratos acima de R$ 66 milhões; em novembro de 2023 o TRF4 o afastou do cargo e em 2/4/2024 o STJ (6ª Turma) revogou o afastamento. Não há condenação nesse processo.
+  - Fonte: https://sbtnews.sbt.com.br/noticia/brasil/stj-autoriza-volta-do-prefeito-de-canoas-rs-ao-cargo
+- **Marcelo Caumo** (Caumolamaçal) | partido não confirmado | Ex-prefeito de Lajeado (2017-2024) | RS | PROPINA
+  - Foi preso temporariamente em 26/02/2026 na 2ª fase da Operação Lamaçal (PF), que apura desvio de verbas do FNAS repassadas após as enchentes de 2024, com suspeita de irregularidades em três licitações. A defesa diz desconhecer os fundamentos da prisão e a considera desnecessária; são suspeitas, ainda não julgadas.
+  - Fonte: https://jornaldebrasilia.com.br/noticias/brasil/ex-prefeito-de-lajeado-e-preso-pela-pf-por-suspeita-de-desvio-de-verbas-federais-apos-enchentes/
+- **Onyx Lorenzoni** (Onyxcaixa) | PP | Ex-ministro do Trabalho e Previdência | RS | PROPINA
+  - Investigado em inquérito autorizado pelo STF em 2017, admitiu caixa 2 da JBS (R$ 300 mil em 2012 e 2014) e firmou em 2020 acordo de não persecução penal com a PGR, homologado pelo STF em fevereiro de 2021, com pagamento de cerca de R$ 180 mil. Inquérito da Odebrecht foi arquivado por Fux em 2018 a pedido da PGR.
+  - Fonte: https://pt.wikipedia.org/wiki/Onyx_Lorenzoni
+- **Yeda Crusius** (Yedetran) | partido não confirmado | Ex-governadora do RS (2007-2011); ex-deputada federal | RS | PROPINA
+  - Condenada em primeira instância em junho de 2019, em ação civil por improbidade administrativa ligada à Operação Rodin (fraudes no Detran/RS), com pena de suspensão de direitos políticos por cinco anos e ressarcimento, se a sentença se tornar definitiva. A defesa recorreu; as fontes consultadas não informam o resultado do recurso.
+  - Fonte: https://pt.wikipedia.org/wiki/Yeda_Crusius ; https://www.brasildefato.com.br/2020/02/01/operacao-rodin-yeda-crusius-e-condenada-por-improbidade-administrativa/
+- **Clésio Salvaro** (Salvarotúmulo) | PSD | Ex-prefeito de Criciúma (2017-2024) | SC | PROPINA
+  - O Gaeco/MP-SC o prendeu preventivamente em 03/09/2024 na 2ª fase da Operação Caronte, sobre suspeita de organização criminosa e fraude em concessão de serviços funerários; o MP já havia denunciado envolvidos em agosto de 2024. Ele nega e fala em motivação política; foi solto dias depois, com medidas cautelares.
+  - Fonte: https://ohoje.com/2024/09/03/prefeito-de-criciuma-e-preso-por-suspeita-de-fraude-e-corrupcao/ ; https://sbtnews.sbt.com.br/noticia/policia/clesio-salvaro-prefeito-de-criciuma-e-preso-por-esquema-criminoso-no-servico-funerario
+- **Julio Garcia** (Juliocatraz) | PSD | Deputado estadual (SC); ex-presidente da Alesc | SC | PROPINA
+  - Em 16/02/2021 a 1ª Vara Federal de Florianópolis aceitou denúncia do MPF contra ele por lavagem de dinheiro, no âmbito da Operação Alcatraz. Outras denúncias do MPF contra ele foram depois rejeitadas por falta de justa causa; o desfecho final não foi confirmado.
+  - Fonte: https://www.poder360.com.br/brasil/justica-aceita-denuncia-contra-ex-presidente-da-assembleia-de-sc/ ; https://www.poder360.com.br/justica/mpf-denuncia-presidente-da-assembleia-de-santa-catarina-e-mais-13/
+- **André Moura** (Moura do Pirambu) | partido não confirmado | Ex-deputado federal e ex-prefeito de Pirambu (SE) | SE | PROPINA
+  - Condenado pelo STF em 29/09/2021, por 6 a 4, a 8 anos e 3 meses por peculato e desvio de recursos quando era prefeito de Pirambu (1997-2004). Recorreu e nega ter causado desvio; a PGR teria proposto acordo de não persecução penal (desfecho não confirmado).
+  - Fonte: https://www.dgabc.com.br/Noticia/3780049/stf-condena-ex-deputado-andre-moura-a-prisao-por-apropriacao-de-recursos-publicos ; https://www.cartacapital.com.br/?p=362474
+- **Bosco Costa** (Boscopropina) | PL | Ex-deputado federal | SE | PROPINA
+  - Condenado pela 1ª Turma do STF em 17/03/2026 a 5 anos e 6 meses em regime semiaberto por corrupção passiva, no mesmo caso das emendas a São José de Ribamar (MA). A defesa nega e diz que não houve direcionamento ilícito de recursos. A fonte não informa sobre recursos.
+  - Fonte: https://www.poder360.com.br/poder-justica/stf-condena-deputados-do-pl-acusados-de-desviar-emendas/
+- **Cezinha de Madureira** (Cezinhatraficante) | PL | Deputado federal (SP) | SP | PROPINA, LAVAGEM
+  - Em 14/9/2026 a PF cumpriu quatro mandados de busca, autorizados pelo ministro Flávio Dino (STF), na 3a fase da Operação Transparência, que apura suspeita de tráfico de influência, exploração de prestígio, corrupção passiva e lavagem de dinheiro ligadas a processos em tribunais superiores. A mulher dele também é alvo. Ele diz que não houve irregularidade e sugere motivação política ou eleitoral; não há denúncia.
+  - Fonte: https://www.gazetadopovo.com.br/republica/pf-deputado-cezinha-de-madureira-suspeita-trafico-influencia/ ; https://www.correiodamanha.com.br/politica/2026/09/319067-pf-mira-cezinha-de-madureira-por-trafico-de-influencia-no-judiciario.html
+- **Fábio Wajngarten** (Wajnjoias) | PL | Ex-chefe da Secom; ex-assessor do PL | SP | LAVAGEM
+  - A PF o indiciou em julho de 2024 por lavagem de dinheiro e associação criminosa no inquérito das joias sauditas. A CPI da Covid (2021) também pediu seu indiciamento. Indiciamento não é condenação; a conclusão do caso não foi confirmada.
+  - Fonte: https://pt.wikipedia.org/wiki/Fábio_Wajngarten ; https://congressoemfoco.com.br/noticia/21359/confira-os-81-nomes-listados-em-pedidos-de-indiciamento-da-cpi
+- **Marcelo Lima** (Estafeta Lima) | Podemos | Prefeito de São Bernardo do Campo (afastado em 2025) | SP | PROPINA, LAVAGEM
+  - Em 14/8/2025 a PF deflagrou a Operação Estafeta, que apura corrupção e lavagem de dinheiro na prefeitura; por ordem do TJSP o prefeito foi afastado do cargo por um ano e passou a usar tornozeleira eletrônica. Um mês antes, a PF apreendeu R$ 14 milhões com um servidor. O Podemos disse confiar na conduta dele; a defesa não foi localizada.
+  - Fonte: https://www.poder360.com.br/poder-brasil/alvo-de-operacao-da-pf-prefeito-de-sao-bernardo-do-campo-e-afastado/
+- **Milton Ribeiro** (Gabinetino) | partido não confirmado | Ex-ministro da Educação (2020-2022) | SP | PROPINA
+  - Preso preventivamente pela PF em 22/06/2022 em investigação sobre corrupção passiva, prevaricação, advocacia administrativa e tráfico de influência na liberação de verbas do FNDE; a prisão foi revogada no dia seguinte por desembargador do TRF-1. Em 2025 o TRF-1 aceitou denúncia contra ele em outro caso (declarações de 2020), tornando-o réu por homofobia. Sem condenação nas fontes consultadas.
+  - Fonte: https://pt.wikipedia.org/wiki/Milton_Ribeiro_(pastor)
+- **Ney Santos** (Embu-Xibalba) | Republicanos | Deputado federal eleito (SP, 2026); ex-prefeito de Embu das Artes | SP | LAVAGEM
+  - Segundo o Correio da Manhã (out/2026), Ney Santos é réu por organização criminosa e lavagem de dinheiro, acusação do Ministério Público de SP que o liga ao PCC; ele nega todas as acusações. Foi eleito deputado federal com 118.566 votos, e o TSE julga recurso contra o registro de candidatura autorizado pelo TRE-SP por 3 a 2. Um inquérito anterior sobre o tema foi trancado em 2023.
+  - Fonte: https://www.correiodamanha.com.br/nacional/sudeste/2026/10/325469-acusado-de-ligacao-com-pcc-ney-santos-e-eleito-e-aguarda-julgamento.html
+- **Pablo Marçal** (Marçalaudo) | PRTB | Empresário e político; ex-candidato a prefeito de SP (2024) | SP | FAKE
+  - Condenado pela Justiça Eleitoral em 2025 por abuso de poder na campanha de 2024, com inelegibilidade de oito anos (TRE-SP manteve até 2032 em dez/2025; cabe recurso ao TSE). A PF o indiciou em 08/11/2024 por uso de laudo médico falso contra Guilherme Boulos; em 2026 houve acordo para arquivamento do processo com condições. Ele nega irregularidades.
+  - Fonte: https://pt.wikipedia.org/wiki/Pablo_Mar%C3%A7al
+- **Rodrigo Manga** (Mangacopia) | Republicanos | Prefeito de Sorocaba (afastado em 2025) | SP | PROPINA
+  - Em 6/11/2025, na 2ª fase da Operação Copia e Cola (PF), o TRF-3 determinou o afastamento do prefeito por 180 dias por suspeitas ligadas a contratos de saúde (corrupção, peculato, fraude em licitação, lavagem). Ele diz que a medida tem motivação política e não respondeu às suspeitas.
+  - Fonte: https://www.cnnbrasil.com.br/politica/alvo-de-operacao-da-pf-prefeito-de-sorocaba-diz-que-foi-afastado-do-cargo/
+- **Bruna Gabrielle (Bruna do Ho-Che-Min)** (Brunamin da Praia Norte) | PSD | Prefeita de Praia Norte (TO), cassada pelo TRE-TO | TO | FAKE
+  - Em setembro de 2026 o plenario do TRE-TO cassou a prefeita e o vice de Praia Norte por abuso de poder politico e economico nas eleicoes de 2024 e declarou a prefeita inelegivel por 8 anos. A decisao cita bonificacoes sem base legal e doacao de material de construcao a eleitores em veiculos da prefeitura. Cabe recurso; a fonte nao traz a defesa.
+  - Fonte: https://agora-to.com.br/tre-to-cassa-mandatos-de-prefeita-e-vice-de-praia-norte-por-abuso-de-poder/
+- **Eduardo Siqueira Campos** (Sisamnes de Palmas) | Podemos | Prefeito de Palmas (TO) | TO | PROPINA
+  - Em maio de 2025 a PF fez buscas contra o prefeito de Palmas na Operacao Sisamnes, sobre vazamento de informacoes do STJ, e em 27/6/2025, em nova fase autorizada pelo ministro Cristiano Zanin (STF), foi alvo de mandado de prisao preventiva. Ele nega ter vazado informacoes sigilosas; a prefeitura e o Podemos defenderam sua integridade.
+  - Fonte: https://sbtnews.sbt.com.br/noticia/politica/prefeito-de-palmas-e-alvo-de-mandado-de-prisao-em-operacao-da-pf-sobre-vazamento-de-informacoes-do-stj
+- **Marcelo Miranda** (Reidogado) | partido não confirmado | Ex-governador do Tocantins | TO | PROPINA
+  - Em outubro de 2018 a 4ª Vara Federal de Palmas o tornou réu na Operação Reis do Gado (PF), acusado de integrar esquema com prejuízo estimado em R$ 458 milhões (2003-2012). A defesa pediu a rejeição da denúncia.
+  - Fonte: https://www.tribunapr.com.br/noticias/politica/justica-poe-marcelo-miranda-no-banco-dos-reus-da-operacao-reis-do-gado/
+- **Mauro Carlesse** (Carlessado) | PSL (à época) | Ex-governador do Tocantins | TO | PROPINA
+  - A Corte Especial do STJ confirmou em 20/10/2021, por unanimidade, o afastamento de Mauro Carlesse do governo por seis meses, por suspeita de obstrução de investigações sobre pagamentos ligados ao Plansaúde (operações Éris e Hygea da PF). A fonte não traz a defesa; desfecho posterior não confirmado.
+  - Fonte: https://www.agazeta.com.br/brasil/stj-confirma-afastamento-de-governador-do-tocantins-por-seis-meses-1021
+- **Wanderlei Barbosa** (Wanderfome) | Republicanos | Governador do Tocantins | TO | PROPINA
+  - Em setembro de 2025 o STJ (min. Mauro Campbell) o afastou do cargo na Operação Fames-19 (suposto desvio em cestas básicas e emendas); em 12/11/2025 a PF fez buscas na Operação Nêmesis (suposta obstrução). Em dezembro de 2025 o STF (Nunes Marques) suspendeu o afastamento. Segue investigado e diz colaborar.
+  - Fonte: https://www.infomoney.com.br/politica/governador-afastado-tocantins-alvo-nova-operacao-obstrucao-investigacao/
+
+## Removidos
+
+- Átila Jacomussi: sem partido confirmado, prisão de 2018 sem desfecho verificado (fonte fraca)
+- Paulinho da Força: Condenado pela 1ª Turma do STF em 2020, mas o Plenário reverteu e o absolveu em nov/2023 (relatos da Istoé Dinheiro/Oeste); única base atual é absolvição.
+- Celso Pitta: Condenação criminal de 4 anos em 2008 não confirmada em fonte aberta (Wikipedia sem fonte para ela; busca só achou ação civil e ação criminal por falsidade sem sentença). Morreu em 2009.
+- Marcelo Victor: Fonte (CNN, 11/10/2022) só relata apreensão de R$ 146 mil pela PF e pedido de esclarecimentos de Moraes; sem operação nomeada, denúncia ou indiciamento confirmados; ele nega.
+- JHC (João Henrique Caldas): Fonte (Tribuna do Sertão, 12/09/2026) não afirma que seja investigado ou indiciado; fala em 'possível envolvimento' e o papel dele 'ainda será definido'; ele diz não constar do processo.
+- Daniella Tema: apenas mandado de busca no gabinete; balanceamento (esquerda >10%)
+- Rejane Dias: busca de 2020 sem acusação formal; balanceamento (esquerda >10%)
+- Valmir de Francisquinho: Inelegibilidade (TRE-SE/TSE) revertida: TSE restaurou seus direitos políticos em 13/10/2022 (Poder360); única base anulada.
+- Waldez Góes: Condenação do STJ (2019) foi revertida: segundo busca, a 1ª Turma do STF o absolveu por 3 a 1 (não abri a fonte do STF); a fonte original confirma só prisão temporária de 2010 (Operação Mãos Limpas). Drop por cautela.
+- Agnelo Queiroz: balanceamento (esquerda >10%); partido não confirmado em fonte
+- Jader Barbalho: condenação cível de 2013 apoiada só em veículo partidário; denúncia do STF não confirmada
+- Adriane Lopes: Fonte aberta não a nomeia como alvo; prefeita diz que a operação não envolve órgãos municipais. Não confirmado.
+- Gim Argello: Condenação de 2016 anulada pelo STJ em 2022 (competência da Justiça Eleitoral); sem outra base confirmada.
+- Marcio Bittar: Apenas inquérito no STF (INQ 4846), sem denúncia, indiciamento ou operação nomeada confirmados; fonte é blog.
+- Bia Kicis: Fontes divergem (busca em maio/2020 não confirmada; confirmada só quebra de sigilo bancário em inquérito de atos antidemocráticos, com componente de discurso); fonte aberta opinativa.
+- Jair Bolsonaro: já está no elenco atual (data.js)
+- Alexandre Ramagem: já está no elenco atual (data.js)
+- Anderson Torres: já está no elenco atual (data.js)
+- Walter Braga Netto: já está no elenco atual (data.js)
+- Carla Zambelli: já está no elenco atual (data.js)
+- Eduardo Bolsonaro: já está no elenco atual (data.js)
+- Fernando Collor: já está no elenco atual (data.js)
+- Daniel Silveira: já está no elenco atual (data.js)
+- Valdemar Costa Neto: já está no elenco atual (data.js)
+- Eduardo Cunha: já está no elenco atual (data.js)
+- Paulo Maluf: já está no elenco atual (data.js)
+- Marcelo Crivella: duplicata de quadrocrivela (mesma pessoa)
+- Silas Malafaia: Alvo de busca da PF em 20/08/2025 (STF) confirmado, mas sem cargo político e partido não confirmado
+- Aécio Neves: Réu no STF, mas absolvido em 2022 (1ª instância, mantida pelo TRF-3)
+- Arthur Lira: Condenação de 1ª instância (2012) sem desfecho confirmado; denúncia Lava Jato rejeitada em 2023; absolvido em 2015
+- Ricardo Salles: Condenação por improbidade (2018) sem desfecho do recurso confirmado
+- Alexandre Silveira: Nenhum procedimento oficial confirmado
+- Antonio Rueda: Não confirmei procedimento oficial em fonte aberta
+- Zucco: Não confirmei procedimento oficial em fonte aberta
+- Gustavo Mendanha: Fonte principal (Jornal Opcao) retornou 403; so ha busca em operacao da Policia Civil (Dose Dupla, 2023), sem reu confirmado.
+- Thiago Pampolha: Nao confirmado afastamento/procedimento oficial; so nomeacao ao TCE-RJ.
+- Orlando Morando: Denuncia MPF (Operacao Prato Feito) so em resultado de busca, desfecho e partido atual nao confirmados.
+- Rogério Cruz: Reu por improbidade (civel), fonte Mais Goias retornou 403; nao confirmei abrindo.
+- Wladimir Garotinho: Nenhuma cassacao/inelegibilidade confirmada.
+- Rafael Nobre: Apenas busca do MPRJ (jul/2026) sem operacao nomeada nem denuncia confirmada; fontes contraditorias.
+- Daniel Messac: Partido incerto e investigacao inicial declarada ilegal pelo STJ; status atual nao confirmado.
+- Léo Índio: Reu pelo 8/1, mas nao e detentor de mandato nem candidato (ex-assessor).
+- Fanica (Elisandro Pereira Machado): Fonte primaria bloqueada (403); so snippet de busca.
+- Lórens Nogueira: Fonte bloqueada (403); apenas investigacao.
+- Alexandre Guimarães / Affonso Guimarães: PSD; data e andamento da Operacao Rota 66 nao confirmados.
+- Hissam Dehaini: Partido divergente nas fontes e sem procedimento alem de busca (2023).
+- Rodrigo Bacellar: Ja existe em data.js.
+- Márcio Canella: Ja existe nos candidatos (all.txt).
+- André Fernandes: PF concluiu que postagens configuraram crime em 2023, mas Moraes arquivou o inquérito (jun/2026) a pedido da PGR; única base é arquivamento.
+- Edvaldo Neto (Cabedelo-PB): Partido Avante, fora do conjunto aliado definido.
+- Humberto Raimundo Rodrigues de Oliveira (Ibipitanga-BA): Filiado ao PT segundo as fontes.
+- David Almeida (Manaus): Avante; PF afirma não haver elemento direto contra ele; sem procedimento formal contra o prefeito.
+- Daniel Santos (Ananindeua-PA): Denúncia do MPPA confirmada, mas partido divergente (PSB/Podemos) e sem confirmação de recebimento.
+- Cícero Lucena (João Pessoa): Não consta como investigado formal; defesa cita decisão do TRE-PB; investigação atingiu a esposa.
+- Paulo Dantas (AL): Caso de 2022 (Operação Edema), STF devolveu o mandato; sem denúncia confirmada nas fontes abertas.
+- Roberto Rocha (MA): Inquérito de 2022 sem desfecho; partido desatualizado.
+- Chico Rodrigues (RR): Partido atual (PSB) não confirmado como aliado; parte do inquérito arquivada.
+- Edson Araújo (MA): PSB, fora do conjunto aliado.
+- Hugo Atayde (Ananindeua): Caso envolve acusação de morte/tortura (homicídio), excluído pelo brief.
+- Éder Mauro (PL-PA): Apenas notícia-crime de vereador; sem procedimento oficial confirmado; ele nega.
+- Gabriel de Parisio (MDB, Wenceslau Guimarães-BA): Apenas veículos da PF vistos em imóvel; sem mandado confirmado contra ele.
+- Simão Durando (Petrolina): Pedido da PF de afastamento foi negado por Dino; fonte única não confirmada.
+- General Girão (PL-RN): Condenação civil por danos, não procedimento penal/eleitoral do tipo exigido.
+- Márcio Canella (União-RJ): Fora do recorte Norte/Nordeste.
+- Marcos Pollon: Apenas processos disciplinares na Câmara (Conselho de Ética); nenhuma denúncia, inquérito ou operação confirmada.
+- Elmar Nascimento: Citado na Overclean, mas não foi alvo de mandado; Nunes Marques rejeitou pedidos da PF/PGR contra ele.
+- João Carlos Bacelar: Nome em envelope apreendido no caso Master; PF avaliou que não é foco; partido divergente (PL/PV); sem procedimento confirmado.
+- Weverton Rocha: PDT, fora do escopo de partidos; alvo de busca (Sem Desconto) confirmado, mas não foi incluído.
+- Ricardo Barros: Procedimentos arquivados ou antigos; nada novo de 2023-2026 confirmado.
+- Eduardo Pazuello: Inquérito de 2021 sobre Manaus enviado à 1a instância; nada recente confirmado.
+- Oswaldo Eustáquio: Blogueiro, não parlamentar nem figura partidária; fonte primária bloqueada (403), só resultados de busca.
+- Hélio Lopes / Silvia Waiapi: Nenhum procedimento oficial encontrado.
+- Jaques Wagner: PT, fora do escopo.
+- Douglas Ruas: Apenas procedimento investigatório criminal da PGJ-RJ (sigiloso, jul/2026); sem denúncia, indiciamento ou operação confirmados; nega irregularidades
+- Isnaldo Bulhões: Reportagem regional (TNH1 citando UOL) diz réu por peculato, mas sem tribunal, data nem denúncia abertos; nao confirmado
+- Juarez Costa: Acusação baseada em delação de executivos da Aegea e investigação da Operação Sorrelfa (MPMT, 2016) sem denúncia/réu confirmado; nega
+- Jean Oliveira (RO): Não confirmada a condenação por corrupção passiva alegada; só indícios de afastamento cautelar, sem fonte aberta
+- Felipe Vasques (CE): Vereador/presidente da Câmara de Juazeiro do Norte, eleito deputado estadual; partido PSDB fora da lista; operações do MPCE/PF em 2026 sem denúncia
+- Raphael Montenegro: Prisão em agosto de 2021, fora do período 2023-2026
+- Thaise Guedes: Indiciamento de 2017, fora do período
+- Felipe Show: Nao confirmado nenhum processo em fonte aberta
+- Júnior Betão: Condenação em 1a instância por peculato não confirmada; fontes antigas
+- André Weiss: Ex-diretor da Sefaz-SP (servidor, sem partido); fora do perfil de político/secretário
+- Welberth Rezende: Partido Cidadania fora da lista; apenas parecer do MP Eleitoral, sem decisão
+- Celso Pitta: falecido; condenação de 2008 sem fonte aberta confirmada
+- Carlos Moisés: absolvido nos dois processos de impeachment
+- Fernando Capez: ação penal trancada pelo STF (única base anulada)
+- Robson Marinho: fonte fraca, sem detalhe do processo
+- Ricardo Nunes: investigado sem denúncia nem operação nomeada contra ele
+- Eliseu Padilha: falecido; citação em delação sem desfecho
+- José Janene: falecido; absolvido na Câmara
+- Ibsen Pinheiro: falecido; fatos antigos, sem processo confirmado
+- Jorge Picciani: falecido
+- Orestes Quércia: sem condenação; falecido
+- Eduardo Paes: apenas citação em delação/inquérito, sem denúncia
+- Ricardo Barros: pedido de indiciamento da CPI não é decisão oficial; sem desfecho confirmado
+- Eduardo Pazuello: apenas recomendação da CPI; absolvido em improbidade
+- Rodrigo Maia: inquérito antigo sem desfecho; sem pendências
+- Marco Feliciano: inquérito sem data/desfecho; denúncias antigas arquivadas
+- Paulo Freire: ação eleitoral só com pedido do MP, sem decisão
+- Álvaro Dias: ação eleitoral em curso, sem decisão
+- Elmar Nascimento: não foi alvo de mandado
+- Elmo Nascimento: citado sem denúncia/mandado confirmado
+- Edison Lobão: denúncia rejeitada pelo STF em 2023
+- Eunício Oliveira: inquéritos sem desfecho
+- Davi Alcolumbre: ligação indireta, sem procedimento contra ele
+- Zequinha Marinho: acusação verbal de ex-delegado, sem denúncia
+- Acir Gurgacz: condenação suspensa pelo STF em 2026 (revisão criminal)
+- Eduardo Braga: inquérito de 2013 sem desfecho

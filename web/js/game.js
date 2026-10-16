@@ -23,6 +23,15 @@ let G = null; // estado salvo
 const S = { mode: 'title', moving: false, mt: 0, fromX: 0, fromY: 0, frame: 0, tick: 0, region: '' };
 
 // ---------- Utilidades ----------
+// R$ 1.500 · R$ 23 mil · R$ 2,3 milhões
+function fmtMoney(n) {
+  n = Math.round(n || 0);
+  const br = (v, d) => v.toLocaleString('pt-BR', { maximumFractionDigits: d });
+  if (n >= 1e9) return `R$ ${br(n / 1e9, 1)} ${n >= 2e9 ? 'bilhões' : 'bilhão'}`;
+  if (n >= 1e6) return `R$ ${br(n / 1e6, 1)} ${n >= 2e6 ? 'milhões' : 'milhão'}`;
+  if (n >= 1e4) return `R$ ${br(n / 1e3, 0)} mil`;
+  return `R$ ${br(n, 0)}`;
+}
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const rand = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
 const pick = arr => arr[Math.floor(Math.random() * arr.length)];
@@ -78,7 +87,7 @@ function loadGame() {
 function newGame(name) {
   G = {
     name, money: 1500, badges: [], party: [], box: [],
-    items: { mandado: 5, cafe: 3 }, seen: {}, caught: {},
+    items: { mandado: 5, cafe: 3 }, seen: {}, caught: {}, gyms: {},
     x: startPos().x, y: startPos().y, dir: 'up', lastPF: null, mapVer: 2,
   };
 }
@@ -326,7 +335,7 @@ async function openBag(inBattle = false) {
   for (;;) {
     const keys = Object.keys(G.items).filter(k => G.items[k] > 0);
     const i = await listScreen('MOCHILA', keys, k => `<span class="grow">${ITEMS[k].name}</span><span>x${G.items[k]}</span>`,
-      { right: `R$ ${G.money}`, foot: 'Mandados e tornozeleiras só funcionam em batalha contra políticos soltos.' });
+      { right: 'Cofre: ' + fmtMoney(G.money), foot: 'Mandados e tornozeleiras só funcionam em batalha contra políticos soltos.' });
     if (i < 0) return null;
     const k = keys[i], it = ITEMS[k];
     if (it.ball) { if (inBattle) return { ball: k }; toast('Use em batalha!'); continue; }
@@ -341,21 +350,21 @@ async function openBag(inBattle = false) {
 }
 
 async function openAgentCard() {
-  const b = Object.values(BOSSES);
   await showDetail(`<h2 style="margin:0;padding:.3em .6em;font-size:1em;color:#fff;background:#1e3a78">CARTEIRA FUNCIONAL — POLÍCIA FEDERAL</h2>
     <div class="body"><div class="pic"><img src="${personSprite(AGENT_LOOK, 'down', 0).toDataURL()}"></div>
-    <div class="txt"><b>Agente:</b> ${G.name}<br><b>Apreensões:</b> R$ ${G.money}<br><b>Polidex:</b> ${Object.keys(G.seen).length} vistos, ${Object.keys(G.caught).length} presos<br><br>
-    <b>Operações concluídas:</b><br>${b.map(o => (G.badges.includes(o.badge) ? '🏅 ' : '▫️ ') + o.title).join('<br>')}</div></div>`);
+    <div class="txt"><b>Agente:</b> ${G.name}<br><b>Cofre público:</b> ${fmtMoney(G.money)}<br><b>Total já recuperado:</b> ${fmtMoney(G.recovered || 0)}<br><b>Meta:</b> ${badgeCount()}/${TOTAL_GYMS()} insígnias · ${Object.keys(G.caught).length}/${POLITICOS.length} presos<br><b>Polidex:</b> ${Object.keys(G.seen).length} vistos, ${Object.keys(G.caught).length} presos<br><br>
+    <b>Insígnias:</b> ${badgeCount()}/${TOTAL_GYMS()}<br>${(G.badges || []).map(x => '🏅 ' + x).join('<br>') || 'Nenhuma ainda.'}</div></div>`);
 }
 
 async function startMenu() {
   for (;;) {
-    const i = await choose(['POLIDEX', 'EQUIPE', 'MOCHILA', G.name.toUpperCase(), 'SALVAR', 'FECHAR']);
+    const i = await choose(['POLIDEX', 'EQUIPE', 'MOCHILA', 'INSÍGNIAS', G.name.toUpperCase(), 'SALVAR', 'FECHAR']);
     if (i === 0) await openPolidex();
     else if (i === 1) await openParty();
     else if (i === 2) await openBag();
-    else if (i === 3) await openAgentCard();
-    else if (i === 4) { await say(saveGame() ? 'Jogo salvo!' : 'Não foi possível salvar neste navegador.'); closeDlg(); }
+    else if (i === 3) await openBadges();
+    else if (i === 4) await openAgentCard();
+    else if (i === 5) { await say(saveGame() ? 'Jogo salvo!' : 'Não foi possível salvar neste navegador.'); closeDlg(); }
     else return;
   }
 }
@@ -385,8 +394,8 @@ async function pfHQ() {
 
 async function shop() {
   for (;;) {
-    const i = await listScreen('ALMOXARIFADO', SHOP, k => `<span class="grow">${ITEMS[k].name}<br><span class="dim">${ITEMS[k].desc}</span></span><span>R$ ${ITEMS[k].price}</span>`,
-      { right: `R$ ${G.money}` });
+    const i = await listScreen('ALMOXARIFADO', SHOP, k => `<span class="grow">${ITEMS[k].name}<br><span class="dim">${ITEMS[k].desc}</span></span><span>${fmtMoney(ITEMS[k].price)}</span>`,
+      { right: 'Cofre: ' + fmtMoney(G.money) });
     if (i < 0) return;
     const k = SHOP[i];
     const q = await choose(['x1', 'x5', 'x10', 'VOLTAR'], { cls: 'menu-right' });
@@ -474,6 +483,7 @@ function updateWorld(dt) {
 }
 
 function showRegion() {
+  if (G) { markVisited(); if (!S.gatesOk) { refreshGates(); S.gatesOk = true; } }
   const r = regionName(G.x, G.y);
   if (r !== S.region) {
     // uma placa por vez: a nova substitui a anterior
@@ -593,7 +603,7 @@ function biomeTile(src, kind, biome) {
 
 // Minimapa do Brasil no canto (N liga/desliga).
 let miniCanvas = null;
-const MINI_COLORS = { water: '#3a78c8', tree: '#2f6a2a', tall: '#4f9a3a', sand: '#e8d898', path: '#d8c088', bld: '#c84848', lawn: '#8ad070', pool: '#5aa0e0' };
+const MINI_COLORS = { runway: '#8a8e96', water: '#3a78c8', tree: '#2f6a2a', tall: '#4f9a3a', sand: '#e8d898', path: '#d8c088', bld: '#c84848', lawn: '#8ad070', pool: '#5aa0e0' };
 function drawMinimap() {
   if (!miniCanvas) {
     // contorno do Brasil: terra em verde, mar em azul, vizinhos escuros; capitais como pontos amarelos
@@ -630,9 +640,13 @@ const PALACIO_LINES = [
 ];
 async function enterBuilding(b) {
   if (b.id === 'pf' || b.kind === 'pf') return pfHQ();
-  if (b.kind === 'palacio' && b.id !== 'guanabara') return talk([`${b.label} — sede do governo${b.uf ? ' de ' + b.uf : ''}.`, pick(PALACIO_LINES)]);
+  if (b.kind === 'jato') return flyMenu(b);
+  if (b.kind === 'empresa') return empresaSequence(b);
+  if (b.kind === 'palacio' || b.id === 'guanabara') return gymSequence(b);
+  if (b.id === 'congresso') return congressoSequence();
   if (b.id.startsWith('casa')) return talk([pick(['A porta está trancada. Ninguém atende.', 'Lá de dentro alguém grita: "Não tem ninguém em casa! Muito menos dinheiro!"'])]);
-  const key = { guanabara: 'cabral', congresso: 'cunha', planalto: 'bolsonaro' }[b.id];
+  const key = { planalto: 'bolsonaro' }[b.id];
+  if (!key) return talk([`${b.label}.`, pick(PALACIO_LINES)]);
   const boss = BOSSES[key];
   if (G.badges.includes(boss.badge)) return talk([`${b.label}: a ${boss.title} já foi concluída aqui.`]);
   await say(`${b.label}. Iniciar a ${boss.title}?`, { wait: false });
@@ -651,9 +665,9 @@ const otherSide = side => side === 'p' ? 'e' : 'p';
 async function wildEncounter(zone) {
   let pool, lo, hi;
   if (zone && typeof zone === 'object') {
-    pool = zone.pool.filter(([id]) => POL[id]).map(([id, w]) => Object.assign({}, POL[id], { w }));
+    pool = zone.pool.filter(([id]) => POL[id]).map(([id, w]) => Object.assign({}, POL[id], { w: w * tierWeight(POL[id], areaProgress(zone)) }));
     [lo, hi] = zone.levels;
-    if (G.badges.length >= 3 && /bras/i.test(zone.name || '')) pool.push(Object.assign({}, POL.golpenaro, { w: 1 }));
+    if ((G.badges || []).includes(BOSSES.bolsonaro.badge) && /bras/i.test(zone.name || '')) pool.push(Object.assign({}, POL.golpenaro, { w: 1 }));
   } else {
     pool = POLITICOS.filter(p => p.zone === zone && p.w > 0);
     if (zone === 3 && G.badges.length >= 3) pool = pool.concat([Object.assign({}, POL.golpenaro, { w: 1 })]);
@@ -667,6 +681,7 @@ async function wildEncounter(zone) {
   await transition();
   const res = await battle({ team: [mon], wild: true });
   if (res === 'lose') await whiteout();
+  if (res === 'caught') await checkGameComplete();
 }
 
 async function bossBattle(key) {
@@ -676,13 +691,14 @@ async function bossBattle(key) {
   const res = await battle({ team, boss: key });
   if (res === 'win') {
     G.badges.push(boss.badge);
-    G.money += boss.prize;
+    G.money += boss.prize * 500;
     await say(`${boss.name}: "${boss.lose}"`);
-    await say(`${boss.title} concluída! Você recebeu o ${boss.badge} e R$ ${boss.prize} em bens apreendidos.`);
-    if (G.badges.length >= 2) { const g = World.npcs.find(n => n.id === 'guard'); if (g) g.hidden = true; }
+    await say(`${boss.title} concluída! Você recebeu o ${boss.badge} e ${fmtMoney(boss.prize * 500)} em bens apreendidos.`);
+    refreshGates();
     saveGame();
     closeDlg();
     if (key === 'bolsonaro') await ending();
+    await checkGameComplete();
   } else if (res === 'lose') await whiteout();
 }
 
@@ -787,7 +803,7 @@ async function hitAnim(side) {
 
 async function battle({ team, wild = false, boss = null }) {
   S.mode = 'battle';
-  B = { team, wild, boss, ei: 0, pi: G.party.findIndex(m => m.hp > 0), st: { p: freshStages(), e: freshStages() }, vol: { p: {}, e: {} },
+  B = { team, wild, boss, bo: typeof boss === 'string' ? BOSSES[boss] : boss, ei: 0, pi: G.party.findIndex(m => m.hp > 0), st: { p: freshStages(), e: freshStages() }, vol: { p: {}, e: {} },
     runs: 0, anim: { e: { vis: true, alpha: 1, dx: 240, dy: 0 }, p: { vis: false, alpha: 1, dx: 0, dy: 0 } },
     showE: false, showP: false, used: new Set(), fichas: new Set([team[0].id]) };
   G.seen[team[0].id] = true;
@@ -797,9 +813,9 @@ async function battle({ team, wild = false, boss = null }) {
     await say(`Um ${monName(team[0])} selvagem apareceu!`);
     await showFicha(POL[team[0].id]);
   } else {
-    const bo = BOSSES[boss];
-    await say(`${bo.title}! ${bo.name} resiste à prisão!`);
-    for (const l of bo.intro) await say(`${bo.name}: "${l}"`);
+    const bo = B.bo;
+    await say(typeof boss === 'string' ? `${bo.title}! ${bo.name} resiste à prisão!` : `${bo.name}, ${bo.title}, quer lutar!`);
+    for (const l of bo.intro || []) await say(`${bo.name}: "${l}"`);
     await say(`${bo.name} mandou ${monName(team[0])}!`);
     await showFicha(POL[team[0].id]);
   }
@@ -894,11 +910,11 @@ async function handleFaints() {
     await giveXP(foe);
     const next = B.team.findIndex(m => m.hp > 0);
     if (next < 0) {
-      if (B.wild) G.money += foe.lvl * 15;
+      if (B.wild) { const m = foe.lvl * 40 + rand(0, 200); G.money += m; G.recovered = (G.recovered || 0) + m; await say(`Na fuga, o político deixou cair ${fmtMoney(m)}. Apreendido!`); }
       return 'win';
     }
     B.ei = next; B.st.e = freshStages(); B.vol.e = {}; G.seen[B.team[next].id] = true;
-    await say(`${BOSSES[B.boss].name} mandou ${monName(B.team[next])}!`);
+    await say(`${B.bo.name} mandou ${monName(B.team[next])}!`);
     if (!B.fichas.has(B.team[next].id)) { B.fichas.add(B.team[next].id); await showFicha(POL[B.team[next].id]); }
     B.anim.e = { vis: true, alpha: 1, dx: 240, dy: 0 };
     await anim(350, t => { B.anim.e.dx = 240 * (1 - t); });
@@ -1250,10 +1266,11 @@ async function titleScreen() {
   ui.innerHTML = '';
   if (opts[i] === 'CONTINUAR') {
     G = saved;
+    G.gyms = G.gyms || {}; G.badges = G.badges || [];
     for (const k of ['party', 'box']) G[k] = G[k].filter(upgradeMon);
     // save do mapa antigo: volta para o início do mapa do Brasil
     if (G.mapVer !== 2) { const st = startPos(); G.x = st.x; G.y = st.y; G.dir = 'up'; G.lastPF = null; G.mapVer = 2; }
-    if (G.badges.length >= 2) { const g = World.npcs.find(n => n.id === 'guard'); if (g) g.hidden = true; }
+    refreshGates();
     S.mode = 'world';
     S.region = '';
     showRegion();
@@ -1325,7 +1342,8 @@ async function intro() {
     }
   }
   await say(`${monName(G.party[0])} agora trabalha com você!`);
-  await say('Três operações aguardam: Calicute no Rio, Lava Jato no Congresso e Tempus Veritatis no Planalto.');
+  await say('Em cada capital, o crime organizado banca políticos a partir do palácio do governo. Desarticule cada ginásio e ganhe a insígnia.');
+  await say('Com todas as insígnias, o Congresso e o Planalto, em Brasília, ficam ao seu alcance.');
   await say('Aperte ENTER para abrir o menu. Z confirma e X volta. Boa sorte, agente!');
   closeDlg();
   saveGame();
@@ -1369,7 +1387,7 @@ function frame(now = 0) {
   S.tick++;
   fitCanvas();
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.fillStyle = S.mode === 'battle' ? '#b8e0a0' : S.mode === 'title' ? '#0e1c48' : S.mode === 'intro' ? '#1e3a78' : '#000';
+  ctx.fillStyle = S.mode === 'battle' ? '#b8e0a0' : S.mode === 'cutscene' ? '#8cc4f4' : S.mode === 'title' ? '#0e1c48' : S.mode === 'intro' ? '#1e3a78' : '#000';
   ctx.fillRect(0, 0, cv.width, cv.height);
   ctx.setTransform(VIEW.k, 0, 0, VIEW.k, VIEW.ox, VIEW.oy);
   if (S.mode === 'world' || S.mode === 'trans') {
@@ -1377,6 +1395,7 @@ function frame(now = 0) {
     drawWorld();
     if (S.mode === 'trans' && S.flash) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height); }
   } else if (S.mode === 'battle') drawBattle();
+  else if (S.mode === 'cutscene') drawCutscene();
   else if (S.mode === 'title') drawTitle();
   else if (S.mode === 'intro') { ctx.fillStyle = '#1e3a78'; ctx.fillRect(0, 0, SW, SH); ctx.fillStyle = '#2c4e9a'; ctx.beginPath(); ctx.ellipse(SW / 2, 172, 110, 18, 0, 0, 7); ctx.fill(); drawPol(MENTOR, false, SW / 2 - 80, 10, 160); }
   requestAnimationFrame(frame);
@@ -1399,10 +1418,12 @@ function enterFullscreen() {
 function boot() {
   buildTiles();
   buildWorld();
+  addTravelArt();
+  spawnGymGuards();
   fitCanvas();
   requestAnimationFrame(frame);
-  const ready = Promise.all([loadBalance(), loadCustomSprites(), document.fonts ? document.fonts.ready : null, document.fonts ? document.fonts.load('700 16px Nunito') : null])
-    .then(() => { for (const k in imgCache) delete imgCache[k]; });
+  const ready = Promise.all([loadBalance(), loadGyms(), loadEmpresas(), loadCustomSprites(), document.fonts ? document.fonts.ready : null, document.fonts ? document.fonts.load('700 16px Nunito') : null])
+    .then(() => { for (const k in imgCache) delete imgCache[k]; seedPoolsByUF(); });
   const bootEl = $('#boot');
   if (location.protocol === 'file:' && !window.EMBEDDED_ASSETS) { const fh = $('.file-hint'); if (fh) fh.hidden = false; }
   const start = full => {

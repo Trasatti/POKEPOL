@@ -1,0 +1,915 @@
+{
+"betopedagio": [
+[
+"cam",
+220683,
+"Beto Richa",
+"PSDB",
+"PR",
+[
+57
+]
+]
+],
+"deltanpoint": [
+[
+"cam",
+220705,
+"Deltan Dallagnol",
+"PODE",
+"PR",
+[
+57
+]
+]
+],
+"francisfake": [
+[
+"cam",
+160646,
+"FERNANDO FRANCISCHINI",
+"PSDB",
+"PR",
+[
+54,
+54,
+54,
+54,
+55,
+55,
+55,
+55
+]
+]
+],
+"onyxcaixa": [
+[
+"cam",
+74399,
+"ONYX LORENZONI",
+"PFL",
+"RS",
+[
+52,
+53,
+53,
+54,
+55,
+56,
+56,
+56
+]
+]
+],
+"laranjalvaro": [
+[
+"cam",
+179000,
+"MARCELO ÁLVARO ANTÔNIO",
+"PRP",
+"MG",
+[
+55,
+55,
+55,
+55,
+56,
+56,
+56,
+57
+]
+]
+],
+"pimentacronimo": [],
+"rosinhadagua": [],
+"reisfuzil": [
+[
+"cam",
+160620,
+"WASHINGTON REIS",
+"PMDB",
+"RJ",
+[
+54,
+55,
+55
+]
+]
+],
+"thjoiascv": [
+[
+"cam",
+74084,
+"RAIMUNDO SANTOS",
+"PFL",
+"PA",
+[
+51,
+52,
+52,
+57
+]
+]
+],
+"marcalaudo": [],
+"gabinetino": [],
+"yedetran": [
+[
+"cam",
+73992,
+"YEDA CRUSIUS",
+"PSDB",
+"RS",
+[
+51,
+52,
+55
+]
+]
+],
+"angorafranco": [
+[
+"cam",
+74863,
+"MOREIRA FRANCO",
+"PMDB",
+"RJ",
+[
+52
+]
+]
+],
+"canellafuzil": [],
+"meurelava": [
+[
+"cam",
+73781,
+"NELSON MEURER",
+"PPB",
+"PR",
+[
+51,
+52,
+52,
+53,
+54,
+55,
+55
+]
+]
+],
+"salvarotumulo": [],
+"ruyveu": [],
+"raquelveu": [
+[
+"cam",
+178998,
+"RAQUEL MUNIZ",
+"PSC",
+"MG",
+[
+55,
+55
+]
+]
+],
+"caumolamacal": [],
+"kleilsonforro": [],
+"brunoeco": [
+[
+"cam",
+141394,
+"BRUNO ARAÚJO",
+"PSDB",
+"PE",
+[
+53,
+54,
+55
+]
+]
+],
+"juliocatraz": [],
+"wajnjoias": [],
+"pastorgilpina": [],
+"boscopropina": [
+[
+"cam",
+74052,
+"BOSCO COSTA",
+"PSDB",
+"SE",
+[
+52,
+55,
+56,
+56,
+57
+]
+]
+],
+"bezerrodeouro": [
+[
+"sen",
+"23",
+"Fernando Luiz Gonçalves Bezerra",
+"PTB",
+null,
+[
+51,
+52
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador23.jpg"
+],
+[
+"sen",
+"5540",
+"Fernando Bezerra de Souza Coelho",
+"MDB",
+null,
+[
+55,
+56
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5540.jpg"
+]
+],
+"coelhinhodapascoa": [
+[
+"cam",
+141431,
+"FERNANDO COELHO FILHO",
+"PSB",
+"PE",
+[
+53,
+54,
+55,
+55,
+55,
+56,
+56,
+57
+]
+]
+],
+"petrolinando": [],
+"felixterno": [
+[
+"cam",
+74542,
+"FÉLIX MENDONÇA",
+"PTB",
+"BA",
+[
+51,
+52,
+52,
+53,
+53
+]
+],
+[
+"cam",
+160666,
+"FÉLIX JÚNIOR",
+"PDT",
+"BA",
+[
+54,
+54,
+55,
+56,
+57
+]
+]
+],
+"dalbarril": [
+[
+"cam",
+220692,
+"Dal Barreto",
+"UNIÃO",
+"BA",
+[
+57
+]
+]
+],
+"underhandinho": [
+[
+"cam",
+204550,
+"Júnior Mano",
+"PATRI",
+"CE",
+[
+56,
+56,
+56,
+57,
+57
+]
+]
+],
+"adutorao": [
+[
+"cam",
+74044,
+"WILSON SANTIAGO",
+"PMDB",
+"PB",
+[
+52,
+53,
+56,
+56,
+57
+]
+],
+[
+"sen",
+"3811",
+"José Wilson Santiago",
+"REPUBLICANOS",
+"PB",
+[
+54,
+55
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador3811.jpg"
+]
+],
+"calvarinho": [],
+"sepsisalves": [
+[
+"cam",
+74324,
+"HENRIQUE EDUARDO ALVES",
+"PMDB",
+"RN",
+[
+51,
+52,
+53,
+54
+]
+]
+],
+"robinsonfantasma": [
+[
+"cam",
+220624,
+"Robinson Faria",
+"PL",
+"RN",
+[
+57,
+57
+]
+]
+],
+"gentilgate": [
+[
+"cam",
+220707,
+"Amanda Gentil",
+"PP",
+"MA",
+[
+57
+]
+]
+],
+"fundebao": [],
+"luannabenesse": [],
+"dudufontana": [
+[
+"cam",
+141421,
+"EDUARDO DA FONTE",
+"PP**",
+"PE",
+[
+53,
+54,
+55,
+55,
+56,
+57
+]
+]
+],
+"mouradopirambu": [
+[
+"cam",
+160543,
+"ANDRE MOURA",
+"PSC",
+"SE",
+[
+54,
+55
+]
+]
+],
+"binhogalinhadeira": [],
+"yurydoparedao": [],
+"vereadoraarbok": [],
+"laranjeirao": [],
+"xequematinho": [],
+"gavetinha": [],
+"boquirao": [],
+"ptolomeudo": [
+[
+"cam",
+141446,
+"GLADSON CAMELI",
+"PP**",
+"AC",
+[
+53,
+53,
+54
+]
+],
+[
+"sen",
+"4558",
+"Gladson de Lima Cameli",
+"PP",
+null,
+[
+55,
+56
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador4558.jpg"
+]
+],
+"cestabasico": [],
+"cassolicitado": [
+[
+"sen",
+"5004",
+"Ivo Narciso Cassol",
+"PP",
+null,
+[
+54,
+55
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5004.jpg"
+]
+],
+"carlessado": [],
+"azamboiada": [
+[
+"cam",
+160615,
+"REINALDO AZAMBUJA",
+"PSDB",
+"MS",
+[
+54
+]
+]
+],
+"lamapuccinelli": [],
+"selmadois": [
+[
+"sen",
+"5929",
+"Selma Rosane Santos Arruda",
+"PODE",
+null,
+[
+56,
+57
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5929.jpg"
+]
+],
+"perildeliver": [
+[
+"sen",
+"4535",
+"Marconi Ferreira Perillo Júnior",
+"PSDB",
+null,
+[
+53,
+54
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador4535.jpg"
+]
+],
+"pandoruda": [
+[
+"sen",
+"46",
+"José Roberto Arruda",
+null,
+null,
+[
+50,
+51
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador46.jpg"
+]
+],
+"ibaneisolado": [],
+"silvaldoma": [],
+"oigarcia": [
+[
+"cam",
+178905,
+"FABIO GARCIA",
+"PSB",
+"MT",
+[
+55,
+55,
+55,
+57
+]
+],
+[
+"sen",
+"5740",
+"Fabio Paulino Garcia",
+"UNIÃO",
+"MT",
+[
+56,
+57
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5740.jpg"
+]
+],
+"sojamaggi": [
+[
+"sen",
+"111",
+"Blairo Borges Maggi",
+"PL",
+null,
+[
+54,
+55
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador111.jpg"
+]
+],
+"fragalhado": [
+[
+"cam",
+73579,
+"ALBERTO FRAGA",
+"PMDB",
+"DF",
+[
+51,
+52,
+52,
+52,
+52,
+52,
+53,
+53,
+55,
+57
+]
+]
+],
+"baldeado": [
+[
+"cam",
+178875,
+"ALEXANDRE BALDY",
+"PSDB",
+"GO",
+[
+55,
+55,
+55,
+55,
+55
+]
+]
+],
+"reidogado": [],
+"helderbellum": [],
+"draculeao": [
+[
+"cam",
+204380,
+"Celina Leão",
+"PP",
+"DF",
+[
+56
+]
+]
+],
+"wanderfome": [],
+"maurodoi": [],
+"helenoalerta": [],
+"quadrocrivela": [
+[
+"cam",
+220599,
+"Marcelo Crivella",
+"REPUBLICANOS",
+"RJ",
+[
+57
+]
+],
+[
+"sen",
+"3366",
+"Marcelo Bezerra Crivella",
+"REPUBLICANOS",
+"RJ",
+[
+52,
+53,
+54,
+55
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador3366.jpg"
+]
+],
+"geleria": [
+[
+"cam",
+146307,
+"NERI GELLER",
+"PSDB",
+"MT",
+[
+53,
+54,
+56
+]
+]
+],
+"boizebuamorim": [],
+"nikolasfaker": [
+[
+"cam",
+209787,
+"Nikolas Ferreira",
+"PL",
+"MG",
+[
+57
+]
+]
+],
+"englerfake": [],
+"sheilafake": [],
+"arrudabigode": [
+[
+"cam",
+172945,
+"RICARDO ARRUDA",
+"PSC",
+"PR",
+[
+54
+]
+]
+],
+"estafetalima": [
+[
+"cam",
+220634,
+"Marcelo Lima",
+"SOLIDARIEDADE",
+"SP",
+[
+57,
+57,
+57
+]
+]
+],
+"mangacopiacola": [],
+"razukbicho": [],
+"gregfantasma": [],
+"copalivre": [],
+"assumcaotornozeleira": [
+[
+"cam",
+152606,
+"CAPITÃO ASSUMÇÃO",
+"PSB",
+"ES",
+[
+53,
+53
+]
+]
+],
+"heroiepettersen": [
+[
+"cam",
+204482,
+"Euclydes Pettersen",
+"PSC",
+"MG",
+[
+56,
+57,
+57
+]
+]
+],
+"hipocratesdanilo": [],
+"gilvanquinto": [
+[
+"cam",
+220526,
+"Gilvan da Federal",
+"PL",
+"ES",
+[
+57
+]
+]
+],
+"vilmarexoneramais": [],
+"furlanhospital": [],
+"velloso2026graco": [
+[
+"cam",
+220589,
+"Eduardo Velloso",
+"UNIÃO",
+"AC",
+[
+57,
+57
+]
+],
+[
+"sen",
+"5902",
+"Eduardo Ovídio Borges de Velloso Vianna",
+"SOLIDARIEDADE",
+"AC",
+[
+56,
+57
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5902.jpg"
+]
+],
+"belotabusca": [],
+"pioneiroflagrante": [],
+"edesioturiacu": [],
+"mariovicktorsobral": [],
+"junimdopovoomerta": [],
+"siqueirapalmassisamnes": [
+[
+"cam",
+74416,
+"EDUARDO CAMPOS",
+"PSB",
+"PE",
+[
+51,
+52
+]
+],
+[
+"sen",
+"1024",
+"José Eduardo Siqueira Campos",
+"PSDB",
+null,
+[
+51,
+52
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador1024.jpg"
+],
+[
+"sen",
+"6005",
+"Jose Wilson Siqueira Campos",
+"DEM",
+null,
+[
+56,
+57
+],
+"http://www.senado.leg.br/senadores/img/fotos-oficiais/senador6005.jpg"
+]
+],
+"goreteindebito": [
+[
+"cam",
+129618,
+"GORETE PEREIRA",
+"PFL",
+"CE",
+[
+52,
+52,
+52,
+52,
+52,
+52,
+52,
+53,
+54,
+55,
+56,
+56,
+57,
+57
+]
+]
+],
+"brunapraianorte": [],
+"cletsonequador": [],
+"carlinhossobralbusca": [],
+"antoniodoidoigapo": [
+[
+"cam",
+220675,
+"Antônio Doido",
+"MDB",
+"PA",
+[
+57
+]
+]
+],
+"chiconazariocaapora": [],
+"cezinhatransparencia": [
+[
+"cam",
+204504,
+"Cezinha de Madureira",
+"PSD",
+"SP",
+[
+56,
+57,
+57
+]
+]
+],
+"queirozcastratio": [
+[
+"cam",
+160161,
+"Marcelo Queiroz",
+"PP",
+"RJ",
+[
+57,
+57
+]
+]
+],
+"garnierfragata": [],
+"nogueiraescudo": [],
+"martinstwitter": [
+[
+"cam",
+220545,
+"Filipe Martins",
+"PL",
+"TO",
+[
+57
+]
+]
+],
+"fernandespunhal": [],
+"camaramonitor": [],
+"cuiabamensalinho": [
+[
+"cam",
+198783,
+"Emanuel Pinheiro Neto",
+"PTB",
+"MT",
+[
+56,
+56,
+57,
+57
+]
+]
+],
+"nininhomt": [],
+"neysantosxibalba": [],
+"audicmota": [],
+"mauromoraespr": [],
+"marcusamim": []
+}

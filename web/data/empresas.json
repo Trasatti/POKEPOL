@@ -1,0 +1,166 @@
+[
+ {
+  "id": "jf",
+  "empresa": "J&F / JBS",
+  "building": "Sede da J&F",
+  "city": "sao_paulo",
+  "owner": {
+   "name": "Joesley Batista",
+   "fact": "Em 2017 fechou delação premiada e acordo de leniência da J&F com o MPF; foi preso em setembro de 2017 (insider trading) e solto em março de 2018.",
+   "source": "https://pt.wikipedia.org/wiki/Joesley_Batista"
+  },
+  "team": [
+   {
+    "id": "temerario",
+    "como": "Gravado por Joesley no Jaburu em março de 2017, em conversa sobre a compra do silêncio de Eduardo Cunha.",
+    "source": "https://pt.wikipedia.org/wiki/Joesley_Batista"
+   },
+   {
+    "id": "malaloures",
+    "como": "Filmado pela PF em abril de 2017 correndo com mala de R$ 500 mil enviada por Joesley.",
+    "source": "https://pt.wikipedia.org/wiki/Joesley_Batista"
+   },
+   {
+    "id": "gravecio",
+    "como": "Gravado pedindo R$ 2 milhões a Joesley em 2017; absolvido em 2022 (TRF-3 confirmou).",
+    "source": "https://pt.wikipedia.org/wiki/Aécio_Neves"
+   },
+   {
+    "id": "cunhamon",
+    "como": "Citado na delação por propinas da JBS ligadas ao FI-FGTS (Operação Sépsis) e na gravação sobre o silêncio.",
+    "source": "https://pt.wikipedia.org/wiki/Joesley_Batista"
+   }
+  ],
+  "intro": [
+   "Sou um homem de negócios. Boi, frango e... conversas gravadas no Jaburu.",
+   "Cheguei com a mala cheia de argumentos. Cadê o meu time?"
+  ],
+  "lose": "Perdi, mas o acordo de leniência é em 25 anos. Tenho tempo.",
+  "look": {
+   "hair": "#2b1b12",
+   "shirt": "#1f3a5f",
+   "pants": "#222222"
+  },
+  "caseValue": 10300000000,
+  "caseValueLabel": "valor do acordo de leniência da J&F (2017), a pagar em 25 anos",
+  "caseValueSource": "https://pt.wikipedia.org/wiki/J%26F_Investimentos"
+ },
+ {
+  "id": "odebrecht",
+  "empresa": "Odebrecht (Novonor)",
+  "building": "Sede da Odebrecht",
+  "city": "salvador",
+  "owner": {
+   "name": "Marcelo Odebrecht",
+   "fact": "Preso em 2015 e condenado em 2016 a 19 anos e 4 meses; delatou em dezembro de 2016 com o pai; concluiu a pena em 2023 e, em 2024, o STF anulou decisões de Curitiba contra ele.",
+   "source": "https://pt.wikipedia.org/wiki/Marcelo_Odebrecht"
+  },
+  "team": [
+   {
+    "id": "cabralzao",
+    "como": "Condenado em 2022 a 17 anos e 7 meses por receber R$ 78,9 milhões em propina da Odebrecht (Maracanã, PAC Favelas, Linha 4).",
+    "source": "https://pt.wikipedia.org/wiki/Sérgio_Cabral_Filho"
+   },
+   {
+    "id": "jucazord",
+    "como": "Um dos mais citados (5 inquéritos) na Lista de Fachin, com base nas delações da Odebrecht (2017).",
+    "source": "https://www.opovo.com.br/noticias/politica/2017/04/amp/nove-ministros-de-temer-integram-lista-de-fachin.html"
+   },
+   {
+    "id": "renanzilla",
+    "como": "Alvo de 4 inquéritos autorizados por Fachin em 2017 a partir das delações da Odebrecht; um deles foi arquivado depois.",
+    "source": "https://www.opovo.com.br/noticias/politica/2017/04/amp/nove-ministros-de-temer-integram-lista-de-fachin.html"
+   }
+  ],
+  "intro": [
+   "Aqui na Odebrecht a gente tem até departamento de operações estruturadas. Chique, né?",
+   "Prepare-se: meu time tem planilha, codinome e muita saudade de obra."
+  ],
+  "lose": "Tá bom, tá bom, eu assino outra delação.",
+  "look": {
+   "hair": "#1c1c1c",
+   "shirt": "#d9d9d9",
+   "pants": "#2e3a59"
+  },
+  "caseValue": 8600000000,
+  "caseValueLabel": "valor que a Novonor/Odebrecht se comprometeu a pagar no acordo de 2016",
+  "caseValueSource": "https://pt.wikipedia.org/wiki/Marcelo_Odebrecht"
+ },
+ {
+  "id": "master",
+  "empresa": "Banco Master",
+  "building": "Sede do Banco Master",
+  "city": "brasilia",
+  "owner": {
+   "name": "Daniel Vorcaro",
+   "fact": "Preso desde 18/11/2025 na Operação Compliance Zero (PF); negociou delação em 2026 e a proposta foi recusada pela PF e pela PGR. Investigado, sem condenação.",
+   "source": "https://pt.wikipedia.org/wiki/Escândalo_do_Banco_Master"
+  },
+  "team": [
+   {
+    "id": "rachadinho",
+    "como": "Pediu recursos a Vorcaro para o filme Dark Horse; em julho de 2026 o STF autorizou abertura de inquérito. Ele nega vantagem indevida.",
+    "source": "https://pt.wikipedia.org/wiki/Escândalo_do_Banco_Master"
+   },
+   {
+    "id": "tarifardo",
+    "como": "PF investiga se recebeu dinheiro via fundo Havengate para se manter nos EUA. Ele nega.",
+    "source": "https://pt.wikipedia.org/wiki/Escândalo_do_Banco_Master"
+   }
+  ],
+  "intro": [
+   "Sou banqueiro de relacionamento. O relacionamento é que ficou caro.",
+   "Meu portfólio é diversificado: só tem crédito fofo."
+  ],
+  "lose": "O FGC que lute. Eu só queria um jatinho.",
+  "look": {
+   "hair": "#3a2a1e",
+   "shirt": "#0b1a33",
+   "pants": "#101820"
+  },
+  "caseValue": 52000000000,
+  "caseValueLabel": "dívida aproximada dos conglomerados do Master com o FGC",
+  "caseValueSource": "https://pt.wikipedia.org/wiki/Escândalo_do_Banco_Master"
+ },
+ {
+  "id": "rural",
+  "empresa": "Banco Rural",
+  "building": "Sede do Banco Rural",
+  "city": "belo_horizonte",
+  "owner": {
+   "name": "Kátia Rabello",
+   "fact": "Ex-presidente do Banco Rural; o STF a condenou no mensalão (2012) por gestão fraudulenta, lavagem e outros crimes; presa em 2013, em liberdade condicional desde 2017.",
+   "source": "https://pt.wikipedia.org/wiki/Kátia_Rabello"
+  },
+  "team": [
+   {
+    "id": "mensaleiro",
+    "como": "Cassado em 2005 e condenado pelo STF em 2012 no mensalão, esquema que usou o Rural.",
+    "source": "https://pt.wikipedia.org/wiki/Escândalo_do_mensalão"
+   },
+   {
+    "id": "granadeiro",
+    "como": "Cassado em 2005 após denunciar o esquema do mensalão (SMP&B, Rural).",
+    "source": "https://pt.wikipedia.org/wiki/Escândalo_do_mensalão"
+   },
+   {
+    "id": "valdemensal",
+    "como": "Condenado pelo STF em 2013 (7 anos e 10 meses); R$ 10,8 milhões vindos das empresas de Valério.",
+    "source": "https://pt.wikipedia.org/wiki/Escândalo_do_mensalão"
+   }
+  ],
+  "intro": [
+   "Aqui é Banco Rural: empréstimo bom é empréstimo que ninguém lê.",
+   "Meu time já passou pelo STF. Você passou pela portaria?"
+  ],
+  "lose": "Liquidaram o banco, mas a pose continua.",
+  "look": {
+   "hair": "#5a3b24",
+   "shirt": "#7a1f2b",
+   "pants": "#2a2a2a"
+  },
+  "caseValue": 1505000,
+  "caseValueLabel": "multa imposta a Kátia Rabello pelo STF no mensalão",
+  "caseValueSource": "https://pt.wikipedia.org/wiki/Kátia_Rabello"
+ }
+]
