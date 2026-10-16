@@ -26,3 +26,6 @@ docs/politicos-sul-sudeste.*
 docs/politicos-nordeste.*
 docs/politicos-norte-centro-oeste.*
 tmp_work/
+
+# Pasta de trabalho do gerador de caricaturas (fotos brutas)
+tools/work/
