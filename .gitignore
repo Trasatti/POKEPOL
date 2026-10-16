@@ -1,0 +1,22 @@
+# ROMs e instaladores de terceiros: nunca versionar (direitos autorais / segurança)
+rom/
+*.gba
+*.gb
+*.exe
+*.zip
+
+# Fotos originais baixadas para gerar as caricaturas (só os sprites finais vão para o repositório)
+tools/fotos/
+tools/**/fotos/
+
+# Modelos e caches
+*.onnx
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuração local do Claude Code
+.claude/settings.local.json

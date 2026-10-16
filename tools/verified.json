@@ -1,0 +1,362 @@
+{
+ "palocciu": {
+  "src": "camara",
+  "id": 74701,
+  "civil": "ANTONIO PALOCCI FILHO",
+  "nome": "ANTONIO PALOCCI",
+  "partido": "PT",
+  "uf": "SP",
+  "leg": 53,
+  "nasc": "1960-10-04",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/74701.jpg"
+ },
+ "garotinho": {
+  "src": "camara",
+  "id": 160539,
+  "civil": "ANTHONY WILLIAM GAROTINHO MATHEUS DE OLIVEIRA",
+  "nome": "ANTHONY GAROTINHO",
+  "partido": "PR",
+  "uf": "RJ",
+  "leg": 54,
+  "nasc": "1960-04-18",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/160539.jpg"
+ },
+ "janonudo": {
+  "src": "camara",
+  "id": 204515,
+  "civil": "ANDRE LUIS GASPAR JANONES",
+  "nome": "André Janones",
+  "partido": "REDE",
+  "uf": "MG",
+  "leg": 57,
+  "nasc": "1984-05-05",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/204515.jpg"
+ },
+ "silveirao": {
+  "src": "camara",
+  "id": 204454,
+  "civil": "DANIEL LUCIO DA SILVEIRA",
+  "nome": "Daniel Silveira",
+  "partido": "PTB",
+  "uf": "RJ",
+  "leg": 56,
+  "nasc": "1982-11-25",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/204454.jpg"
+ },
+ "azeredinho": {
+  "src": "camara",
+  "id": 160647,
+  "civil": "EDUARDO BRANDÃO DE AZEREDO",
+  "nome": "EDUARDO AZEREDO",
+  "partido": "PSDB",
+  "uf": "MG",
+  "leg": 54,
+  "nasc": "1948-09-09",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/160647.jpg"
+ },
+ "malaloures": {
+  "src": "camara",
+  "id": 141532,
+  "civil": "RODRIGO SANTOS DA ROCHA LOURES",
+  "nome": "ROCHA LOURES",
+  "partido": "MDB",
+  "uf": "PR",
+  "leg": 55,
+  "nasc": "1966-11-13",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/141532.jpg"
+ },
+ "codevasfo": {
+  "src": "camara",
+  "id": 178886,
+  "civil": "JOSE JUSCELINO DOS SANTOS REZENDE FILHO",
+  "nome": "Juscelino Filho",
+  "partido": "PSDB",
+  "uf": "MA",
+  "leg": 57,
+  "nasc": "1984-11-06",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/178886.jpg"
+ },
+ "boiadeiro": {
+  "src": "camara",
+  "id": 220633,
+  "civil": "RICARDO DE AQUINO SALLES",
+  "nome": "Ricardo Salles",
+  "partido": "NOVO",
+  "uf": "SP",
+  "leg": 57,
+  "nasc": "1975-06-08",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/220633.jpg"
+ },
+ "zambellina": {
+  "src": "camara",
+  "id": 204507,
+  "civil": "CARLA ZAMBELLI SALGADO DE OLIVEIRA",
+  "nome": "Carla Zambelli",
+  "partido": "PL",
+  "uf": "SP",
+  "leg": 57,
+  "nasc": "1980-07-03",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/204507.jpg"
+ },
+ "machadao": {
+  "src": "camara",
+  "id": 73755,
+  "civil": "José Sérgio de Oliveira Machado",
+  "nome": "SÉRGIO MACHADO",
+  "partido": "PSDB",
+  "uf": "CE",
+  "leg": 49,
+  "nasc": "1946-12-18",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/73755.jpg"
+ },
+ "mensaleiro": {
+  "src": "camara",
+  "id": 74782,
+  "civil": "JOSÉ DIRCEU DE OLIVEIRA E SILVA",
+  "nome": "JOSÉ DIRCEU",
+  "partido": "PT",
+  "uf": "SP",
+  "leg": 52,
+  "nasc": "1946-03-16",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/74782.jpg"
+ },
+ "tarifardo": {
+  "src": "camara",
+  "id": 92346,
+  "civil": "EDUARDO NANTES BOLSONARO",
+  "nome": "Eduardo Bolsonaro",
+  "partido": "PL",
+  "uf": "SP",
+  "leg": 57,
+  "nasc": "1984-07-10",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/92346.jpg"
+ },
+ "abinzinho": {
+  "src": "camara",
+  "id": 220619,
+  "civil": "ALEXANDRE RAMAGEM RODRIGUES",
+  "nome": "Delegado Ramagem",
+  "partido": "PL",
+  "uf": "RJ",
+  "leg": 57,
+  "nasc": "1972-05-08",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/220619.jpg"
+ },
+ "cunhamon": {
+  "src": "camara",
+  "id": 74173,
+  "civil": "EDUARDO COSENTINO DA CUNHA",
+  "nome": "EDUARDO CUNHA",
+  "partido": "MDB",
+  "uf": "RJ",
+  "leg": 55,
+  "nasc": "1958-09-29",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/74173.jpg"
+ },
+ "lirassauro": {
+  "src": "camara",
+  "id": 160541,
+  "civil": "ARTHUR CÉSAR PEREIRA DE LIRA",
+  "nome": "Arthur Lira",
+  "partido": "PP",
+  "uf": "AL",
+  "leg": 57,
+  "nasc": "1969-06-25",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/160541.jpg"
+ },
+ "temerario": {
+  "src": "camara",
+  "id": 73552,
+  "civil": "MICHEL MIGUEL ELIAS TEMER LULIA",
+  "nome": "MICHEL TEMER",
+  "partido": "PMDB",
+  "uf": "SP",
+  "leg": 53,
+  "nasc": "1940-09-23",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/73552.jpg"
+ },
+ "gravecio": {
+  "src": "camara",
+  "id": 74646,
+  "civil": "AÉCIO NEVES DA CUNHA",
+  "nome": "Aécio Neves",
+  "partido": "PSDB",
+  "uf": "MG",
+  "leg": 57,
+  "nasc": "1960-03-10",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/74646.jpg"
+ },
+ "malufante": {
+  "src": "camara",
+  "id": 132056,
+  "civil": "PAULO SALIM MALUF",
+  "nome": "PAULO MALUF",
+  "partido": "PP",
+  "uf": "SP",
+  "leg": 55,
+  "nasc": "1931-09-03",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/132056.jpg"
+ },
+ "golpenaro": {
+  "src": "camara",
+  "id": 74847,
+  "civil": "JAIR MESSIAS BOLSONARO",
+  "nome": "JAIR BOLSONARO",
+  "partido": "PSL",
+  "uf": "RJ",
+  "leg": 55,
+  "nasc": "1955-03-21",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/74847.jpg"
+ },
+ "sacostenes": {
+  "src": "camara",
+  "id": 178947,
+  "civil": "SOSTENES SILVA CAVALCANTE",
+  "nome": "Sóstenes Cavalcante",
+  "partido": "PL",
+  "uf": "RJ",
+  "leg": 57,
+  "nasc": "1975-01-16",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/178947.jpg"
+ },
+ "jordyaluga": {
+  "src": "camara",
+  "id": 204460,
+  "civil": "Carlos Roberto Jordy Coelho de Mattos",
+  "nome": "Carlos Jordy",
+  "partido": "PL",
+  "uf": "RJ",
+  "leg": 57,
+  "nasc": "1982-02-08",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/204460.jpg"
+ },
+ "discalculayer": {
+  "src": "camara",
+  "id": 220568,
+  "civil": "GUSTAVO GAYER MACHADO DE ARAUJO",
+  "nome": "Gustavo Gayer",
+  "partido": "PL",
+  "uf": "GO",
+  "leg": 57,
+  "nasc": "1981-04-13",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/220568.jpg"
+ },
+ "friasdark": {
+  "src": "camara",
+  "id": 220655,
+  "civil": "MARIO LUIS FRIAS",
+  "nome": "Mario Frias",
+  "partido": "PL",
+  "uf": "SP",
+  "leg": 57,
+  "nasc": "1971-10-09",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/220655.jpg"
+ },
+ "maranhaozito": {
+  "src": "camara",
+  "id": 204563,
+  "civil": "JOSIMAR CUNHA RODRIGUES",
+  "nome": "Josimar Maranhãozinho",
+  "partido": "PL",
+  "uf": "MA",
+  "leg": 57,
+  "nasc": "1976-11-13",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/204563.jpg"
+ },
+ "granadeiro": {
+  "src": "camara",
+  "id": 73420,
+  "civil": "ROBERTO JEFFERSON MONTEIRO FRANCISCO",
+  "nome": "ROBERTO JEFFERSON",
+  "partido": "PTB",
+  "uf": "RJ",
+  "leg": 52,
+  "nasc": "1953-06-14",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/73420.jpg"
+ },
+ "valdemensal": {
+  "src": "camara",
+  "id": 73565,
+  "civil": "VALDEMAR COSTA NETO",
+  "nome": "VALDEMAR COSTA NETO",
+  "partido": "PR",
+  "uf": "SP",
+  "leg": 54,
+  "nasc": "1949-08-11",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/73565.jpg"
+ },
+ "bunkerddel": {
+  "src": "camara",
+  "id": 74544,
+  "civil": "GEDDEL QUADROS VIEIRA LIMA",
+  "nome": "GEDDEL VIEIRA LIMA",
+  "partido": "PMDB",
+  "uf": "BA",
+  "leg": 53,
+  "nasc": "1959-03-18",
+  "foto": "https://www.camara.leg.br/internet/deputado/bandep/74544.jpg"
+ },
+ "delcidiao": {
+  "src": "senado",
+  "id": 3360,
+  "civil": "Delcídio do Amaral Gomez",
+  "nome": "Delcídio do Amaral",
+  "partido": "S/Partido",
+  "uf": null,
+  "nasc": "1955-02-08"
+ },
+ "rachadinho": {
+  "src": "senado",
+  "id": 5894,
+  "civil": "Flávio Nantes Bolsonaro",
+  "nome": "Flávio Bolsonaro",
+  "partido": "PL",
+  "uf": "RJ",
+  "nasc": "1981-04-30"
+ },
+ "renanzilla": {
+  "src": "senado",
+  "id": 70,
+  "civil": "José Renan Vasconcelos Calheiros",
+  "nome": "Renan Calheiros",
+  "partido": "MDB",
+  "uf": "AL",
+  "nasc": "1955-09-16"
+ },
+ "jucazord": {
+  "src": "senado",
+  "id": 73,
+  "civil": "Romero Jucá Filho",
+  "nome": "Romero Jucá",
+  "partido": "MDB",
+  "uf": null,
+  "nasc": "1954-11-30"
+ },
+ "dovalento": {
+  "src": "senado",
+  "id": 5942,
+  "civil": "Marcos Ribeiro do Val",
+  "nome": "Marcos do Val",
+  "partido": "AVANTE",
+  "uf": "ES",
+  "nasc": "1971-06-15"
+ },
+ "ciromaster": {
+  "src": "senado",
+  "id": 739,
+  "civil": "Ciro Nogueira Lima Filho",
+  "nome": "Ciro Nogueira",
+  "partido": "PP",
+  "uf": "PI",
+  "nasc": "1968-11-21"
+ },
+ "confiscollor": {
+  "src": "senado",
+  "id": 4525,
+  "civil": "Fernando Affonso Collor de Mello",
+  "nome": "Fernando Collor",
+  "partido": "PTB",
+  "uf": null,
+  "nasc": "1949-08-12"
+ }
+}

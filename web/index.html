@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0c18">
+<meta name="build" content="20261016e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>PokéPol</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261016e">
+</head>
+<body>
+<div id="screen">
+  <canvas id="cv" width="480" height="270"></canvas>
+  <div id="ui"></div>
+  <!-- Controles de toque: só aparecem em telas sensíveis ao toque -->
+  <div id="touch">
+    <div id="dpad"><span class="d up"></span><span class="d left"></span><span class="d center"></span><span class="d right"></span><span class="d down"></span></div>
+    <div id="ab"><button id="btnB" class="round">B</button><button id="btnA" class="round">A</button></div>
+    <button id="btnStart" class="pill">MENU</button>
+  </div>
+</div>
+<div id="boot">
+  <h1>POKÉPOL</h1>
+  <p class="sub">Edição Polícia Federal</p>
+  <button id="bootFull">▶ INICIAR EM TELA CHEIA</button>
+  <button id="bootWin" class="ghost">Jogar na janela</button>
+  <div class="keys">
+    <span><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> ou <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> andar</span>
+    <span><kbd>Z</kbd> / <kbd>Espaço</kbd> botão A</span>
+    <span><kbd>X</kbd> / <kbd>Esc</kbd> botão B</span>
+    <span><kbd>Enter</kbd> menu</span>
+    <span><kbd>F</kbd> tela cheia</span>
+  </div>
+  <p class="note">Paródia sem fins lucrativos. Fatos baseados em notícias públicas. Investigados não condenados são presumidos inocentes.</p>
+</div>
+<div id="rotate">Gire o celular para a horizontal ↻</div>
+<script src="js/data.js?v=20261016e"></script>
+<script src="js/rules.js?v=20261016e"></script>
+<script src="js/art.js?v=20261016e"></script>
+<script src="js/map.js?v=20261016e"></script>
+<script src="js/game.js?v=20261016e"></script>
+</body>
+</html>

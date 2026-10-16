@@ -1,0 +1,15 @@
+{
+  "name": "PokéPol — Edição Polícia Federal",
+  "short_name": "PokéPol",
+  "description": "Paródia no estilo Pokémon: prenda políticos como agente da Polícia Federal.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#15162a",
+  "theme_color": "#1e3a78",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

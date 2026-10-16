@@ -1,0 +1,76 @@
+<!doctype html><meta charset="utf-8"><title>Art preview</title>
+<body style="background:#222;color:#eee;font:12px sans-serif;margin:8px">
+<div id="st">carregando... (servir via http, ex.: python -m http.server)</div>
+<h3>Vila de exemplo (3x)</h3>
+<canvas id="town"></canvas>
+<h3>Mapa completo (1x) + prédios + personagens + tiles</h3>
+<canvas id="map"></canvas><br>
+<canvas id="extra" width="1400" height="520"></canvas>
+<script src="js/data.js"></script><script src="js/art.js"></script><script src="js/map.js"></script>
+<script>
+const cm = document.getElementById('map'), cx = cm.getContext('2d');
+buildTiles(); buildWorld();
+cm.width = MAP_W * TILE; cm.height = MAP_H * TILE;
+// tile 'tree' usa o quarto (x & 1) + (y & 1) * 2
+function tileImg(k, x, y, f) {
+  const fs = Tiles[k]; if (!fs) return null;
+  if (k === 'tree') return fs[(x & 1) + (y & 1) * 2];
+  return fs[f % fs.length];
+}
+function maskAt(g, i, j, k) {
+  const H = g.length, W = g[0].length;
+  const same = (a, b) => { if (a < 0 || b < 0 || a >= W || b >= H) return true; return g[b][a] === k; };
+  const dirs = [[0, -1, 1], [1, -1, 2], [1, 0, 4], [1, 1, 8], [0, 1, 16], [-1, 1, 32], [-1, 0, 64], [-1, -1, 128]];
+  let m = 0; for (const [dx, dy, bit] of dirs) if (same(i + dx, j + dy)) m |= bit;
+  return m;
+}
+function drawTown() {
+  const W = 26, H = 17, T = TILE, c = document.getElementById('town');
+  c.width = W * T; c.height = H * T; c.style.width = (W * T * 1.5) + 'px'; c.style.imageRendering = 'pixelated';
+  const x = c.getContext('2d'); x.imageSmoothingEnabled = false;
+  const g = [];
+  for (let j = 0; j < H; j++) { g.push([]); for (let i = 0; i < W; i++) g[j].push('grass'); }
+  const rect = (a, b, w, h, k) => { for (let j = b; j < b + h; j++) for (let i = a; i < a + w; i++) if (j >= 0 && i >= 0 && j < H && i < W) g[j][i] = k; };
+  rect(0, 0, W, 2, 'tree'); rect(0, 0, 2, H, 'tree'); rect(W - 2, 0, 2, H, 'tree'); rect(0, H - 2, W, 2, 'tree');
+  rect(2, 2, 2, 4, 'tree'); rect(W - 4, 2, 2, 4, 'tree');
+  rect(2, 9, W - 4, 2, 'path'); rect(12, 2, 2, 7, 'path'); rect(12, 11, 2, 4, 'path');
+  rect(3, 12, 6, 3, 'water'); rect(17, 12, 5, 3, 'sand');
+  rect(6, 8, 4, 1, 'fence'); rect(16, 8, 4, 1, 'fence');
+  rect(5, 7, 1, 1, 'flower'); rect(10, 7, 1, 1, 'flower'); rect(15, 7, 1, 1, 'flower'); rect(20, 7, 1, 1, 'flower'); rect(4, 11, 1, 1, 'flower');
+  rect(15, 11, 2, 1, 'tall'); rect(20, 5, 3, 2, 'tall');
+  rect(11, 4, 1, 1, 'sign'); rect(21, 2, 1, 1, 'pool'); rect(22, 2, 1, 1, 'pool');
+  const f = Math.floor(performance.now() / 500) % 2;
+  for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) {
+    const k = g[j][i];
+    x.drawImage(Tiles.grass[0], i * T, j * T);
+    const at = autotileFor(k, maskAt(g, i, j, k), f);
+    const im = at || tileImg(k, i, j, f); if (im) x.drawImage(im, i * T, j * T, T, T);
+  }
+  const hs = [{ kind: 'casa', w: 5, h: 4, roof: '#c84848', x: 4, y: 3 }, { kind: 'pf', w: 6, h: 4, roof: '#c84848', x: 15, y: 3 }];
+  window._townHouses = window._townHouses || hs.map(b => ({ b, img: drawBuilding(b) }));
+  for (const h of window._townHouses) x.drawImage(h.img, h.b.x * T, h.b.y * T);
+  const npcs = [[10, 9, 'down', { shirt: '#c04040', pants: '#3a4a6a', hair: '#2a2220', skin: '#f0c098' }, 0], [14, 10, 'left', { shirt: '#3a70c0', pants: '#6a5a3a', skin: '#d8a070' }, 1], [8, 8, 'up', { shirt: '#e8c030', pants: '#2a2a3a', skin: '#f0c098' }, 2]];
+  for (const [i, j, d, lk, fr] of npcs) { const im = personSprite(lk, d, fr); x.drawImage(im, i * T, (j + 1) * T - im.height); }
+  const im = personSprite(AGENT_LOOK, 'down', f ? 1 : 0); x.drawImage(im, 12 * T, 10 * T + T - im.height);
+}
+function draw() {
+  cx.imageSmoothingEnabled = false;
+  const fr = 0;
+  for (let y = 0; y < MAP_H; y++) for (let x = 0; x < MAP_W; x++) {
+    let k = World.tiles[y][x]; if (k === 'bld') k = 'grass';
+    cx.drawImage(Tiles.grass[0], x * TILE, y * TILE, TILE, TILE);
+    const im = autotileFor(k, maskAt(World.tiles, x, y, k), fr) || tileImg(k, x, y, fr); if (im) cx.drawImage(im, x * TILE, y * TILE, TILE, TILE);
+  }
+  for (const b of World.buildings) cx.drawImage(b.img, b.x * TILE, b.y * TILE);
+  for (const n of World.npcs) { const im = personSprite(n.look, n.dir, 0); cx.drawImage(im, n.x * TILE, (n.y + 1) * TILE - im.height); };
+  const e = document.getElementById('extra').getContext('2d'); e.imageSmoothingEnabled = false; e.clearRect(0, 0, 1400, 520);
+  let ox = 0; for (const b of World.buildings) { e.drawImage(b.img, ox, 0); ox += b.img.width + 10; if (ox > 1100) break; }
+  ['down','left','right','up'].forEach((d, r) => [0,1,0,2].forEach((f, c) => e.drawImage(personSprite(AGENT_LOOK, d, f), c * 40, 220 + r * 48)));
+  ['down','left','right','up'].forEach((d, r) => [0,1,2].forEach((f, c) => e.drawImage(personSprite(World.npcs[0].look, d, f), 200 + c * 40, 220 + r * 48)));
+  let tx = 600; for (const k of Object.keys(Tiles)) for (const t of Tiles[k]) { e.drawImage(t, tx, 220, TILE, TILE); tx += 36; if (tx > 1380) tx = 600; }
+  drawTown();
+}
+draw();
+ART_READY.then(() => { draw(); document.getElementById('st').textContent = 'ART_READY ok'; });
+setInterval(drawTown, 500);
+</script>

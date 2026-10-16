@@ -1,0 +1,6603 @@
+{
+ "meta": {
+  "notes": "Contrato de balanceamento POKÉPOL. Stats Gen 3 reescalados por faixa de zona; stat = floor((2*base+31)*lvl/100)+5, HP = floor((2*base+31)*lvl/100)+lvl+10 (sem EV). XP curva medium-fast (lvl^3). XP ganho = exp*lvlInimigo/7 (x1.5 treinador). Golpes carregados: os 4 últimos aprendidos até o nível atual. Para politicos com stageBase, usar stageBase[indice do estagio da carreira] no lugar de base.",
+  "catByType": {
+   "fis": [
+    "FUGA",
+    "GOLPE",
+    "NORMAL",
+    "PROPINA",
+    "RACHADINHA"
+   ],
+   "esp": [
+    "LAVAGEM",
+    "DELACAO",
+    "FAKE",
+    "CENTRAO"
+   ]
+  },
+  "chanceNote": "chance = % do efeito secundário em golpes de dano; 100 para golpes de status e efeitos intrínsecos (drain, multi, critico, fixo)."
+ },
+ "moves": {
+  "discurso": {
+   "name": "Discurso Inflamado",
+   "type": "NORMAL",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 35,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Discurso longo e barulhento que machuca mais o ouvido que o corpo."
+  },
+  "repudio": {
+   "name": "Nota de Repúdio",
+   "type": "NORMAL",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 30,
+   "eff": "nada",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Não faz nada, mas ficou lindo no Twitter."
+  },
+  "foro": {
+   "name": "Foro Privilegiado",
+   "type": "NORMAL",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 20,
+   "eff": "defup",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Muda de instância e ganha tempo: sobe a Defesa."
+  },
+  "recurso": {
+   "name": "Recurso Protelatório",
+   "type": "NORMAL",
+   "cat": "status",
+   "pow": 0,
+   "acc": 95,
+   "pp": 20,
+   "eff": "atkdown",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Atrasa o processo e reduz o Ataque do alvo."
+  },
+  "cortina": {
+   "name": "Cortina de Fumaça",
+   "type": "NORMAL",
+   "cat": "status",
+   "pow": 0,
+   "acc": 95,
+   "pp": 20,
+   "eff": "defdown",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Confunde a investigação e reduz a Defesa do alvo."
+  },
+  "saidinha": {
+   "name": "Saidinha",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 1,
+   "desc": "Sai pela porta dos fundos antes de todo mundo."
+  },
+  "propina": {
+   "name": "Propina",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Um agradecimento em espécie."
+  },
+  "cheque": {
+   "name": "Cheque Cidadão",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Programa social usado para comprar votos, como na condenação de Garotinho."
+  },
+  "mesada": {
+   "name": "Mesadão",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 55,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Pagamento mensal para manter a base feliz."
+  },
+  "mala": {
+   "name": "Mala de Dinheiro",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Mala pesada, entrega rápida."
+  },
+  "caixa2": {
+   "name": "Caixa 2",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 90,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Dinheiro que não existe na prestação de contas."
+  },
+  "manter": {
+   "name": "Tem Que Manter Isso",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": "atkdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Frase gravada por Joesley Batista no caso Temer; pode reduzir o Ataque do alvo."
+  },
+  "guardanapo": {
+   "name": "Farra dos Guardanapos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": "atkup",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Festa em Paris com guardanapos na cabeça; pode subir o Ataque de quem usa."
+  },
+  "joias": {
+   "name": "Joias Sauditas",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 62,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Presentes de joias sauditas, caso em que a PF indiciou o ex-presidente."
+  },
+  "bunker": {
+   "name": "Bunker de 51 Mi",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 95,
+   "acc": 80,
+   "pp": 5,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "R$ 51 milhões em malas num apartamento em Salvador."
+  },
+  "mensalao": {
+   "name": "Mensalão",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 30,
+   "acc": 95,
+   "pp": 15,
+   "eff": "multi",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Pagamentos mensais em sequência: acerta de 2 a 5 vezes."
+  },
+  "corrida": {
+   "name": "Corrida da Mala",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": "speup",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Corre com a mala pela rua; pode subir a Velocidade."
+  },
+  "sig_witzel": {
+   "name": "Hospital de Campanha",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 62,
+   "acc": 95,
+   "pp": 20,
+   "eff": "critico",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Contratos da saúde na pandemia que levaram ao impeachment de Witzel; golpe de alta chance crítica."
+  },
+  "dois_milhoes": {
+   "name": "Pedido de R$ 2 Milhões",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": "atkdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Pedido gravado por Joesley Batista; Aécio foi absolvido em 2022."
+  },
+  "sig_respiralima": {
+   "name": "Respirador Superfaturado",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Réu por compra de respiradores com sobrepreço na covid; ele nega. Pode deixar o alvo investigado."
+  },
+  "sig_ciromaster": {
+   "name": "Mesada do Master",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "drain",
+   "chance": 100,
+   "prio": 0,
+   "desc": "PF suspeita de vantagens de Vorcaro, como mesada; ele nega. Recupera metade do dano."
+  },
+  "sig_maranhaozito": {
+   "name": "Pedágio da Emenda",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Propina sobre emendas, caso da condenação de Maranhãozinho no STF."
+  },
+  "laranja": {
+   "name": "Laranja",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Em nome de outro, o dinheiro some no papel."
+  },
+  "doleiro": {
+   "name": "Doleiro",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 55,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Câmbio paralelo sem fila e sem recibo."
+  },
+  "planilha": {
+   "name": "Planilha Paralela",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 100,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "A contabilidade que ninguém deveria ver."
+  },
+  "pedalada": {
+   "name": "Pedalada Fiscal",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 100,
+   "pp": 15,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Atrasa repasses para maquiar as contas; pode reduzir a Defesa."
+  },
+  "chocolate": {
+   "name": "Chocolate Lavado",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de lavagem por meio de uma loja de chocolates; ele nega."
+  },
+  "suica": {
+   "name": "Conta na Suíça",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contas secretas no exterior, como no caso de Cunha."
+  },
+  "rouba": {
+   "name": "Rouba Mas Faz",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 65,
+   "acc": 95,
+   "pp": 15,
+   "eff": "drain",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Bordão associado a Maluf; recupera metade do dano."
+  },
+  "offshore": {
+   "name": "Offshore",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 80,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Empresa de fachada em paraíso fiscal."
+  },
+  "sig_sacostenes": {
+   "name": "Saco Preto de R$ 430 mil",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "critico",
+   "chance": 100,
+   "prio": 0,
+   "desc": "PF achou R$ 430 mil em dinheiro vivo na Operação Galho Fraco; ele nega. Chance crítica alta."
+  },
+  "sig_jordyaluga": {
+   "name": "Aluguel de Fachada",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Suspeita de desvio de cota parlamentar por locadora de fachada; ele nega."
+  },
+  "sig_emprestinho": {
+   "name": "Empréstimo Fake",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 80,
+   "acc": 100,
+   "pp": 15,
+   "eff": "fixo",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Denunciado por empréstimo bancário com documento falso; ele nega. Dano igual ao nível."
+  },
+  "dedurar": {
+   "name": "Dedurar",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Conta tudo ao delegado."
+  },
+  "gravacao": {
+   "name": "Gravação Secreta",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 55,
+   "acc": 100,
+   "pp": 20,
+   "eff": "atkdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Grava a conversa escondido; pode reduzir o Ataque."
+  },
+  "grampo": {
+   "name": "Grampo",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 65,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Escuta autorizada que revela o que não devia."
+  },
+  "delacao": {
+   "name": "Delação Premiada",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Entrega todo mundo em troca de pena menor."
+  },
+  "inquerito": {
+   "name": "Abrir Inquérito",
+   "type": "DELACAO",
+   "cat": "status",
+   "pow": 0,
+   "acc": 90,
+   "pp": 15,
+   "eff": "investigado",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Deixa o alvo investigado: perde vida a cada turno."
+  },
+  "sig_vazacellar": {
+   "name": "Vazamento Unha e Carne",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "accdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso por suspeita de vazar dados de operação e orientar destruição de provas; pode baixar a Precisão."
+  },
+  "sig_cidelator": {
+   "name": "Cartão de Vacina",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 62,
+   "acc": 95,
+   "pp": 20,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "PF indiciou Mauro Cid por falsificação de cartão de vacina; pode reduzir a Defesa."
+  },
+  "acampamento": {
+   "name": "Acampamento no QG",
+   "type": "GOLPE",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 20,
+   "eff": "defup",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Fica na frente do quartel até a Defesa subir."
+  },
+  "motociata": {
+   "name": "Motociata",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Barulho de escapamento e muita buzina."
+  },
+  "perseguicao": {
+   "name": "Perseguição Armada",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 65,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Perseguição de arma em punho, como no caso Zambelli."
+  },
+  "fuzil": {
+   "name": "Rajada de Fuzil",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 90,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Tiros de fuzil contra agentes da PF."
+  },
+  "minuta": {
+   "name": "Minuta do Golpe",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Decreto golpista achado pela PF."
+  },
+  "granada": {
+   "name": "Granada",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Granadas lançadas contra a PF."
+  },
+  "punhal": {
+   "name": "Punhal Verde-Amarelo",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 95,
+   "acc": 80,
+   "pp": 5,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Plano \"Punhal Verde e Amarelo\" da trama golpista; golpe devastador, mas impreciso."
+  },
+  "sig_silveira": {
+   "name": "Vídeo Contra o STF",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "flinch",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Vídeo de ameaças a ministros que levou à condenação de Silveira."
+  },
+  "sig_blitzvinei": {
+   "name": "Blitz Eleitoral",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Blitze no segundo turno de 2022; pode deixar o alvo preso."
+  },
+  "live": {
+   "name": "Live Infinita",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Transmissão que não acaba nunca; pode reduzir a Defesa."
+  },
+  "disparo": {
+   "name": "Disparo em Massa",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Mensagem enviada para toda a lista."
+  },
+  "narrativa": {
+   "name": "Narrativa Confusa",
+   "type": "FAKE",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 15,
+   "eff": "confuso",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Versão nova a cada hora: deixa o alvo confuso."
+  },
+  "deepfake": {
+   "name": "Deepfake",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Vídeo que parece verdade, mas não é."
+  },
+  "odio": {
+   "name": "Gabinete do Ódio",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 90,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Rede de ataques coordenados apontada pela PF."
+  },
+  "hacker": {
+   "name": "Hacker do CNJ",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 90,
+   "pp": 15,
+   "eff": "spddown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Invasão hacker ao CNJ que levou à condenação de Zambelli."
+  },
+  "abin": {
+   "name": "Abin Paralela",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Espionagem de adversários apurada pela PF."
+  },
+  "sig_dovalento": {
+   "name": "Falso Testemunho",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "spadown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Investigado por falso testemunho ao relatar suposto plano golpista; ele nega."
+  },
+  "manobra": {
+   "name": "Manobra Regimental",
+   "type": "CENTRAO",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 20,
+   "eff": "atkdown",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Usa o regimento para travar o adversário e baixar o Ataque."
+  },
+  "sangria": {
+   "name": "Estancar a Sangria",
+   "type": "CENTRAO",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 10,
+   "eff": "heal",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Pacto para estancar a sangria: recupera metade da vida."
+  },
+  "vista": {
+   "name": "Pedido de Vista",
+   "type": "CENTRAO",
+   "cat": "status",
+   "pow": 0,
+   "acc": 75,
+   "pp": 10,
+   "eff": "vista",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Pede vista e some por semanas: o alvo dorme 1 a 3 turnos."
+  },
+  "emenda": {
+   "name": "Emenda Pix",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Dinheiro direto, sem pergunta."
+  },
+  "tomaladaca": {
+   "name": "Toma Lá Dá Cá",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 100,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Voto em troca de cargo."
+  },
+  "confisco": {
+   "name": "Confisco da Poupança",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": "drain",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Plano Collor de 1990; recupera metade do dano."
+  },
+  "orcamento": {
+   "name": "Orçamento Secreto",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 80,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Emendas sem transparência, declaradas inconstitucionais em 2022."
+  },
+  "boiada": {
+   "name": "Passar a Boiada",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Aproveita a distração para afrouxar regras ambientais."
+  },
+  "codevasf": {
+   "name": "Desvio da Codevasf",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": "drain",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Denunciado pela PGR por desvio de emendas na Codevasf; recupera metade do dano."
+  },
+  "sig_friasdark": {
+   "name": "Emenda Dark Horse",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "spddown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Suspeita de R$ 2 milhões em emendas a instituto ligado a produtora de filme; ele nega."
+  },
+  "fantasma": {
+   "name": "Funcionário Fantasma",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 25,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Assessor que só aparece no dia do pagamento."
+  },
+  "rachadinha": {
+   "name": "Rachadinha",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 55,
+   "acc": 100,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Parte do salário do assessor volta para o chefe."
+  },
+  "queiroz": {
+   "name": "Depósito do Queiroz",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Depósitos do ex-assessor Queiroz apontados pelo Coaf."
+  },
+  "mansao": {
+   "name": "Mansão de 6 Mi",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Compra de mansão de R$ 6 milhões em Brasília."
+  },
+  "sig_discalculayer": {
+   "name": "Oscip Fantasma",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "confuso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação Discalculia apura uso da cota parlamentar; ele nega. Pode confundir."
+  },
+  "sig_ceperjao": {
+   "name": "Folha da Ceperj",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "multi",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Cargos temporários da Ceperj usados na eleição de 2022, segundo o TSE; acerta de 2 a 5 vezes."
+  },
+  "embaixada": {
+   "name": "Noite na Embaixada",
+   "type": "FUGA",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 10,
+   "eff": "heal",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Dorme na embaixada e recupera metade da vida."
+  },
+  "aviao": {
+   "name": "Jatinho da FAB",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Voo oficial para compromisso nada oficial."
+  },
+  "exterior": {
+   "name": "Fuga pro Exterior",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Aeroporto, passagem só de ida."
+  },
+  "italia": {
+   "name": "Fuga pra Itália",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Fugiu para a Itália, onde foi presa."
+  },
+  "tornozeleira": {
+   "name": "Tornozeleira Rompida",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "speup",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Rompe a tornozeleira e corre; pode subir a Velocidade."
+  },
+  "tarifaco": {
+   "name": "Tarifaço",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Sanções e tarifas contra o Brasil após lobby nos EUA."
+  },
+  "del_conversa": {
+   "name": "Conversa com o Filho do Cerveró",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Gravação feita pelo filho de Nestor Cerveró que levou à prisão do senador em 2015."
+  },
+  "del_fuga": {
+   "name": "Plano de Fuga do Cerveró",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": "spedown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Segundo o STF, gravado discutindo como tirar Cerveró do país."
+  },
+  "del_mesada": {
+   "name": "Mesada à Família",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Gravado oferecendo ajuda financeira à família de Cerveró, segundo a denúncia."
+  },
+  "del_preso": {
+   "name": "Prisão no Mandato",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Primeiro senador preso no exercício do mandato, em 2015."
+  },
+  "del_lula": {
+   "name": "Delação contra Lula e Dilma",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Sua delação citou Lula e Dilma; houve contestação."
+  },
+  "del_bomba": {
+   "name": "Delação do Delcídio",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Delação premiada na Lava Jato que sacudiu Brasília."
+  },
+  "mac_contrato": {
+   "name": "Contrato da Transpetro",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contratos da estatal que renderam propina, segundo sua delação."
+  },
+  "mac_navio": {
+   "name": "Navios do Promef",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Encomendas de navios da Transpetro; ele admitiu repasses."
+  },
+  "mac_gravador": {
+   "name": "Gravador no Bolso",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": "atkdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Gravou conversas escondido com políticos poderosos."
+  },
+  "mac_repasse": {
+   "name": "Repasse a Senadores",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Admitiu ter repassado propina a políticos."
+  },
+  "mac_juca": {
+   "name": "Pacto Gravado com Jucá",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Gravação em que Jucá fala em \"estancar a sangria\"."
+  },
+  "mac_pmdb": {
+   "name": "Caixa do PMDB",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Disse ter arrecadado propina para o partido."
+  },
+  "mac_delacao": {
+   "name": "Delação da Transpetro",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Delação premiada na Lava Jato com gravações de aliados."
+  },
+  "gar_radio": {
+   "name": "Programa de Rádio",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Radialista de longa data, usa o microfone como arma."
+  },
+  "gar_campos": {
+   "name": "Prefeitura de Campos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Base eleitoral em Campos dos Goytacazes."
+  },
+  "gar_chequinho": {
+   "name": "Operação Chequinho",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Caso de compra de votos com o Cheque Cidadão em Campos."
+  },
+  "gar_bangu": {
+   "name": "Prisão em Bangu",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Foi preso mais de uma vez."
+  },
+  "gar_ficha": {
+   "name": "Ficha Suja",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenações o deixaram inelegível."
+  },
+  "gar_votos": {
+   "name": "Condenação por Compra de Votos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Condenado por compra de votos com o Cheque Cidadão."
+  },
+  "jan_corte": {
+   "name": "Corte Viral",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Trecho de vídeo que circula por todo canto."
+  },
+  "jan_salario": {
+   "name": "Salário Devolvido",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de devolução de parte do salário de assessores; ele nega."
+  },
+  "jan_audio": {
+   "name": "Áudio da Rachadinha",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 66,
+   "acc": 95,
+   "pp": 15,
+   "eff": "confuso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Áudio vazado sobre devolução de salários de assessores; ele nega irregularidade."
+  },
+  "jan_likes": {
+   "name": "Exército de Likes",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 75,
+   "acc": 90,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Mobilização de seguidores nas redes."
+  },
+  "jan_inquerito": {
+   "name": "Inquérito da Rachadinha",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 82,
+   "acc": 85,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Alvo de apuração por suposta rachadinha no gabinete; ele nega."
+  },
+  "pez_obra": {
+   "name": "Obra Emergencial",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contratos de obras na época do governo do RJ."
+  },
+  "pez_herdeiro": {
+   "name": "Herança de Cabral",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Sucedeu Cabral no governo do RJ."
+  },
+  "pez_preso": {
+   "name": "Prisão no Cargo",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 62,
+   "acc": 95,
+   "pp": 20,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso em 2018 ainda governador."
+  },
+  "pez_lobo": {
+   "name": "Operação Boca de Lobo",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Operação da PF que o prendeu em 2018."
+  },
+  "pez_miranda": {
+   "name": "Delação do Carlos Miranda",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 78,
+   "acc": 90,
+   "pp": 10,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Delação ligada ao esquema de Cabral."
+  },
+  "pez_gov": {
+   "name": "Governador Preso",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Acusado de receber mesada do esquema de Cabral."
+  },
+  "wit_dispensa": {
+   "name": "Licitação Dispensada",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contratos sem licitação na pandemia."
+  },
+  "wit_emerg": {
+   "name": "Contrato Emergencial",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Compras emergenciais sob suspeita na saúde."
+  },
+  "wit_os": {
+   "name": "Organização Social",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contratos com organizações sociais na saúde."
+  },
+  "wit_edmar": {
+   "name": "Delação de Edmar Santos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Ex-secretário de Saúde que fez delação."
+  },
+  "wit_afasta": {
+   "name": "Afastamento pelo STJ",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Foi afastado do cargo em 2020."
+  },
+  "wit_impeach": {
+   "name": "Impeachment",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Perdeu o cargo por impeachment em 2021."
+  },
+  "sil_placa": {
+   "name": "Placa Quebrada",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Quebrou placa em homenagem a Marielle Franco durante a campanha de 2018."
+  },
+  "sil_ameaca": {
+   "name": "Ameaça a Ministros",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenado por ameaças a ministros do STF."
+  },
+  "sil_flagrante": {
+   "name": "Prisão em Flagrante",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso em flagrante por ordem do STF em 2021."
+  },
+  "sil_tozeleira": {
+   "name": "Descumprimento da Tornozeleira",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "spedown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Descumpriu medidas cautelares impostas pelo STF."
+  },
+  "sil_graca": {
+   "name": "Graça Presidencial",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Perdão de Bolsonaro, depois anulado pelo STF."
+  },
+  "car_tuite": {
+   "name": "Tuíte Raivoso",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Ataques pelas redes."
+  },
+  "car_print": {
+   "name": "Print Editado",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Imagem adulterada para parecer verdade."
+  },
+  "car_perfil": {
+   "name": "Perfil Anônimo",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Ataques sem rosto."
+  },
+  "car_inquerito": {
+   "name": "Inquérito da Abin Paralela",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Investigado pela PF no caso da Abin paralela."
+  },
+  "aze_campanha": {
+   "name": "Campanha de 1998",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Caso que originou o mensalão tucano."
+  },
+  "aze_valerio": {
+   "name": "Publicitário Marcos Valério",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O operador do esquema, também no mensalão do PT."
+  },
+  "aze_estatais": {
+   "name": "Dinheiro das Estatais",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Patrocínios de estatais mineiras, segundo a condenação."
+  },
+  "aze_sociedade": {
+   "name": "Empréstimos Fictícios",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Empréstimos usados para disfarçar dinheiro da campanha."
+  },
+  "aze_tucano": {
+   "name": "Mensalão Tucano",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 36,
+   "acc": 100,
+   "pp": 30,
+   "eff": "multi",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Repasses em sequência: acerta de 2 a 5 vezes."
+  },
+  "aze_stf": {
+   "name": "Condenação no STF",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenado no mensalão tucano."
+  },
+  "aze_preso": {
+   "name": "Preso em 2018",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Foi preso em 2018 após condenação."
+  },
+  "mal_joesley": {
+   "name": "Conversa com Joesley",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Ligação com o dono da JBS."
+  },
+  "mal_pizza": {
+   "name": "Pizzaria da Entrega",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Local onde a PF filmou o recebimento da mala."
+  },
+  "mal_mala": {
+   "name": "Mala de R$ 500 mil",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Filmado pela PF com a mala em 2017."
+  },
+  "mal_camera": {
+   "name": "Câmera da PF",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "accdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Imagens da PF que o mostram correndo com a mala."
+  },
+  "mal_preso": {
+   "name": "Preso pela PF",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Foi preso após o caso da mala."
+  },
+  "mal_jbs": {
+   "name": "Delação da JBS",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 84,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Gravações de Joesley Batista que o implicaram."
+  },
+  "cod_leilao": {
+   "name": "Leilão de Cavalos",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Usou jatinho da FAB para ir a leilão de cavalos."
+  },
+  "cod_visita": {
+   "name": "Visita Oficial",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Compromisso oficial só no papel."
+  },
+  "cod_asfalto": {
+   "name": "Asfalto da Codevasf",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de desvio de emendas em pavimentação, segundo a denúncia."
+  },
+  "cod_pgr": {
+   "name": "Denúncia da PGR",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Denunciado pela PGR; ele nega."
+  },
+  "cod_saida": {
+   "name": "Saída do Ministério",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Deixou o governo em 2025."
+  },
+  "boi_fiscal": {
+   "name": "Fiscalização Frouxa",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Fiscais do meio ambiente com a mão atada."
+  },
+  "boi_queimada": {
+   "name": "Queimada",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Fogo que se espalha pelo mato."
+  },
+  "boi_madeira": {
+   "name": "Exportação de Madeira",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de favorecer exportação ilegal de madeira; ele nega."
+  },
+  "boi_akuanduba": {
+   "name": "Operação Akuanduba",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação da PF sobre o setor madeireiro."
+  },
+  "boi_reuniao": {
+   "name": "Reunião Ministerial",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "A reunião de abril de 2020 que ficou famosa."
+  },
+  "boi_demissao": {
+   "name": "Saída do Ministério",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Deixou o ministério em 2021."
+  },
+  "rac_salario": {
+   "name": "Salário de Assessor",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Folha de pagamento do gabinete."
+  },
+  "rac_anula": {
+   "name": "Provas Anuladas",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 78,
+   "acc": 90,
+   "pp": 10,
+   "eff": "defup",
+   "chance": 30,
+   "prio": 0,
+   "desc": "As provas foram anuladas em 2021."
+  },
+  "zam_arma": {
+   "name": "Arma em Punho",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Empunhou arma em perseguição a um homem em SP em 2022."
+  },
+  "zam_post": {
+   "name": "Post Furioso",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Disparo nas redes."
+  },
+  "zam_rua": {
+   "name": "Perseguição na Rua",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Caso em que perseguiu um homem pelas ruas."
+  },
+  "zam_hacker_c": {
+   "name": "Contratação do Hacker",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenada por ter contratado o hacker."
+  },
+  "zam_mandado": {
+   "name": "Mandado Falso contra Moraes",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "confuso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Documento falso inserido no sistema do CNJ."
+  },
+  "gra_denuncia": {
+   "name": "Denúncia do Mensalão",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Revelou o esquema em 2005."
+  },
+  "gra_folha": {
+   "name": "Entrevista Bombástica",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Entrevista que abalou o governo Lula."
+  },
+  "gra_correios": {
+   "name": "Propina nos Correios",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Vídeo que iniciou o caso do Mensalão."
+  },
+  "gra_cassacao": {
+   "name": "Cassação de 2005",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Perdeu o mandato na crise do Mensalão."
+  },
+  "gra_condena": {
+   "name": "Condenação do Mensalão",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Também foi condenado no esquema."
+  },
+  "val_cadeira": {
+   "name": "Cadeira do PL",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Comanda o partido há anos."
+  },
+  "val_dinheiro": {
+   "name": "Dinheiro do Mensalão",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenado no Mensalão."
+  },
+  "val_renuncia": {
+   "name": "Renúncia de 2005",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Renunciou ao mandato na crise do Mensalão."
+  },
+  "val_condena": {
+   "name": "Condenação no Mensalão",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenado por corrupção passiva e lavagem."
+  },
+  "val_papuda": {
+   "name": "Cadeia da Papuda",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso no Complexo da Papuda em 2013."
+  },
+  "val_fundo": {
+   "name": "Fundo Partidário",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Verba pública do partido."
+  },
+  "val_capitao": {
+   "name": "Filiação do Capitão",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Abrigou Bolsonaro no PL em 2021."
+  },
+  "men_casa": {
+   "name": "Casa Civil",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Poderoso ministro de Lula."
+  },
+  "men_cuba": {
+   "name": "Plástica em Cuba",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Exílio e mudança de rosto nos anos 1970."
+  },
+  "men_chefe": {
+   "name": "Chefe do Esquema",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O STF o apontou como chefe do Mensalão."
+  },
+  "men_condena": {
+   "name": "Condenação a 10 Anos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Condenado no Mensalão."
+  },
+  "men_lava": {
+   "name": "Preso na Lava Jato",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso em 2015 na Lava Jato."
+  },
+  "men_jd": {
+   "name": "Consultoria JD",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenado na Lava Jato por receber pela consultoria."
+  },
+  "cab_paris": {
+   "name": "Festa em Paris",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "A farra com guardanapos."
+  },
+  "cab_heli": {
+   "name": "Helicóptero a Mangaratiba",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Voos do governo para a casa de veraneio."
+  },
+  "cab_anel": {
+   "name": "Anel de Brilhante",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Joias de luxo da família do ex-governador."
+  },
+  "cab_maracana": {
+   "name": "Obras do Maracanã",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 62,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Obras da reforma citadas nas condenações."
+  },
+  "cab_calicute": {
+   "name": "Operação Calicute",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 80,
+   "acc": 90,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "A operação que o prendeu em 2016."
+  },
+  "cab_400": {
+   "name": "Condenado a 400 Anos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Penas somadas de mais de 400 anos."
+  },
+  "tar_pf": {
+   "name": "Carteira da PF",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Era escrivão da Polícia Federal."
+  },
+  "tar_wash": {
+   "name": "Viagem a Washington",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Mudou-se para os EUA em 2025."
+  },
+  "tar_lobby": {
+   "name": "Lobby na Casa Branca",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Fez lobby por sanções contra o Brasil."
+  },
+  "tar_magnitsky": {
+   "name": "Sanção Magnitsky",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Sanções contra autoridades brasileiras."
+  },
+  "tar_coacao": {
+   "name": "Denúncia por Coação",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Denunciado pela PGR por coação; ele nega."
+  },
+  "abi_relatorio": {
+   "name": "Relatório da Abin",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Relatórios sob medida."
+  },
+  "abi_spy": {
+   "name": "Software de Espionagem",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de espionagem na Abin paralela."
+  },
+  "abi_firstmile": {
+   "name": "FirstMile",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Programa de monitoramento citado no caso Abin paralela."
+  },
+  "abi_mon": {
+   "name": "Monitoramento de Adversários",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Apontado pela PF na Abin paralela."
+  },
+  "abi_eua": {
+   "name": "Fuga aos EUA",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "spedown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Deixou o país após a condenação."
+  },
+  "abi_trama": {
+   "name": "Trama Golpista",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Condenado pelo STF em 2025 na trama golpista."
+  },
+  "min_carteira": {
+   "name": "Carteira de Delegado",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Delegado da PF."
+  },
+  "min_orlando": {
+   "name": "Viagem a Orlando",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Estava nos EUA em 8 de janeiro."
+  },
+  "min_busca": {
+   "name": "Busca na Casa",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "PF fez busca na casa dele."
+  },
+  "min_gaveta": {
+   "name": "Minuta na Gaveta",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Minuta achada pela PF na casa dele."
+  },
+  "min_falha": {
+   "name": "Falha no 8 de Janeiro",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Segurança do DF falhou no dia dos ataques."
+  },
+  "min_preso": {
+   "name": "Preso ao Voltar",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Foi preso em janeiro de 2023."
+  },
+  "gen_intervencao": {
+   "name": "Interventor no Rio",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Comandou a intervenção federal na segurança do RJ em 2018."
+  },
+  "gen_ordem": {
+   "name": "Ordem do Dia",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Mensagens com carimbo do quartel."
+  },
+  "gen_casa": {
+   "name": "Casa Civil",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foi ministro-chefe da Casa Civil."
+  },
+  "gen_vice": {
+   "name": "Candidato a Vice",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foi vice na chapa de Bolsonaro em 2022."
+  },
+  "gen_reuniao": {
+   "name": "Reunião na Casa do General",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Reunião citada na denúncia da trama golpista."
+  },
+  "gen_preso": {
+   "name": "Preso em 2024",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso em dezembro de 2024."
+  },
+  "cun_trust": {
+   "name": "Tenho Trusts",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Diz ter trusts, não contas na Suíça."
+  },
+  "cun_pauta": {
+   "name": "Pauta Contra o Governo",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Controlava a pauta da Câmara."
+  },
+  "cun_rito": {
+   "name": "Rito do Impeachment",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Aceitou o pedido de impeachment de Dilma."
+  },
+  "cun_aceite": {
+   "name": "Aceite do Impeachment",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Em dezembro de 2015."
+  },
+  "cun_para": {
+   "name": "Trusts em Paraíso Fiscal",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 66,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Valores no exterior descobertos na Lava Jato."
+  },
+  "cun_cassa": {
+   "name": "Cassação de 2016",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 75,
+   "acc": 90,
+   "pp": 15,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Perdeu o mandato em 2016."
+  },
+  "ren_gado": {
+   "name": "Venda de Gado",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Comprovou renda com a venda de gado em 2007."
+  },
+  "ren_desp": {
+   "name": "Despesas Pagas por Lobista",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Caso de 2007 que causou sua renúncia à presidência do Senado."
+  },
+  "ren_notas": {
+   "name": "Notas do Gado",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Notas fiscais questionadas no caso."
+  },
+  "ren_renuncia": {
+   "name": "Renúncia à Presidência",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Renunciou ao comando do Senado em 2007."
+  },
+  "ren_inqs": {
+   "name": "Dezenas de Inquéritos",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Alvo de vários inquéritos no STF."
+  },
+  "ren_mesa": {
+   "name": "Mesa do Senado",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": "flinch",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Poder de presidir o Senado."
+  },
+  "lir_relator": {
+   "name": "Emenda de Relator",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O instrumento do orçamento secreto."
+  },
+  "lir_trator": {
+   "name": "Tratoraço",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Emendas de tratores e máquinas, com suspeita de sobrepreço."
+  },
+  "lir_plenario": {
+   "name": "Centrão no Plenário",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Maioria de Lira na Câmara."
+  },
+  "lir_pauta": {
+   "name": "Pauta Travada",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Controle total da pauta da Câmara."
+  },
+  "lir_gaveta": {
+   "name": "Impeachment na Gaveta",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 66,
+   "acc": 95,
+   "pp": 15,
+   "eff": "flinch",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Centenas de pedidos de impeachment engavetados."
+  },
+  "lir_rp9": {
+   "name": "Orçamento Secreto Barrado",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 90,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O STF o declarou inconstitucional em 2022."
+  },
+  "juc_conversa": {
+   "name": "Conversa Gravada",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Gravada por Sérgio Machado em 2016."
+  },
+  "juc_roraima": {
+   "name": "Governo de Roraima",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Governou Roraima."
+  },
+  "juc_supremo": {
+   "name": "Com o Supremo, Com Tudo",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Frase gravada na conversa."
+  },
+  "juc_governo": {
+   "name": "Mudar o Governo",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Assunto da gravação de 2016."
+  },
+  "juc_acordo": {
+   "name": "Grande Acordo Nacional",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Expressão da gravação."
+  },
+  "juc_ministro": {
+   "name": "Ministro por 11 Dias",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 82,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foi ministro do Planejamento por poucos dias em 2016."
+  },
+  "tem_jaburu": {
+   "name": "Jantar no Jaburu",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Encontro noturno com Joesley Batista."
+  },
+  "tem_meso": {
+   "name": "Mesóclise",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 42,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Fala sempre rebuscada."
+  },
+  "tem_portos": {
+   "name": "Decreto dos Portos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Alvo de inquérito sobre o decreto."
+  },
+  "tem_gravacao": {
+   "name": "Gravação de Joesley",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Gravação feita em 2017."
+  },
+  "tem_denuncias": {
+   "name": "Denúncias Barradas",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 78,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Câmara barrou duas denúncias contra ele no cargo."
+  },
+  "tem_preso": {
+   "name": "Prisão de 2019",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso por alguns dias em 2019."
+  },
+  "gre_derrota": {
+   "name": "Derrota em 2014",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Perdeu a eleição presidencial."
+  },
+  "gre_aeroporto": {
+   "name": "Aeroporto de Cláudio",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Aeroporto em terreno da família."
+  },
+  "gre_conversa": {
+   "name": "Conversa com Joesley",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Gravado em 2017."
+  },
+  "gre_mala": {
+   "name": "Mala do Primo",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Primo filmado com R$ 2 milhões."
+  },
+  "gre_afasta": {
+   "name": "Afastamento do Senado",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foi afastado do mandato em 2017."
+  },
+  "gre_denuncia": {
+   "name": "Denúncia por Corrupção",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Virou réu, mas foi absolvido em 2022."
+  },
+  "mfu_tunel": {
+   "name": "Túnel Ayrton Senna",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Obra do governo Maluf."
+  },
+  "mfu_obra": {
+   "name": "Obra Superfaturada",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Obras famosas por sobrepreço."
+  },
+  "mfu_interpol": {
+   "name": "Nota Vermelha da Interpol",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Apareceu na lista de procurados."
+  },
+  "mfu_jersey": {
+   "name": "Conta em Jersey",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 62,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Dinheiro na Ilha de Jersey."
+  },
+  "mfu_domic": {
+   "name": "Prisão Domiciliar",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Foi para prisão domiciliar em 2018."
+  },
+  "mfu_stf": {
+   "name": "Condenação por Lavagem",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Condenado pelo STF em 2017."
+  },
+  "col_elba": {
+   "name": "Fiat Elba",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O carro do impeachment."
+  },
+  "col_plano": {
+   "name": "Plano Collor",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O plano de 1990."
+  },
+  "col_pc": {
+   "name": "Caso PC Farias",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O tesoureiro que derrubou o presidente."
+  },
+  "col_impeach": {
+   "name": "Impeachment de 1992",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Perdeu o mandato."
+  },
+  "col_carros": {
+   "name": "Carros de Luxo",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Carros apreendidos pela PF em 2015."
+  },
+  "col_br": {
+   "name": "Propina da BR Distribuidora",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 86,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Condenado pelo STF em 2023."
+  },
+  "col_preso": {
+   "name": "Prisão em Maceió",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 90,
+   "acc": 85,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso em 2025."
+  },
+  "gdl_apto": {
+   "name": "Apartamento em Salvador",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Onde a PF achou o dinheiro."
+  },
+  "gdl_digitais": {
+   "name": "Digitais na Mala",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "A PF encontrou as digitais dele nas malas."
+  },
+  "gdl_caixa": {
+   "name": "Caixa Econômica",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foi vice-presidente do banco."
+  },
+  "gdl_caixas": {
+   "name": "Caixas e Malas",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Notas empilhadas."
+  },
+  "gdl_laVue": {
+   "name": "Prédio La Vue",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Pressão sobre ministro por obra em Salvador."
+  },
+  "gdl_domic": {
+   "name": "Prisão Domiciliar",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Cumpriu prisão domiciliar."
+  },
+  "gol_cercadinho": {
+   "name": "Cercadinho do Alvorada",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Falava com apoiadores todo dia."
+  },
+  "gol_cloroquina": {
+   "name": "Cloroquina",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Defendeu o remédio na pandemia."
+  },
+  "gol_embaixadores": {
+   "name": "Reunião com Embaixadores",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 66,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Atacou o sistema eleitoral diante de embaixadores."
+  },
+  "sac_cota": {
+   "name": "Cota Parlamentar",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Verba pública do mandato."
+  },
+  "sac_carro": {
+   "name": "Aluguel de Carro",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de desvio da cota por aluguel de carros; ele nega."
+  },
+  "sac_loc": {
+   "name": "Locadora Suspeita",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Locadora sob suspeita da PF."
+  },
+  "sac_nota": {
+   "name": "Nota Fria",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Notas suspeitas de cobrança."
+  },
+  "sac_galho": {
+   "name": "Operação Galho Fraco",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação do STF/Dino em dezembro de 2025."
+  },
+  "sac_sigilo": {
+   "name": "Quebra de Sigilo",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Medida autorizada no inquérito."
+  },
+  "jor_vereanca": {
+   "name": "Vereança em Niterói",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Início da carreira."
+  },
+  "jor_locacao": {
+   "name": "Nota de Locação",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de notas de locação; ele nega."
+  },
+  "jor_fantasma": {
+   "name": "Veículos Fantasma",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de carros que nunca circularam; ele nega."
+  },
+  "jor_busca": {
+   "name": "Busca e Apreensão",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "PF cumpriu mandados contra ele."
+  },
+  "gay_video": {
+   "name": "Vídeo do Canal",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Canal de política nas redes."
+  },
+  "gay_conta": {
+   "name": "Conta que Não Fecha",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 50,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Alvo da Operação Discalculia; ele nega."
+  },
+  "gay_divulga": {
+   "name": "Contrato de Divulgação",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita sobre gastos da cota; ele nega."
+  },
+  "gay_discalculia": {
+   "name": "Operação Discalculia",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação da PF autorizada pelo STF em 2024."
+  },
+  "gay_busca": {
+   "name": "Busca na Câmara",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Medida da PF no inquérito."
+  },
+  "fri_malhacao": {
+   "name": "Ator de Malhação",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Antes da política, atuava na TV."
+  },
+  "fri_cena": {
+   "name": "Cena de Ação",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Dublê de político."
+  },
+  "fri_rouanet": {
+   "name": "Lei Rouanet",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foi secretário especial da Cultura."
+  },
+  "fri_dark": {
+   "name": "Filme Dark Horse",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Filme ligado ao caso das emendas."
+  },
+  "fri_instituto": {
+   "name": "Instituto Ligado",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de emendas a instituto ligado à produtora; ele nega."
+  },
+  "fri_passaporte": {
+   "name": "Passaporte Recolhido",
+   "type": "CENTRAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Medida da operação da PF em 2026."
+  },
+  "cep_temp": {
+   "name": "Cargo Temporário",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contratações temporárias na eleição de 2022."
+  },
+  "cep_cadastro": {
+   "name": "Cadastro da Ceperj",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Lista de contratados."
+  },
+  "cep_fund": {
+   "name": "Fundação Ceperj",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Fundação no centro do caso."
+  },
+  "cep_massa": {
+   "name": "Contratação em Massa",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Milhares de contratados antes da eleição."
+  },
+  "cep_inelegivel": {
+   "name": "Inelegível pelo TSE",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 78,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "O TSE o declarou inelegível em 2026; cabe recurso."
+  },
+  "cep_abuso": {
+   "name": "Abuso de Poder Político",
+   "type": "RACHADINHA",
+   "cat": "fis",
+   "pow": 88,
+   "acc": 85,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Motivo da decisão do TSE."
+  },
+  "baz_alerj": {
+   "name": "Presidência da Alerj",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Comandou a Assembleia do RJ."
+  },
+  "baz_tel": {
+   "name": "Telefonema Suspeito",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de aviso a investigados; ele nega."
+  },
+  "baz_aviso": {
+   "name": "Aviso Antecipado",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de vazamento."
+  },
+  "baz_zargun": {
+   "name": "Operação Zargun",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Dados da operação teriam vazado."
+  },
+  "baz_unha": {
+   "name": "Operação Unha e Carne",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação da PF de dezembro de 2025."
+  },
+  "baz_preso": {
+   "name": "Prisão pela PF",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Preso em 03/12/2025; solto com tornozeleira."
+  },
+  "val_curso": {
+   "name": "Curso de Tiro",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Instrutor antes da política."
+  },
+  "val_video": {
+   "name": "Vídeo Mentiroso",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Investigado por falso testemunho; ele nega."
+  },
+  "val_reuniao": {
+   "name": "Reunião com Bolsonaro",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Relato do suposto plano golpista."
+  },
+  "val_relato": {
+   "name": "Relato do Golpe",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Versão contestada pela PF."
+  },
+  "val_calunia": {
+   "name": "Denunciação Caluniosa",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Uma das acusações no STF."
+  },
+  "val_coacao": {
+   "name": "Coação de Testemunha",
+   "type": "FAKE",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Outra investigação sobre ele."
+  },
+  "lim_emerg": {
+   "name": "Compra Emergencial",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Compras na pandemia."
+  },
+  "lim_sobre": {
+   "name": "Sobrepreço",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Diferença entre preço e valor real."
+  },
+  "lim_adega": {
+   "name": "Adega de Vinhos",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Respiradores comprados numa loja de vinhos."
+  },
+  "lim_sangria": {
+   "name": "Operação Sangria",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação da PF sobre os respiradores."
+  },
+  "lim_pgr": {
+   "name": "Denúncia da PGR",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Virou réu no STJ em 2021."
+  },
+  "lim_manaus": {
+   "name": "Pandemia em Manaus",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O cenário da compra."
+  },
+  "cir_master": {
+   "name": "Banco Master",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Instituição ligada ao inquérito."
+  },
+  "cir_emenda": {
+   "name": "Emenda Redigida",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Suspeita de emenda escrita pelo Master; ele nega."
+  },
+  "cir_acoes": {
+   "name": "Ações com Desconto",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "PF suspeita de ações vendidas com desconto."
+  },
+  "cir_amigo": {
+   "name": "Amigo do Vorcaro",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 58,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Relação citada pela PF."
+  },
+  "cir_zero": {
+   "name": "Compliance Zero",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Operação da PF em maio de 2026."
+  },
+  "cir_busca": {
+   "name": "Operação da PF",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Quinta fase da operação."
+  },
+  "mar_pref": {
+   "name": "Prefeitura de Nunes Freire",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Início da carreira."
+  },
+  "mar_ribamar": {
+   "name": "Emenda para Ribamar",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Emendas para São José de Ribamar."
+  },
+  "mar_obra": {
+   "name": "Obra de Ribamar",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Contratos pagos com emendas."
+  },
+  "mar_propina": {
+   "name": "Propina de R$ 1,6 Mi",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Valor da condenação."
+  },
+  "mar_pgr": {
+   "name": "Denúncia da PGR",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Caso levado ao STF."
+  },
+  "mar_semi": {
+   "name": "Regime Semiaberto",
+   "type": "PROPINA",
+   "cat": "fis",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "preso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Pena de 6 anos e 5 meses em março de 2026."
+  },
+  "bli_farda": {
+   "name": "Farda da PRF",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Carreira na rodovia."
+  },
+  "bli_blitz": {
+   "name": "Blitz na Estrada",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Operações de fiscalização."
+  },
+  "bli_op": {
+   "name": "Operação Eleitoral",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Blitze no segundo turno de 2022."
+  },
+  "bli_nordeste": {
+   "name": "Bloqueio no Nordeste",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Foco das blitze."
+  },
+  "bli_turno": {
+   "name": "Segundo Turno",
+   "type": "GOLPE",
+   "cat": "fis",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Dia das blitze."
+  },
+  "jrn_pedido": {
+   "name": "Pedido de Empréstimo",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Empréstimo bancário sob suspeita."
+  },
+  "jrn_doc": {
+   "name": "Documento Falso",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 45,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Denúncia do MPDFT; ele nega."
+  },
+  "jrn_banco": {
+   "name": "Banco de Brasília",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Banco do empréstimo."
+  },
+  "jrn_falsa": {
+   "name": "Falsidade Ideológica",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Acusação da denúncia."
+  },
+  "jrn_mpdft": {
+   "name": "Denúncia do MPDFT",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Em 2024."
+  },
+  "jrn_lavagem": {
+   "name": "Lavagem de Dinheiro",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Acusação, que ele nega."
+  },
+  "cid_ajudante": {
+   "name": "Ajudante de Ordens",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Cargo na Presidência."
+  },
+  "cid_celular": {
+   "name": "Celular Apreendido",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 52,
+   "acc": 100,
+   "pp": 25,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Mensagens do celular foram peça-chave."
+  },
+  "cid_rolex": {
+   "name": "Venda do Rolex",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 68,
+   "acc": 95,
+   "pp": 15,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "Venda de presentes no exterior."
+  },
+  "cid_contrad": {
+   "name": "Depoimentos Contraditórios",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 76,
+   "acc": 90,
+   "pp": 10,
+   "eff": "confuso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Versões diferentes ao longo do acordo."
+  }
+ },
+ "politicos": {
+  "delcidiao": {
+   "base": [
+    70,
+    43,
+    58,
+    47,
+    58,
+    23
+   ],
+   "exp": 127,
+   "career": [
+    {
+     "rank": "Diretor da Petrobras",
+     "lvl": 1
+    },
+    {
+     "rank": "Senador",
+     "lvl": 20
+    }
+   ],
+   "ability": "delator",
+   "learn": [
+    [
+     1,
+     "del_conversa"
+    ],
+    [
+     1,
+     "dedurar"
+    ],
+    [
+     6,
+     "del_fuga"
+    ],
+    [
+     10,
+     "del_mesada"
+    ],
+    [
+     16,
+     "del_preso"
+    ],
+    [
+     22,
+     "del_lula"
+    ],
+    [
+     28,
+     "del_bomba"
+    ]
+   ]
+  },
+  "machadao": {
+   "base": [
+    36,
+    45,
+    31,
+    36,
+    90,
+    63
+   ],
+   "exp": 105,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Senador",
+     "lvl": 16
+    },
+    {
+     "rank": "Presidente da Transpetro",
+     "lvl": 34
+    }
+   ],
+   "ability": "contato",
+   "learn": [
+    [
+     1,
+     "mac_contrato"
+    ],
+    [
+     1,
+     "mac_navio"
+    ],
+    [
+     6,
+     "mac_gravador"
+    ],
+    [
+     10,
+     "mac_repasse"
+    ],
+    [
+     16,
+     "mac_juca"
+    ],
+    [
+     22,
+     "mac_pmdb"
+    ],
+    [
+     28,
+     "mac_delacao"
+    ]
+   ]
+  },
+  "garotinho": {
+   "base": [
+    132,
+    52,
+    23,
+    52,
+    29,
+    23
+   ],
+   "exp": 76,
+   "career": [
+    {
+     "rank": "Prefeito de Campos",
+     "lvl": 1
+    },
+    {
+     "rank": "Governador do RJ",
+     "lvl": 16
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 34
+    }
+   ],
+   "ability": "verba",
+   "learn": [
+    [
+     1,
+     "gar_radio"
+    ],
+    [
+     1,
+     "gar_campos"
+    ],
+    [
+     6,
+     "cheque"
+    ],
+    [
+     10,
+     "gar_chequinho"
+    ],
+    [
+     16,
+     "gar_bangu"
+    ],
+    [
+     22,
+     "gar_ficha"
+    ],
+    [
+     28,
+     "gar_votos"
+    ]
+   ]
+  },
+  "janonudo": {
+   "base": [
+    55,
+    44,
+    41,
+    39,
+    82,
+    38
+   ],
+   "exp": 66,
+   "career": [
+    {
+     "rank": "Vereador",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    }
+   ],
+   "ability": "contato",
+   "learn": [
+    [
+     1,
+     "live"
+    ],
+    [
+     1,
+     "jan_corte"
+    ],
+    [
+     6,
+     "jan_salario"
+    ],
+    [
+     10,
+     "rachadinha"
+    ],
+    [
+     16,
+     "jan_audio"
+    ],
+    [
+     22,
+     "jan_likes"
+    ],
+    [
+     26,
+     "jan_inquerito"
+    ]
+   ]
+  },
+  "pezao": {
+   "base": [
+    72,
+    76,
+    85,
+    27,
+    27,
+    22
+   ],
+   "exp": 135,
+   "career": [
+    {
+     "rank": "Prefeito de Piraí",
+     "lvl": 1
+    },
+    {
+     "rank": "Vice-Governador do RJ",
+     "lvl": 16
+    },
+    {
+     "rank": "Governador do RJ",
+     "lvl": 34
+    }
+   ],
+   "ability": "blindagem",
+   "learn": [
+    [
+     1,
+     "pez_obra"
+    ],
+    [
+     1,
+     "pez_herdeiro"
+    ],
+    [
+     6,
+     "mesada"
+    ],
+    [
+     10,
+     "pez_preso"
+    ],
+    [
+     16,
+     "pez_lobo"
+    ],
+    [
+     22,
+     "pez_miranda"
+    ],
+    [
+     28,
+     "pez_gov"
+    ]
+   ]
+  },
+  "witzel": {
+   "base": [
+    35,
+    57,
+    84,
+    53,
+    40,
+    31
+   ],
+   "exp": 114,
+   "career": [
+    {
+     "rank": "Juiz Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Governador do RJ",
+     "lvl": 16
+    }
+   ],
+   "ability": "recurso",
+   "learn": [
+    [
+     1,
+     "wit_dispensa"
+    ],
+    [
+     1,
+     "wit_emerg"
+    ],
+    [
+     6,
+     "wit_os"
+    ],
+    [
+     10,
+     "sig_witzel"
+    ],
+    [
+     16,
+     "wit_edmar"
+    ],
+    [
+     22,
+     "wit_afasta"
+    ],
+    [
+     28,
+     "wit_impeach"
+    ]
+   ]
+  },
+  "silveirao": {
+   "base": [
+    39,
+    79,
+    34,
+    34,
+    44,
+    69
+   ],
+   "exp": 74,
+   "career": [
+    {
+     "rank": "Policial Militar",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    }
+   ],
+   "ability": "carteirada",
+   "learn": [
+    [
+     1,
+     "live"
+    ],
+    [
+     1,
+     "sil_placa"
+    ],
+    [
+     6,
+     "sil_ameaca"
+    ],
+    [
+     10,
+     "sig_silveira"
+    ],
+    [
+     16,
+     "sil_flagrante"
+    ],
+    [
+     22,
+     "sil_tozeleira"
+    ],
+    [
+     28,
+     "sil_graca"
+    ]
+   ]
+  },
+  "carluxo": {
+   "base": [
+    29,
+    34,
+    29,
+    97,
+    34,
+    77
+   ],
+   "exp": 95,
+   "career": [
+    {
+     "rank": "Vereador do Rio",
+     "lvl": 1
+    }
+   ],
+   "ability": "especialista",
+   "learn": [
+    [
+     1,
+     "car_tuite"
+    ],
+    [
+     1,
+     "car_print"
+    ],
+    [
+     6,
+     "car_perfil"
+    ],
+    [
+     10,
+     "deepfake"
+    ],
+    [
+     16,
+     "odio"
+    ],
+    [
+     22,
+     "abin"
+    ],
+    [
+     28,
+     "car_inquerito"
+    ]
+   ]
+  },
+  "azeredinho": {
+   "base": [
+    25,
+    68,
+    76,
+    46,
+    38,
+    46
+   ],
+   "exp": 119,
+   "career": [
+    {
+     "rank": "Governador de MG",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 20
+    }
+   ],
+   "ability": "blindagem",
+   "learn": [
+    [
+     1,
+     "aze_campanha"
+    ],
+    [
+     1,
+     "aze_valerio"
+    ],
+    [
+     6,
+     "aze_estatais"
+    ],
+    [
+     10,
+     "aze_sociedade"
+    ],
+    [
+     16,
+     "aze_tucano"
+    ],
+    [
+     22,
+     "aze_stf"
+    ],
+    [
+     28,
+     "aze_preso"
+    ]
+   ]
+  },
+  "malaloures": {
+   "base": [
+    46,
+    51,
+    40,
+    46,
+    46,
+    102
+   ],
+   "exp": 69,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Assessor Especial da Presidência",
+     "lvl": 16
+    }
+   ],
+   "ability": "fujao",
+   "learn": [
+    [
+     1,
+     "mal_joesley"
+    ],
+    [
+     1,
+     "mal_pizza"
+    ],
+    [
+     6,
+     "corrida"
+    ],
+    [
+     10,
+     "mal_mala"
+    ],
+    [
+     16,
+     "mal_camera"
+    ],
+    [
+     22,
+     "mal_preso"
+    ],
+    [
+     28,
+     "mal_jbs"
+    ]
+   ]
+  },
+  "codevasfo": {
+   "base": [
+    39,
+    46,
+    67,
+    67,
+    32,
+    60
+   ],
+   "exp": 155,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Ministro das Comunicações",
+     "lvl": 16
+    }
+   ],
+   "ability": "verba",
+   "learn": [
+    [
+     1,
+     "cod_leilao"
+    ],
+    [
+     1,
+     "cod_visita"
+    ],
+    [
+     6,
+     "aviao"
+    ],
+    [
+     10,
+     "cod_asfalto"
+    ],
+    [
+     16,
+     "codevasf"
+    ],
+    [
+     22,
+     "cod_pgr"
+    ],
+    [
+     28,
+     "cod_saida"
+    ]
+   ]
+  },
+  "boiadeiro": {
+   "base": [
+    69,
+    69,
+    62,
+    91,
+    48,
+    40
+   ],
+   "exp": 212,
+   "career": [
+    {
+     "rank": "Secretário de Meio Ambiente de SP",
+     "lvl": 1
+    },
+    {
+     "rank": "Ministro do Meio Ambiente",
+     "lvl": 16
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 34
+    }
+   ],
+   "ability": "especialista",
+   "learn": [
+    [
+     1,
+     "boi_fiscal"
+    ],
+    [
+     1,
+     "boi_queimada"
+    ],
+    [
+     6,
+     "boi_madeira"
+    ],
+    [
+     10,
+     "boi_akuanduba"
+    ],
+    [
+     16,
+     "boi_reuniao"
+    ],
+    [
+     22,
+     "boi_demissao"
+    ],
+    [
+     28,
+     "boiada"
+    ]
+   ]
+  },
+  "rachadinho": {
+   "base": [
+    39,
+    64,
+    43,
+    52,
+    50,
+    65
+   ],
+   "exp": 126,
+   "career": [
+    {
+     "rank": "Deputado Estadual do RJ",
+     "lvl": 1
+    },
+    {
+     "rank": "Senador",
+     "lvl": 16
+    }
+   ],
+   "ability": "verba",
+   "learn": [
+    [
+     1,
+     "rac_salario"
+    ],
+    [
+     1,
+     "fantasma"
+    ],
+    [
+     6,
+     "rachadinha"
+    ],
+    [
+     10,
+     "chocolate"
+    ],
+    [
+     16,
+     "queiroz"
+    ],
+    [
+     22,
+     "rac_anula"
+    ],
+    [
+     28,
+     "mansao"
+    ]
+   ],
+   "stageBase": [
+    [
+     39,
+     64,
+     43,
+     52,
+     50,
+     65
+    ],
+    [
+     58,
+     80,
+     58,
+     64,
+     65,
+     80
+    ]
+   ]
+  },
+  "zambellina": {
+   "base": [
+    54,
+    96,
+    29,
+    42,
+    79,
+    79
+   ],
+   "exp": 137,
+   "career": [
+    {
+     "rank": "Deputada Federal",
+     "lvl": 1
+    }
+   ],
+   "ability": "fujao",
+   "learn": [
+    [
+     1,
+     "zam_arma"
+    ],
+    [
+     1,
+     "zam_post"
+    ],
+    [
+     6,
+     "zam_rua"
+    ],
+    [
+     10,
+     "zam_hacker_c"
+    ],
+    [
+     16,
+     "zam_mandado"
+    ],
+    [
+     22,
+     "hacker"
+    ],
+    [
+     28,
+     "italia"
+    ]
+   ]
+  },
+  "granadeiro": {
+   "base": [
+    42,
+    88,
+    66,
+    29,
+    92,
+    63
+   ],
+   "exp": 140,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    }
+   ],
+   "ability": "especialista",
+   "learn": [
+    [
+     1,
+     "gra_denuncia"
+    ],
+    [
+     1,
+     "gra_folha"
+    ],
+    [
+     6,
+     "gra_correios"
+    ],
+    [
+     10,
+     "gra_cassacao"
+    ],
+    [
+     16,
+     "gra_condena"
+    ],
+    [
+     22,
+     "fuzil"
+    ],
+    [
+     28,
+     "granada"
+    ]
+   ]
+  },
+  "valdemensal": {
+   "base": [
+    58,
+    31,
+    74,
+    78,
+    54,
+    85
+   ],
+   "exp": 211,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Presidente do PL",
+     "lvl": 20
+    }
+   ],
+   "ability": "pressao",
+   "learn": [
+    [
+     1,
+     "val_cadeira"
+    ],
+    [
+     1,
+     "val_dinheiro"
+    ],
+    [
+     6,
+     "val_renuncia"
+    ],
+    [
+     10,
+     "val_condena"
+    ],
+    [
+     16,
+     "val_papuda"
+    ],
+    [
+     22,
+     "val_fundo"
+    ],
+    [
+     28,
+     "val_capitao"
+    ]
+   ]
+  },
+  "mensaleiro": {
+   "base": [
+    81,
+    74,
+    62,
+    31,
+    62,
+    70
+   ],
+   "exp": 175,
+   "career": [
+    {
+     "rank": "Deputado Estadual de SP",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    },
+    {
+     "rank": "Ministro da Casa Civil",
+     "lvl": 34
+    }
+   ],
+   "ability": "contato",
+   "learn": [
+    [
+     1,
+     "men_casa"
+    ],
+    [
+     1,
+     "men_cuba"
+    ],
+    [
+     6,
+     "men_chefe"
+    ],
+    [
+     10,
+     "mensalao"
+    ],
+    [
+     16,
+     "men_condena"
+    ],
+    [
+     22,
+     "men_lava"
+    ],
+    [
+     28,
+     "men_jd"
+    ]
+   ]
+  },
+  "cabralzao": {
+   "base": [
+    89,
+    110,
+    101,
+    38,
+    38,
+    34
+   ],
+   "exp": 204,
+   "career": [
+    {
+     "rank": "Deputado Estadual do RJ",
+     "lvl": 1
+    },
+    {
+     "rank": "Senador",
+     "lvl": 16
+    },
+    {
+     "rank": "Governador do RJ",
+     "lvl": 34
+    }
+   ],
+   "ability": "foro",
+   "learn": [
+    [
+     1,
+     "cab_paris"
+    ],
+    [
+     1,
+     "cab_heli"
+    ],
+    [
+     4,
+     "cab_anel"
+    ],
+    [
+     7,
+     "cab_maracana"
+    ],
+    [
+     10,
+     "guardanapo"
+    ],
+    [
+     12,
+     "cab_calicute"
+    ],
+    [
+     14,
+     "cab_400"
+    ]
+   ]
+  },
+  "tarifardo": {
+   "base": [
+    42,
+    56,
+    46,
+    50,
+    52,
+    68
+   ],
+   "exp": 162,
+   "career": [
+    {
+     "rank": "Escrivão da PF",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    }
+   ],
+   "ability": "acelera",
+   "learn": [
+    [
+     1,
+     "tar_pf"
+    ],
+    [
+     1,
+     "exterior"
+    ],
+    [
+     6,
+     "tar_wash"
+    ],
+    [
+     10,
+     "tar_lobby"
+    ],
+    [
+     16,
+     "tar_magnitsky"
+    ],
+    [
+     22,
+     "tar_coacao"
+    ],
+    [
+     28,
+     "tarifaco"
+    ]
+   ],
+   "stageBase": [
+    [
+     42,
+     56,
+     46,
+     50,
+     52,
+     68
+    ],
+    [
+     55,
+     72,
+     58,
+     64,
+     63,
+     93
+    ]
+   ]
+  },
+  "abinzinho": {
+   "base": [
+    46,
+    40,
+    34,
+    138,
+    80,
+    121
+   ],
+   "exp": 145,
+   "career": [
+    {
+     "rank": "Delegado da PF",
+     "lvl": 1
+    },
+    {
+     "rank": "Diretor-Geral da Abin",
+     "lvl": 16
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 34
+    }
+   ],
+   "ability": "especialista",
+   "learn": [
+    [
+     1,
+     "abi_relatorio"
+    ],
+    [
+     1,
+     "abi_spy"
+    ],
+    [
+     6,
+     "abi_firstmile"
+    ],
+    [
+     10,
+     "abi_mon"
+    ],
+    [
+     16,
+     "abin"
+    ],
+    [
+     22,
+     "abi_eua"
+    ],
+    [
+     26,
+     "abi_trama"
+    ]
+   ]
+  },
+  "minutorres": {
+   "base": [
+    51,
+    121,
+    54,
+    35,
+    111,
+    88
+   ],
+   "exp": 139,
+   "career": [
+    {
+     "rank": "Delegado da PF",
+     "lvl": 1
+    },
+    {
+     "rank": "Secretário de Segurança do DF",
+     "lvl": 16
+    },
+    {
+     "rank": "Ministro da Justiça",
+     "lvl": 34
+    }
+   ],
+   "ability": "carteirada",
+   "learn": [
+    [
+     1,
+     "min_carteira"
+    ],
+    [
+     1,
+     "min_orlando"
+    ],
+    [
+     6,
+     "min_busca"
+    ],
+    [
+     10,
+     "min_gaveta"
+    ],
+    [
+     16,
+     "min_falha"
+    ],
+    [
+     22,
+     "min_preso"
+    ],
+    [
+     26,
+     "minuta"
+    ]
+   ]
+  },
+  "generalzao": {
+   "base": [
+    66,
+    106,
+    61,
+    61,
+    71,
+    96
+   ],
+   "exp": 149,
+   "career": [
+    {
+     "rank": "General do Exército",
+     "lvl": 1
+    },
+    {
+     "rank": "Ministro da Casa Civil",
+     "lvl": 16
+    },
+    {
+     "rank": "Ministro da Defesa",
+     "lvl": 34
+    }
+   ],
+   "ability": "blindagem",
+   "learn": [
+    [
+     1,
+     "gen_intervencao"
+    ],
+    [
+     1,
+     "gen_ordem"
+    ],
+    [
+     6,
+     "gen_casa"
+    ],
+    [
+     10,
+     "gen_vice"
+    ],
+    [
+     16,
+     "gen_reuniao"
+    ],
+    [
+     22,
+     "gen_preso"
+    ],
+    [
+     27,
+     "punhal"
+    ]
+   ]
+  },
+  "cunhamon": {
+   "base": [
+    42,
+    71,
+    151,
+    80,
+    38,
+    59
+   ],
+   "exp": 203,
+   "career": [
+    {
+     "rank": "Deputado Estadual do RJ",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    },
+    {
+     "rank": "Presidente da Câmara",
+     "lvl": 34
+    }
+   ],
+   "ability": "recurso",
+   "learn": [
+    [
+     1,
+     "cun_trust"
+    ],
+    [
+     1,
+     "cun_pauta"
+    ],
+    [
+     6,
+     "cun_rito"
+    ],
+    [
+     10,
+     "cun_aceite"
+    ],
+    [
+     14,
+     "cun_para"
+    ],
+    [
+     18,
+     "cun_cassa"
+    ],
+    [
+     21,
+     "suica"
+    ]
+   ]
+  },
+  "renanzilla": {
+   "base": [
+    47,
+    57,
+    90,
+    114,
+    66,
+    66
+   ],
+   "exp": 154,
+   "career": [
+    {
+     "rank": "Deputado Estadual de AL",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 12
+    },
+    {
+     "rank": "Senador",
+     "lvl": 24
+    },
+    {
+     "rank": "Presidente do Senado",
+     "lvl": 36
+    }
+   ],
+   "ability": "imunidade",
+   "learn": [
+    [
+     1,
+     "ren_gado"
+    ],
+    [
+     1,
+     "ren_desp"
+    ],
+    [
+     6,
+     "ren_notas"
+    ],
+    [
+     10,
+     "ren_renuncia"
+    ],
+    [
+     16,
+     "ren_inqs"
+    ],
+    [
+     22,
+     "vista"
+    ],
+    [
+     28,
+     "ren_mesa"
+    ]
+   ]
+  },
+  "lirassauro": {
+   "base": [
+    44,
+    45,
+    65,
+    53,
+    64,
+    43
+   ],
+   "exp": 177,
+   "career": [
+    {
+     "rank": "Deputado Estadual de AL",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    },
+    {
+     "rank": "Presidente da Câmara",
+     "lvl": 34
+    }
+   ],
+   "ability": "pressao",
+   "learn": [
+    [
+     1,
+     "lir_relator"
+    ],
+    [
+     1,
+     "lir_trator"
+    ],
+    [
+     6,
+     "lir_plenario"
+    ],
+    [
+     10,
+     "lir_pauta"
+    ],
+    [
+     16,
+     "lir_gaveta"
+    ],
+    [
+     22,
+     "orcamento"
+    ],
+    [
+     28,
+     "lir_rp9"
+    ]
+   ],
+   "stageBase": [
+    [
+     44,
+     45,
+     65,
+     53,
+     64,
+     43
+    ],
+    [
+     59,
+     60,
+     80,
+     68,
+     80,
+     58
+    ],
+    [
+     79,
+     80,
+     100,
+     90,
+     105,
+     76
+    ]
+   ]
+  },
+  "jucazord": {
+   "base": [
+    76,
+    66,
+    71,
+    81,
+    76,
+    91
+   ],
+   "exp": 171,
+   "career": [
+    {
+     "rank": "Governador de Roraima",
+     "lvl": 1
+    },
+    {
+     "rank": "Senador",
+     "lvl": 16
+    },
+    {
+     "rank": "Ministro do Planejamento",
+     "lvl": 34
+    }
+   ],
+   "ability": "recurso",
+   "learn": [
+    [
+     1,
+     "juc_conversa"
+    ],
+    [
+     1,
+     "juc_roraima"
+    ],
+    [
+     6,
+     "juc_supremo"
+    ],
+    [
+     10,
+     "juc_governo"
+    ],
+    [
+     14,
+     "sangria"
+    ],
+    [
+     18,
+     "juc_acordo"
+    ],
+    [
+     24,
+     "juc_ministro"
+    ]
+   ]
+  },
+  "temerario": {
+   "base": [
+    68,
+    73,
+    63,
+    68,
+    68,
+    120
+   ],
+   "exp": 148,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Presidente da Câmara",
+     "lvl": 12
+    },
+    {
+     "rank": "Vice-Presidente da República",
+     "lvl": 24
+    },
+    {
+     "rank": "Presidente da República",
+     "lvl": 36
+    }
+   ],
+   "ability": "imunidade",
+   "learn": [
+    [
+     1,
+     "tem_jaburu"
+    ],
+    [
+     1,
+     "tem_meso"
+    ],
+    [
+     6,
+     "tem_portos"
+    ],
+    [
+     10,
+     "tem_gravacao"
+    ],
+    [
+     16,
+     "manter"
+    ],
+    [
+     22,
+     "tem_denuncias"
+    ],
+    [
+     28,
+     "tem_preso"
+    ]
+   ]
+  },
+  "gravecio": {
+   "base": [
+    76,
+    73,
+    69,
+    64,
+    64,
+    93
+   ],
+   "exp": 216,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Governador de MG",
+     "lvl": 16
+    },
+    {
+     "rank": "Senador",
+     "lvl": 34
+    }
+   ],
+   "ability": "recurso",
+   "learn": [
+    [
+     1,
+     "gre_derrota"
+    ],
+    [
+     1,
+     "gre_aeroporto"
+    ],
+    [
+     6,
+     "gre_conversa"
+    ],
+    [
+     10,
+     "dois_milhoes"
+    ],
+    [
+     16,
+     "gre_mala"
+    ],
+    [
+     22,
+     "gre_afasta"
+    ],
+    [
+     28,
+     "gre_denuncia"
+    ]
+   ]
+  },
+  "malufante": {
+   "base": [
+    38,
+    54,
+    54,
+    87,
+    76,
+    130
+   ],
+   "exp": 153,
+   "career": [
+    {
+     "rank": "Prefeito de São Paulo",
+     "lvl": 1
+    },
+    {
+     "rank": "Governador de SP",
+     "lvl": 16
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 34
+    }
+   ],
+   "ability": "fujao",
+   "learn": [
+    [
+     1,
+     "mfu_tunel"
+    ],
+    [
+     1,
+     "mfu_obra"
+    ],
+    [
+     6,
+     "mfu_interpol"
+    ],
+    [
+     10,
+     "mfu_jersey"
+    ],
+    [
+     16,
+     "rouba"
+    ],
+    [
+     22,
+     "mfu_domic"
+    ],
+    [
+     28,
+     "mfu_stf"
+    ]
+   ]
+  },
+  "confiscollor": {
+   "base": [
+    57,
+    70,
+    62,
+    88,
+    70,
+    92
+   ],
+   "exp": 192,
+   "career": [
+    {
+     "rank": "Prefeito de Maceió",
+     "lvl": 1
+    },
+    {
+     "rank": "Governador de Alagoas",
+     "lvl": 12
+    },
+    {
+     "rank": "Presidente da República",
+     "lvl": 24
+    },
+    {
+     "rank": "Senador",
+     "lvl": 36
+    }
+   ],
+   "ability": "carteirada",
+   "learn": [
+    [
+     1,
+     "col_elba"
+    ],
+    [
+     1,
+     "col_plano"
+    ],
+    [
+     6,
+     "col_pc"
+    ],
+    [
+     10,
+     "col_impeach"
+    ],
+    [
+     14,
+     "confisco"
+    ],
+    [
+     20,
+     "col_carros"
+    ],
+    [
+     26,
+     "col_br"
+    ],
+    [
+     28,
+     "col_preso"
+    ]
+   ]
+  },
+  "bunkerddel": {
+   "base": [
+    136,
+    94,
+    55,
+    55,
+    94,
+    26
+   ],
+   "exp": 154,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Ministro da Integração Nacional",
+     "lvl": 16
+    },
+    {
+     "rank": "Ministro da Secretaria de Governo",
+     "lvl": 34
+    }
+   ],
+   "ability": "foro",
+   "learn": [
+    [
+     1,
+     "gdl_apto"
+    ],
+    [
+     1,
+     "gdl_digitais"
+    ],
+    [
+     6,
+     "gdl_caixa"
+    ],
+    [
+     10,
+     "gdl_caixas"
+    ],
+    [
+     14,
+     "gdl_laVue"
+    ],
+    [
+     18,
+     "gdl_domic"
+    ],
+    [
+     22,
+     "bunker"
+    ]
+   ]
+  },
+  "golpenaro": {
+   "base": [
+    59,
+    127,
+    59,
+    64,
+    74,
+    108
+   ],
+   "exp": 250,
+   "career": [
+    {
+     "rank": "Capitão do Exército",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    },
+    {
+     "rank": "Presidente da República",
+     "lvl": 28
+    }
+   ],
+   "ability": "blindagem",
+   "learn": [
+    [
+     1,
+     "gol_cercadinho"
+    ],
+    [
+     1,
+     "motociata"
+    ],
+    [
+     6,
+     "gol_cloroquina"
+    ],
+    [
+     10,
+     "joias"
+    ],
+    [
+     16,
+     "gol_embaixadores"
+    ],
+    [
+     22,
+     "minuta"
+    ],
+    [
+     26,
+     "embaixada"
+    ],
+    [
+     30,
+     "punhal"
+    ]
+   ]
+  },
+  "sacostenes": {
+   "base": [
+    94,
+    36,
+    72,
+    85,
+    72,
+    81
+   ],
+   "exp": 175,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    }
+   ],
+   "ability": "verba",
+   "learn": [
+    [
+     1,
+     "sac_cota"
+    ],
+    [
+     1,
+     "sac_carro"
+    ],
+    [
+     6,
+     "sac_loc"
+    ],
+    [
+     10,
+     "sac_nota"
+    ],
+    [
+     16,
+     "sac_galho"
+    ],
+    [
+     22,
+     "sac_sigilo"
+    ],
+    [
+     28,
+     "sig_sacostenes"
+    ]
+   ]
+  },
+  "jordyaluga": {
+   "base": [
+    76,
+    64,
+    69,
+    73,
+    64,
+    93
+   ],
+   "exp": 216,
+   "career": [
+    {
+     "rank": "Vereador de Niterói",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    }
+   ],
+   "ability": "contato",
+   "learn": [
+    [
+     1,
+     "jor_vereanca"
+    ],
+    [
+     1,
+     "sac_cota"
+    ],
+    [
+     6,
+     "jor_locacao"
+    ],
+    [
+     10,
+     "jor_fantasma"
+    ],
+    [
+     16,
+     "sac_galho"
+    ],
+    [
+     22,
+     "jor_busca"
+    ],
+    [
+     28,
+     "sig_jordyaluga"
+    ]
+   ]
+  },
+  "discalculayer": {
+   "base": [
+    33,
+    85,
+    33,
+    37,
+    41,
+    70
+   ],
+   "exp": 126,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    }
+   ],
+   "ability": "especialista",
+   "learn": [
+    [
+     1,
+     "gay_video"
+    ],
+    [
+     1,
+     "sac_cota"
+    ],
+    [
+     6,
+     "gay_conta"
+    ],
+    [
+     10,
+     "gay_divulga"
+    ],
+    [
+     16,
+     "gay_discalculia"
+    ],
+    [
+     22,
+     "gay_busca"
+    ],
+    [
+     28,
+     "sig_discalculayer"
+    ]
+   ]
+  },
+  "friasdark": {
+   "base": [
+    43,
+    33,
+    23,
+    76,
+    63,
+    63
+   ],
+   "exp": 137,
+   "career": [
+    {
+     "rank": "Secretário Especial da Cultura",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    }
+   ],
+   "ability": "verba",
+   "learn": [
+    [
+     1,
+     "fri_malhacao"
+    ],
+    [
+     1,
+     "fri_cena"
+    ],
+    [
+     6,
+     "fri_rouanet"
+    ],
+    [
+     10,
+     "fri_dark"
+    ],
+    [
+     16,
+     "fri_instituto"
+    ],
+    [
+     22,
+     "fri_passaporte"
+    ],
+    [
+     28,
+     "sig_friasdark"
+    ]
+   ]
+  },
+  "ceperjao": {
+   "base": [
+    46,
+    99,
+    46,
+    49,
+    57,
+    84
+   ],
+   "exp": 250,
+   "career": [
+    {
+     "rank": "Vereador do Rio",
+     "lvl": 1
+    },
+    {
+     "rank": "Vice-Governador do RJ",
+     "lvl": 16
+    },
+    {
+     "rank": "Governador do RJ",
+     "lvl": 34
+    }
+   ],
+   "ability": "imunidade",
+   "learn": [
+    [
+     1,
+     "cep_temp"
+    ],
+    [
+     1,
+     "cep_cadastro"
+    ],
+    [
+     6,
+     "cep_fund"
+    ],
+    [
+     10,
+     "cep_massa"
+    ],
+    [
+     16,
+     "sig_ceperjao"
+    ],
+    [
+     22,
+     "cep_inelegivel"
+    ],
+    [
+     28,
+     "cep_abuso"
+    ]
+   ]
+  },
+  "vazacellar": {
+   "base": [
+    67,
+    57,
+    55,
+    57,
+    90,
+    53
+   ],
+   "exp": 165,
+   "career": [
+    {
+     "rank": "Deputado Estadual do RJ",
+     "lvl": 1
+    },
+    {
+     "rank": "Presidente da Alerj",
+     "lvl": 16
+    }
+   ],
+   "ability": "recurso",
+   "learn": [
+    [
+     1,
+     "baz_alerj"
+    ],
+    [
+     1,
+     "baz_tel"
+    ],
+    [
+     6,
+     "baz_aviso"
+    ],
+    [
+     10,
+     "baz_zargun"
+    ],
+    [
+     16,
+     "baz_unha"
+    ],
+    [
+     22,
+     "baz_preso"
+    ],
+    [
+     28,
+     "sig_vazacellar"
+    ]
+   ]
+  },
+  "dovalento": {
+   "base": [
+    24,
+    19,
+    15,
+    102,
+    53,
+    87
+   ],
+   "exp": 73,
+   "career": [
+    {
+     "rank": "Senador",
+     "lvl": 1
+    }
+   ],
+   "ability": "fujao",
+   "learn": [
+    [
+     1,
+     "val_curso"
+    ],
+    [
+     1,
+     "val_video"
+    ],
+    [
+     6,
+     "val_reuniao"
+    ],
+    [
+     10,
+     "val_relato"
+    ],
+    [
+     16,
+     "val_calunia"
+    ],
+    [
+     22,
+     "val_coacao"
+    ],
+    [
+     28,
+     "sig_dovalento"
+    ]
+   ]
+  },
+  "respiralima": {
+   "base": [
+    58,
+    81,
+    108,
+    76,
+    63,
+    54
+   ],
+   "exp": 173,
+   "career": [
+    {
+     "rank": "Apresentador de TV",
+     "lvl": 1
+    },
+    {
+     "rank": "Governador do Amazonas",
+     "lvl": 16
+    }
+   ],
+   "ability": "contato",
+   "learn": [
+    [
+     1,
+     "lim_emerg"
+    ],
+    [
+     1,
+     "lim_sobre"
+    ],
+    [
+     6,
+     "lim_adega"
+    ],
+    [
+     10,
+     "lim_sangria"
+    ],
+    [
+     16,
+     "lim_pgr"
+    ],
+    [
+     22,
+     "lim_manaus"
+    ],
+    [
+     28,
+     "sig_respiralima"
+    ]
+   ]
+  },
+  "ciromaster": {
+   "base": [
+    49,
+    65,
+    53,
+    46,
+    57,
+    30
+   ],
+   "exp": 79,
+   "career": [
+    {
+     "rank": "Deputado Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Senador",
+     "lvl": 16
+    },
+    {
+     "rank": "Ministro da Casa Civil",
+     "lvl": 34
+    }
+   ],
+   "ability": "pressao",
+   "learn": [
+    [
+     1,
+     "cir_master"
+    ],
+    [
+     1,
+     "cir_emenda"
+    ],
+    [
+     6,
+     "cir_acoes"
+    ],
+    [
+     10,
+     "cir_amigo"
+    ],
+    [
+     16,
+     "cir_zero"
+    ],
+    [
+     22,
+     "cir_busca"
+    ],
+    [
+     28,
+     "sig_ciromaster"
+    ]
+   ]
+  },
+  "maranhaozito": {
+   "base": [
+    73,
+    98,
+    108,
+    44,
+    54,
+    64
+   ],
+   "exp": 163,
+   "career": [
+    {
+     "rank": "Prefeito de Governador Nunes Freire",
+     "lvl": 1
+    },
+    {
+     "rank": "Deputado Federal",
+     "lvl": 16
+    }
+   ],
+   "ability": "blindagem",
+   "learn": [
+    [
+     1,
+     "mar_pref"
+    ],
+    [
+     1,
+     "mar_ribamar"
+    ],
+    [
+     6,
+     "mar_obra"
+    ],
+    [
+     10,
+     "mar_propina"
+    ],
+    [
+     16,
+     "mar_pgr"
+    ],
+    [
+     22,
+     "mar_semi"
+    ],
+    [
+     28,
+     "sig_maranhaozito"
+    ]
+   ]
+  },
+  "blitzvinei": {
+   "base": [
+    68,
+    90,
+    56,
+    51,
+    64,
+    111
+   ],
+   "exp": 202,
+   "career": [
+    {
+     "rank": "Policial Rodoviário Federal",
+     "lvl": 1
+    },
+    {
+     "rank": "Diretor-Geral da PRF",
+     "lvl": 16
+    }
+   ],
+   "ability": "fujao",
+   "learn": [
+    [
+     1,
+     "bli_farda"
+    ],
+    [
+     1,
+     "bli_blitz"
+    ],
+    [
+     6,
+     "bli_op"
+    ],
+    [
+     10,
+     "bli_nordeste"
+    ],
+    [
+     16,
+     "bli_turno"
+    ],
+    [
+     22,
+     "tornozeleira"
+    ],
+    [
+     28,
+     "sig_blitzvinei"
+    ]
+   ]
+  },
+  "emprestinho": {
+   "base": [
+    51,
+    42,
+    46,
+    51,
+    60,
+    51
+   ],
+   "exp": 92,
+   "career": [
+    {
+     "rank": "Vereador de Balneário Camboriú",
+     "lvl": 1
+    }
+   ],
+   "ability": "verba",
+   "learn": [
+    [
+     1,
+     "jrn_pedido"
+    ],
+    [
+     1,
+     "jrn_doc"
+    ],
+    [
+     6,
+     "jrn_banco"
+    ],
+    [
+     10,
+     "jrn_falsa"
+    ],
+    [
+     16,
+     "jrn_mpdft"
+    ],
+    [
+     22,
+     "jrn_lavagem"
+    ],
+    [
+     28,
+     "sig_emprestinho"
+    ]
+   ]
+  },
+  "cidelator": {
+   "base": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "exp": 61,
+   "career": [
+    {
+     "rank": "Tenente-Coronel do Exército",
+     "lvl": 1
+    }
+   ],
+   "ability": "delator",
+   "learn": [
+    [
+     1,
+     "cid_ajudante"
+    ],
+    [
+     1,
+     "dedurar"
+    ],
+    [
+     6,
+     "cid_celular"
+    ],
+    [
+     10,
+     "sig_cidelator"
+    ],
+    [
+     16,
+     "cid_rolex"
+    ],
+    [
+     22,
+     "cid_contrad"
+    ],
+    [
+     28,
+     "delacao"
+    ]
+   ]
+  }
+ },
+ "abilities": {
+  "foro": {
+   "name": "Foro Privilegiado",
+   "desc": "Chance de prisão pela metade: é mais difícil de capturar."
+  },
+  "carteirada": {
+   "name": "Carteirada",
+   "desc": "Ao entrar em campo, diz \"Você sabe com quem está falando?\" e baixa o Ataque do rival."
+  },
+  "imunidade": {
+   "name": "Imunidade Parlamentar",
+   "desc": "Não sofre nenhuma condição de status."
+  },
+  "blindagem": {
+   "name": "Blindagem Jurídica",
+   "desc": "Com a vida cheia, sofre metade do dano."
+  },
+  "contato": {
+   "name": "Contatos no Judiciário",
+   "desc": "30% de chance de deixar o agressor investigado ao ser atingido por golpe físico."
+  },
+  "fujao": {
+   "name": "Fujão",
+   "desc": "Selvagem: 15% de chance de fugir a cada turno. Aliado: escapa sempre."
+  },
+  "verba": {
+   "name": "Verba de Gabinete",
+   "desc": "Recupera 1/16 da vida a cada turno com dinheiro público."
+  },
+  "pressao": {
+   "name": "Pressão do Centrão",
+   "desc": "Os golpes do rival gastam 2 PP."
+  },
+  "especialista": {
+   "name": "Especialista no Crime",
+   "desc": "Bônus de mesmo tipo (STAB) é 2,0 em vez de 1,5."
+  },
+  "recurso": {
+   "name": "Recurso Infinito",
+   "desc": "Se um golpe fosse nocauteá-lo com a vida cheia, sobrevive com 1 de vida."
+  },
+  "acelera": {
+   "name": "Fuga Rápida",
+   "desc": "Sua Velocidade sobe 1 estágio a cada turno."
+  },
+  "delator": {
+   "name": "Delação",
+   "desc": "Ao ser nocauteado, derruba a Defesa de quem o venceu em 1 estágio."
+  }
+ },
+ "zoneLevels": {
+  "1": [
+   2,
+   6
+  ],
+  "2": [
+   7,
+   13
+  ],
+  "3": [
+   13,
+   24
+  ]
+ },
+ "bosses": {
+  "cabral": [
+   [
+    "pezao",
+    11
+   ],
+   [
+    "garotinho",
+    12
+   ],
+   [
+    "cabralzao",
+    14
+   ]
+  ],
+  "cunha": [
+   [
+    "malaloures",
+    17
+   ],
+   [
+    "jucazord",
+    18
+   ],
+   [
+    "temerario",
+    19
+   ],
+   [
+    "cunhamon",
+    21
+   ]
+  ],
+  "bolsonaro": [
+   [
+    "minutorres",
+    26
+   ],
+   [
+    "abinzinho",
+    26
+   ],
+   [
+    "generalzao",
+    27
+   ],
+   [
+    "tarifardo",
+    28
+   ],
+   [
+    "golpenaro",
+    30
+   ]
+  ]
+ }
+}

@@ -1,0 +1,321 @@
+{
+ "curitiba": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Jardim Botânico"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Iguaçu"
+  }
+ },
+ "florianopolis": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Ponte Hercílio Luz"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Casa d'Agronômica"
+  }
+ },
+ "portoalegre": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Usina do Gasômetro"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Piratini"
+  }
+ },
+ "saopaulo": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "MASP"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio dos Bandeirantes"
+  }
+ },
+ "riodejaneiro": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Cristo Redentor"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Guanabara"
+  }
+ },
+ "vitoria": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Convento da Penha"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Anchieta"
+  }
+ },
+ "belohorizonte": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Igreja da Pampulha"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Tiradentes"
+  }
+ },
+ "salvador": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Elevador Lacerda"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Centro Administrativo da Bahia"
+  }
+ },
+ "aracaju": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Arcos da Orla de Atalaia"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio de Despachos"
+  }
+ },
+ "maceio": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Jangadas de Maceió"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio República dos Palmares"
+  }
+ },
+ "recife": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Marco Zero e Torre de Cristal"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio do Campo das Princesas"
+  }
+ },
+ "joaopessoa": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Farol do Cabo Branco"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio da Redenção"
+  }
+ },
+ "natal": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Forte dos Reis Magos"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Governadoria"
+  }
+ },
+ "fortaleza": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Ponte dos Ingleses"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio da Abolição"
+  }
+ },
+ "teresina": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Ponte Estaiada"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio de Karnak"
+  }
+ },
+ "saoluis": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Casarões de Azulejos"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio dos Leões"
+  }
+ },
+ "belem": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Ver-o-Peso"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio dos Despachos"
+  }
+ },
+ "macapa": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Marco Zero do Equador"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio do Setentrião"
+  }
+ },
+ "boavista": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Monumento ao Garimpeiro"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Senador Hélio Campos"
+  }
+ },
+ "manaus": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Teatro Amazonas"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Rio Negro"
+  }
+ },
+ "portovelho": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Três Caixas d'Água"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Rio Madeira"
+  }
+ },
+ "riobranco": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Passarela Joaquim Macêdo"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Rio Branco"
+  }
+ },
+ "cuiaba": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Igreja do Bom Despacho"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Paiaguás"
+  }
+ },
+ "campogrande": {
+  "landmark": {
+   "w": 6,
+   "h": 5,
+   "name": "Morada dos Baís"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Parque dos Poderes"
+  }
+ },
+ "goiania": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Monumento às Três Raças"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio das Esmeraldas"
+  }
+ },
+ "palmas": {
+  "landmark": {
+   "w": 5,
+   "h": 5,
+   "name": "Praça dos Girassóis"
+  },
+  "palacio": {
+   "w": 6,
+   "h": 4,
+   "name": "Palácio Araguaia"
+  }
+ },
+ "brasilia": {
+  "landmark": {
+   "w": 6,
+   "h": 6,
+   "name": "Catedral Metropolitana"
+  }
+ }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>POKÉPOL — Prévia do mapa</title>
+<style>
+body{margin:0;background:#1a1d24;color:#eee;font:13px system-ui,sans-serif}
+header{padding:8px 12px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+canvas{display:block;margin:0 12px 12px;image-rendering:pixelated;border:1px solid #444}
+label{cursor:pointer}
+#info{opacity:.8}
+</style></head><body>
+<header>
+  <b>POKÉPOL — mapa (2 px por tile)</b>
+  <label><input type="checkbox" id="bio"> tingir por bioma</label>
+  <label><input type="checkbox" id="lab" checked> nomes das cidades</label>
+  <span id="info"></span>
+</header>
+<canvas id="c"></canvas>
+<script src="js/map.js"></script>
+<script>
+const COL = { grass:'#6fbf5a', tall:'#2fe05a', path:'#d9c27a', sand:'#ecd9a0', water:'#3b7fd0', tree:'#1c5a2a', flower:'#e86aa0', fence:'#8a6a3a', sign:'#fff', lawn:'#8fd070', pool:'#7fb8f0', bld:'#8a3a3a' };
+const BIO = { pampa:'#b8e070', mata_atlantica:'#2fa04a', costa:'#f0d890', caatinga:'#d8a860', amazonia:'#1f7a3a', pantanal:'#40b0b0', cerrado:'#d8c050' };
+const cv = document.getElementById('c'), cx = cv.getContext('2d');
+const t0 = performance.now();
+buildWorld();
+const ms = Math.round(performance.now() - t0);
+const K = 2; cv.width = MAP_W * K; cv.height = MAP_H * K;
+function draw() {
+  const useBio = document.getElementById('bio').checked;
+  for (let y = 0; y < MAP_H; y++) for (let x = 0; x < MAP_W; x++) {
+    const t = World.tiles[y][x];
+    let c = COL[t] || '#f0f'; if (t === 'tree' && !World.landMask[y * MAP_W + x]) c = '#0d2a14';
+    if (useBio && (t === 'grass' || t === 'flower' || t === 'tall' || t === 'sand' || t === 'tree')) {
+      const b = BIO[World.biomeGrid[y][x]]; if (b && t !== 'tall' && t !== 'tree') c = b;
+    }
+    cx.fillStyle = c; cx.fillRect(x * K, y * K, K, K);
+  }
+  if (document.getElementById('lab').checked) {
+    cx.font = 'bold 9px sans-serif'; cx.textBaseline = 'middle';
+    for (const c of World.cities) {
+      cx.fillStyle = 'rgba(0,0,0,.35)'; cx.fillRect(c.x * K - 1, c.y * K - 1, c.w * K + 2, c.h * K + 2);
+      const label = c.order + ' ' + c.name;
+      cx.fillStyle = '#000'; cx.fillText(label, c.x * K + 1, c.y * K - 5); cx.fillStyle = '#fff'; cx.fillText(label, c.x * K, c.y * K - 6);
+    }
+    cx.fillStyle = '#f33'; cx.fillRect(START.x * K - 2, START.y * K - 2, 6, 6);
+  }
+}
+draw();
+document.getElementById('bio').onchange = draw; document.getElementById('lab').onchange = draw;
+document.getElementById('info').textContent = `${MAP_W}x${MAP_H} tiles · ${World.cities.length} cidades · ${Object.keys(World.areas).length} áreas · ${World.buildings.length} prédios · gerado em ${ms} ms`;
+cv.onmousemove = e => { const r = cv.getBoundingClientRect(), x = Math.floor((e.clientX - r.left) / K), y = Math.floor((e.clientY - r.top) / K); const z = tileAt(x, y) === 'tall' ? zoneAt(x, y) : null; cv.title = `${x},${y} · ${regionAt(x, y)}${z ? ' · ' + z.name + ' Lv ' + z.levels.join('-') : ''}`; };
+</script></body></html>
