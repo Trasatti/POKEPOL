@@ -222,7 +222,7 @@ kbd { display: inline-block; min-width: 1.6em; padding: .05em .35em; margin: 0 .
 @media (pointer: coarse) {
   #dlg { left: 19%; right: 19%; }
   #ui:has(.menu-battle) #dlg { right: 54%; }
-  .menu-battle { right: 19%; width: 34%; font-size: .72em; }
+  .menu-battle { right: 19%; width: 34%; font-size: .64em; padding-left: .5em; padding-right: .3em; }
   .menu-moves { left: 19%; width: 38%; }
   .move-info { right: 19%; width: 24%; font-size: .66em; }
   .menu-yesno { right: 19%; }

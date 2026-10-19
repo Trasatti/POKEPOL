@@ -94,6 +94,36 @@ def bulge(X, Y, cx, cy, rx, ry, strength):
     k = np.where(r2 < 1, 1 - strength * (1 - r2) ** 2, 1.0)
     return cx + (X - cx) * k, cy + (Y - cy) * k
 
+
+TIGHT_RX = None   # fator opcional (x largura do rosto) para recortar vizinhos/fundo laterais
+REFINE_MASK = False   # ligado por tools/work/redo.py para ids marcados na revisao de arte
+def refine_mask(a, mask, em, fxc, fyc, fw, fh, sx, sy, xx, yy):
+    """grabCut semeado: miolo do rosto = fundo-impossivel; fora da mascara = fundo; devolve maior componente."""
+    H, W = mask.shape
+    gc = np.full((H, W), cv2.GC_BGD, np.uint8)
+    gc[mask] = cv2.GC_PR_BGD
+    gc[mask & em(fxc, fyc - 0.05 * fh * sy, 0.66 * fw * sx, 0.80 * fh * sy)] = cv2.GC_PR_FGD
+    gc[mask & em(fxc, fyc, 0.42 * fw * sx, 0.46 * fh * sy)] = cv2.GC_FGD                      # miolo do rosto
+    gc[mask & (yy < fyc - 0.30 * fh * sy) & (np.abs(xx - fxc) < 0.55 * fw * sx)] = cv2.GC_FGD   # cabelo/testa
+    bgm = np.zeros((1, 65), np.float64); fgm = np.zeros((1, 65), np.float64)
+    try:
+        cv2.grabCut(np.ascontiguousarray(a[..., ::-1]), gc, None, bgm, fgm, 6, cv2.GC_INIT_WITH_MASK)
+    except Exception:
+        return mask
+    m2 = (gc == cv2.GC_FGD) | (gc == cv2.GC_PR_FGD)
+    m2 = ndimage.binary_opening(m2, iterations=3)
+    lab, n = ndimage.label(m2)
+    if n > 1: m2 = lab == (1 + int(np.argmax(ndimage.sum(m2, lab, range(1, n + 1)))))
+    m2 = ndimage.binary_fill_holes(m2)
+    if m2.sum() <= 0.6 * mask.sum(): return mask
+    if TIGHT_RX:
+        m2 = m2 & em(fxc, fyc - 0.05 * fh * sy, TIGHT_RX * fw * sx, 0.95 * fh * sy)
+        m2 = ndimage.binary_opening(m2, iterations=3)
+        lab, n = ndimage.label(m2)
+        if n > 1: m2 = lab == (1 + int(np.argmax(ndimage.sum(m2, lab, range(1, n + 1)))))
+        m2 = ndimage.binary_fill_holes(m2)
+    return m2 if m2.sum() > 0.35 * mask.sum() else mask
+
 def make_head(img, wlist, fixgreen=False):
     fx, fy, fw, fh = detect_face(img)
     pad = False
@@ -128,6 +158,13 @@ def make_head(img, wlist, fixgreen=False):
     lab, n = ndimage.label(mask)
     if n > 1: mask = lab == (1 + int(np.argmax(ndimage.sum(mask, lab, range(1, n + 1)))))
     mask = ndimage.binary_fill_holes(mask)
+    if REFINE_MASK:   # limpeza de fundo/halo (grabCut) para fotos com restos de fundo dentro da silhueta
+        seg = ndimage.binary_opening((soft > 0.5) & ell, iterations=4)
+        lab_, n_ = ndimage.label(seg)
+        if n_ > 1: seg = lab_ == (1 + int(np.argmax(ndimage.sum(seg, lab_, range(1, n_ + 1)))))
+        seg = ndimage.binary_fill_holes(seg)
+        if seg.sum() > 0.7 * mask.sum(): mask = seg      # so a segmentacao (sem a elipse de reforco), que nao inclui o fundo ao redor do rosto
+        mask = refine_mask(a, mask, em, fxc, fyc, fw, fh, sx, sy, xx, yy)
     chin = L(0.5, 1.0)[1]; mask[int(min(H, chin + 0.07 * fh * sy)):, :] = False
     # --- colour fixes
     mm = mask & (np.abs(xx - fxc) < 0.3 * fw * sx) & (np.abs(yy - fyc) < 0.35 * fh * sy)
