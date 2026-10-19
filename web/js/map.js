@@ -425,8 +425,11 @@ function buildWorld() {
     c.biome = biomeGrid[oy][ox];
     rect(ox - 2, oy - 2, w + 4, h + 4, 'grass');
     rect(ox, oy, w, h, bras ? 'lawn' : 'grass');
-    // anel de árvores (2 de espessura, fora da área da cidade); os portões leste/oeste são abertos pelas rotas
-    rect(ox - 2, oy - 2, w + 4, 2, 'tree'); rect(ox - 2, oy + h, w + 4, 2, 'tree'); rect(ox - 2, oy, 2, h, 'tree'); rect(ox + w, oy, 2, h, 'tree');
+    // árvores esparsas em volta (só nos cantos e uns tufos a cada 10 tiles): a cidade fica aberta por todos os lados
+    const tuft = (x, y) => rect(x, y, 2, 2, 'tree');
+    tuft(ox - 2, oy - 2); tuft(ox + w, oy - 2); tuft(ox - 2, oy + h); tuft(ox + w, oy + h);
+    for (let x = ox + 8; x < ox + w - 6; x += 10) { tuft(x, oy - 2); tuft(x, oy + h); }
+    for (let y = oy + 8; y < oy + h - 6; y += 10) { tuft(ox - 2, y); tuft(ox + w, y); }
     const gy = oy + c.gy;
     const signTxt = bras ? `BRASÍLIA — Capital Federal\n${c.tag}` : `${c.name.toUpperCase()} — Capital ${c.de}\n${c.tag}`;
     if (!bras) {
