@@ -1,0 +1,7 @@
+{
+  "name": "pokepol-tests",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Testes automatizados do POKEPOL (node:test, sem dependencias)",
+  "scripts": { "test": "node --test \"tests/**/*.test.js\"" }
+}

@@ -855,6 +855,8 @@ function buildWorld() {
   // --- sedes de empresas (zonas de treino), à margem das rotas perto de cada cidade
   const EMP = [['jf', 'sao_paulo', 'Sede da J&F'], ['odebrecht', 'salvador', 'Sede da Odebrecht'], ['rural', 'belo_horizonte', 'Banco Rural'], ['master', 'brasilia', 'Banco Master']];
   const okT = new Set(['grass', 'flower', 'tall', 'tree', 'sand']);
+  const onRoute = new Uint8Array(N);   // a sede nunca pode cair em cima do traçado de uma rota (nem do pincel de 2 tiles)
+  for (const r of routes) for (const [x, y] of r.cells) for (const [dx, dy] of [[0, 0], [1, 0], [0, 1], [1, 1]]) if (inb(x + dx, y + dy)) onRoute[(y + dy) * W + x + dx] = 1;
   for (const [emp, cid, label] of EMP) {
     const c = cityBy[cid]; let done = false;
     const cand = routes.filter(r => r.a.id === cid || r.b.id === cid);
@@ -871,7 +873,7 @@ function buildWorld() {
           const k = y * W + x;
           if (!inb(x, y) || !land[k] || wall[k] || ocean[k] || boxGrid[k] || ringM[k]) { ok = false; break; }
           const inside = x >= bx && x < bx + 6 && y >= by && y < by + 4;
-          if (inside && !okT.has(tiles[y][x])) { ok = false; break; }
+          if (inside && (!okT.has(tiles[y][x]) || onRoute[k])) { ok = false; break; }
           if (!inside && y === ly && x === lx) continue;
           if (!inside && (tiles[y][x] === 'sign' || tiles[y][x] === 'bld' || tiles[y][x] === 'fence' || tiles[y][x] === 'water')) { ok = false; break; }
         }
@@ -884,6 +886,76 @@ function buildWorld() {
       }
     }
     if (!done) console.warn('empresa sem lugar: ' + emp);
+  }
+
+  // --- garantia final: o caminho de cada rota nunca fica interrompido (árvore/cerca/água/prédio por cima do traçado).
+  //     Roda por último e não usa o RNG; só mexe em tiles de tree/fence/water sobre o traçado e, se um prédio cair em cima, contorna.
+  {
+    const SOL = t => SOLID.has(t);
+    const clearTree = (x, y) => {   // remove o bloco 2x2 do pinheiro inteiro (sem deixar árvore cortada)
+      const bx = x & ~1, by = y & ~1;
+      for (let j = 0; j < 2; j++) for (let i = 0; i < 2; i++) { const xx = bx + i, yy = by + j; if (inb(xx, yy) && tiles[yy][xx] === 'tree' && !boxGrid[yy * W + xx]) tiles[yy][xx] = land[yy * W + xx] ? 'grass' : tiles[yy][xx]; }
+    };
+    const open = (x, y) => {        // deixa o tile livre e vira caminho; false se for prédio/placa/cidade
+      if (!inb(x, y) || boxGrid[y * W + x]) return !inb(x, y) ? false : !SOL(tiles[y][x]);
+      const t = tiles[y][x];
+      if (t === 'bld' || t === 'sign') return false;
+      if (t === 'tree') clearTree(x, y);
+      if (t === 'tree' || t === 'fence' || t === 'water') tiles[y][x] = 'path';
+      return true;
+    };
+    const bypass = (p, q) => {      // menor caminho de p a q contornando prédios, numa janela local
+      const x0 = Math.max(1, Math.min(p[0], q[0]) - 14), x1 = Math.min(W - 2, Math.max(p[0], q[0]) + 14);
+      const y0 = Math.max(1, Math.min(p[1], q[1]) - 14), y1 = Math.min(H - 2, Math.max(p[1], q[1]) + 14);
+      const ww = x1 - x0 + 1, hh = y1 - y0 + 1, dist = new Float32Array(ww * hh).fill(1e9), par = new Int32Array(ww * hh).fill(-1), done = new Uint8Array(ww * hh);
+      const id = (x, y) => (y - y0) * ww + (x - x0);
+      dist[id(p[0], p[1])] = 0;
+      for (;;) {
+        let bi = -1, bd = 1e9;
+        for (let k = 0; k < dist.length; k++) if (!done[k] && dist[k] < bd) { bd = dist[k]; bi = k; }
+        if (bi < 0) return null;
+        done[bi] = 1; const cx = x0 + bi % ww, cy = y0 + ((bi / ww) | 0);
+        if (cx === q[0] && cy === q[1]) break;
+        for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+          const nx = cx + dx, ny = cy + dy; if (nx < x0 || nx > x1 || ny < y0 || ny > y1) continue;
+          const t = tiles[ny][nx]; if (t === 'bld' || t === 'sign' || (boxGrid[ny * W + nx] && SOL(t)) || !land[ny * W + nx]) continue;
+          const c = bd + (t === 'path' ? 1 : t === 'tree' || t === 'fence' ? 4 : t === 'water' ? 6 : 2), k = id(nx, ny);
+          if (c < dist[k]) { dist[k] = c; par[k] = bi; }
+        }
+      }
+      const out = []; for (let k = id(q[0], q[1]); k !== -1; k = par[k]) out.push([x0 + k % ww, y0 + ((k / ww) | 0)]);
+      return out;
+    };
+    for (const r of routes) {
+      const cs = r.cells;
+      for (let i = 0; i < cs.length; i++) {            // 1) o tile do traçado em si
+        const [x, y] = cs[i]; if (tiles[y][x] === 'bld') continue;
+        open(x, y);
+      }
+      for (let i = 0; i < cs.length; i++) {            // 2) prédio em cima do traçado: contorna
+        if (tiles[cs[i][1]][cs[i][0]] !== 'bld') continue;
+        let j = i; while (j + 1 < cs.length && tiles[cs[j + 1][1]][cs[j + 1][0]] === 'bld') j++;
+        const p = cs[Math.max(0, i - 1)], q = cs[Math.min(cs.length - 1, j + 1)], pth = bypass(p, q);
+        if (pth) for (const [x, y] of pth) { open(x, y); open(x + 1, y); open(x, y + 1); open(x + 1, y + 1); }
+        i = j;
+      }
+      for (const [x, y] of cs) for (const [dx, dy] of [[1, 0], [0, 1], [1, 1]]) {   // 3) o pincel de 2 tiles não pode ser mordido por árvore/cerca
+        const xx = x + dx, yy = y + dy;
+        if (inb(xx, yy) && !boxGrid[yy * W + xx] && (tiles[yy][xx] === 'tree' || tiles[yy][xx] === 'fence')) open(xx, yy);
+      }
+    }
+    // 4) mapa aberto: toda avenida que chega na borda da cidade continua para fora (sem pinheiro tampando o fim da rua)
+    for (const c of cities) for (let y = c.y; y < c.y + c.h; y++) for (const [ex, dx] of [[c.x, -1], [c.x + c.w - 1, 1]]) {
+      if (tiles[y][ex] !== 'path') continue;
+      for (let k = 1; k <= 10; k++) {
+        const x = ex + dx * k;
+        if (!inb(x, y) || boxGrid[y * W + x] || !land[y * W + x] || ocean[y * W + x]) break;
+        const t = tiles[y][x];
+        if (t === 'water' || t === 'bld' || t === 'sign') break;
+        if (!SOL(t) && k > 2) break;
+        open(x, y);
+      }
+    }
   }
 
   // --- imagens de fallback dos prédios

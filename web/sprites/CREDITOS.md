@@ -138,3 +138,15 @@ Gerado por `tools/make_caricatures_novos.py` (mesmo pipeline v4). Registros Câm
 | martinstwitter | Filipe Martins (sem registro verificado em API; identificado pelo título/descrição do arquivo no Commons) | Commons: https://commons.wikimedia.org/wiki/File:Filipe_Garcia_Martins_em_maio_de_2019.png | CC BY 3.0 - Ministério das Relações Exteriores do Brasil |
 | cuiabamensalinho | Emanuel Pinheiro (sem registro verificado em API; identificado pelo título/descrição do arquivo no Commons) | Commons: https://commons.wikimedia.org/wiki/File:Emanuel_Pinheiro,_prefeito_eleito_de_Cuiab%C3%A1_2016.png | CC BY 2.0 - Marco Corrêa/PR |
 | neysantosxibalba | Ney Santos (sem registro verificado em API; identificado pelo título/descrição do arquivo no Commons) | Commons: https://commons.wikimedia.org/wiki/File:2020_NEY_SANTOS_CANDIDATO_PREFEITO_SP_EMBU_DAS_ARTES_TSE_(250001009058).jpg | CC BY 4.0 - Portal de Dados Abertos do Tribunal Superior Eleitoral do Br |
+| mauromoraespr | Mauro Moraes / PL-PR (página oficial da Alep, legenda "Foto de Mauro Moraes") | https://www.assembleia.pr.leg.br/deputados/perfil/mauro-moraes | Assembleia Legislativa do Paraná, retrato oficial |
+| nininhomt | Nininho (Ondanir Bortolini) / deputado estadual MT (perfil oficial ALMT nº 51, alt "Nininho") | https://www.al.mt.gov.br/parlamento/deputados/51/perfil | Assembleia Legislativa de Mato Grosso, retrato oficial |
+| belotabusca | Marcinho Belota (Márcio Agra Belota) / PL-RR (perfil oficial ALE-RR) | https://al.rr.leg.br/deputados/marcinho-belota/ | Assembleia Legislativa de Roraima, retrato oficial |
+| audicmota | Audic Mota (Audic Cavalcante Mota Dias) / MDB-CE (perfil oficial ALECE, alt "Audic Mota") | https://www.al.ce.gov.br/deputados/audic-mota | Assembleia Legislativa do Ceará, retrato oficial |
+| cassolicitado | Ivo Narciso Cassol (API Senado id 5004, nasc. 1959-01-20) | https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5004.jpg | Agência Senado, uso livre com crédito |
+| garnierfragata | Almir Garnier Santos (placa "GARNIER" visível; título do arquivo no Commons) | Commons: https://commons.wikimedia.org/wiki/File:2021-03-31_Encontro_com_os_novos_comandantes_das_For%C3%A7as_Armadas_-_51086752341_(cropped3).jpg | CC BY 2.0 - Palácio do Planalto / Marcos Corrêa/PR |
+| vorcaro | Daniel Vorcaro (identificado pelo título do arquivo e imagem da página da Wikipédia) | Commons: https://commons.wikimedia.org/wiki/File:Daniel_Vorcaro_-_2024_(cropped).jpg | CC0 - Márcio Gustavo Vasconcelos |
+
+
+## Ilustrações genéricas (sem foto)
+
+Ilustração genérica, sem foto (não retrata o rosto real). Gerada por tools/make_generic_caricatures.py para: wajnjoias, caumolamacal, kleilsonforro, brunoeco, luannabenesse, vereadoraarbok, laranjeirao, xequematinho, gavetinha, boquirao, hipocratesdanilo, edesioturiacu, mariovicktorsobral, junimdopovoomerta, brunapraianorte, cletsonequador, carlinhossobralbusca, chiconazariocaapora, marcusamim, silvaldoma, razukbicho, gregfantasma, fernandespunhal, camaramonitor.

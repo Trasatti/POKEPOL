@@ -13410,6 +13410,174 @@
    "chance": 30,
    "prio": 0,
    "desc": "Pode deixar o alvo preso."
+  },
+  "vor_cdb": {
+   "name": "CDB de 140% do CDI",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 40,
+   "acc": 100,
+   "pp": 30,
+   "eff": null,
+   "chance": 0,
+   "prio": 0,
+   "desc": "O Master chegou a oferecer até 140% do CDI para atrair investidores."
+  },
+  "vor_jatinho": {
+   "name": "Jatinho no Aeroporto",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 45,
+   "acc": 100,
+   "pp": 25,
+   "eff": "speup",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Chegou de helicóptero ao terminal de jatos em Guarulhos; pode subir a Velocidade de quem usa."
+  },
+  "vor_carteira": {
+   "name": "Carteira Sem Lastro",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 100,
+   "pp": 20,
+   "eff": "defdown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "A PF aponta R$ 12,2 bi em carteiras de crédito sem lastro vendidas ao BRB; ele nega. Pode baixar a Defesa."
+  },
+  "vor_liquidacao": {
+   "name": "Liquidação Extrajudicial",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 70,
+   "acc": 90,
+   "pp": 15,
+   "eff": "flinch",
+   "chance": 30,
+   "prio": 0,
+   "desc": "O Banco Central liquidou o Master em 18/11/2025; pode fazer o alvo recuar."
+  },
+  "vor_brb": {
+   "name": "Compra pelo BRB",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 75,
+   "acc": 90,
+   "pp": 15,
+   "eff": "drain",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Oferta de R$ 2 bi do BRB, barrada pelo Banco Central em set/2025. Drena vida do alvo."
+  },
+  "vor_fgc": {
+   "name": "Pagamento do FGC",
+   "type": "LAVAGEM",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 10,
+   "eff": "heal",
+   "chance": 100,
+   "prio": 0,
+   "desc": "O Fundo Garantidor cobre até R$ 250 mil por CPF: recupera metade da vida."
+  },
+  "vor_cautelares": {
+   "name": "Tornozeleira do TRF-1",
+   "type": "NORMAL",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 20,
+   "eff": "defup",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Solto em nov/2025 com tornozeleira e passaporte retido: sobe a Defesa."
+  },
+  "vor_delacao_recusada": {
+   "name": "Delação Recusada",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 85,
+   "acc": 85,
+   "pp": 10,
+   "eff": "recoil",
+   "chance": 100,
+   "prio": 0,
+   "desc": "PF e PGR rejeitaram duas propostas dele em 2026. Ataque forte que machuca quem usa."
+  },
+  "vor_voo": {
+   "name": "Voo Interrompido",
+   "type": "FUGA",
+   "cat": "fis",
+   "pow": 90,
+   "acc": 90,
+   "pp": 10,
+   "eff": "flinch",
+   "chance": 30,
+   "prio": 0,
+   "desc": "A PF o interceptou no aeroporto em 17/11/2025; a defesa nega fuga. Pode fazer o alvo recuar."
+  },
+  "vor_compliance": {
+   "name": "Compliance Zero",
+   "type": "LAVAGEM",
+   "cat": "esp",
+   "pow": 100,
+   "acc": 80,
+   "pp": 5,
+   "eff": "investigado",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Nome da operação da PF que o prendeu duas vezes; pode deixar o alvo investigado."
+  },
+  "cid_audios": {
+   "name": "Áudios Vazados",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 60,
+   "acc": 95,
+   "pp": 20,
+   "eff": "confuso",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Áudios de 2024 publicados pela Veja; ele disse que era desabafo com um amigo."
+  },
+  "cid_acordo": {
+   "name": "Acordo Homologado",
+   "type": "DELACAO",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 20,
+   "eff": "defup",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Acordo de delação homologado em set/2023: sobe a Defesa."
+  },
+  "cid_sigilo": {
+   "name": "Sigilo Derrubado",
+   "type": "DELACAO",
+   "cat": "esp",
+   "pow": 80,
+   "acc": 90,
+   "pp": 10,
+   "eff": "spddown",
+   "chance": 30,
+   "prio": 0,
+   "desc": "Moraes tornou públicos os depoimentos da delação em fev/2025; pode baixar a Def. Especial."
+  },
+  "cid_regime": {
+   "name": "Regime Aberto",
+   "type": "NORMAL",
+   "cat": "status",
+   "pow": 0,
+   "acc": 100,
+   "pp": 10,
+   "eff": "heal",
+   "chance": 100,
+   "prio": 0,
+   "desc": "Pena de 2 anos em regime aberto, reduzida pela delação: recupera metade da vida."
   }
  },
  "politicos": {
@@ -15841,29 +16009,37 @@
   },
   "cidelator": {
    "base": [
-    50,
-    50,
-    50,
-    50,
-    50,
-    50
+    46,
+    38,
+    58,
+    48,
+    60,
+    65
    ],
-   "exp": 61,
+   "exp": 64,
    "career": [
     {
-     "rank": "Tenente-Coronel do Exército",
+     "rank": "Preso",
      "lvl": 1
+    },
+    {
+     "rank": "Prisão Domiciliar",
+     "lvl": 16
+    },
+    {
+     "rank": "Programa de Proteção à Testemunha",
+     "lvl": 36
     }
    ],
    "ability": "delator",
    "learn": [
     [
      1,
-     "cid_ajudante"
+     "dedurar"
     ],
     [
      1,
-     "dedurar"
+     "cid_ajudante"
     ],
     [
      6,
@@ -15874,16 +16050,59 @@
      "sig_cidelator"
     ],
     [
-     16,
+     15,
+     "cid_audios"
+    ],
+    [
+     20,
      "cid_rolex"
     ],
     [
-     22,
+     26,
      "cid_contrad"
     ],
     [
-     28,
+     30,
+     "cid_acordo"
+    ],
+    [
+     34,
+     "cid_sigilo"
+    ],
+    [
+     38,
+     "cid_regime"
+    ],
+    [
+     45,
      "delacao"
+    ]
+   ],
+   "catch": 45,
+   "stageBase": [
+    [
+     46,
+     38,
+     58,
+     48,
+     60,
+     65
+    ],
+    [
+     60,
+     50,
+     75,
+     65,
+     75,
+     80
+    ],
+    [
+     80,
+     62,
+     98,
+     80,
+     100,
+     110
     ]
    ]
   },
@@ -21528,6 +21747,101 @@
     [
      28,
      "marcusamim_7"
+    ]
+   ]
+  },
+  "vorcaro": {
+   "base": [
+    44,
+    40,
+    40,
+    65,
+    55,
+    70
+   ],
+   "exp": 64,
+   "career": [
+    {
+     "rank": "Preso",
+     "lvl": 1
+    },
+    {
+     "rank": "Prisão Domiciliar",
+     "lvl": 16
+    },
+    {
+     "rank": "Programa de Proteção à Testemunha",
+     "lvl": 36
+    }
+   ],
+   "ability": "recurso",
+   "catch": 45,
+   "learn": [
+    [
+     1,
+     "vor_cdb"
+    ],
+    [
+     1,
+     "vor_jatinho"
+    ],
+    [
+     7,
+     "vor_carteira"
+    ],
+    [
+     16,
+     "vor_liquidacao"
+    ],
+    [
+     20,
+     "vor_brb"
+    ],
+    [
+     25,
+     "vor_fgc"
+    ],
+    [
+     28,
+     "vor_cautelares"
+    ],
+    [
+     33,
+     "vor_delacao_recusada"
+    ],
+    [
+     40,
+     "vor_voo"
+    ],
+    [
+     45,
+     "vor_compliance"
+    ]
+   ],
+   "stageBase": [
+    [
+     44,
+     40,
+     40,
+     65,
+     55,
+     70
+    ],
+    [
+     60,
+     50,
+     55,
+     85,
+     70,
+     85
+    ],
+    [
+     78,
+     65,
+     70,
+     115,
+     92,
+     110
     ]
    ]
   }

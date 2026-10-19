@@ -228,6 +228,21 @@ function seedPoolsByUF() {
       }
     }
   }
+  // nenhum mato fica vazio: cidade sem elenco próprio herda os políticos das rotas vizinhas
+  for (const c of cities) {
+    const a = areas['cidade_' + c.id];
+    if (a && !(a.pool || []).length) a.pool = ['rota_' + (c.order - 1), 'rota_' + c.order].flatMap(k => (areas[k] && areas[k].pool) || []).map(([id, w]) => [id, w]);
+  }
+  // a família e os aliados aparecem bastante no estado deles e em Brasília
+  const FREQUENTES = { rachadinho: ['RJ', 'DF'], carluxo: ['RJ', 'DF'], tarifardo: ['SP', 'DF'], lirassauro: ['AL', 'DF'] };
+  for (const [id, ufs] of Object.entries(FREQUENTES)) {
+    if (!POL[id] || STARTERS.includes(id)) continue;
+    for (const c of cities.filter(c => ufs.includes(c.uf)))
+      for (const aid of ['cidade_' + c.id, 'rota_' + c.order, 'rota_' + (c.order - 1)]) {
+        const a = areas[aid];
+        if (a) (a.pool = a.pool || []).push([id, id === 'lirassauro' || id === 'tarifardo' ? 6 : 10]);
+      }
+  }
 }
 
 // Zerar o jogo: todas as insígnias (26 capitais + Congresso), o Planalto vencido e todos os políticos presos.

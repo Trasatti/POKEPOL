@@ -162,9 +162,12 @@ function say(text, { wait = true } = {}) {
     d.classList.remove('more');
     clearInterval(sayIv);
     let i = 0, done = false, pop = null;
+    // falas longas (golpes e crimes com nome grande) usam letra menor para caber na caixa
+    d.style.fontSize = text.length > 150 ? '.76em' : text.length > 105 ? '.86em' : '';
     d.textContent = '';
     const finish = () => {
       clearInterval(sayIv); d.textContent = text; done = true;
+      fitBox(d, 0.5);
       if (wait) d.classList.add('more'); else res();
     };
     sayIv = setInterval(() => { i += 2; d.textContent = text.slice(0, i); if (i >= text.length) finish(); }, 18);
@@ -246,9 +249,16 @@ function showDetail(html) {
   return new Promise(res => {
     const d = el('div', 'detail', html);
     const done = () => { pop(); d.remove(); res(); };
-    const pop = pushHandler(b => { if (b === 'a' || b === 'b') done(); });
+    const pop = pushHandler(b => {
+      if (b === 'a' || b === 'b') { done(); return true; }
+      const t = d.querySelector('.txt');
+      if (t && (b === 'up' || b === 'down')) t.scrollTop += b === 'down' ? 40 : -40;
+      return true;
+    });
     d.onclick = done;
     ui.appendChild(d);
+    const t = d.querySelector('.txt');
+    if (t) fitBox(t, 0.6);
   });
 }
 
@@ -258,11 +268,19 @@ function showFicha(p) {
     const f = el('div', 'box ficha', `<div class="ft">FICHA DA PF · Nº ${String(p.dex).padStart(3, '0')}</div>
       <div class="fb"><img src="${spriteURL(p)}"><div><b>${realName(p)}</b> <span class="dim">“${p.name}”</span><br>${typeChips(p.types)}
       <p>${p.fact}</p></div></div><div class="fh">Z para continuar</div>`);
-    const done = () => { pop(); f.remove(); res(); };
+    const done = () => { pop(); f.remove(); ui.classList.remove('ficha-open'); res(); };
     const pop = pushHandler(b => { if (b === 'a' || b === 'b') done(); });
     f.onclick = done;
+    ui.classList.add('ficha-open');   // esconde a caixa de diálogo atrás da ficha
     ui.appendChild(f);
+    fitBox(f);
   });
+}
+
+// Diminui a letra de uma caixa até o conteúdo caber nela.
+function fitBox(box, min = 0.45) {
+  let s = parseFloat(getComputedStyle(box).fontSize), s0 = s;
+  while (box.scrollHeight > box.clientHeight + 1 && s > s0 * min) { s *= 0.93; box.style.fontSize = s + 'px'; }
 }
 
 function toast(msg) { const t = el('div', 'toast', msg); ui.appendChild(t); setTimeout(() => t.remove(), 1700); }
@@ -274,13 +292,16 @@ function monDetailHTML(p, m) {
   const seen = !m && !G.seen[p.id];
   const st = m ? stats(m) : null;
   const img = seen ? silURL(p) : spriteURL(p);
-  return `<h2 style="margin:0;padding:.3em .6em;font-size:1em;color:#fff;background:#1e3a78;display:flex;justify-content:space-between">
-    <span>Nº ${String(p.dex).padStart(3, '0')} ${seen ? '?????' : dexName(p)}</span><span>${m ? 'Nv ' + m.lvl : (G.caught[p.id] ? 'PRESO' : '')}</span></h2>
+  const ab = p.ability && ABILITIES[p.ability] ? ABILITIES[p.ability].name + ' — ' + ABILITIES[p.ability].desc : '—';
+  const extra = m ? `<div class="stats"><span><b>Vida</b> ${m.hp}/${st.hp}</span><span><b>Vel</b> ${st.spe}</span><span><b>Atq</b> ${st.atk}</span><span><b>Def</b> ${st.def}</span><span><b>Atq Esp</b> ${st.spa}</span><span><b>Def Esp</b> ${st.spd}</span></div>
+      <div class="sec"><b>Cargo:</b> ${rankName(m) || '—'} ${statusChip(m)}</div><div class="sec"><b>Habilidade:</b> ${ab}</div>
+      <div class="sec"><b>Golpes:</b></div><div class="moves">${m.moves.map(k => `<span>${MOVES[k].name} <span class="dim">${m.pp[k]}/${movePP(MOVES[k])}</span></span>`).join('')}</div>`
+    : (p.career ? `<div class="sec"><b>Carreira:</b> ${p.career.map(c => c.rank).join(' → ')}</div>` : '');
+  return `<h2><span class="ell">Nº ${String(p.dex).padStart(3, '0')} ${seen ? '?????' : dexName(p)}</span><span>${m ? 'Nv ' + m.lvl : (G.caught[p.id] ? 'PRESO' : '')}</span></h2>
     <div class="body"><div class="pic"><img src="${img}">${seen ? '' : typeChips(p.types)}</div>
     <div class="txt">${seen ? 'Ainda não visto. Procure no mato alto!' :
-      `<b>${p.real}</b>${p.poke ? ` <span class="dim">· inspirado em ${p.poke}</span>` : ''}<br>${p.fact}` +
-      (m ? `<br><br><b>Cargo:</b> ${rankName(m) || '—'} ${statusChip(m)}<br><b>Vida</b> ${m.hp}/${st.hp} · <b>Atq</b> ${st.atk} · <b>Def</b> ${st.def} · <b>Atq Esp</b> ${st.spa} · <b>Def Esp</b> ${st.spd} · <b>Vel</b> ${st.spe}<br><b>Habilidade:</b> ${p.ability && ABILITIES[p.ability] ? ABILITIES[p.ability].name + ' — ' + ABILITIES[p.ability].desc : '—'}<br><b>Golpes:</b> ${m.moves.map(k => `${MOVES[k].name} (${m.pp[k]}/${movePP(MOVES[k])})`).join(', ')}` : (p.career ? `<br><br><b>Carreira:</b> ${p.career.map(c => c.rank).join(' → ')}` : ''))}
-    </div></div><div class="foot" style="padding:.2em .6em;font-size:.65em;color:#555">Paródia. Investigados não condenados são presumidos inocentes.</div>`;
+      `<b>${p.real}</b>${p.poke ? ` <span class="dim">· inspirado em ${p.poke}</span>` : ''}<br>${p.fact}` + extra}
+    </div></div><div class="foot">Paródia. Investigados não condenados são presumidos inocentes.</div>`;
 }
 
 async function openPolidex() {
@@ -300,8 +321,8 @@ async function openPolidex() {
 
 function partyRow(m) {
   const st = stats(m), f = m.hp / st.hp;
-  return `<img src="${spriteURL(POL[m.id])}"><span class="grow">${monName(m)} <span class="dim">Nv${m.lvl} ${rankName(m)}</span> ${statusChip(m)}</span>
-    <div class="hpbar ${hpClass(f)}" style="max-width:35%"><i style="width:${f * 100}%"></i></div><span class="dim">${m.hp}/${st.hp}</span>`;
+  return `<img src="${spriteURL(POL[m.id])}"><span class="grow2"><span class="l1"><span class="nm">${monName(m)}</span><span class="lv">Nv${m.lvl}</span>${statusChip(m)}</span><span class="dim l2">${rankName(m) || ''}</span></span>
+    <span class="hpc"><div class="hpbar ${hpClass(f)}"><i style="width:${f * 100}%"></i></div><span class="dim">${m.hp}/${st.hp}</span></span>`;
 }
 
 async function openParty() {
@@ -333,7 +354,7 @@ function useHealItem(key, m) {
 
 async function openBag(inBattle = false) {
   for (;;) {
-    const keys = Object.keys(G.items).filter(k => G.items[k] > 0);
+    const keys = Object.keys(G.items).filter(k => G.items[k] > 0 && ITEMS[k]);
     const i = await listScreen('MOCHILA', keys, k => `<span class="grow">${ITEMS[k].name}</span><span>x${G.items[k]}</span>`,
       { right: 'Cofre: ' + fmtMoney(G.money), foot: 'Mandados e tornozeleiras só funcionam em batalha contra políticos soltos.' });
     if (i < 0) return null;
@@ -350,10 +371,11 @@ async function openBag(inBattle = false) {
 }
 
 async function openAgentCard() {
-  await showDetail(`<h2 style="margin:0;padding:.3em .6em;font-size:1em;color:#fff;background:#1e3a78">CARTEIRA FUNCIONAL — POLÍCIA FEDERAL</h2>
+  const nBad = badgeCount() + ((G.badges || []).includes(BOSSES.cunha.badge) ? 1 : 0), totBad = TOTAL_GYMS() + 1;
+  await showDetail(`<h2><span class="ell">CARTEIRA FUNCIONAL — POLÍCIA FEDERAL</span></h2>
     <div class="body"><div class="pic"><img src="${personSprite(AGENT_LOOK, 'down', 0).toDataURL()}"></div>
-    <div class="txt"><b>Agente:</b> ${G.name}<br><b>Cofre público:</b> ${fmtMoney(G.money)}<br><b>Total já recuperado:</b> ${fmtMoney(G.recovered || 0)}<br><b>Meta:</b> ${badgeCount()}/${TOTAL_GYMS()} insígnias · ${Object.keys(G.caught).length}/${POLITICOS.length} presos<br><b>Polidex:</b> ${Object.keys(G.seen).length} vistos, ${Object.keys(G.caught).length} presos<br><br>
-    <b>Insígnias:</b> ${badgeCount()}/${TOTAL_GYMS()}<br>${(G.badges || []).map(x => '🏅 ' + x).join('<br>') || 'Nenhuma ainda.'}</div></div>`);
+    <div class="txt"><b>Agente:</b> ${G.name}<br><b>Cofre público:</b> ${fmtMoney(G.money)}<br><b>Total já recuperado:</b> ${fmtMoney(G.recovered || 0)}<br><b>Meta:</b> ${nBad}/${totBad} insígnias · ${Object.keys(G.caught).length}/${POLITICOS.length} presos<br><b>Polidex:</b> ${Object.keys(G.seen).length} vistos, ${Object.keys(G.caught).length} presos<br><br>
+    <b>Insígnias:</b> ${nBad}/${totBad}<div class="badges">${(G.badges || []).map(x => '<span>🏅 ' + x + '</span>').join('') || 'Nenhuma ainda.'}</div></div></div>`);
 }
 
 async function startMenu() {
@@ -398,7 +420,10 @@ async function shop() {
       { right: 'Cofre: ' + fmtMoney(G.money) });
     if (i < 0) return;
     const k = SHOP[i];
-    const q = await choose(['x1', 'x5', 'x10', 'VOLTAR'], { cls: 'menu-right' });
+    const pr = ITEMS[k].price;
+    await say(`${ITEMS[k].name}: ${fmtMoney(pr)} cada. Quantos?`, { wait: false });
+    const q = await choose([`x1 · ${fmtMoney(pr)}`, `x5 · ${fmtMoney(pr * 5)}`, `x10 · ${fmtMoney(pr * 10)}`, 'VOLTAR'], { cls: 'menu-right' });
+    closeDlg();
     if (q < 0 || q === 3) continue;
     const n = [1, 5, 10][q], cost = n * ITEMS[k].price;
     if (cost > G.money) { toast('Verba insuficiente!'); continue; }
@@ -549,7 +574,7 @@ function drawWorld() {
   actors.sort((a, b) => a.y - b.y).forEach(a => a.draw());
   ctx.restore();
   // minimapa no canto superior direito da janela
-  if (S.minimap !== false && MAP_W > 60) { const k = VIEW.dpr * 2.4; ctx.setTransform(k, 0, 0, k, cv.width - SW * k, 0); drawMinimap(); ctx.setTransform(VIEW.k, 0, 0, VIEW.k, VIEW.ox, VIEW.oy); }
+  if (S.minimap !== false && MAP_W > 60) { const m = miniMetrics(); ctx.setTransform(m.k, 0, 0, m.k, cv.width - SW * m.k, m.ty); drawMinimap(); ctx.setTransform(VIEW.k, 0, 0, VIEW.k, VIEW.ox, VIEW.oy); }
 }
 
 // Personagens podem ser mais altos que um tile (32x48 no estilo 4ª/5ª geração): pés na base do tile.
@@ -601,7 +626,20 @@ function biomeTile(src, kind, biome) {
   return m[biome];
 }
 
-// Minimapa do Brasil no canto (N liga/desliga).
+// Minimapa do Brasil no canto (N liga/desliga). Escala com a janela; no toque começa pequeno e um toque nele alterna pequeno/grande.
+const coarseMQ = matchMedia('(pointer: coarse)');
+function miniMetrics() {
+  const frac = coarseMQ.matches ? (S.miniBig ? 0.24 : 0.12) : 0.22;
+  const k = Math.min(VIEW.dpr * 2.4, cv.width * frac / 110);
+  const h = Math.round(104 * MAP_H / MAP_W);
+  return { k, ty: coarseMQ.matches ? cv.height * 0.12 : 0, w: 110 * k, h: (h + 12) * k };
+}
+cv.addEventListener('pointerdown', e => {
+  if (!coarseMQ.matches || S.mode !== 'world' || S.minimap === false || MAP_W <= 60) return;
+  const r = cv.getBoundingClientRect(), sx = cv.width / r.width, sy = cv.height / r.height;
+  const x = (e.clientX - r.left) * sx, y = (e.clientY - r.top) * sy, m = miniMetrics();
+  if (x >= cv.width - m.w && y >= m.ty && y <= m.ty + m.h) S.miniBig = !S.miniBig;
+});
 let miniCanvas = null;
 const MINI_COLORS = { runway: '#8a8e96', water: '#3a78c8', tree: '#2f6a2a', tall: '#4f9a3a', sand: '#e8d898', path: '#d8c088', bld: '#c84848', lawn: '#8ad070', pool: '#5aa0e0' };
 function drawMinimap() {
@@ -677,7 +715,10 @@ async function wildEncounter(zone) {
   const tot = pool.reduce((a, p) => a + p.w, 0);
   let r = Math.random() * tot, p = pool[0];
   for (const q of pool) { r -= q.w; if (r <= 0) { p = q; break; } }
-  const mon = makeMon(p.id, rand(lo, hi));
+  // matinho justo: o nível do selvagem acompanha a sua equipe — de 3 abaixo até 1 acima do seu mais forte
+  // (a zona só decide dentro dessa faixa). Chefões e ginásios não usam isso.
+  const ref = Math.max(...G.party.map(m => m.lvl));
+  const mon = makeMon(p.id, Math.max(2, Math.min(ref + 1, Math.max(ref - 3, rand(lo, hi)))));
   await transition();
   const res = await battle({ team: [mon], wild: true });
   if (res === 'lose') await whiteout();
@@ -770,22 +811,22 @@ function drawBattle() {
   g.addColorStop(0, '#f8f8e0'); g.addColorStop(0.55, '#d8f0c0'); g.addColorStop(1, '#a8d890');
   ctx.fillStyle = g; ctx.fillRect(0, 0, SW, SH);
   ctx.fillStyle = '#c8e0a0';
-  ctx.beginPath(); ctx.ellipse(368, 118, 92, 20, 0, 0, 7); ctx.fill();
-  ctx.beginPath(); ctx.ellipse(130, 196, 120, 24, 0, 0, 7); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(368, 102, 76, 15, 0, 0, 7); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(116, 180, 96, 18, 0, 0, 7); ctx.fill();
   ctx.fillStyle = '#98c078';
-  ctx.beginPath(); ctx.ellipse(368, 121, 80, 13, 0, 0, Math.PI); ctx.fill();
-  ctx.beginPath(); ctx.ellipse(130, 199, 106, 16, 0, 0, Math.PI); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(368, 104, 66, 9, 0, 0, Math.PI); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(116, 182, 84, 12, 0, 0, Math.PI); ctx.fill();
   if (!B) return;
   const e = B.team[B.ei], p = G.party[B.pi];
   const A = B.anim;
   if (A.e.vis) {
     ctx.globalAlpha = A.e.alpha;
-    drawPol(POL[e.id], false, 312 + A.e.dx, 22 + A.e.dy, 112);
+    drawPol(POL[e.id], false, 320 + A.e.dx, 4 + A.e.dy, 96);
     ctx.globalAlpha = 1;
   }
   if (A.p.vis) {
     ctx.globalAlpha = A.p.alpha;
-    drawPol(POL[p.id], true, 34 + A.p.dx, 70 + A.p.dy, 192);
+    drawPol(POL[p.id], true, 44 + A.p.dx, 40 + A.p.dy, 144);
     ctx.globalAlpha = 1;
   }
   if (A.ball) ctx.drawImage(MANDADO(), A.ball.x, A.ball.y, 24, 24);
@@ -802,6 +843,7 @@ async function hitAnim(side) {
 }
 
 async function battle({ team, wild = false, boss = null }) {
+  if (!G.party.some(m => m.hp > 0)) { await say('Sua equipe está sem condições de lutar. Procure a Superintendência!'); closeDlg(); return 'lose'; }
   S.mode = 'battle';
   B = { team, wild, boss, bo: typeof boss === 'string' ? BOSSES[boss] : boss, ei: 0, pi: G.party.findIndex(m => m.hp > 0), st: { p: freshStages(), e: freshStages() }, vol: { p: {}, e: {} },
     runs: 0, anim: { e: { vis: true, alpha: 1, dx: 240, dy: 0 }, p: { vis: false, alpha: 1, dx: 0, dy: 0 } },
@@ -856,7 +898,7 @@ async function battle({ team, wild = false, boss = null }) {
     if (myMove) {
       const pr = k => (MOVES[k].prio || 0);
       const sp = side => stats(sideMon(side)).spe * stageMul(B.st[side].spe) * (sideMon(side).status === 'preso' ? 0.25 : 1);
-      const meFirst = pr(myMove) !== pr(foeMove) ? pr(myMove) > pr(foeMove) : sp('p') > sp('e') || (sp('p') === sp('e') && Math.random() < 0.5);
+      const meFirst = pr(myMove) !== pr(foeMove) ? pr(myMove) > pr(foeMove) : sp('p') >= sp('e');   // empate de velocidade: a PF age primeiro
       if (meFirst) order.push(['p', myMove], ['e', foeMove]); else order.push(['e', foeMove], ['p', myMove]);
     } else order.push(['e', foeMove]);
 
@@ -972,7 +1014,9 @@ async function chooseAction() {
   for (;;) {
     const me = G.party[B.pi];
     say(`O que ${monName(me)} vai fazer?`, { wait: false });
-    const i = await choose(['LUTAR', 'MOCHILA', 'EQUIPE', 'FUGIR'], { cls: 'menu-battle', cols: 2, cancel: false, start: B.lastAct || 0 });
+    const pr = choose(['LUTAR', 'MOCHILA', 'EQUIPE', 'FUGIR'], { cls: 'menu-battle', cols: 2, cancel: false, start: B.lastAct || 0 });
+    const dd = $('#dlg'); if (dd) fitBox(dd, 0.5);
+    const i = await pr;
     B.lastAct = i;
     if (i === 0) {
       const mv = await chooseMove(me);
@@ -996,17 +1040,24 @@ async function chooseMove(me) {
   }
   closeDlg();
   const info = el('div', 'box move-info');
-  ui.appendChild(info);
-  const opts = me.moves.map(k => ({ label: `${MOVES[k].name} <span class="dim">${me.pp[k]}/${movePP(MOVES[k])}</span>`, disabled: !me.pp[k] }));
+  const opts = me.moves.map(k => ({ label: `<span class="mn">${MOVES[k].name}</span><span class="dim pp">${me.pp[k]}/${movePP(MOVES[k])}</span>`, disabled: !me.pp[k] }));
   const foe = B.team[B.ei];
   const show = i => {
     const mv = MOVES[me.moves[i]];
     const mult = mv.pow ? typeMult(mv.type, POL[foe.id].types) : 1;
     const tag = !G.seen[foe.id] || mult === 1 ? '' : mult > 1 ? '<span style="color:#c03030">Super efetivo</span>' : '<span style="color:#888">Pouco efetivo</span>';
+    info.style.fontSize = '';
     info.innerHTML = `<span><span class="chip" style="background:${TYPES[mv.type].color}">${TYPES[mv.type].label}</span> ${CAT_LABEL[moveCat(mv)]}</span>
       <span>${mv.pow ? 'Poder ' + mv.pow : '—'} · Precisão ${mv.acc || '—'}</span>${tag}${mv.desc ? `<span class="dim">${mv.desc}</span>` : ''}`;
+    fitBox(info, 0.4);
   };
-  const i = await choose(opts, { cls: 'menu-moves', cols: 2, onMove: show, start: 0 });
+  const pr = choose(opts, { cls: 'menu-moves', cols: 2, onMove: show, start: 0 });
+  ui.appendChild(info);   // depois do menu, para ficar por cima
+  fitBox(info, 0.4);       // o primeiro show() roda antes de a caixa estar na tela
+  const mm = ui.querySelector('.menu-moves');
+  if (mm) fitBox(mm, 0.45);
+  show(0);
+  const i = await pr;
   info.remove();
   return i < 0 ? null : me.moves[i];
 }
@@ -1024,6 +1075,7 @@ async function choosePartyInBattle(cancel) {
 function enemyChooseMove(foe, me) {
   const ms = foe.moves.filter(k => foe.pp[k] > 0);
   if (!ms.length) return 'desespero';
+  if (B.wild) return pick(ms);   // selvagem ataca no improviso (como no Pokémon); treinadores escolhem o melhor golpe
   const max = stats(foe).hp;
   const scored = ms.map(k => {
     const mv = MOVES[k];
@@ -1150,7 +1202,9 @@ async function learnMove(m, mk) {
   await say(`${monName(m)} quer aprender ${MOVES[mk].name}, mas já sabe 4 golpes. Esquecer um?`, { wait: false });
   if (!(await yesNo())) { await say(`${monName(m)} não aprendeu ${MOVES[mk].name}.`); return; }
   closeDlg();
-  const i = await choose(m.moves.map(k => MOVES[k].name).concat(['CANCELAR']));
+  const pr = choose(m.moves.map(k => MOVES[k].name).concat(['CANCELAR']), { cls: 'menu-right menu-forget' });
+  const fm = ui.querySelector('.menu-forget'); if (fm) fitBox(fm, 0.5);
+  const i = await pr;
   if (i < 0 || i >= 4) { await say(`${monName(m)} não aprendeu ${MOVES[mk].name}.`); return; }
   const out = m.moves[i];
   m.moves[i] = mk; delete m.pp[out]; m.pp[mk] = movePP(MOVES[mk]);
@@ -1160,10 +1214,11 @@ async function learnMove(m, mk) {
 // "Evolução": o político sobe de cargo.
 async function promote(m, onField) {
   const rank = rankName(m);
-  await say(`O quê? ${monName(m)} está sendo promovido!`);
+  const colab = STARTERS.includes(m.id);   // colaboradores "evoluem" de pena, não de cargo
+  await say(colab ? `O quê? A situação de ${monName(m)} está mudando!` : `O quê? ${monName(m)} está sendo promovido!`);
   if (onField && B) { for (let k = 0; k < 6; k++) { B.anim.flash = k % 2 === 0; await sleep(120); } B.anim.flash = false; }
   sfx(523, 0.12); await sleep(130); sfx(659, 0.12); await sleep(130); sfx(784, 0.25);
-  await say(`Parabéns! ${monName(m)} agora é ${rank}!`);
+  await say(colab ? `Parabéns! ${monName(m)} agora está em ${rank.toUpperCase()}!` : `Parabéns! ${monName(m)} agora é ${rank}!`);
 }
 
 async function giveXP(foe) {
@@ -1310,8 +1365,8 @@ function chooseStarter() {
     });
     const draw = () => { cards.forEach((c, k) => c.classList.toggle('sel', k === idx)); const p = POL[STARTERS[idx]]; say(`${p.name}, o ${realName(p)}. Tipo ${p.types.map(t => TYPES[t].label).join('/')}. ←/→ escolhe, Z confirma.`, { wait: false }); };
     const pop = pushHandler(b => {
-      if (b === 'left') idx = (idx + 2) % 3;
-      else if (b === 'right') idx = (idx + 1) % 3;
+      if (b === 'left') idx = (idx + STARTERS.length - 1) % STARTERS.length;
+      else if (b === 'right') idx = (idx + 1) % STARTERS.length;
       else if (b === 'a') { pop(); w.remove(); res(STARTERS[idx]); return; }
       else return;
       draw();
@@ -1332,6 +1387,8 @@ async function intro() {
   await say('Sua missão: investigar, prender e registrar cada um no POLIDEX.');
   await say('Enfraqueça o alvo em combate e cumpra um MANDADO DE PRISÃO.');
   await say('Quem é preso pode fazer delação premiada e lutar ao seu lado!');
+  await say('Dois presos aceitaram colaborar com a PF em troca de benefícios.');
+  await say('Treine bem o seu colaborador: de PRESO ele evolui para PRISÃO DOMICILIAR e, no fim, para PROTEÇÃO À TESTEMUNHA!');
   await say('Para começar, escolha seu primeiro colaborador.');
   for (;;) {
     const id = await chooseStarter();
@@ -1385,6 +1442,7 @@ function frame(now = 0) {
   const dt = Math.min(0.05, (now - lastT) / 1000 || 0);
   lastT = now;
   S.tick++;
+  if (coarseMQ.matches) { const busy = S.mode !== 'world' || handlers.length > 0 || !!$('#dlg'); if (busy !== S.busy) { S.busy = busy; $('#touch').classList.toggle('busy', busy); } }
   fitCanvas();
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.fillStyle = S.mode === 'battle' ? '#b8e0a0' : S.mode === 'cutscene' ? '#8cc4f4' : S.mode === 'title' ? '#0e1c48' : S.mode === 'intro' ? '#1e3a78' : '#000';
